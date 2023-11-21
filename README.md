@@ -4,12 +4,12 @@
 
 ## 基本流程
 
-1. 基于 `https://libraries.io/api` 获取热门的 `NPM` 项目，并存到本地数据库。
+1. 基于 [Libraries](https://libraries.io/api) 获取热门的 `NPM` 项目，并存到本地数据库。
 1. 在本地数据库中按顺序选择一个目标项目。
 1. 基于 `gpt4` 生成目标项目相关标题。
 1. 基于 `gpt4` 生成目标项目相关内容。
 1. 将生成的内容发布到各平台，如：知乎、掘金、CSDN、简书、SegmentFault、博客园、开源中国、GitHub 等...
-1. 未提供开放 API 的平台，使用 `Puppeteer` 进行自动发布。
+1. 未提供开放 API 的平台，使用 [Puppeteer](https://pptr.nodejs.cn/) 进行自动发布。
 
 ## 关键节点
 

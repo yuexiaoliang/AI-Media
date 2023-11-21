@@ -1,0 +1,21 @@
+{
+  "compilerOptions": {
+    "target": "es2020", // 指定ECMAScript目标版本
+    "module": "commonjs", // 指定模块代码生成方式
+    "lib": ["es2020"], // 指定要包含在编译中的库文件。
+    "noEmit": true,
+    "composite": true, // 启用项目编译
+    "moduleResolution": "node", // 选择模块解析策略
+    "strict": true, // 启用所有严格类型检查选项
+    "esModuleInterop": true, // 允許export = x和import x = require()形式的互操作性导入
+    "skipLibCheck": true, // 跳过库文件的类型检查以提高性能
+    "forceConsistentCasingInFileNames": true // 禁止对大小写不一致的引用
+  },
+  "include": [
+    "packages/**/*" // 包括所有子项目的src目录
+  ],
+  "exclude": [
+    "node_modules", // 排除node_modules
+    "**/node_modules/*"
+  ]
+}
