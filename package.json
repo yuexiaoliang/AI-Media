@@ -5,6 +5,7 @@
   "main": "index.js",
   "type": "module",
   "scripts": {
+    "run": "node dist/index.cjs",
     "dev": "node scripts/build.js --watch",
     "build": "node scripts/build.js"
   },
