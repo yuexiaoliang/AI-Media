@@ -3,6 +3,7 @@ import { fileURLToPath } from 'url';
 import { spawnSync } from 'child_process';
 import esbuild from 'esbuild';
 import yargs from 'yargs-parser';
+import { replace } from 'esbuild-plugin-replace'
 
 const argv = yargs(process.argv.slice(2))
 
@@ -26,12 +27,13 @@ const esbuildOptions = {
   bundle: true,
   minify: !argv.watch,
   sourcemap: argv.watch,
+  plugins: [replace()]
 }
 
 if (argv.watch) {
   let ctx = await esbuild.context({
     ...esbuildOptions,
-    plugins: [buildEnd],
+    plugins: [...esbuildOptions.plugins, buildEnd],
   })
   ctx.watch()
 } else {

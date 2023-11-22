@@ -1,15 +1,7 @@
-import path from 'path';
-import fs from 'fs-extra';
+export * from './apis';
+export * from './db';
+
 import { npm } from './apis';
-import { database } from './db'
-import * as cheerio from 'cheerio';
-import { JSONPreset } from 'lowdb/node';
+import { database } from './db';
 
-export async function main() {
-  const pkg = await npm.getPackage();
-  if (!pkg) return;
-  console.log(`🚀 > file: index.ts:11 > main > pkg:`, pkg.name);
-
-  // 文章发布完成后，将 isPublished 设置为 true
-  await database.setPackagePublished(pkg.name);
-}
+export { npm, database };

@@ -50,6 +50,7 @@ export const getPackages = async () => {
 
 export async function getPackage() {
   const list = await getPackages();
+  // return list[0];
 
   const notPublished = list.filter((item) => !item.isPublished);
   let pkg = notPublished[0];
