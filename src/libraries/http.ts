@@ -1,5 +1,5 @@
 import axios from 'axios';
-import constants from '@auto-blog/constants';
+import constants from '@constants';
 
 type Serve = 'npm' | 'github';
 

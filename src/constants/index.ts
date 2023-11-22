@@ -1,5 +1,3 @@
-import 'dotenv/config';
-
 export type EnvKeys = (typeof envKeys)[number];
 
 export type EnvConstants = {

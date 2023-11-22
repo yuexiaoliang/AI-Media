@@ -1,8 +1,8 @@
 import * as cheerio from 'cheerio';
 import axios from 'axios';
-import http from '../http';
-import { database } from '../db';
-import { DBPackage, DBPackages } from '../db/database';
+import http from './http';
+import * as database from '@database';
+import { DBPackage, DBPackages } from '@database';
 
 export const getPackages = async () => {
   const [db, data] = await database.getLocalDatabase();
@@ -50,7 +50,6 @@ export const getPackages = async () => {
 
 export async function getPackage() {
   const list = await getPackages();
-  // return list[0];
 
   const notPublished = list.filter((item) => !item.isPublished);
   let pkg = notPublished[0];

@@ -3,13 +3,15 @@ import { fileURLToPath } from 'url';
 import { spawnSync } from 'child_process';
 import esbuild from 'esbuild';
 import yargs from 'yargs-parser';
-import { replace } from 'esbuild-plugin-replace'
+import { rimrafSync } from 'rimraf'
 
 const argv = yargs(process.argv.slice(2))
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 
-const outfile = path.resolve(__dirname, '../dist/index.cjs');
+const entryPoints = [path.resolve(__dirname, './src/index.ts')];
+const outdir = './dist/';
+const outfile = outdir + 'index.cjs';
 
 const buildEnd = {
   name: 'build-end',
@@ -21,22 +23,31 @@ const buildEnd = {
 };
 
 const esbuildOptions = {
-  entryPoints: [path.resolve(__dirname, '../main.ts')],
-  outfile,
+  entryPoints,
   platform: 'node',
+  outfile,
   bundle: true,
   minify: !argv.watch,
-  sourcemap: argv.watch,
-  plugins: [replace()]
+  assetNames: 'assets/[name]-[hash]',
+  loader: { '.txt': 'text' },
+  alias: {
+    '@constants': './src/constants',
+    '@libraries': './src/libraries',
+    '@openai': './src/openai',
+    '@utils': './src/utils',
+    '@database': './src/database',
+  },
 }
 
 if (argv.watch) {
+  rimrafSync(outdir)
   let ctx = await esbuild.context({
     ...esbuildOptions,
-    plugins: [...esbuildOptions.plugins, buildEnd],
+    plugins: [buildEnd],
   })
   ctx.watch()
 } else {
+  rimrafSync(outdir)
   esbuild.build(esbuildOptions)
 }
 

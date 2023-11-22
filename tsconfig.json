@@ -9,10 +9,19 @@
     "strict": true, // 启用所有严格类型检查选项
     "esModuleInterop": true, // 允許export = x和import x = require()形式的互操作性导入
     "skipLibCheck": true, // 跳过库文件的类型检查以提高性能
-    "forceConsistentCasingInFileNames": true // 禁止对大小写不一致的引用
+    "forceConsistentCasingInFileNames": true, // 禁止对大小写不一致的引用
+    "baseUrl": ".",
+    "paths": {
+      "@constants": ["./src/constants"],
+      "@libraries": ["./src/libraries"],
+      "@openai": ["./src/openai"],
+      "@utils": ["./src/utils"],
+      "@database": ["./src/database"],
+    }
   },
   "include": [
-    "packages/**/*" // 包括所有子项目的src目录
+    "src/**/*", // 包括所有子项目的src目录
+    "./types.d.ts"
   ],
   "exclude": [
     "node_modules", // 排除node_modules

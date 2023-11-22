@@ -1,21 +1,9 @@
 import path from 'path';
 import { JSONPreset } from 'lowdb/node';
-import type { Low } from 'lowdb';
+import { Low } from 'lowdb';
 import { merge } from 'lodash';
-
-export interface DBPackage {
-  name: string;
-  description?: string;
-  isPublished?: boolean;
-  [key: string]: any;
-}
-
-export type DBPackages = DBPackage[];
-
-export interface DBData {
-  pageNumber: number;
-  packages: DBPackages;
-}
+import { DBData, DBPackage, DBChatCompletionHistoryItem } from './types';
+export * from './types';
 
 let db: Low<DBData>;
 
@@ -23,7 +11,8 @@ export const getLocalDatabase = async () => {
   if (!db) {
     db = await JSONPreset<DBData>(path.resolve(__dirname, '../db.json'), {
       pageNumber: 0,
-      packages: []
+      packages: [],
+      chatCompletionHistory: []
     });
   }
 
@@ -53,6 +42,14 @@ export const setPackagePublished = async (name: string) => {
   if (pkg) {
     pkg.isPublished = true;
   }
+
+  db.write();
+};
+
+export const insertChatCompletionHistory = async (item: DBChatCompletionHistoryItem) => {
+  const [db, data] = await getLocalDatabase();
+
+  data.chatCompletionHistory.push(item);
 
   db.write();
 };
