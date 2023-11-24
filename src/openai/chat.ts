@@ -6,8 +6,7 @@ import prompts from './prompts.txt';
 
 const http = createHttp('chat');
 
-export const genArticle = async (pkg: DBPackage, model?: AIModel) => {
-  console.log('\n 正在生成文章...');
+export const genAndSaveArticle = async (pkg: DBPackage, model?: AIModel) => {
   const messages = [
     {
       role: 'system',
@@ -40,8 +39,6 @@ export const genArticle = async (pkg: DBPackage, model?: AIModel) => {
 };
 
 export const genImagePrompt = async () => {
-  console.log('\n 正在生成图片 Prompt...');
-
   const messages = [
     {
       role: 'user',

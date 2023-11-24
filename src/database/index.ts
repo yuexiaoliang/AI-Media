@@ -10,7 +10,7 @@ let db: Low<DBData>;
 
 export const getLocalDatabase = async () => {
   if (!db) {
-    db = await JSONPreset<DBData>(path.resolve(__dirname, '../db.json'), {
+    db = await JSONPreset<DBData>(path.resolve(__dirname, './db.json'), {
       pageNumber: 0,
       packages: [],
       chatCompletionHistory: [],

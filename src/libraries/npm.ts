@@ -5,8 +5,6 @@ import * as database from '@database';
 import { DBPackage, DBPackages } from '@database';
 
 export const getPackages = async () => {
-  console.log('\n 正在获取 npm 包列表...');
-
   const [db, data] = await database.getLocalDatabase();
 
   const notPublished = data.packages.filter((item) => !item.isPublished);
@@ -50,9 +48,7 @@ export const getPackages = async () => {
   return data.packages;
 };
 
-export async function getPackage() {
-  const list = await getPackages();
-
+export async function getFirstNotPublishedPackage(list: DBPackages) {
   const notPublished = list.filter((item) => !item.isPublished);
   let pkg = notPublished[0];
 
@@ -61,11 +57,14 @@ export async function getPackage() {
     return;
   }
 
-  console.log(`\n 正在获取 ${pkg.name} 包信息...`);
-  const { versions, ...res } = (await http.get(pkg.name)) as DBPackage;
-  pkg = { ...pkg, ...res };
-
-  await database.updateOrInsertPackage(pkg);
-
   return pkg;
+}
+
+export async function loadPackageInfo(pkgName: DBPackage['name']) {
+  const { versions, ...rest } = (await http.get(pkgName)) as DBPackage;
+
+  // 包信息入库
+  await database.updateOrInsertPackage(rest);
+
+  return rest;
 }

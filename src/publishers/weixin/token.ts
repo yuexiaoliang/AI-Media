@@ -9,7 +9,7 @@ const http = createHttp();
 
 export const getTokenInfo = async () => {
   let tokenInfo: { access_token: string; timestamp: number };
-  const tokenFilePath = path.resolve(__dirname, '../token.json');
+  const tokenFilePath = path.resolve(__dirname, './token.json');
 
   if (fs.existsSync(tokenFilePath)) {
     tokenInfo = readFileSync(tokenFilePath);

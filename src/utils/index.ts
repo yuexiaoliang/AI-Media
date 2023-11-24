@@ -1,4 +1,5 @@
 import crypto from 'crypto';
+export * as file from './file';
 
 // This function replaces all instances of [[KEY]] in the given template
 // with the corresponding value in the values object.

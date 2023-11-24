@@ -20,11 +20,8 @@ export const getMaterials = async (type: string = 'image', offset: number = 0, c
 export const addMaterial = async (filepath: string, type: MaterialType = 'image') => {
   if (await hasWeixinMaterial(filepath)) return await getWeixinMaterial(filepath);
 
-  console.log('\n 正在新增素材...')
-
   const formData = new FormData();
   formData.append('media', fs.createReadStream(path.resolve(__dirname, filepath)));
-  console.log(`🚀 > file: material.ts:26 > addMaterial > formData:`, formData);
 
   const {
     data: { item, ...rest }
