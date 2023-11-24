@@ -6,7 +6,7 @@ import sharp from 'sharp';
 export function saveArticleFile(filename: string, content: string) {
   const dir = path.join(__dirname, './articles');
   fs.ensureDirSync(dir);
-  fs.writeFileSync(path.join(dir, `${filename}.md`), content);
+  fs.writeFileSync(path.join(dir, filename), content);
 }
 
 export async function saveImageByB64(b64_json: string) {
