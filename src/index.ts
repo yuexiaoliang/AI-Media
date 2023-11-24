@@ -1,49 +1,29 @@
 import 'dotenv/config';
-import fs from 'fs-extra';
 import path from 'path';
 import { npm } from '@libraries';
-import { DBPackage } from '@database';
-import * as database from '@database';
-import { chat, AIModel, AIModelKeys } from '@openai';
+import { images, chat, AIModel } from '@openai';
+import { setPackagePublished } from '@database';
+import { weixin } from '@publishers';
 
 (async () => {
-  const list = await npm.getPackages();
-  const models = Object.keys(AIModel) as AIModelKeys[];
-  const pkgs = list.slice(0, 1);
-
-  for (let i = 0; i < models.length - 1; i++) {
-    const model = models[i];
-    const fns = pkgs.map((pkg) => () => gen(pkg, model));
-
-    for await (const fn of fns) {
-      await fn();
-    }
-
-    console.log(`${model} 完成了\n`);
-  }
-  console.log('\n全部完成了');
-})();
-
-async function gen(pkg: DBPackage, model: AIModelKeys) {
   try {
-    const choices = await chat.genArticle(pkg);
+    // 获取包信息
+    const pkg = await npm.getPackage();
+    if (!pkg) return;
 
-    const [completion] = choices;
+    // 生成文章
+    const content = await chat.genArticle(pkg, AIModel.GPT3);
+    if (!content) return;
 
-    const dir = path.join(__dirname, 'articles');
-    fs.ensureDirSync(dir);
-    fs.writeFileSync(path.join(dir, `${pkg.name}-${model}.md`), completion.message.content);
+    // 发布公众号草稿
+    const { media_id } = await weixin.draft.addDraft(content, pkg);
 
-    console.log(`${pkg.name}-${model} 完成了`);
-  } catch (error: any) {
-    console.log('openai -> error: ', error.message);
+    // 发布公众号文章
+    // await weixin.freepublish.submitDraft(media_id);
+
+    // 设置包的发布状态
+    await setPackagePublished(pkg.name);
+  } catch (error) {
+    console.log(`🚀 > file: index.ts:18 > error:`, error);
   }
-}
-
-export async function main() {
-  const pkg = await npm.getPackage();
-  if (!pkg) return;
-
-  // 文章发布完成后，将 isPublished 设置为 true
-  await database.setPackagePublished(pkg.name);
-}
+})();

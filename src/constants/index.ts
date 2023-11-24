@@ -6,7 +6,7 @@ export type EnvConstants = {
 
 export type Constants = typeof constants;
 
-const envKeys = ['LIBRARIES_API_KEY', 'OPENAI_API_KEY'] as const;
+const envKeys = ['LIBRARIES_API_KEY', 'OPENAI_API_KEY', 'WX_APPID', 'WX_APP_SECRET'] as const;
 
 const envConstants: EnvConstants = envKeys.reduce((obj, curr) => {
   obj[curr] = process.env[curr] as EnvKeys;

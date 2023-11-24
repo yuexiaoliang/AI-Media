@@ -17,11 +17,12 @@
       "@openai": ["./src/openai"],
       "@utils": ["./src/utils"],
       "@database": ["./src/database"],
+      "@publishers": ["./src/publishers"],
+      "@md-renders": ["./src/md-renders"]
     }
   },
   "include": [
-    "src/**/*", // 包括所有子项目的src目录
-    "./types.d.ts"
+    "src/**/*" // 包括所有子项目的src目录
   ],
   "exclude": [
     "node_modules", // 排除node_modules

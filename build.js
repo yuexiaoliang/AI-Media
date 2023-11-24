@@ -30,12 +30,15 @@ const esbuildOptions = {
   minify: !argv.watch,
   assetNames: 'assets/[name]-[hash]',
   loader: { '.txt': 'text' },
+  external: ['sharp'],
   alias: {
     '@constants': './src/constants',
     '@libraries': './src/libraries',
     '@openai': './src/openai',
     '@utils': './src/utils',
     '@database': './src/database',
+    "@publishers": "./src/publishers",
+    "@md-renders": "./src/md-renders",
   },
 }
 
@@ -48,6 +51,11 @@ if (argv.watch) {
   ctx.watch()
 } else {
   rimrafSync(outdir)
-  esbuild.build(esbuildOptions)
+  const opts = { ...esbuildOptions };
+
+  if (argv.run) {
+    opts.plugins = [buildEnd]
+  }
+  esbuild.build(opts)
 }
 

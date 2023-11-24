@@ -1,3 +1,5 @@
+import crypto from 'crypto';
+
 // This function replaces all instances of [[KEY]] in the given template
 // with the corresponding value in the values object.
 //
@@ -7,4 +9,19 @@ export function renderTemplate(template: string, values: { [key: string]: string
   return template.replace(/\[\[(\w+)\]\]/g, (match, key) => {
     return key in values ? values[key] : match;
   });
+}
+
+// 获取以秒为单位的时间戳
+export function getTimestamp(): number {
+  return Math.floor(Date.now() / 1000);
+}
+
+// 将字符串转为 md5 值
+export function stringToMd5(str: string): string {
+  return crypto.createHash('md5').update(str).digest('hex');
+}
+
+// 随机获取数组中的一个元素
+export function randomItem<T>(arr: T[]): T {
+  return arr[Math.floor(Math.random() * arr.length)];
 }

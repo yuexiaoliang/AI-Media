@@ -5,6 +5,8 @@ import * as database from '@database';
 import { DBPackage, DBPackages } from '@database';
 
 export const getPackages = async () => {
+  console.log('\n 正在获取 npm 包列表...');
+
   const [db, data] = await database.getLocalDatabase();
 
   const notPublished = data.packages.filter((item) => !item.isPublished);
@@ -59,6 +61,7 @@ export async function getPackage() {
     return;
   }
 
+  console.log(`\n 正在获取 ${pkg.name} 包信息...`);
   const { versions, ...res } = (await http.get(pkg.name)) as DBPackage;
   pkg = { ...pkg, ...res };
 

@@ -1,0 +1,1 @@
+export * as weixin from './weixin'
