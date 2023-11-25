@@ -29,7 +29,7 @@ const esbuildOptions = {
   bundle: true,
   minify: !argv.watch,
   assetNames: 'assets/[name]-[hash]',
-  loader: { '.txt': 'text' },
+  loader: { '.txt': 'text', '.css': 'text' },
   external: ['sharp'],
   alias: {
     '@constants': './src/constants',

@@ -3,8 +3,8 @@ import juice from 'juice';
 import MarkdownIt from 'markdown-it';
 import type StateBlock from 'markdown-it/lib/rules_block/state_block';
 import mdHighlight from 'markdown-it-highlightjs';
-import theme1 from './theme-1.txt';
-import hljs from './hljs.css.txt';
+import theme from './styles/theme.css';
+import hljs from './styles/hljs.css';
 
 export interface MetaYamlOptions {
   cb?(yamlJSON: Record<string, any>, yamlRaw: string): void;
@@ -30,7 +30,7 @@ export const mdToWeixin = <T>(val: string) => {
 
   const result = md.render(val);
 
-  const html = juice.inlineContent(result, theme1 + hljs);
+  const html = juice.inlineContent(result, theme + hljs);
 
   // @ts-ignore
   return [{ meta: _meta, html }, md] as [{ meta: T; html: string }, MarkdownIt];
