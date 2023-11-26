@@ -1,0 +1,459 @@
+{
+  "pageNumber": 2,
+  "packages": [
+    {
+      "name": "express",
+      "description": "Fast, unopinionated, minimalist web framework",
+      "contributions_count": 295,
+      "dependent_repos_count": 1122978,
+      "dependents_count": 101538,
+      "deprecation_reason": null,
+      "forks": 10577,
+      "homepage": "http://expressjs.com/",
+      "keywords": [
+        "express",
+        "framework",
+        "sinatra",
+        "web",
+        "http",
+        "rest",
+        "restful",
+        "router",
+        "app",
+        "api",
+        "javascript",
+        "nodejs",
+        "server"
+      ],
+      "language": "JavaScript",
+      "latest_download_url": "https://registry.npmjs.org/express/-/express-4.18.2.tgz",
+      "latest_release_number": "4.18.2",
+      "latest_release_published_at": "2022-10-08T20:14:32.495Z",
+      "latest_stable_release_number": "4.18.2",
+      "latest_stable_release_published_at": "2022-10-08T20:14:32.495Z",
+      "license_normalized": false,
+      "licenses": "MIT",
+      "normalized_licenses": [
+        "MIT"
+      ],
+      "package_manager_url": "https://www.npmjs.com/package/express",
+      "platform": "NPM",
+      "rank": 30,
+      "repository_license": "MIT",
+      "repository_status": "",
+      "repository_url": "https://github.com/expressjs/express",
+      "stars": 61712,
+      "status": null,
+      "isPublished": true
+    },
+    {
+      "name": "debug",
+      "description": "Lightweight debugging utility for Node.js and the browser",
+      "contributions_count": 108,
+      "dependent_repos_count": 980556,
+      "dependents_count": 46405,
+      "deprecation_reason": null,
+      "forks": 944,
+      "homepage": "https://github.com/debug-js/debug#readme",
+      "keywords": [
+        "debug",
+        "log",
+        "debugger",
+        "browser",
+        "debugging",
+        "javascript",
+        "logging",
+        "node",
+        "node-js"
+      ],
+      "language": "JavaScript",
+      "latest_download_url": "https://registry.npmjs.org/debug/-/debug-4.3.4.tgz",
+      "latest_release_number": "4.3.4",
+      "latest_release_published_at": "2022-03-17T13:38:47.641Z",
+      "latest_stable_release_number": "4.3.4",
+      "latest_stable_release_published_at": "2022-03-17T13:38:47.641Z",
+      "license_normalized": false,
+      "licenses": "MIT",
+      "normalized_licenses": [
+        "MIT"
+      ],
+      "package_manager_url": "https://www.npmjs.com/package/debug",
+      "platform": "NPM",
+      "rank": 30,
+      "repository_license": "MIT",
+      "repository_status": null,
+      "repository_url": "https://github.com/debug-js/debug",
+      "stars": 10793,
+      "status": null,
+      "isPublished": true
+    },
+    {
+      "name": "ansi-regex",
+      "description": "Regular expression for matching ANSI escape codes",
+      "contributions_count": 13,
+      "dependent_repos_count": 893943,
+      "dependents_count": 2468,
+      "deprecation_reason": null,
+      "forks": 71,
+      "homepage": "https://github.com/chalk/ansi-regex#readme",
+      "keywords": [
+        "ansi",
+        "styles",
+        "color",
+        "colour",
+        "colors",
+        "terminal",
+        "console",
+        "cli",
+        "string",
+        "tty",
+        "escape",
+        "formatting",
+        "rgb",
+        "256",
+        "shell",
+        "xterm",
+        "command-line",
+        "text",
+        "regex",
+        "regexp",
+        "re",
+        "match",
+        "test",
+        "find",
+        "pattern"
+      ],
+      "language": "JavaScript",
+      "latest_download_url": "https://registry.npmjs.org/ansi-regex/-/ansi-regex-3.0.1.tgz",
+      "latest_release_number": "3.0.1",
+      "latest_release_published_at": "2022-03-27T13:29:44.595Z",
+      "latest_stable_release_number": "3.0.1",
+      "latest_stable_release_published_at": "2022-03-27T13:29:44.595Z",
+      "license_normalized": false,
+      "licenses": "MIT",
+      "normalized_licenses": [
+        "MIT"
+      ],
+      "package_manager_url": "https://www.npmjs.com/package/ansi-regex",
+      "platform": "NPM",
+      "rank": 25,
+      "repository_license": "MIT",
+      "repository_status": null,
+      "repository_url": "https://github.com/chalk/ansi-regex",
+      "stars": 164,
+      "status": null
+    },
+    {
+      "name": "chalk",
+      "description": "Terminal string styling done right"
+    },
+    {
+      "name": "balanced-match",
+      "description": "Match balanced character pairs, like \"{\" and \"}\""
+    },
+    {
+      "name": "async",
+      "description": "Higher-order functions and common patterns for asynchronous code"
+    },
+    {
+      "name": "inherits",
+      "description": "Browser-friendly inheritance fully compatible with standard node.js inherits()"
+    },
+    {
+      "name": "concat-map",
+      "description": "concatenative mapdashery"
+    },
+    {
+      "name": "core-util-is",
+      "description": "The `util.is*` functions introduced in Node v0.12."
+    },
+    {
+      "name": "glob",
+      "description": "the most correct and second fastest glob implementation in JavaScript"
+    },
+    {
+      "name": "ajv",
+      "description": "Another JSON Schema Validator"
+    },
+    {
+      "name": "ms",
+      "description": "Tiny millisecond conversion utility"
+    },
+    {
+      "name": "arr-flatten",
+      "description": "Recursively flatten an array or arrays."
+    },
+    {
+      "name": "arr-diff",
+      "description": "Returns an array with only the unique values from the first array, by excluding all values from a..."
+    },
+    {
+      "name": "escape-string-regexp",
+      "description": "Escape RegExp special characters"
+    },
+    {
+      "name": "array-unique",
+      "description": "Remove duplicate values from an array. Fastest ES5 implementation."
+    },
+    {
+      "name": "commander",
+      "description": "the complete solution for node.js command-line programs"
+    },
+    {
+      "name": "acorn",
+      "description": "ECMAScript parser"
+    },
+    {
+      "name": "accepts",
+      "description": "Higher-level content negotiation"
+    },
+    {
+      "name": "minimist",
+      "description": "parse argument options"
+    },
+    {
+      "name": "camelcase",
+      "description": "Convert a dash/dot/underscore/space separated string to camelCase or PascalCase: `foo-bar` → `foo..."
+    },
+    {
+      "name": "anymatch",
+      "description": "Matches strings against configurable strings, globs, regular expressions, and/or functions"
+    },
+    {
+      "name": "mkdirp",
+      "description": "Recursively mkdir, like `mkdir -p`"
+    },
+    {
+      "name": "semver",
+      "description": "The semantic version parser used by npm."
+    },
+    {
+      "name": "isarray",
+      "description": "Array#isArray for older browsers"
+    },
+    {
+      "name": "graceful-fs",
+      "description": "A drop-in replacement for fs, making various improvements."
+    },
+    {
+      "name": "rimraf",
+      "description": "A deep deletion module for node (like `rm -rf`)"
+    },
+    {
+      "name": "minimatch",
+      "description": "a glob matcher in javascript"
+    },
+    {
+      "name": "argparse",
+      "description": "CLI arguments parser. Native port of python's argparse."
+    },
+    {
+      "name": "inflight",
+      "description": "Add callbacks to requests in flight to avoid async duplication"
+    },
+    {
+      "name": "fs.realpath",
+      "description": "Use node's fs.realpath, but fall back to the JS implementation if the native one fails"
+    },
+    {
+      "name": "braces",
+      "description": "Bash-like brace expansion, implemented in JavaScript. Safer than other brace expansion libs, with..."
+    },
+    {
+      "name": "safe-buffer",
+      "description": "Safer Node.js Buffer API"
+    },
+    {
+      "name": "iconv-lite",
+      "description": "Convert character encodings in pure javascript."
+    },
+    {
+      "name": "asn1",
+      "description": "Contains parsers and serializers for ASN.1 (currently BER only)"
+    },
+    {
+      "name": "mime-db",
+      "description": "Media Type Database"
+    },
+    {
+      "name": "assert-plus",
+      "description": "Extra assertions on top of node's assert module"
+    },
+    {
+      "name": "path-is-absolute",
+      "description": "Node.js 0.12 path.isAbsolute() ponyfill"
+    },
+    {
+      "name": "color-convert",
+      "description": "Plain color conversion functions"
+    },
+    {
+      "name": "asynckit",
+      "description": "Minimal async jobs utility library, with streams support"
+    },
+    {
+      "name": "once",
+      "description": "Run a function exactly one time"
+    },
+    {
+      "name": "aws-sign2",
+      "description": "AWS signing. Originally pulled from LearnBoost/knox, maintained as vendor in request, now a stand..."
+    },
+    {
+      "name": "qs",
+      "description": "A querystring parser that supports nesting and arrays, with a depth limit"
+    },
+    {
+      "name": "cross-spawn",
+      "description": "Cross platform child_process#spawn and child_process#spawnSync"
+    },
+    {
+      "name": "aws4",
+      "description": "Signs and prepares requests using AWS Signature Version 4"
+    },
+    {
+      "name": "decamelize",
+      "description": "Convert a camelized string into a lowercased one with a custom separator: unicornRainbow → unicor..."
+    },
+    {
+      "name": "readable-stream",
+      "description": "Node.js Streams, a user-land copy of the stream library from Node.js"
+    },
+    {
+      "name": "has-flag",
+      "description": "Check if argv has a specific flag"
+    },
+    {
+      "name": "request",
+      "description": "Simplified HTTP request client."
+    },
+    {
+      "name": "cliui",
+      "description": "easily create complex multi-column command-line-interfaces"
+    },
+    {
+      "name": "is-buffer",
+      "description": "Determine if an object is a Buffer"
+    },
+    {
+      "name": "code-point-at",
+      "description": "ES2015 `String#codePointAt()` ponyfill"
+    },
+    {
+      "name": "supports-color",
+      "description": "Detect whether a terminal supports color"
+    },
+    {
+      "name": "is-fullwidth-code-point",
+      "description": "Check if the character represented by a given Unicode code point is fullwidth"
+    },
+    {
+      "name": "async-each",
+      "description": "No-bullshit, ultra-simple, 35-lines-of-code async parallel forEach / map function for JavaScript."
+    },
+    {
+      "name": "strip-ansi",
+      "description": "Strip ANSI escape codes from a string"
+    },
+    {
+      "name": "object-assign",
+      "description": "ES2015 `Object.assign()` ponyfill"
+    },
+    {
+      "name": "core-js",
+      "description": "Standard library"
+    },
+    {
+      "name": "string_decoder",
+      "description": "The string_decoder module from Node core"
+    },
+    {
+      "name": "depd",
+      "description": "Deprecate all the things"
+    }
+  ],
+  "chatCompletionHistory": [
+    {
+      "articleTitle": "express",
+      "completionInfo": {
+        "id": "chatcmpl-8OLRYnm0AGXweK1s2efByAIAT8Ruj",
+        "object": "chat.completion",
+        "created": 1700812992,
+        "model": "gpt-3.5-turbo-0613",
+        "usage": {
+          "prompt_tokens": 761,
+          "completion_tokens": 1462,
+          "total_tokens": 2223
+        }
+      }
+    },
+    {
+      "articleTitle": "debug",
+      "completionInfo": {
+        "id": "chatcmpl-8OiadUNn78PrYwFoflqtlZTzU6MgO",
+        "object": "chat.completion",
+        "created": 1700901967,
+        "model": "gpt-3.5-turbo-0613",
+        "usage": {
+          "prompt_tokens": 770,
+          "completion_tokens": 1356,
+          "total_tokens": 2126
+        }
+      }
+    },
+    {
+      "articleTitle": "ansi-regex",
+      "completionInfo": {
+        "id": "chatcmpl-8P5gXzxfNouaPfcA2FXHKxjn5QWB9",
+        "object": "chat.completion",
+        "created": 1700990745,
+        "model": "gpt-3.5-turbo-0613",
+        "usage": {
+          "prompt_tokens": 820,
+          "completion_tokens": 1750,
+          "total_tokens": 2570
+        }
+      }
+    },
+    {
+      "articleTitle": "ansi-regex",
+      "completionInfo": {
+        "id": "chatcmpl-8P5ujr6vYB8LhdHF3uLzTYAmCGrHP",
+        "object": "chat.completion",
+        "created": 1700991625,
+        "model": "gpt-3.5-turbo-0613",
+        "usage": {
+          "prompt_tokens": 820,
+          "completion_tokens": 1065,
+          "total_tokens": 1885
+        }
+      }
+    },
+    {
+      "articleTitle": "ansi-regex",
+      "completionInfo": {
+        "id": "chatcmpl-8P5yGrywwCKYWssN41TqiNPwm71iv",
+        "object": "chat.completion",
+        "created": 1700991844,
+        "model": "gpt-3.5-turbo-0613",
+        "usage": {
+          "prompt_tokens": 820,
+          "completion_tokens": 940,
+          "total_tokens": 1760
+        }
+      }
+    }
+  ],
+  "weixinMaterials": {
+    "0ba960f09f866d44407d97bb3190ebab": {
+      "media_id": "3TI8XMZiLsZyu-QJGQpsXPgaqqSwCjMEnk5wy6T1MBoxvxlsLOAS4cDylaEQiGsG",
+      "url": "http://mmbiz.qpic.cn/mmbiz_png/QPCr6EnHPrxLpyZQgXOicq4ZbMRY1LbIjKFKkibOs6g0jFwjjQV8uMjUCh4Xj5jdr5DPjiadkRscicGia7BIhNKyVLg/0?wx_fmt=png",
+      "filepath": "images\\7a42a318976c8d2fef990d4a4374ddb8.png"
+    },
+    "a8c0e0266fe116b2a3da616b9db7911a": {
+      "media_id": "3TI8XMZiLsZyu-QJGQpsXO66N6XtQAii3loQaVpnagPibGSNrmp1f4ah2vpCC3RW",
+      "url": "http://mmbiz.qpic.cn/mmbiz_png/QPCr6EnHPrzaN4FDmxOzhDCxNPCFcgqgicuIITxJ5ZiaK2nGicIQCa1UiaBzFDnDPyu57hVyhrxgRhEemILV6ibeLyQ/0?wx_fmt=png",
+      "filepath": "F:\\Projects\\auto-blog\\dist\\images\\bb6b8f11c0054a81610b7a5294569417.png"
+    }
+  }
+}

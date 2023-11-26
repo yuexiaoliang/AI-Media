@@ -43,14 +43,14 @@ const esbuildOptions = {
 }
 
 if (argv.watch) {
-  rimrafSync(outdir)
+  // rimrafSync(outdir)
   let ctx = await esbuild.context({
     ...esbuildOptions,
     plugins: [buildEnd],
   })
   ctx.watch()
 } else {
-  rimrafSync(outdir)
+  // rimrafSync(outdir)
   const opts = { ...esbuildOptions };
 
   if (argv.run) {
