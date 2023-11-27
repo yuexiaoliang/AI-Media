@@ -2,7 +2,6 @@ import * as cheerio from 'cheerio';
 import axios from 'axios';
 import http from './http';
 import * as database from '@database';
-import { getRandomItem } from '@utils';
 
 // 采集包列表
 export const collectPackages = async (platform: database.DBPublishedPlatforms) => {
@@ -63,7 +62,7 @@ export const collectPackages = async (platform: database.DBPublishedPlatforms) =
   return data.packages;
 };
 
-// 随机获取一个包的信息
+// 获取包的基本信息
 export async function getPackageInfo(pkgName: string) {
   const { repository_url, homepage } = (await http.get(pkgName)) as Record<string, any>;
 
@@ -84,21 +83,7 @@ export async function getPackageInfo(pkgName: string) {
     }
   };
 
-  console.log(`\n 包数据正在入库...`);
   await database.replaceOrInsertPackage(pkg);
 
   return pkg;
-}
-
-// 获取所有未采集基本数据的包
-export async function getNotGottenPackages() {
-  const [_, data] = await database.openLocalDatabase();
-
-  const notGotten = data.packages.filter((item) => {
-    if (!item.stepsStatus) return true;
-
-    return !item.stepsStatus.gottenBaseInfo;
-  });
-
-  return notGotten;
 }

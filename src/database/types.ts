@@ -1,5 +1,12 @@
 import { ChatCompletion } from '@openai';
 
+export interface DBData {
+  pageNumber: number;
+  packages: DBPackages;
+  generatedArticleHistory: Record<string, DBGeneratedArticleHistoryItem>;
+  weixinMaterials: Record<string, DBWeixinMaterial>;
+}
+
 export interface DBPackage {
   name: string;
   homepage?: string;
@@ -8,6 +15,8 @@ export interface DBPackage {
 
   [key: string]: any;
 }
+
+export type DBPackages = DBPackage[];
 
 export type DBPublishedPlatforms = 'weixin' | 'github';
 export interface DBPublishedPlatformStatus {
@@ -22,19 +31,9 @@ export interface DBPackageStepsStatus extends DBPublishedPlatformStatus {
 
 export type DBPackageStepsStatusKeys = keyof DBPackageStepsStatus;
 
-export type DBPackages = DBPackage[];
-
 export interface DBWeixinMaterial {
   media_id: string;
   url: string;
-}
-
-export interface DBData {
-  pageNumber: number;
-  packages: DBPackages;
-  generatedArticleHistory: Record<string, DBGeneratedArticleHistoryItem>;
-  chatCompletionHistory: DBChatCompletionHistoryItem[];
-  weixinMaterials: Record<string, DBWeixinMaterial>;
 }
 
 export type DBCompletionInfo = Omit<ChatCompletion, 'choices'>;
@@ -42,9 +41,4 @@ export type DBCompletionInfo = Omit<ChatCompletion, 'choices'>;
 export interface DBGeneratedArticleHistoryItem {
   title: string;
   completionInfo: DBCompletionInfo;
-}
-
-export interface DBChatCompletionHistoryItem {
-  completionInfo: DBCompletionInfo;
-  articleTitle: string;
 }

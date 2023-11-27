@@ -1,6 +1,5 @@
 import path from 'path';
 import fs from 'fs-extra';
-import crypto from 'crypto';
 import sharp from 'sharp';
 import { fileTypeFromBuffer } from 'file-type';
 
@@ -55,7 +54,6 @@ export async function saveImageByB64(pkgName: string, b64Json: string) {
 
   // 获取文件类型
   const type = await fileTypeFromBuffer(buffer);
-  console.log(`🚀 > file: file.ts:58 > saveImageByB64 > type:`, type);
   if (!type) {
     throw new Error('@utils/file.ts: 保存图片到本地时，获取文件类型失败');
   }

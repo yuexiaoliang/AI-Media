@@ -32,8 +32,7 @@ export const mdToWeixin = <T>(val: string) => {
 
   const html = juice.inlineContent(result, theme + hljs);
 
-  // @ts-ignore
-  return [{ meta: _meta, html }, md] as [{ meta: T; html: string }, MarkdownIt];
+  return [{ meta: _meta!, html }, md] as [{ meta: T; html: string }, MarkdownIt];
 };
 
 function removeMatchingH1Plugin(md: MarkdownIt) {

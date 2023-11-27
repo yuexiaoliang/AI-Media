@@ -2,46 +2,13 @@ import * as database from '@database';
 import createHttp from './http';
 import { AIModel, ChatCompletion } from './types';
 import { renderTemplate, file } from '@utils';
-import genArticlePrompt from './prompts/genArticle.txt';
-import genArticlePromptV2 from './prompts/genArticleV2.txt';
+import genArticlePrompt from './prompts/genArticleV2.txt';
 import genImagePromptPrompt from './prompts/genImagePrompt.txt';
 import { mdToWeixin } from '@md-renders';
 
 const http = createHttp('chat');
 
-export const genAndSaveArticle = async (pkg: database.DBPackage, model?: AIModel) => {
-  const messages = [
-    {
-      role: 'system',
-      content: renderTemplate(genArticlePrompt, { pkgName: pkg.name, pkg: JSON.stringify(pkg) })
-    }
-  ];
-
-  const res = (await http.post('completions', {
-    model: model || AIModel.GPT4,
-    stream: false,
-    temperature: 0.7,
-    top_p: 0.9,
-    messages
-  })) as ChatCompletion;
-
-  const { choices, usage, ...rest } = res;
-
-  await database.insertChatCompletionHistory({
-    articleTitle: pkg.name,
-    completionInfo: {
-      ...rest,
-      usage
-    }
-  });
-
-  const [completion] = choices;
-  const content = completion.message.content;
-
-  return content;
-};
-
-export const genArticleV2 = async (readme: string, pkgName: string) => {
+export const genArticle = async (readme: string, pkgName: string) => {
   // 如果生成过文章，则需要获取以生成的文章，避免重复请求浪费资源
   if (await database.getPackageGeneratedArticleStatus(pkgName)) {
     const history = await database.getPackageGeneratedArticleHistory(pkgName);
@@ -67,7 +34,7 @@ export const genArticleV2 = async (readme: string, pkgName: string) => {
     messages: [
       {
         role: 'user',
-        content: renderTemplate(genArticlePromptV2, { readme, pkgName })
+        content: renderTemplate(genArticlePrompt, { readme, pkgName })
       }
     ]
   })) as ChatCompletion;

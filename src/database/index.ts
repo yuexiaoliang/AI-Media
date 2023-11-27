@@ -2,8 +2,8 @@ import path from 'path';
 import { JSONPreset } from 'lowdb/node';
 import { Low } from 'lowdb';
 import { merge } from 'lodash';
-import { getRandomItem, stringToMd5 } from '@utils';
-import { DBData, DBPackage, DBChatCompletionHistoryItem, DBWeixinMaterial, DBPackageStepsStatusKeys, DBGeneratedArticleHistoryItem, DBPublishedPlatforms, DBPublishedPlatformStatus } from './types';
+import { getRandomItem } from '@utils';
+import { DBData, DBPackage, DBWeixinMaterial, DBPackageStepsStatusKeys, DBGeneratedArticleHistoryItem, DBPublishedPlatforms, DBPublishedPlatformStatus } from './types';
 export * from './types';
 
 let db: Low<DBData>;
@@ -14,18 +14,11 @@ export const openLocalDatabase = async () => {
       pageNumber: 0,
       packages: [],
       generatedArticleHistory: {},
-      chatCompletionHistory: [],
       weixinMaterials: {}
     });
   }
 
   return [db, db.data] as [Low<DBData>, DBData];
-};
-
-// 通过包名获取包信息
-export const getPackageByName = async (name: string) => {
-  const [_, data] = await openLocalDatabase();
-  return data.packages.find((item) => item.name === name);
 };
 
 // 替换或插入包信息
@@ -42,13 +35,6 @@ export const replaceOrInsertPackage = async (newPkg: DBPackage) => {
   }
 
   db.write();
-};
-
-// 获取所有符合状态条件的包
-export const getPackagesByStatus = async (key: DBPackageStepsStatusKeys, status: boolean = false) => {
-  const [_, data] = await openLocalDatabase();
-
-  return data.packages.filter((item) => item.stepsStatus?.[key] === status);
 };
 
 // 获取所有未发布到指定平台的包
@@ -187,22 +173,4 @@ export const getWeixinMaterial = async (pkgName: string) => {
   const [_, dbData] = await openLocalDatabase();
 
   return dbData.weixinMaterials[pkgName];
-};
-
-export const setPackagePublished = async (name: string, status: boolean = true) => {
-  const [db, data] = await openLocalDatabase();
-
-  const pkg = data.packages.find((item) => item.name === name);
-
-  if (pkg) pkg.isPublished = status;
-
-  db.write();
-};
-
-export const insertChatCompletionHistory = async (item: DBChatCompletionHistoryItem) => {
-  const [db, data] = await openLocalDatabase();
-
-  data.chatCompletionHistory.push(item);
-
-  db.write();
 };

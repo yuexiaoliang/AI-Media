@@ -8,7 +8,8 @@
     "start": "node ./dist/index.cjs",
     "dev": "node ./build.js --watch",
     "build:run": "node ./build.js --run",
-    "build": "node ./build.js"
+    "build": "node ./build.js",
+    "find-deadcode": "npx ts-prune"
   },
   "keywords": [],
   "author": "",
