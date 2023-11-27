@@ -51,6 +51,14 @@ export async function getNotPublishedPackages(platform: DBPublishedPlatforms) {
     throw new Error('@auto-blog/libraries: invalid platform');
   }
 
+  const notPlatformPublished = data.packages.filter((item) => {
+    if (!item.stepsStatus) return false;
+    if (!item.stepsStatus.gottenBaseInfo) return false;
+
+    return !item.stepsStatus[s];
+  });
+  if (notPlatformPublished.length) return notPlatformPublished;
+
   const notPublished = data.packages.filter((item) => {
     if (!item.stepsStatus) return true;
     if (!item.stepsStatus.gottenBaseInfo) return true;
@@ -106,15 +114,22 @@ export const getPackageStatus = async (name: string, key: DBPackageStepsStatusKe
   return pkg?.stepsStatus?.[key];
 };
 
+// 获取所有未获取基本信息的包
+export const getNotGottenBaseInfoPackages = async () => {
+  const [_, data] = await openLocalDatabase();
+
+  return data.packages.filter((item) => !item.stepsStatus?.gottenBaseInfo);
+};
+
 // 设置发布到微信公众号草稿状态
 export const setPackagePublishedWeixinDraftStatus = async (name: string, status: boolean = true) => {
   await setPackageStatus(name, 'publishedWeixinDraft', status);
-}
+};
 
 // 获取发布到微信公众号草稿状态
 export const getPackagePublishedWeixinDraftStatus = async (name: string) => {
   return await getPackageStatus(name, 'publishedWeixinDraft');
-}
+};
 
 // 设置包的采集基本信息（README）状态
 export const setPackageCollectedGuideStatus = async (name: string, status: boolean = true) => {

@@ -11,7 +11,7 @@ import { weixin } from '@publishers';
 async function weixinPublisher() {
   try {
     console.log('\n 正在获取 npm 包列表...');
-    await npm.collectPackages('weixin');
+    await npm.collectPackages();
 
     // 获取未发布到微信公众号的包
     console.log('\n 正在获取未发布到微信公众号的包...');

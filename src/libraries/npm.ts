@@ -4,19 +4,10 @@ import http from './http';
 import * as database from '@database';
 
 // 采集包列表
-export const collectPackages = async (platform: database.DBPublishedPlatforms) => {
+export const collectPackages = async () => {
   const [db, data] = await database.openLocalDatabase();
 
-  const fnMap: Record<database.DBPublishedPlatforms, () => any> = {
-    weixin: database.getNotPublishedWeixinPackages,
-    github: database.getNotPublishedGithubPackages
-  };
-
-  if (!fnMap[platform]) {
-    throw new Error('@auto-blog/libraries: invalid platform');
-  }
-
-  const notPublished = await fnMap[platform]();
+  const notPublished = await database.getNotGottenBaseInfoPackages();
 
   if (data.pageNumber && notPublished.length >= 30) return data.packages;
 
