@@ -1,2 +1,7 @@
 node_modules
 .env
+/dist/*.cjs
+/dist/token.json
+/dist/packages/*/*
+!/dist/packages/*/*.md
+/dist/packages/*/README.md
