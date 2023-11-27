@@ -17,9 +17,10 @@ export interface DBPublishedPlatformStatus {
 export interface DBPackageStepsStatus extends DBPublishedPlatformStatus {
   gottenBaseInfo: boolean;
   collectedGuide: boolean;
-  simplifiedGuide: boolean;
   generatedArticle: boolean;
 }
+
+export type DBPackageStepsStatusKeys = keyof DBPackageStepsStatus;
 
 export type DBPackages = DBPackage[];
 
@@ -32,11 +33,19 @@ export interface DBWeixinMaterial {
 export interface DBData {
   pageNumber: number;
   packages: DBPackages;
+  generatedArticleHistory: Record<string, DBGeneratedArticleHistoryItem>;
   chatCompletionHistory: DBChatCompletionHistoryItem[];
   weixinMaterials: Record<string, DBWeixinMaterial>;
 }
 
+export type DBCompletionInfo = Omit<ChatCompletion, 'choices'>;
+
+export interface DBGeneratedArticleHistoryItem {
+  title: string;
+  completionInfo: DBCompletionInfo;
+}
+
 export interface DBChatCompletionHistoryItem {
-  completionInfo: Omit<ChatCompletion, 'choices'>;
+  completionInfo: DBCompletionInfo;
   articleTitle: string;
 }

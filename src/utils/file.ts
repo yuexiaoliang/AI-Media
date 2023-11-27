@@ -11,8 +11,23 @@ export function saveReadmeMD(md: string, pkgName: string) {
   fs.writeFileSync(path.join(dir, `README.md`), md);
 }
 
-export function saveArticleFile(filename: string, content: string) {
-  const dir = path.join(__dirname, './articles');
+export function getReadmeMD(pkgName: string) {
+  const file = path.join(__dirname, `./packages/${pkgName}/README.md`);
+
+  if (!fs.existsSync(file)) return;
+  return fs.readFileSync(file, 'utf-8');
+}
+
+export function getArticleFile(pkgName: string, filename: string) {
+  const file = path.join(__dirname, `./packages/${pkgName}/${filename}`);
+
+  if (!fs.existsSync(file)) return;
+  return fs.readFileSync(file, 'utf-8');
+}
+
+export function saveArticleFile(pkgName: string, filename: string, content: string) {
+  const dir = path.join(__dirname, `./packages/${pkgName}/`);
+
   fs.ensureDirSync(dir);
   fs.writeFileSync(path.join(dir, filename), content);
 }

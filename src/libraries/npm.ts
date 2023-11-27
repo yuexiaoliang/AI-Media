@@ -2,14 +2,22 @@ import * as cheerio from 'cheerio';
 import axios from 'axios';
 import http from './http';
 import * as database from '@database';
-import { DBPackages } from '@database';
 import { getRandomItem } from '@utils';
 
 // 采集包列表
-export const collectPackages = async () => {
+export const collectPackages = async (platform: database.DBPublishedPlatforms) => {
   const [db, data] = await database.openLocalDatabase();
 
-  const notPublished = data.packages.filter((item) => !item.isPublished);
+  const fnMap: Record<database.DBPublishedPlatforms, () => any> = {
+    weixin: database.getNotPublishedWeixinPackages,
+    github: database.getNotPublishedGithubPackages
+  };
+
+  if (!fnMap[platform]) {
+    throw new Error('@auto-blog/libraries: invalid platform');
+  }
+
+  const notPublished = await fnMap[platform]();
 
   if (data.pageNumber && notPublished.length >= 30) return data.packages;
 
@@ -23,7 +31,7 @@ export const collectPackages = async () => {
   try {
     const { data: html } = await axios.get('https://libraries.io/search', { params });
 
-    const projects: DBPackages = [];
+    const projects: database.DBPackages = [];
 
     const $ = cheerio.load(html);
     const $projects = $('.project');
@@ -35,7 +43,6 @@ export const collectPackages = async () => {
           stepsStatus: {
             gottenBaseInfo: false,
             collectedGuide: false,
-            simplifiedGuide: false,
             generatedArticle: false,
             publishedWeixinDraft: false,
             publishedGithub: false
@@ -57,27 +64,27 @@ export const collectPackages = async () => {
 };
 
 // 随机获取一个包的信息
-export async function getRandomPackageInfo() {
-  const basePkg = getRandomItem(await getNotGottenPackages());
+export async function getPackageInfo(pkgName: string) {
+  const { repository_url, homepage } = (await http.get(pkgName)) as Record<string, any>;
 
-  const { repository_url, homepage, name } = (await http.get(basePkg.name)) as Record<string, any>;
-  if (!repository_url) return getRandomPackageInfo();
+  if (!repository_url) {
+    throw new Error(`@auto-blog/libraries: package [${pkgName}] not found`);
+  }
 
-  const pkg = {
-    name,
+  const pkg: database.DBPackage = {
+    name: pkgName,
     homepage,
     repository_url,
     stepsStatus: {
       gottenBaseInfo: true,
       collectedGuide: false,
-      simplifiedGuide: false,
       generatedArticle: false,
       publishedWeixinDraft: false,
       publishedGithub: false
     }
   };
 
-  // 包信息入库
+  console.log(`\n 包数据正在入库...`);
   await database.replaceOrInsertPackage(pkg);
 
   return pkg;
@@ -94,36 +101,4 @@ export async function getNotGottenPackages() {
   });
 
   return notGotten;
-}
-
-// 获取所有未发布到指定平台的包
-export async function getNotPublishedPackages(platform: database.DBPublishedPlatforms) {
-  const [_, data] = await database.openLocalDatabase();
-
-  const keyMap: Record<database.DBPublishedPlatforms, keyof database.DBPublishedPlatformStatus> = {
-    weixin: 'publishedWeixinDraft',
-    github: 'publishedGithub'
-  };
-
-  const s = keyMap[platform];
-  if (!s) {
-    console.warn('@auto-blog/libraries: invalid platform');
-    return [];
-  }
-
-  const notPublished = data.packages.filter((item) => {
-    if (!item.stepsStatus) return false;
-    if (!item.stepsStatus.gottenBaseInfo) return false;
-
-    return !item.stepsStatus[s];
-  });
-
-  return notPublished;
-}
-
-// 随机获取未发布到微信公众号的包
-export async function getRandomNotPublishedWeixinDraft() {
-  const pkgs = await getNotPublishedPackages('weixin');
-
-  return getRandomItem(pkgs);
 }

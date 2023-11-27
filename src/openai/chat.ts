@@ -1,16 +1,19 @@
-import { DBPackage, insertChatCompletionHistory } from '@database';
+import * as database from '@database';
 import createHttp from './http';
 import { AIModel, ChatCompletion } from './types';
-import { renderTemplate } from '@utils';
-import prompts from './prompts.txt';
+import { renderTemplate, file } from '@utils';
+import genArticlePrompt from './prompts/genArticle.txt';
+import genArticlePromptV2 from './prompts/genArticleV2.txt';
+import genImagePromptPrompt from './prompts/genImagePrompt.txt';
+import { mdToWeixin } from '@md-renders';
 
 const http = createHttp('chat');
 
-export const genAndSaveArticle = async (pkg: DBPackage, model?: AIModel) => {
+export const genAndSaveArticle = async (pkg: database.DBPackage, model?: AIModel) => {
   const messages = [
     {
       role: 'system',
-      content: renderTemplate(prompts, { pkgName: pkg.name, pkg: JSON.stringify(pkg) })
+      content: renderTemplate(genArticlePrompt, { pkgName: pkg.name, pkg: JSON.stringify(pkg) })
     }
   ];
 
@@ -24,7 +27,7 @@ export const genAndSaveArticle = async (pkg: DBPackage, model?: AIModel) => {
 
   const { choices, usage, ...rest } = res;
 
-  await insertChatCompletionHistory({
+  await database.insertChatCompletionHistory({
     articleTitle: pkg.name,
     completionInfo: {
       ...rest,
@@ -38,16 +41,74 @@ export const genAndSaveArticle = async (pkg: DBPackage, model?: AIModel) => {
   return content;
 };
 
+export const genArticleV2 = async (readme: string, pkgName: string) => {
+  // 如果生成过文章，则需要获取以生成的文章，避免重复请求浪费资源
+  if (await database.getPackageGeneratedArticleStatus(pkgName)) {
+    const history = await database.getPackageGeneratedArticleHistory(pkgName);
+    if (history) {
+      const { title } = history;
+      const md = file.getArticleFile(pkgName, `${title}.md`);
+
+      if (md) {
+        const { html, meta } = renderAndSave(md);
+        if (html) {
+          return { md, html, meta };
+        } else {
+          const { html } = renderAndSave(md);
+          return { md, html, meta };
+        }
+      }
+    }
+  }
+
+  const res = (await http.post('completions', {
+    model: AIModel.GPT4,
+    stream: false,
+    messages: [
+      {
+        role: 'user',
+        content: renderTemplate(genArticlePromptV2, { readme, pkgName })
+      }
+    ]
+  })) as ChatCompletion;
+
+  const { choices, usage, ...rest } = res;
+
+  const [completion] = choices;
+  const content = completion.message.content;
+
+  const completionInfo = {
+    ...rest,
+    usage
+  };
+
+  const { html, meta } = renderAndSave(content);
+
+  await database.setPackageGeneratedArticleHistory(pkgName, { title: meta.title, completionInfo });
+  await database.setPackageGeneratedArticleStatus(pkgName, true);
+
+  return { md: content, html, meta };
+
+  function renderAndSave(md: string) {
+    const [{ html, meta }] = mdToWeixin<{
+      title: string;
+      desc: string;
+      tags: string[];
+      pkgName: string;
+    }>(md);
+
+    file.saveArticleFile(pkgName, `${meta.title}.md`, md);
+    file.saveArticleFile(pkgName, `${meta.title}.html`, html);
+
+    return { html, meta };
+  }
+};
+
 export const genImagePrompt = async () => {
   const messages = [
     {
       role: 'user',
-      content: `你是一个资深AI工程师，尤其精通Prompt工程，请帮我写一条用来生成图片的Prompt。
-需要以“在代码中编织梦想”为核心意思。
-需要适合作为缩略图。
-需要加入一些随机元素，使每次生成的图片都不一样。
-只回答我Prompt。
-不要使用“”’’等符号进行包裹。`
+      content: genImagePromptPrompt
     }
   ];
 
