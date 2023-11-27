@@ -3,6 +3,14 @@ import fs from 'fs-extra';
 import crypto from 'crypto';
 import sharp from 'sharp';
 
+export function saveReadmeMD(md: string, pkgName: string) {
+  const dir = path.join(__dirname, `./packages/${pkgName}/`);
+
+  fs.ensureDirSync(dir);
+
+  fs.writeFileSync(path.join(dir, `README.md`), md);
+}
+
 export function saveArticleFile(filename: string, content: string) {
   const dir = path.join(__dirname, './articles');
   fs.ensureDirSync(dir);

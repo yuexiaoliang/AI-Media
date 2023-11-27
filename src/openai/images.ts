@@ -1,5 +1,5 @@
 import createHttp from './http';
-import { randomItem, file } from '@utils';
+import { getRandomItem, file } from '@utils';
 
 const http = createHttp('images');
 
@@ -9,7 +9,7 @@ export async function genAndSaveImage(prompt: string) {
     size: '1792x1024',
     response_format: 'b64_json',
     prompt,
-    style: randomItem(['vivid', 'natural']),
+    style: getRandomItem(['vivid', 'natural']),
     n: 1
   });
 

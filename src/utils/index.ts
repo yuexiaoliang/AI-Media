@@ -23,6 +23,6 @@ export function stringToMd5(str: string): string {
 }
 
 // 随机获取数组中的一个元素
-export function randomItem<T>(arr: T[]): T {
+export function getRandomItem<T>(arr: T[]): T {
   return arr[Math.floor(Math.random() * arr.length)];
 }
