@@ -25,7 +25,6 @@ export type DBPackageStepsStatusKeys = keyof DBPackageStepsStatus;
 export type DBPackages = DBPackage[];
 
 export interface DBWeixinMaterial {
-  filepath: string;
   media_id: string;
   url: string;
 }

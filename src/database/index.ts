@@ -120,6 +120,16 @@ export const getPackageStatus = async (name: string, key: DBPackageStepsStatusKe
   return pkg?.stepsStatus?.[key];
 };
 
+// 设置发布到微信公众号草稿状态
+export const setPackagePublishedWeixinDraftStatus = async (name: string, status: boolean = true) => {
+  await setPackageStatus(name, 'publishedWeixinDraft', status);
+}
+
+// 获取发布到微信公众号草稿状态
+export const getPackagePublishedWeixinDraftStatus = async (name: string) => {
+  return await getPackageStatus(name, 'publishedWeixinDraft');
+}
+
 // 设置包的采集基本信息（README）状态
 export const setPackageCollectedGuideStatus = async (name: string, status: boolean = true) => {
   await setPackageStatus(name, 'collectedGuide', status);
@@ -157,29 +167,26 @@ export const setPackageGeneratedArticleHistory = async (pkgName: string, history
 };
 
 // 设置微信素材
-export const setWeixinMaterial = async (material: DBWeixinMaterial) => {
+export const setWeixinMaterial = async (pkgName: string, material: DBWeixinMaterial) => {
   const [db, dbData] = await openLocalDatabase();
 
-  const key = stringToMd5(material.filepath);
-  dbData.weixinMaterials[key] = material;
+  dbData.weixinMaterials[pkgName] = material;
 
   db.write();
 };
 
 // 是否存在微信素材
-export const hasWeixinMaterial = async (filepath: string) => {
+export const hasWeixinMaterial = async (pkgName: string) => {
   const [_, dbData] = await openLocalDatabase();
 
-  const key = stringToMd5(filepath);
-  return !!dbData.weixinMaterials[key];
+  return !!dbData.weixinMaterials[pkgName];
 };
 
 // 获取微信素材
-export const getWeixinMaterial = async (filepath: string) => {
+export const getWeixinMaterial = async (pkgName: string) => {
   const [_, dbData] = await openLocalDatabase();
 
-  const key = stringToMd5(filepath);
-  return dbData.weixinMaterials[key];
+  return dbData.weixinMaterials[pkgName];
 };
 
 export const setPackagePublished = async (name: string, status: boolean = true) => {

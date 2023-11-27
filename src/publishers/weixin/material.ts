@@ -17,8 +17,8 @@ export const getMaterials = async (type: string = 'image', offset: number = 0, c
   return data;
 };
 
-export const addMaterial = async (filepath: string, type: MaterialType = 'image') => {
-  if (await hasWeixinMaterial(filepath)) return await getWeixinMaterial(filepath);
+export const addMaterial = async (pkgName: string, filepath: string, type: MaterialType = 'image') => {
+  if (await hasWeixinMaterial(pkgName)) return await getWeixinMaterial(pkgName);
 
   const formData = new FormData();
   formData.append('media', fs.createReadStream(path.resolve(__dirname, filepath)));
@@ -29,9 +29,7 @@ export const addMaterial = async (filepath: string, type: MaterialType = 'image'
     params: { type }
   });
 
-  const data: DBWeixinMaterial = { ...rest, filepath };
+  await setWeixinMaterial(pkgName, rest);
 
-  await setWeixinMaterial(data);
-
-  return data;
+  return rest as DBWeixinMaterial;
 };

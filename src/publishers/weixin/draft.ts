@@ -1,4 +1,5 @@
 import createHttp from './http';
+import * as database from '@database';
 
 const http = createHttp('draft');
 
@@ -12,10 +13,12 @@ export const getDrafts = async () => {
 };
 
 // 新增草稿
-export const addDraft = async (articles: any[]) => {
+export const addDraft = async (pkgName: string, article: any) => {
   const { data } = await http.post('add', {
-    articles
+    articles: [article]
   });
+
+  await database.setPackagePublishedWeixinDraftStatus(pkgName, true);
 
   return data;
 };
