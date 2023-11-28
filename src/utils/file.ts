@@ -1,7 +1,8 @@
 import path from 'path';
 import fs from 'fs-extra';
-import sharp from 'sharp';
+import crypto from 'crypto';
 import { fileTypeFromBuffer } from 'file-type';
+import { getRandomItem } from './index'
 
 // 保存 README.md 文件到本地
 export function saveReadmeMD(md: string, pkgName: string) {
@@ -48,8 +49,8 @@ export function getCover(pkgName: string) {
 }
 
 // 保存图片到本地
-export async function saveImageByB64(pkgName: string, b64Json: string) {
-  const dir = path.join(__dirname, `./packages/${pkgName}/`);
+export async function saveImageByB64(b64Json: string) {
+  const dir = path.join(__dirname, `./html-templates/images/cover-bgs/`);
   const buffer = Buffer.from(b64Json, 'base64');
 
   // 获取文件类型
@@ -58,10 +59,18 @@ export async function saveImageByB64(pkgName: string, b64Json: string) {
     throw new Error('@utils/file.ts: 保存图片到本地时，获取文件类型失败');
   }
 
-  const filepath = path.resolve(dir, `cover.png`);
+  const md5 = crypto.createHash('md5').update(buffer).digest('hex');
+  const filepath = path.resolve(dir, `${md5}.${type.ext}`);
 
   fs.ensureDirSync(path.resolve(__dirname, dir));
-  await sharp(buffer).withMetadata().toFile(filepath);
+  fs.writeFileSync(filepath, buffer);
 
   return filepath;
+}
+
+export async function getRandomCoverBgImage() {
+  const dir = path.join(__dirname, `./html-templates/images/cover-bgs/`);
+  const files = fs.readdirSync(dir);
+
+  return getRandomItem(files);
 }

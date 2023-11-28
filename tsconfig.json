@@ -18,7 +18,8 @@
       "@utils": ["./src/utils"],
       "@database": ["./src/database"],
       "@publishers": ["./src/publishers"],
-      "@md-renders": ["./src/md-renders"]
+      "@md-renders": ["./src/md-renders"],
+      "@cover": ["./src/cover"],
     }
   },
   "include": [

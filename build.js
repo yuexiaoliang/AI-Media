@@ -2,6 +2,7 @@ import path from 'path';
 import { fileURLToPath } from 'url';
 import { spawnSync } from 'child_process';
 import esbuild from 'esbuild';
+import { copy } from 'esbuild-plugin-copy';
 import yargs from 'yargs-parser';
 import { rimrafSync } from 'rimraf'
 
@@ -29,8 +30,7 @@ const esbuildOptions = {
   bundle: true,
   minify: !argv.watch,
   assetNames: 'assets/[name]-[hash]',
-  loader: { '.txt': 'text', '.css': 'text' },
-  external: ['sharp'],
+  loader: { '.txt': 'text', '.css': 'text', '.html': 'text' },
   alias: {
     '@constants': './src/constants',
     '@libraries': './src/libraries',
@@ -39,22 +39,33 @@ const esbuildOptions = {
     '@database': './src/database',
     "@publishers": "./src/publishers",
     "@md-renders": "./src/md-renders",
+    "@cover": "./src/cover",
   },
+  plugins: [
+    copy({
+      resolveFrom: 'cwd',
+      assets: [
+        { from: './src/html-templates/**/*', to: './dist/html-templates' },
+      ],
+    }),
+  ]
 }
 
 if (argv.watch) {
   // rimrafSync(outdir)
+  rimrafSync(`${outdir}/html-templates`)
   let ctx = await esbuild.context({
     ...esbuildOptions,
-    plugins: [buildEnd],
+    plugins: [...esbuildOptions.plugins, buildEnd],
   })
   ctx.watch()
 } else {
   // rimrafSync(outdir)
+  rimrafSync(`${outdir}/html-templates`)
   const opts = { ...esbuildOptions };
 
   if (argv.run) {
-    opts.plugins = [buildEnd]
+    opts.plugins = [...esbuildOptions.plugins, buildEnd]
   }
   esbuild.build(opts)
 }

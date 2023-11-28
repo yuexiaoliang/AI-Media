@@ -4,10 +4,7 @@ import * as chat from './chat';
 
 const http = createHttp('images');
 
-export async function genAndSaveImage(pkgName: string) {
-  const cover = file.getCover(pkgName);
-  if (cover) return cover;
-
+export async function genAndSaveImage() {
   const prompt = await chat.genImagePrompt();
 
   const res = await http.post(`generations`, {
@@ -24,7 +21,7 @@ export async function genAndSaveImage(pkgName: string) {
   const { data } = res;
   const [{ b64_json }] = data;
 
-  const filepath = await file.saveImageByB64(pkgName, b64_json);
+  const filepath = await file.saveImageByB64(b64_json);
 
   return filepath;
 }

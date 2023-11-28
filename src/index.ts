@@ -1,8 +1,9 @@
 import 'dotenv/config';
 import { npm, github } from '@libraries';
-import { images, chat } from '@openai';
+import { chat } from '@openai';
 import * as database from '@database';
 import { weixin } from '@publishers';
+import * as cover from '@cover';
 
 (async () => {
   weixinPublisher();
@@ -30,8 +31,8 @@ async function weixinPublisher() {
     console.log('\n 正在生成文章内容...');
     const { html, meta } = await chat.genArticle(readme, pkg.name);
 
-    console.log('\n 正在生成图片...');
-    const coverPath = await images.genAndSaveImage(pkg.name);
+    console.log('\n 正在生成缩略图...');
+    const coverPath = await cover.generateCover(pkg.name);
 
     console.log('\n 正在上传图片到公众号素材库...');
     const { media_id: thumb_media_id } = await weixin.material.addMaterial(pkg.name, coverPath);

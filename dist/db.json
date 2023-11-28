@@ -123,12 +123,14 @@
     {
       "name": "core-util-is",
       "stepsStatus": {
-        "gottenBaseInfo": false,
-        "collectedGuide": false,
-        "generatedArticle": false,
-        "publishedWeixinDraft": false,
+        "gottenBaseInfo": true,
+        "collectedGuide": true,
+        "generatedArticle": true,
+        "publishedWeixinDraft": true,
         "publishedGithub": false
-      }
+      },
+      "homepage": "https://github.com/isaacs/core-util-is#readme",
+      "repository_url": "https://github.com/isaacs/core-util-is"
     },
     {
       "name": "glob",
@@ -718,6 +720,21 @@
           "total_tokens": 2541
         }
       }
+    },
+    "core-util-is": {
+      "title": "探索Node.js核心工具类库：core-util-is的实用指南",
+      "completionInfo": {
+        "id": "chatcmpl-8PmSLepOsRyw6FrRajvRI34Sm0DNp",
+        "object": "chat.completion",
+        "created": 1701155157,
+        "model": "gpt-4-1106-preview",
+        "system_fingerprint": "fp_a24b4d720c",
+        "usage": {
+          "prompt_tokens": 547,
+          "completion_tokens": 1177,
+          "total_tokens": 1724
+        }
+      }
     }
   },
   "weixinMaterials": {
@@ -740,6 +757,10 @@
     "balanced-match": {
       "media_id": "3TI8XMZiLsZyu-QJGQpsXDD-ooZc6siAJUCcll_7ORFCwafQ75orxZGsr9TsF2aR",
       "url": "http://mmbiz.qpic.cn/mmbiz_png/QPCr6EnHPrzLdicKpkBA2OuqMhXbp4Ja0TF4py6iakDG4n3e4E8h0B8j0Xvo04mZK0w4JEkftacsFHIxRIXuMLXQ/0?wx_fmt=png"
+    },
+    "core-util-is": {
+      "media_id": "3TI8XMZiLsZyu-QJGQpsXBdHY77l1JVw0ndEfe3FpbjxqF2sYkxtUqj3L_zrxjPQ",
+      "url": "http://mmbiz.qpic.cn/mmbiz_png/QPCr6EnHPrzLdicKpkBA2OuqMhXbp4Ja0OD8RSJzdCde2pI9jBoyb2wmozrCkT5WL35lVwzUlTXzNpsT7sUjzfA/0?wx_fmt=png"
     }
   }
 }
