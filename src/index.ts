@@ -17,12 +17,12 @@ async function weixinPublisher() {
     console.log('\n 正在获取未发布到微信公众号的包...');
     let pkg = await database.getRandomNotPublishedWeixinDraft();
 
+    console.log(`\n 已选择包名：${pkg.name}`);
+
     if (!pkg.stepsStatus?.gottenBaseInfo) {
       console.log(`\n 正在获取包的基本信息...`);
       pkg = await npm.getPackageInfo(pkg.name);
     }
-
-    console.log(`\n 包名：${pkg.name}`);
 
     console.log('\n 正在采集包的 README...');
     const readme = await github.collectPackageReadme(pkg.name);
