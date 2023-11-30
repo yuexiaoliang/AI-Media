@@ -245,12 +245,14 @@
     {
       "name": "camelcase",
       "stepsStatus": {
-        "gottenBaseInfo": false,
-        "collectedGuide": false,
-        "generatedArticle": false,
-        "publishedWeixinDraft": false,
+        "gottenBaseInfo": true,
+        "collectedGuide": true,
+        "generatedArticle": true,
+        "publishedWeixinDraft": true,
         "publishedGithub": false
-      }
+      },
+      "homepage": "https://github.com/sindresorhus/camelcase#readme",
+      "repository_url": "https://github.com/sindresorhus/camelcase"
     },
     {
       "name": "anymatch",
@@ -752,6 +754,21 @@
           "total_tokens": 3213
         }
       }
+    },
+    "camelcase": {
+      "title": "一键风格转换：JavaScript字符串驼峰化利器——camelcase包使用指南",
+      "completionInfo": {
+        "id": "chatcmpl-8Qb8h0DbWXZLG9LSRMJapyjyPAAhR",
+        "object": "chat.completion",
+        "created": 1701349983,
+        "model": "gpt-4-1106-preview",
+        "system_fingerprint": "fp_a24b4d720c",
+        "usage": {
+          "prompt_tokens": 1988,
+          "completion_tokens": 1218,
+          "total_tokens": 3206
+        }
+      }
     }
   },
   "weixinMaterials": {
@@ -782,6 +799,10 @@
     "cliui": {
       "media_id": "3TI8XMZiLsZyu-QJGQpsXNLIFV4Z-v71MkwjWialiDgI3LSA56Ck5RuKyz5JD_nc",
       "url": "http://mmbiz.qpic.cn/mmbiz_png/QPCr6EnHPrxwQd9ZictclibZsDXPI6ECKoictfQjMLlg1V27krUAEnDiceFgLyywd0qpDEa2OXVdePiaPk6AwaIk5kg/0?wx_fmt=png"
+    },
+    "camelcase": {
+      "media_id": "3TI8XMZiLsZyu-QJGQpsXG0owRVpSWq3h4U7ZOWbztORIMvAYZbhelFdQC8l2kX8",
+      "url": "http://mmbiz.qpic.cn/mmbiz_png/QPCr6EnHPrxicUhGstkgv4ZwyLMRBqy8Zlyq5h3WTV3icnhzcq4tia6xvdibQavF5kxvMB4lPlsBFTb7l1ZeLmCTtQ/0?wx_fmt=png"
     }
   }
 }
