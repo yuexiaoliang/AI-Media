@@ -155,12 +155,14 @@
     {
       "name": "ms",
       "stepsStatus": {
-        "gottenBaseInfo": false,
-        "collectedGuide": false,
-        "generatedArticle": false,
-        "publishedWeixinDraft": false,
+        "gottenBaseInfo": true,
+        "collectedGuide": true,
+        "generatedArticle": true,
+        "publishedWeixinDraft": true,
         "publishedGithub": false
-      }
+      },
+      "homepage": "https://github.com/vercel/ms#readme",
+      "repository_url": "https://github.com/vercel/ms"
     },
     {
       "name": "arr-flatten",
@@ -769,6 +771,21 @@
           "total_tokens": 3206
         }
       }
+    },
+    "ms": {
+      "title": "以毫秒为中心：利用ms包高效转换时间格式",
+      "completionInfo": {
+        "id": "chatcmpl-8QbZbRCzHpYOJRKa9dL2feMPxGyQp",
+        "object": "chat.completion",
+        "created": 1701351651,
+        "model": "gpt-4-1106-preview",
+        "system_fingerprint": "fp_a24b4d720c",
+        "usage": {
+          "prompt_tokens": 1995,
+          "completion_tokens": 892,
+          "total_tokens": 2887
+        }
+      }
     }
   },
   "weixinMaterials": {
@@ -803,6 +820,10 @@
     "camelcase": {
       "media_id": "3TI8XMZiLsZyu-QJGQpsXG0owRVpSWq3h4U7ZOWbztORIMvAYZbhelFdQC8l2kX8",
       "url": "http://mmbiz.qpic.cn/mmbiz_png/QPCr6EnHPrxicUhGstkgv4ZwyLMRBqy8Zlyq5h3WTV3icnhzcq4tia6xvdibQavF5kxvMB4lPlsBFTb7l1ZeLmCTtQ/0?wx_fmt=png"
+    },
+    "ms": {
+      "media_id": "3TI8XMZiLsZyu-QJGQpsXEPs8aCOk9WdshdwW1AbJT3Ky0--4xH-kuT30vUnPD30",
+      "url": "http://mmbiz.qpic.cn/mmbiz_png/QPCr6EnHPrxicUhGstkgv4ZwyLMRBqy8ZJQ6LLFotk0FneWYYm5AxKiaicCibPUC1iaRVibw6rMZGQsaN4mHeGL04EeA/0?wx_fmt=png"
     }
   }
 }
