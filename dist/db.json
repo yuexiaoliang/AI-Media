@@ -555,12 +555,14 @@
     {
       "name": "is-buffer",
       "stepsStatus": {
-        "gottenBaseInfo": false,
-        "collectedGuide": false,
-        "generatedArticle": false,
-        "publishedWeixinDraft": false,
+        "gottenBaseInfo": true,
+        "collectedGuide": true,
+        "generatedArticle": true,
+        "publishedWeixinDraft": true,
         "publishedGithub": false
-      }
+      },
+      "homepage": "https://github.com/feross/is-buffer#readme",
+      "repository_url": "https://github.com/feross/is-buffer"
     },
     {
       "name": "code-point-at",
@@ -803,6 +805,21 @@
           "total_tokens": 10105
         }
       }
+    },
+    "is-buffer": {
+      "title": "如何在Node.js和浏览器中优雅地判断Buffer对象",
+      "completionInfo": {
+        "id": "chatcmpl-8RBjg6pfakzCek4oX1PrSX3ORa4QS",
+        "object": "chat.completion",
+        "created": 1701490660,
+        "model": "gpt-4-1106-preview",
+        "system_fingerprint": "fp_a24b4d720c",
+        "usage": {
+          "prompt_tokens": 1406,
+          "completion_tokens": 939,
+          "total_tokens": 2345
+        }
+      }
     }
   },
   "weixinMaterials": {
@@ -845,6 +862,10 @@
     "ajv": {
       "media_id": "3TI8XMZiLsZyu-QJGQpsXLpXbX-b_ml88mkcUPXx-TclSYV3Wov95etiW5EicGhU",
       "url": "http://mmbiz.qpic.cn/mmbiz_png/QPCr6EnHPryRU6GdNqhfrnuVicCc7cYx7d45Y4GewNQ2IkcDm1Sfur5OKQb3rb47TV8gLNqUww62qkTgcZvK0XQ/0?wx_fmt=png"
+    },
+    "is-buffer": {
+      "media_id": "3TI8XMZiLsZyu-QJGQpsXG_-OJdQJTB0XMWnFXW8dOeFav6eUn97rtYrwcYKgDrJ",
+      "url": "http://mmbiz.qpic.cn/mmbiz_png/QPCr6EnHPrzzHmunxxBSWicYOHRpqRscVI6swHgOtVGGNMEcYvDZ2ao6PBEyILNRMxD9plASWMk9pU5b73ia7uLA/0?wx_fmt=png"
     }
   }
 }
