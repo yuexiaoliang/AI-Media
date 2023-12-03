@@ -433,12 +433,14 @@
     {
       "name": "color-convert",
       "stepsStatus": {
-        "gottenBaseInfo": false,
-        "collectedGuide": false,
-        "generatedArticle": false,
-        "publishedWeixinDraft": false,
+        "gottenBaseInfo": true,
+        "collectedGuide": true,
+        "generatedArticle": true,
+        "publishedWeixinDraft": true,
         "publishedGithub": false
-      }
+      },
+      "homepage": "https://github.com/Qix-/color-convert#readme",
+      "repository_url": "https://github.com/Qix-/color-convert"
     },
     {
       "name": "asynckit",
@@ -837,6 +839,21 @@
           "total_tokens": 8435
         }
       }
+    },
+    "color-convert": {
+      "title": "色彩转换大师：深入浅出color-convert包的使用",
+      "completionInfo": {
+        "id": "chatcmpl-8RdKtGvTSlAuPuisgD4qTAmBhxVZh",
+        "object": "chat.completion",
+        "created": 1701596755,
+        "model": "gpt-4-1106-preview",
+        "system_fingerprint": "fp_2eb0b038f6",
+        "usage": {
+          "prompt_tokens": 1790,
+          "completion_tokens": 1042,
+          "total_tokens": 2832
+        }
+      }
     }
   },
   "weixinMaterials": {
@@ -887,6 +904,10 @@
     "qs": {
       "media_id": "3TI8XMZiLsZyu-QJGQpsXMxm1VVTksTmksQVlEtfwGbSTwXCX6MjCRsVn7l2eBoa",
       "url": "http://mmbiz.qpic.cn/mmbiz_png/QPCr6EnHPrxo2Q22cldyvibbGT4CLusBTAbtwW2eDVRxAmHQkREsvnlzLLicOueyUonndLKK3jT5O130lZmA5okQ/0?wx_fmt=png"
+    },
+    "color-convert": {
+      "media_id": "3TI8XMZiLsZyu-QJGQpsXOmkHrSr_J6GUBbzZdw4E1E2dIXe_fULZozE2i3cMOq7",
+      "url": "http://mmbiz.qpic.cn/mmbiz_png/QPCr6EnHPrxo2Q22cldyvibbGT4CLusBTMmaB9diaXN8vZ5WH1hrHR0Vm6lRD1PBpwdgAY5PdS5N8XnxtkJdlticA/0?wx_fmt=png"
     }
   }
 }
