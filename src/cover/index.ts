@@ -20,7 +20,7 @@ export async function generateCover(pkgName: string) {
   let gotoUrl = url.pathToFileURL(entry).href;
   gotoUrl += `?${queryString.stringify(urlQuery)}`;
 
-  const browser = await puppeteer.launch({ headless: 'new' });
+  const browser = await puppeteer.launch({ headless: 'new', args: ['--no-sandbox'] });
   const page = await browser.newPage();
 
   await page.goto(gotoUrl);
