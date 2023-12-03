@@ -473,12 +473,14 @@
     {
       "name": "qs",
       "stepsStatus": {
-        "gottenBaseInfo": false,
-        "collectedGuide": false,
-        "generatedArticle": false,
-        "publishedWeixinDraft": false,
+        "gottenBaseInfo": true,
+        "collectedGuide": true,
+        "generatedArticle": true,
+        "publishedWeixinDraft": true,
         "publishedGithub": false
-      }
+      },
+      "homepage": "https://github.com/ljharb/qs",
+      "repository_url": "https://github.com/ljharb/qs"
     },
     {
       "name": "cross-spawn",
@@ -820,6 +822,21 @@
           "total_tokens": 2345
         }
       }
+    },
+    "qs": {
+      "title": "深入解析与应用 Node.js 中的 QS 库",
+      "completionInfo": {
+        "id": "chatcmpl-8RdGYHdYfrQcSG0UMpprepo3gO94q",
+        "object": "chat.completion",
+        "created": 1701596486,
+        "model": "gpt-4-1106-preview",
+        "system_fingerprint": "fp_a24b4d720c",
+        "usage": {
+          "prompt_tokens": 7154,
+          "completion_tokens": 1281,
+          "total_tokens": 8435
+        }
+      }
     }
   },
   "weixinMaterials": {
@@ -866,6 +883,10 @@
     "is-buffer": {
       "media_id": "3TI8XMZiLsZyu-QJGQpsXG_-OJdQJTB0XMWnFXW8dOeFav6eUn97rtYrwcYKgDrJ",
       "url": "http://mmbiz.qpic.cn/mmbiz_png/QPCr6EnHPrzzHmunxxBSWicYOHRpqRscVI6swHgOtVGGNMEcYvDZ2ao6PBEyILNRMxD9plASWMk9pU5b73ia7uLA/0?wx_fmt=png"
+    },
+    "qs": {
+      "media_id": "3TI8XMZiLsZyu-QJGQpsXMxm1VVTksTmksQVlEtfwGbSTwXCX6MjCRsVn7l2eBoa",
+      "url": "http://mmbiz.qpic.cn/mmbiz_png/QPCr6EnHPrxo2Q22cldyvibbGT4CLusBTAbtwW2eDVRxAmHQkREsvnlzLLicOueyUonndLKK3jT5O130lZmA5okQ/0?wx_fmt=png"
     }
   }
 }

@@ -48,6 +48,7 @@ export const genArticle = async (readme: string, pkgName: string) => {
     ...rest,
     usage
   };
+  console.log(`🚀 > file: chat.ts:58 > genArticle > content:`, content);
 
   const { html, meta } = renderAndSave(content);
 
