@@ -3,7 +3,7 @@ import path from 'path';
 import fs from 'fs-extra'
 import puppeteer from 'puppeteer';
 import queryString from 'query-string';
-import { file } from '@utils';
+import { file } from '@auto-blog/utils';
 
 export async function generateCover(pkgName: string) {
   const _cover = await file.getCover(pkgName)

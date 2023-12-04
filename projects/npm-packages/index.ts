@@ -1,15 +1,12 @@
+
 import 'dotenv/config';
-import { npm, github } from '@libraries';
-import { chat } from '@openai';
-import * as database from '@database';
-import { weixin } from '@publishers';
-import * as cover from '@cover';
+import { npm, github } from '@auto-blog/libraries';
+import { chat } from '@auto-blog/openai';
+import * as database from '@auto-blog/database';
+import { weixin } from '@auto-blog/platform';
+import * as cover from '@auto-blog/cover';
 
-(async () => {
-  weixinPublisher();
-})();
-
-async function weixinPublisher() {
+export async function publisher() {
   try {
     console.log('\n 正在获取 npm 包列表...');
     await npm.collectPackages();

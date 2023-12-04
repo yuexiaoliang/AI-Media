@@ -1,8 +1,8 @@
 import axios from 'axios';
 import * as cheerio from 'cheerio';
 import html2md from 'html-to-md';
-import * as database from '@database';
-import { file } from '@utils';
+import * as database from '@auto-blog/database';
+import { file } from '@auto-blog/utils';
 
 export const collectPackageReadme = async (name: string) => {
   if (await database.getPackageCollectedGuideStatus(name)) {

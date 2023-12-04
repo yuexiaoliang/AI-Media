@@ -1,5 +1,5 @@
 import axios from 'axios';
-import constants from '@constants';
+import constants from '@auto-blog/constants';
 
 type Serve = 'audio' | 'chat' | 'images';
 

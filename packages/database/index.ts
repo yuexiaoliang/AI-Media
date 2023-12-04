@@ -2,7 +2,7 @@ import path from 'path';
 import { JSONPreset } from 'lowdb/node';
 import { Low } from 'lowdb';
 import { merge } from 'lodash';
-import { getRandomItem } from '@utils';
+import { getRandomItem } from '@auto-blog/utils';
 import { DBData, DBPackage, DBWeixinMaterial, DBPackageStepsStatusKeys, DBGeneratedArticleHistoryItem, DBPublishedPlatforms, DBPublishedPlatformStatus } from './types';
 export * from './types';
 

@@ -22,12 +22,28 @@
     "@types/markdown-it": "^13.0.7",
     "@types/node": "^20.9.2",
     "@types/yargs-parser": "^21.0.3",
+    "esbuild": "^0.19.6",
+    "typescript": "^5.2.2"
+  },
+  "dependencies": {
+    "@auto-blog/constants": "workspace:^",
+    "@auto-blog/cover": "workspace:^",
+    "@auto-blog/database": "workspace:^",
+    "@auto-blog/libraries": "workspace:^",
+    "@auto-blog/md-render": "workspace:^",
+    "@auto-blog/npm-packages": "workspace:^",
+    "@auto-blog/openai": "workspace:^",
+    "@auto-blog/platform": "workspace:^",
+    "@auto-blog/utils": "workspace:^",
     "axios": "^1.6.2",
     "cheerio": "1.0.0-rc.12",
     "dayjs": "^1.11.10",
     "dotenv": "^16.3.1",
-    "esbuild": "^0.19.6",
+    "esbuild-plugin-copy": "^2.1.1",
+    "file-type": "^18.7.0",
+    "form-data": "^4.0.0",
     "fs-extra": "^11.1.1",
+    "html-to-md": "^0.8.4",
     "js-yaml": "^4.1.0",
     "jsonfile": "^6.1.0",
     "juice": "^9.1.0",
@@ -36,16 +52,9 @@
     "markdown-it": "^13.0.2",
     "markdown-it-highlightjs": "^4.0.1",
     "nanoid": "^5.0.3",
-    "rimraf": "^5.0.5",
-    "typescript": "^5.2.2",
-    "yargs-parser": "^21.1.1"
-  },
-  "dependencies": {
-    "esbuild-plugin-copy": "^2.1.1",
-    "file-type": "^18.7.0",
-    "form-data": "^4.0.0",
-    "html-to-md": "^0.8.4",
     "puppeteer": "^21.5.2",
-    "query-string": "^8.1.0"
+    "query-string": "^8.1.0",
+    "rimraf": "^5.0.5",
+    "yargs-parser": "^21.1.1"
   }
 }

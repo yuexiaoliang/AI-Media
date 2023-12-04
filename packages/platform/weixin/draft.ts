@@ -1,5 +1,5 @@
 import createHttp from './http';
-import * as database from '@database';
+import * as database from '@auto-blog/database';
 
 const http = createHttp('draft');
 

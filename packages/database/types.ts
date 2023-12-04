@@ -1,4 +1,4 @@
-import { ChatCompletion } from '@openai';
+import { ChatCompletion } from '@auto-blog/openai';
 
 export interface DBData {
   pageNumber: number;

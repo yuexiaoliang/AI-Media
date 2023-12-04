@@ -2,8 +2,8 @@ import { readFileSync, writeFileSync } from 'jsonfile';
 import fs from 'fs-extra';
 import path from 'path';
 import createHttp from './http';
-import constants from '@constants';
-import { getTimestamp } from '@utils';
+import constants from '@auto-blog/constants';
+import { getTimestamp } from '@auto-blog/utils';
 
 const http = createHttp();
 

@@ -1,10 +1,10 @@
-import * as database from '@database';
+import * as database from '@auto-blog/database';
 import createHttp from './http';
 import { AIModel, ChatCompletion } from './types';
-import { renderTemplate, file } from '@utils';
+import { renderTemplate, file } from '@auto-blog/utils';
 import genArticlePrompt from './prompts/genArticleV2.txt';
 import genImagePromptPrompt from './prompts/genImagePrompt.txt';
-import { mdToWeixin } from '@md-renders';
+import { mdToWeixin } from '@auto-blog/md-render';
 
 const http = createHttp('chat');
 

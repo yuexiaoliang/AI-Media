@@ -10,7 +10,7 @@ const argv = yargs(process.argv.slice(2))
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 
-const entryPoints = [path.resolve(__dirname, './src/index.ts')];
+const entryPoints = [path.resolve(__dirname, './index.ts')];
 const outdir = './dist/';
 const outfile = outdir + 'index.cjs';
 
@@ -28,24 +28,14 @@ const esbuildOptions = {
   platform: 'node',
   outfile,
   bundle: true,
-  minify: !argv.watch,
+  // minify: !argv.watch,
   assetNames: 'assets/[name]-[hash]',
   loader: { '.txt': 'text', '.css': 'text', '.html': 'text' },
-  alias: {
-    '@constants': './src/constants',
-    '@libraries': './src/libraries',
-    '@openai': './src/openai',
-    '@utils': './src/utils',
-    '@database': './src/database',
-    "@publishers": "./src/publishers",
-    "@md-renders": "./src/md-renders",
-    "@cover": "./src/cover",
-  },
   plugins: [
     copy({
       resolveFrom: 'cwd',
       assets: [
-        { from: './src/html-templates/**/*', to: './dist/html-templates' },
+        { from: './html-templates/**/*', to: './dist/html-templates' },
       ],
     }),
   ]

@@ -1,7 +1,7 @@
 import * as cheerio from 'cheerio';
 import axios from 'axios';
 import http from './http';
-import * as database from '@database';
+import * as database from '@auto-blog/database';
 
 // 采集包列表
 export const collectPackages = async () => {

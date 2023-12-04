@@ -2,7 +2,7 @@ import fs from 'fs-extra';
 import path from 'path';
 import FormData from 'form-data';
 import createHttp from './http';
-import * as database from '@database'
+import * as database from '@auto-blog/database'
 
 type MaterialType = 'image' | 'video' | 'voice' | 'thumb';
 

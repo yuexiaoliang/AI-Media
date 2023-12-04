@@ -1,5 +1,5 @@
 import createHttp from './http';
-import { file, getRandomItem } from '@utils';
+import { file, getRandomItem } from '@auto-blog/utils';
 import * as chat from './chat';
 
 const http = createHttp('images');
