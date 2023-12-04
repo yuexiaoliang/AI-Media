@@ -445,12 +445,14 @@
     {
       "name": "asynckit",
       "stepsStatus": {
-        "gottenBaseInfo": false,
-        "collectedGuide": false,
-        "generatedArticle": false,
-        "publishedWeixinDraft": false,
+        "gottenBaseInfo": true,
+        "collectedGuide": true,
+        "generatedArticle": true,
+        "publishedWeixinDraft": true,
         "publishedGithub": false
-      }
+      },
+      "homepage": "https://github.com/alexindigo/asynckit#readme",
+      "repository_url": "https://github.com/alexindigo/asynckit"
     },
     {
       "name": "once",
@@ -854,6 +856,21 @@
           "total_tokens": 2832
         }
       }
+    },
+    "asynckit": {
+      "title": "利用asynckit进行高效异步任务控制与流支持",
+      "completionInfo": {
+        "id": "chatcmpl-8RyAX0rqXx3Q4jewFoWC8L0Vf1ft2",
+        "object": "chat.completion",
+        "created": 1701676837,
+        "model": "gpt-4-1106-preview",
+        "system_fingerprint": "fp_2eb0b038f6",
+        "usage": {
+          "prompt_tokens": 3410,
+          "completion_tokens": 1064,
+          "total_tokens": 4474
+        }
+      }
     }
   },
   "weixinMaterials": {
@@ -908,6 +925,10 @@
     "color-convert": {
       "media_id": "3TI8XMZiLsZyu-QJGQpsXOmkHrSr_J6GUBbzZdw4E1E2dIXe_fULZozE2i3cMOq7",
       "url": "http://mmbiz.qpic.cn/mmbiz_png/QPCr6EnHPrxo2Q22cldyvibbGT4CLusBTMmaB9diaXN8vZ5WH1hrHR0Vm6lRD1PBpwdgAY5PdS5N8XnxtkJdlticA/0?wx_fmt=png"
+    },
+    "asynckit": {
+      "media_id": "3TI8XMZiLsZyu-QJGQpsXCV5SpaPtyb2_rGYW7V_5M34PKA_zF5qkADncefVkMyr",
+      "url": "http://mmbiz.qpic.cn/mmbiz_png/QPCr6EnHPrzjuHfkn0MfgJ4icG6AkuDCmxsbwPXTnjk4U9nLH5icgk9wxXzuicibbzaIfOKSRNjNaISbradK0iaxr5g/0?wx_fmt=png"
     }
   }
 }
