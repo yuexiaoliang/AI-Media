@@ -1,27 +1,31 @@
+import { merge } from 'lodash';
+import { file } from '@auto-blog/utils';
 import createHttp from './http';
-import { file, getRandomItem } from '@auto-blog/utils';
-import * as chat from './chat';
 
 const http = createHttp('images');
 
-export async function genAndSaveImage() {
-  const prompt = await chat.genImagePrompt();
+export const defineImagesGenerations = (config: Record<string, any> = {}) => {
+  const _config = merge(
+    {
+      model: 'dall-e-2',
+      size: '256x256',
+      response_format: 'b64_json',
+      n: 1
+    },
+    config
+  );
 
-  const res = await http.post(`generations`, {
-    model: 'dall-e-3',
-    size: '1792x1024',
-    style: getRandomItem(['vivid', 'natural']),
-    // model: 'dall-e-2',
-    // size: '256x256',
-    response_format: 'b64_json',
-    prompt,
-    n: 1
-  });
+  return async (prompt: string) => {
+    const res = await http.post(`generations`, {
+      ..._config,
+      prompt
+    });
 
-  const { data } = res;
-  const [{ b64_json }] = data;
+    const { data } = res;
+    const [{ b64_json }] = data;
 
-  const filepath = await file.saveImageByB64(b64_json);
+    const filepath = await file.saveImageByB64(b64_json);
 
-  return filepath;
-}
+    return { b64_json, res, filepath };
+  };
+};
