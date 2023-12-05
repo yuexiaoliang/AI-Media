@@ -87,9 +87,7 @@
     const { pkgName, bgImage } = query
     if (pkgName) {
       const text = document.querySelector('.pkg-name')
-      setTimeout(() => {
-        text.innerHTML = pkgName
-      }, 3000);
+      text.innerHTML = pkgName
     }
 
     if (bgImage) {

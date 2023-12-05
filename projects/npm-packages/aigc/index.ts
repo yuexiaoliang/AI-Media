@@ -1,7 +1,9 @@
 import { chat, images } from '@auto-blog/openai';
 import * as database from '@auto-blog/database';
-import { getRandomItem, renderTemplate, file } from '@auto-blog/utils';
+import { getRandomItem, renderTemplate } from '@auto-blog/utils';
 import { mdToWeixin } from '@auto-blog/md-render';
+
+import * as file from '../file';
 import genArticlePrompt from './prompts/genArticle.txt';
 import genImagePromptPrompt from './prompts/genImagePrompt.txt';
 
@@ -80,6 +82,9 @@ export const genArticleBgImage = async () => {
     style: getRandomItem(['vivid', 'natural'])
   });
 
-  const { filepath } = await generator(prompt);
+  const { b64_json } = await generator(prompt);
+
+  const filepath = file.saveImageByB64(b64_json);
+
   return filepath;
 };

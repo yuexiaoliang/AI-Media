@@ -1,7 +1,7 @@
 import path from 'path';
 import url from 'url';
 import { defineCoverGeneration } from '@auto-blog/cover';
-import { file } from '@auto-blog/utils';
+import * as file from '../file';
 import queryString from 'query-string';
 
 export const generateCover = async (pkgName: string) => {
@@ -9,12 +9,15 @@ export const generateCover = async (pkgName: string) => {
   if (_cover) return _cover;
 
   const savePath = path.resolve(__dirname, `./packages/${pkgName}/cover.png`);
+  const bgImage = await file.getRandomCoverBgImage();
+
+  if (!bgImage) throw new Error('获取封面背景图片失败');
 
   const generator = defineCoverGeneration(savePath);
 
   const urlQuery: Record<string, string> = {
     pkgName,
-    bgImage: await file.getRandomCoverBgImage()
+    bgImage
   };
 
   const entry = path.resolve(__dirname, `./html-templates/cover.html`);
@@ -35,5 +38,5 @@ export const generateCover = async (pkgName: string) => {
     }
   });
 
-  return savePath
+  return savePath;
 };

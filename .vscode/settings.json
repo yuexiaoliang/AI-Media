@@ -3,6 +3,7 @@
     "aigc",
     "batchget",
     "dall",
+    "dirpath",
     "errcode",
     "errmsg",
     "freepublish",
