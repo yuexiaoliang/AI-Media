@@ -1,10 +1,9 @@
-
 import 'dotenv/config';
-import { npm, github } from '@auto-blog/libraries';
 import { chat } from '@auto-blog/openai';
 import * as database from '@auto-blog/database';
 import { weixin } from '@auto-blog/platform';
 import * as cover from '@auto-blog/cover';
+import { npm, github } from './libraries';
 
 export async function publisher() {
   try {
@@ -24,6 +23,7 @@ export async function publisher() {
 
     console.log('\n 正在采集包的 README...');
     const readme = await github.collectPackageReadme(pkg.name);
+    return
 
     console.log('\n 正在生成文章内容...');
     const { html, meta } = await chat.genArticle(readme, pkg.name);

@@ -29,7 +29,6 @@
     "@auto-blog/constants": "workspace:^",
     "@auto-blog/cover": "workspace:^",
     "@auto-blog/database": "workspace:^",
-    "@auto-blog/libraries": "workspace:^",
     "@auto-blog/md-render": "workspace:^",
     "@auto-blog/npm-packages": "workspace:^",
     "@auto-blog/openai": "workspace:^",

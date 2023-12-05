@@ -17,9 +17,6 @@ importers:
       '@auto-blog/database':
         specifier: workspace:^
         version: link:packages/database
-      '@auto-blog/libraries':
-        specifier: workspace:^
-        version: link:packages/libraries
       '@auto-blog/md-render':
         specifier: workspace:^
         version: link:packages/md-render
