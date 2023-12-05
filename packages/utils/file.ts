@@ -39,6 +39,7 @@ export function saveArticleFile(pkgName: string, filename: string, content: stri
 
 export function getCover(pkgName: string) {
   const dir = path.join(__dirname, `./packages/${pkgName}/`);
+  if (!fs.existsSync(dir)) return;
 
   const files = fs.readdirSync(dir);
   const cover = files.find((file) => /^cover\.(jpg|png|jpeg|webp|gif)$/.test(file));

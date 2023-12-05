@@ -71,7 +71,7 @@
 </head>
 
 <body>
-  <div class="cover">
+  <div class="cover" id="cover">
     <div class="center">
       <div class="title text-stroke">每天一个<img src="./images/npm.png" />包</div>
       <div class="pkg-name text-stroke">Package</div>
@@ -87,7 +87,9 @@
     const { pkgName, bgImage } = query
     if (pkgName) {
       const text = document.querySelector('.pkg-name')
-      text.innerHTML = pkgName
+      setTimeout(() => {
+        text.innerHTML = pkgName
+      }, 3000);
     }
 
     if (bgImage) {

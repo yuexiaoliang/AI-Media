@@ -2,7 +2,7 @@ import 'dotenv/config';
 import { chat } from '@auto-blog/openai';
 import * as database from '@auto-blog/database';
 import { weixin } from '@auto-blog/platform';
-import * as cover from '@auto-blog/cover';
+import * as cover from './cover'
 import { npm, github } from './libraries';
 import * as aigc from './aigc';
 
@@ -29,17 +29,18 @@ export async function publisher() {
     // console.log('\n 正在生成文章内容...');
     // const { html, meta } = await aigc.genArticle(readme, pkg.name);
 
-    // console.log('\n 正在生成缩略图...');
-    // const coverPath = await cover.generateCover(pkg.name);
+    console.log('\n 正在生成缩略图...');
+    const coverPath = await cover.generateCover('abc');
+    console.log('\n 完成了！');
     return;
 
-    console.log('\n 正在上传图片到公众号素材库...');
-    const { media_id: thumb_media_id } = await weixin.material.addMaterial(pkg.name, coverPath);
+    // console.log('\n 正在上传图片到公众号素材库...');
+    // const { media_id: thumb_media_id } = await weixin.material.addMaterial(pkg.name, coverPath);
 
-    console.log('\n 正在新增公众号草稿...');
-    await weixin.draft.addDraft(pkg.name, { title: meta.title, digest: meta.desc, content: html, thumb_media_id });
+    // console.log('\n 正在新增公众号草稿...');
+    // await weixin.draft.addDraft(pkg.name, { title: meta.title, digest: meta.desc, content: html, thumb_media_id });
 
-    console.log('\n 完成了！');
+    // console.log('\n 完成了！');
   } catch (error: any) {
     console.log(`Error:`, error);
   }
