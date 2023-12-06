@@ -509,12 +509,14 @@
     {
       "name": "decamelize",
       "stepsStatus": {
-        "gottenBaseInfo": false,
-        "collectedGuide": false,
-        "generatedArticle": false,
-        "publishedWeixinDraft": false,
+        "gottenBaseInfo": true,
+        "collectedGuide": true,
+        "generatedArticle": true,
+        "publishedWeixinDraft": true,
         "publishedGithub": false
-      }
+      },
+      "homepage": "https://github.com/sindresorhus/decamelize#readme",
+      "repository_url": "https://github.com/sindresorhus/decamelize"
     },
     {
       "name": "readable-stream",
@@ -871,6 +873,21 @@
           "total_tokens": 4474
         }
       }
+    },
+    "decamelize": {
+      "title": "字符串驼峰转换术：讲解Nodejs中decamelize的使用",
+      "completionInfo": {
+        "id": "chatcmpl-8SlcoUyszigME6BOsD6k4mBJlTKiv",
+        "object": "chat.completion",
+        "created": 1701866946,
+        "model": "gpt-4-1106-preview",
+        "system_fingerprint": "fp_a24b4d720c",
+        "usage": {
+          "prompt_tokens": 1223,
+          "completion_tokens": 907,
+          "total_tokens": 2130
+        }
+      }
     }
   },
   "weixinMaterials": {
@@ -929,6 +946,10 @@
     "asynckit": {
       "media_id": "3TI8XMZiLsZyu-QJGQpsXCV5SpaPtyb2_rGYW7V_5M34PKA_zF5qkADncefVkMyr",
       "url": "http://mmbiz.qpic.cn/mmbiz_png/QPCr6EnHPrzjuHfkn0MfgJ4icG6AkuDCmxsbwPXTnjk4U9nLH5icgk9wxXzuicibbzaIfOKSRNjNaISbradK0iaxr5g/0?wx_fmt=png"
+    },
+    "decamelize": {
+      "media_id": "3TI8XMZiLsZyu-QJGQpsXKBk-Fj3Wt3OXCyl0t714KHvNdQpyq2RXCgC8Ga7DtYa",
+      "url": "http://mmbiz.qpic.cn/mmbiz_png/QPCr6EnHPryhEznbE8KRgAse0K2KM0lS1Mzynko8lqxGRx2jzerQ6GLrFshvQZa8UAl2sYvGlFq1aZpMNsPibgQ/0?wx_fmt=png"
     }
   }
 }
