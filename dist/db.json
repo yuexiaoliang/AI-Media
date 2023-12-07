@@ -281,12 +281,14 @@
     {
       "name": "semver",
       "stepsStatus": {
-        "gottenBaseInfo": false,
-        "collectedGuide": false,
-        "generatedArticle": false,
-        "publishedWeixinDraft": false,
+        "gottenBaseInfo": true,
+        "collectedGuide": true,
+        "generatedArticle": true,
+        "publishedWeixinDraft": true,
         "publishedGithub": false
-      }
+      },
+      "homepage": "https://github.com/npm/node-semver#readme",
+      "repository_url": "https://github.com/npm/node-semver"
     },
     {
       "name": "isarray",
@@ -888,6 +890,21 @@
           "total_tokens": 2130
         }
       }
+    },
+    "semver": {
+      "title": "版本号升级终结者：掌握Node.js的semver库",
+      "completionInfo": {
+        "id": "chatcmpl-8SzdhLevKxl0RUnsoEjnJbGRhOtbs",
+        "object": "chat.completion",
+        "created": 1701920817,
+        "model": "gpt-4-1106-preview",
+        "system_fingerprint": "fp_a24b4d720c",
+        "usage": {
+          "prompt_tokens": 8090,
+          "completion_tokens": 1388,
+          "total_tokens": 9478
+        }
+      }
     }
   },
   "weixinMaterials": {
@@ -950,6 +967,10 @@
     "decamelize": {
       "media_id": "3TI8XMZiLsZyu-QJGQpsXKBk-Fj3Wt3OXCyl0t714KHvNdQpyq2RXCgC8Ga7DtYa",
       "url": "http://mmbiz.qpic.cn/mmbiz_png/QPCr6EnHPryhEznbE8KRgAse0K2KM0lS1Mzynko8lqxGRx2jzerQ6GLrFshvQZa8UAl2sYvGlFq1aZpMNsPibgQ/0?wx_fmt=png"
+    },
+    "semver": {
+      "media_id": "3TI8XMZiLsZyu-QJGQpsXAJKk5aGSM0W_6m4zyqDSmqfCBTfgrnrqsLAi1-9Ni1Q",
+      "url": "http://mmbiz.qpic.cn/mmbiz_png/QPCr6EnHPryDhdbkSy9kKmzicLeu60oeFbUO6VQ1yHN4icrRFQ3qf4f1ZfuJL18uh8DjLnUVtqS322Db2zB2kpvQ/0?wx_fmt=png"
     }
   }
 }
