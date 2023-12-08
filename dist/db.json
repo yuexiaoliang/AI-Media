@@ -113,12 +113,14 @@
     {
       "name": "concat-map",
       "stepsStatus": {
-        "gottenBaseInfo": false,
-        "collectedGuide": false,
-        "generatedArticle": false,
-        "publishedWeixinDraft": false,
+        "gottenBaseInfo": true,
+        "collectedGuide": true,
+        "generatedArticle": true,
+        "publishedWeixinDraft": true,
         "publishedGithub": false
-      }
+      },
+      "homepage": "https://github.com/ljharb/concat-map#readme",
+      "repository_url": "https://github.com/ljharb/concat-map"
     },
     {
       "name": "core-util-is",
@@ -905,6 +907,21 @@
           "total_tokens": 9478
         }
       }
+    },
+    "concat-map": {
+      "title": "利用concat-map进行数组元素的映射和合并",
+      "completionInfo": {
+        "id": "chatcmpl-8TMCEghuB8cPzwyy4rGS37cSTOavJ",
+        "object": "chat.completion",
+        "created": 1702007526,
+        "model": "gpt-4-1106-preview",
+        "system_fingerprint": "fp_a24b4d720c",
+        "usage": {
+          "prompt_tokens": 1671,
+          "completion_tokens": 906,
+          "total_tokens": 2577
+        }
+      }
     }
   },
   "weixinMaterials": {
@@ -971,6 +988,10 @@
     "semver": {
       "media_id": "3TI8XMZiLsZyu-QJGQpsXAJKk5aGSM0W_6m4zyqDSmqfCBTfgrnrqsLAi1-9Ni1Q",
       "url": "http://mmbiz.qpic.cn/mmbiz_png/QPCr6EnHPryDhdbkSy9kKmzicLeu60oeFbUO6VQ1yHN4icrRFQ3qf4f1ZfuJL18uh8DjLnUVtqS322Db2zB2kpvQ/0?wx_fmt=png"
+    },
+    "concat-map": {
+      "media_id": "3TI8XMZiLsZyu-QJGQpsXPkDUwYMzLc34dO5qdlRzCs116uIcq1ikQEH09O3ARyG",
+      "url": "http://mmbiz.qpic.cn/mmbiz_png/QPCr6EnHPrxUDWuVIL2J3dQ1CxEnFKVfWWCicoyes7rgniciacodVwGibsbNgZ9MvfjFr6ZWIBncJp5GAp2jhZcFCQ/0?wx_fmt=png"
     }
   }
 }
