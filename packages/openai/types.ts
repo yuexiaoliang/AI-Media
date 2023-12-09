@@ -12,6 +12,7 @@ export interface ChatCompletion {
   object: string;
   created: number;
   model: string;
+  system_fingerprint: string,
   choices: ChatCompletionChoice[];
   usage: ChatCompletionUsage;
 }

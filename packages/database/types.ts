@@ -1,5 +1,7 @@
 import { ChatCompletion } from '@auto-blog/openai';
 
+export type Project = 'npm-packages';
+
 export interface DBData {
   pageNumber: number;
   packages: DBPackages;
@@ -38,7 +40,3 @@ export interface DBWeixinMaterial {
 
 export type DBCompletionInfo = Omit<ChatCompletion, 'choices'>;
 
-export interface DBGeneratedArticleHistoryItem {
-  title: string;
-  completionInfo: DBCompletionInfo;
-}

@@ -1,36 +1,58 @@
-import path from 'path';
-import { JSONPreset } from 'lowdb/node';
-import { Low } from 'lowdb';
-import { DBData, DBGeneratedArticleHistoryItem } from './types';
-export * from './types';
+import { defineDatabase } from './common';
+import { ChatCompletion } from '@auto-blog/openai';
+import { Project } from './types';
 
-let db: Low<DBData>;
+export type CompletionInfo = Omit<ChatCompletion, 'choices'>;
 
-export const openLocalDatabase = async () => {
-  if (!db) {
-    db = await JSONPreset<DBData>(path.resolve(__dirname, './db/aigc-records.json'), {
-      pageNumber: 0,
-      packages: [],
-      generatedArticleHistory: {},
-      weixinMaterials: {}
-    });
-  }
+export interface AigcListItem<T> {
+  project: Project;
+  info: T;
+  completionInfo: CompletionInfo;
+}
 
-  return [db, db.data] as [Low<DBData>, DBData];
+export interface AigcDB<T = Record<string, any>> {
+  list: AigcListItem<T>[];
+}
+
+export interface NpmPackageInfo {
+  pkgName: string;
+  title: string;
+}
+
+const openDatabase = defineDatabase<AigcDB>('aigc-records', {
+  list: []
+});
+
+// 筛选出指定项目的列表
+export const filterProjectList = async <T>(project: Project) => {
+  const [db, data] = await openDatabase();
+  const list = data.list.filter((item) => item.project === project) as AigcListItem<T>[];
+
+  return [list, db, data] as const;
 };
 
 // 获取包的生成文章历史记录
-export const getPackageGeneratedArticleHistory = async (name: string) => {
-  const [_, data] = await openLocalDatabase();
-
-  return data.generatedArticleHistory[name];
+export const getNpmPackageRecord = async (pkgName: string) => {
+  const [_, data] = await openDatabase();
+  return data.list.find((item) => item.info.pkgName === pkgName);
 };
 
 // 设置包的生成文章历史记录
-export const setPackageGeneratedArticleHistory = async (pkgName: string, history: DBGeneratedArticleHistoryItem) => {
-  const [db, data] = await openLocalDatabase();
+export const setNpmPackageRecord = async (info: NpmPackageInfo, completionInfo: CompletionInfo) => {
+  const [db, data] = await openDatabase();
+  const index = data.list.findIndex((item) => item.info.pkgName === info.pkgName);
 
-  data.generatedArticleHistory[pkgName] = history;
+  const item = {
+    project: 'npm-packages',
+    info,
+    completionInfo
+  } as AigcListItem<NpmPackageInfo>;
+
+  if (index > -1) {
+    data.list[index] = item;
+  } else {
+    data.list.push(item);
+  }
 
   db.write();
 };

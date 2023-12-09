@@ -1,4 +1,4 @@
-import { chat, images } from '@auto-blog/openai';
+import { AIModel, chat, images } from '@auto-blog/openai';
 import { aigcRecordsDB, npmPackagesDB } from '@auto-blog/database';
 import { getRandomItem, renderTemplate } from '@auto-blog/utils';
 import { mdToWeixin } from '@auto-blog/md-render';
@@ -10,9 +10,9 @@ import genImagePromptPrompt from './prompts/genImagePrompt.txt';
 export const genArticle = async (readme: string, pkgName: string) => {
   // 如果生成过文章，则需要获取以生成的文章，避免重复请求浪费资源
   if (await npmPackagesDB.getPackageGeneratedArticleStatus(pkgName)) {
-    const history = await aigcRecordsDB.getPackageGeneratedArticleHistory(pkgName);
+    const history = await aigcRecordsDB.getNpmPackageRecord(pkgName);
     if (history) {
-      const { title } = history;
+      const { title } = history.info;
       const md = file.getArticleFile(pkgName, `${title}.md`);
 
       if (md) {
@@ -27,7 +27,7 @@ export const genArticle = async (readme: string, pkgName: string) => {
     }
   }
 
-  const completions = chat.defineCompletions();
+  const completions = chat.defineCompletions({ model: AIModel.GPT4 });
   const { content, completionInfo } = await completions([
     {
       role: 'user',
@@ -37,7 +37,7 @@ export const genArticle = async (readme: string, pkgName: string) => {
 
   const { html, meta } = renderAndSave(content);
 
-  await aigcRecordsDB.setPackageGeneratedArticleHistory(pkgName, { title: meta.title, completionInfo });
+  await aigcRecordsDB.setNpmPackageRecord({ pkgName, title: meta.title }, completionInfo);
   await npmPackagesDB.setPackageGeneratedArticleStatus(pkgName, true);
 
   return { md: content, html, meta };

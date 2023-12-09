@@ -1,7 +1,11 @@
 {
-  "generatedArticleHistory": {
-    "isarray": {
-      "title": "深入浅出isarray：彻底理解数组类型判定",
+  "list": [
+    {
+      "project": "npm-packages",
+      "info": {
+        "pkgName": "isarray",
+        "title": "深入浅出isarray：彻底理解数组类型判定"
+      },
       "completionInfo": {
         "id": "chatcmpl-8PQg6FSuPcUj0LIiXFS0kTDNwvSxG",
         "object": "chat.completion",
@@ -15,8 +19,12 @@
         }
       }
     },
-    "har-schema": {
-      "title": "以HAR Schema提升Web性能分析的实用指南",
+    {
+      "project": "npm-packages",
+      "info": {
+        "pkgName": "har-schema",
+        "title": "以HAR Schema提升Web性能分析的实用指南"
+      },
       "completionInfo": {
         "id": "chatcmpl-8PRx7Qr8tDqAY5QellVkhROVdSoF8",
         "object": "chat.completion",
@@ -30,8 +38,12 @@
         }
       }
     },
-    "extend": {
-      "title": "深入浅出 Node.js 对象扩展：使用 extend 实现无缝数据合并",
+    {
+      "project": "npm-packages",
+      "info": {
+        "pkgName": "extend",
+        "title": "深入浅出 Node.js 对象扩展：使用 extend 实现无缝数据合并"
+      },
       "completionInfo": {
         "id": "chatcmpl-8PTg7W34ngEtb8tMb23YyA3I9nWDE",
         "object": "chat.completion",
@@ -45,8 +57,12 @@
         }
       }
     },
-    "inflight": {
-      "title": "避免重复请求的秘密武器：Nodejs 中使用 inflight 库",
+    {
+      "project": "npm-packages",
+      "info": {
+        "pkgName": "inflight",
+        "title": "避免重复请求的秘密武器：Nodejs 中使用 inflight 库"
+      },
       "completionInfo": {
         "id": "chatcmpl-8PTyKS8tnmYWKRPc4h4HW0HxCp801",
         "object": "chat.completion",
@@ -60,8 +76,12 @@
         }
       }
     },
-    "balanced-match": {
-      "title": "高效解析配对字符串：Node.js中的balanced-match应用",
+    {
+      "project": "npm-packages",
+      "info": {
+        "pkgName": "balanced-match",
+        "title": "高效解析配对字符串：Node.js中的balanced-match应用"
+      },
       "completionInfo": {
         "id": "chatcmpl-8PgJA5tDqJJMFV4vhAgkNTM0kxGk0",
         "object": "chat.completion",
@@ -75,8 +95,12 @@
         }
       }
     },
-    "core-util-is": {
-      "title": "探索Node.js核心工具类库：core-util-is的实用指南",
+    {
+      "project": "npm-packages",
+      "info": {
+        "pkgName": "core-util-is",
+        "title": "探索Node.js核心工具类库：core-util-is的实用指南"
+      },
       "completionInfo": {
         "id": "chatcmpl-8PmSLepOsRyw6FrRajvRI34Sm0DNp",
         "object": "chat.completion",
@@ -90,8 +114,12 @@
         }
       }
     },
-    "cliui": {
-      "title": "打造直观的命令行界面：cliui使用指南",
+    {
+      "project": "npm-packages",
+      "info": {
+        "pkgName": "cliui",
+        "title": "打造直观的命令行界面：cliui使用指南"
+      },
       "completionInfo": {
         "id": "chatcmpl-8Q5aX3wiNrR7Q564dvq4vA1Xh1vVf",
         "object": "chat.completion",
@@ -105,8 +133,12 @@
         }
       }
     },
-    "camelcase": {
-      "title": "一键风格转换：JavaScript字符串驼峰化利器——camelcase包使用指南",
+    {
+      "project": "npm-packages",
+      "info": {
+        "pkgName": "camelcase",
+        "title": "一键风格转换：JavaScript字符串驼峰化利器——camelcase包使用指南"
+      },
       "completionInfo": {
         "id": "chatcmpl-8Qb8h0DbWXZLG9LSRMJapyjyPAAhR",
         "object": "chat.completion",
@@ -120,8 +152,12 @@
         }
       }
     },
-    "ms": {
-      "title": "以毫秒为中心：利用ms包高效转换时间格式",
+    {
+      "project": "npm-packages",
+      "info": {
+        "pkgName": "ms",
+        "title": "以毫秒为中心：利用ms包高效转换时间格式"
+      },
       "completionInfo": {
         "id": "chatcmpl-8QbZbRCzHpYOJRKa9dL2feMPxGyQp",
         "object": "chat.completion",
@@ -135,8 +171,12 @@
         }
       }
     },
-    "ajv": {
-      "title": "JSON模式校验利器 — Ajv快速入门指南",
+    {
+      "project": "npm-packages",
+      "info": {
+        "pkgName": "ajv",
+        "title": "JSON模式校验利器 — Ajv快速入门指南"
+      },
       "completionInfo": {
         "id": "chatcmpl-8QliclHW745sT0vHVoKEAlJIbdMoA",
         "object": "chat.completion",
@@ -150,8 +190,12 @@
         }
       }
     },
-    "is-buffer": {
-      "title": "如何在Node.js和浏览器中优雅地判断Buffer对象",
+    {
+      "project": "npm-packages",
+      "info": {
+        "pkgName": "is-buffer",
+        "title": "如何在Node.js和浏览器中优雅地判断Buffer对象"
+      },
       "completionInfo": {
         "id": "chatcmpl-8RBjg6pfakzCek4oX1PrSX3ORa4QS",
         "object": "chat.completion",
@@ -165,8 +209,12 @@
         }
       }
     },
-    "qs": {
-      "title": "深入解析与应用 Node.js 中的 QS 库",
+    {
+      "project": "npm-packages",
+      "info": {
+        "pkgName": "qs",
+        "title": "深入解析与应用 Node.js 中的 QS 库"
+      },
       "completionInfo": {
         "id": "chatcmpl-8RdGYHdYfrQcSG0UMpprepo3gO94q",
         "object": "chat.completion",
@@ -180,8 +228,12 @@
         }
       }
     },
-    "color-convert": {
-      "title": "色彩转换大师：深入浅出color-convert包的使用",
+    {
+      "project": "npm-packages",
+      "info": {
+        "pkgName": "color-convert",
+        "title": "色彩转换大师：深入浅出color-convert包的使用"
+      },
       "completionInfo": {
         "id": "chatcmpl-8RdKtGvTSlAuPuisgD4qTAmBhxVZh",
         "object": "chat.completion",
@@ -195,8 +247,12 @@
         }
       }
     },
-    "asynckit": {
-      "title": "利用asynckit进行高效异步任务控制与流支持",
+    {
+      "project": "npm-packages",
+      "info": {
+        "pkgName": "asynckit",
+        "title": "利用asynckit进行高效异步任务控制与流支持"
+      },
       "completionInfo": {
         "id": "chatcmpl-8RyAX0rqXx3Q4jewFoWC8L0Vf1ft2",
         "object": "chat.completion",
@@ -210,8 +266,12 @@
         }
       }
     },
-    "decamelize": {
-      "title": "字符串驼峰转换术：讲解Nodejs中decamelize的使用",
+    {
+      "project": "npm-packages",
+      "info": {
+        "pkgName": "decamelize",
+        "title": "字符串驼峰转换术：讲解Nodejs中decamelize的使用"
+      },
       "completionInfo": {
         "id": "chatcmpl-8SlcoUyszigME6BOsD6k4mBJlTKiv",
         "object": "chat.completion",
@@ -225,8 +285,12 @@
         }
       }
     },
-    "semver": {
-      "title": "版本号升级终结者：掌握Node.js的semver库",
+    {
+      "project": "npm-packages",
+      "info": {
+        "pkgName": "semver",
+        "title": "版本号升级终结者：掌握Node.js的semver库"
+      },
       "completionInfo": {
         "id": "chatcmpl-8SzdhLevKxl0RUnsoEjnJbGRhOtbs",
         "object": "chat.completion",
@@ -240,8 +304,12 @@
         }
       }
     },
-    "concat-map": {
-      "title": "利用concat-map进行数组元素的映射和合并",
+    {
+      "project": "npm-packages",
+      "info": {
+        "pkgName": "concat-map",
+        "title": "利用concat-map进行数组元素的映射和合并"
+      },
       "completionInfo": {
         "id": "chatcmpl-8TMCEghuB8cPzwyy4rGS37cSTOavJ",
         "object": "chat.completion",
@@ -255,8 +323,12 @@
         }
       }
     },
-    "safe-buffer": {
-      "title": "安全内存管理：Node.js中使用safe-buffer优化Buffer安全性",
+    {
+      "project": "npm-packages",
+      "info": {
+        "pkgName": "safe-buffer",
+        "title": "安全内存管理：Node.js中使用safe-buffer优化Buffer安全性"
+      },
       "completionInfo": {
         "id": "chatcmpl-8TjvTxUclbcmlbNypOMmYBH7reeLj",
         "object": "chat.completion",
@@ -270,8 +342,12 @@
         }
       }
     },
-    "mkdirp": {
-      "title": "Node.js实现递归创建目录的利器—mkdirp",
+    {
+      "project": "npm-packages",
+      "info": {
+        "pkgName": "mkdirp",
+        "title": "Node.js实现递归创建目录的利器—mkdirp"
+      },
       "completionInfo": {
         "id": "chatcmpl-8ToyEmJOmUtneRw69AaVSfPfqDFAb",
         "object": "chat.completion",
@@ -285,8 +361,12 @@
         }
       }
     },
-    "has-flag": {
-      "title": "深入解析命令行标志检测包 has-flag 的妙用",
+    {
+      "project": "npm-packages",
+      "info": {
+        "pkgName": "has-flag",
+        "title": "深入解析命令行标志检测包 has-flag 的妙用"
+      },
       "completionInfo": {
         "id": "chatcmpl-8Tozt3OLsM8q5wrcUbIldbpexPv4Z",
         "object": "chat.completion",
@@ -300,8 +380,12 @@
         }
       }
     },
-    "argparse": {
-      "title": "深入解析 Node.js 命令行参数解析库 argparse",
+    {
+      "project": "npm-packages",
+      "info": {
+        "pkgName": "argparse",
+        "title": "深入解析 Node.js 命令行参数解析库 argparse"
+      },
       "completionInfo": {
         "id": "chatcmpl-8Tp136NQ4rSVglh29iiasR38iSTef",
         "object": "chat.completion",
@@ -315,8 +399,12 @@
         }
       }
     },
-    "assert-plus": {
-      "title": "强化JavaScript断言：使用assert-plus提升代码可靠性",
+    {
+      "project": "npm-packages",
+      "info": {
+        "pkgName": "assert-plus",
+        "title": "强化JavaScript断言：使用assert-plus提升代码可靠性"
+      },
       "completionInfo": {
         "id": "chatcmpl-8Tp2xrcrqiFYnWtnHRgQkVV6CTZhx",
         "object": "chat.completion",
@@ -330,8 +418,12 @@
         }
       }
     },
-    "code-point-at": {
-      "title": "使用code-point-at进行Unicode码点获取",
+    {
+      "project": "npm-packages",
+      "info": {
+        "pkgName": "code-point-at",
+        "title": "使用code-point-at进行Unicode码点获取"
+      },
       "completionInfo": {
         "id": "chatcmpl-8TpQQAsFsDn3tlKTgcDa9EJaxWCrA",
         "object": "chat.completion",
@@ -344,6 +436,25 @@
           "total_tokens": 1572
         }
       }
+    },
+    {
+      "project": "npm-packages",
+      "info": {
+        "pkgName": "once",
+        "title": "保证函数单次执行的神器：once"
+      },
+      "completionInfo": {
+        "id": "chatcmpl-8Tr9YXDC62DQjL8WOSibpatM2AB4Z",
+        "object": "chat.completion",
+        "created": 1702126524,
+        "model": "gpt-4-1106-preview",
+        "system_fingerprint": "fp_a24b4d720c",
+        "usage": {
+          "prompt_tokens": 1044,
+          "completion_tokens": 1071,
+          "total_tokens": 2115
+        }
+      }
     }
-  }
+  ]
 }
