@@ -377,12 +377,14 @@
     {
       "name": "safe-buffer",
       "stepsStatus": {
-        "gottenBaseInfo": false,
-        "collectedGuide": false,
-        "generatedArticle": false,
-        "publishedWeixinDraft": false,
+        "gottenBaseInfo": true,
+        "collectedGuide": true,
+        "generatedArticle": true,
+        "publishedWeixinDraft": true,
         "publishedGithub": false
-      }
+      },
+      "homepage": "https://github.com/feross/safe-buffer",
+      "repository_url": "https://github.com/feross/safe-buffer"
     },
     {
       "name": "iconv-lite",
@@ -922,6 +924,21 @@
           "total_tokens": 2577
         }
       }
+    },
+    "safe-buffer": {
+      "title": "安全内存管理：Node.js中使用safe-buffer优化Buffer安全性",
+      "completionInfo": {
+        "id": "chatcmpl-8TjvTxUclbcmlbNypOMmYBH7reeLj",
+        "object": "chat.completion",
+        "created": 1702098743,
+        "model": "gpt-4-1106-preview",
+        "system_fingerprint": "fp_a24b4d720c",
+        "usage": {
+          "prompt_tokens": 5688,
+          "completion_tokens": 1416,
+          "total_tokens": 7104
+        }
+      }
     }
   },
   "weixinMaterials": {
@@ -992,6 +1009,10 @@
     "concat-map": {
       "media_id": "3TI8XMZiLsZyu-QJGQpsXPkDUwYMzLc34dO5qdlRzCs116uIcq1ikQEH09O3ARyG",
       "url": "http://mmbiz.qpic.cn/mmbiz_png/QPCr6EnHPrxUDWuVIL2J3dQ1CxEnFKVfWWCicoyes7rgniciacodVwGibsbNgZ9MvfjFr6ZWIBncJp5GAp2jhZcFCQ/0?wx_fmt=png"
+    },
+    "safe-buffer": {
+      "media_id": "3TI8XMZiLsZyu-QJGQpsXFfnsDp4qNNxsG4SLTXaUWDkOjAt0YlM2204N6yGYbac",
+      "url": "http://mmbiz.qpic.cn/mmbiz_png/QPCr6EnHPrypobcAURxgOw7gptcAnOwKCFsqLSrIW0M2eJHZTEYBxicLeeItea8KQw3dxwdIlbrwReh97NCiaEdw/0?wx_fmt=png"
     }
   }
 }
