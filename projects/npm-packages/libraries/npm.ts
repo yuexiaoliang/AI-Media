@@ -5,7 +5,7 @@ import { npmPackagesDB } from '@auto-blog/database';
 
 // 采集包列表
 export const collectPackages = async () => {
-  const [db, data] = await npmPackagesDB.openLocalDatabase();
+  const [db, data] = await npmPackagesDB.openDatabase();
 
   const notPublished = await npmPackagesDB.getNotGottenBaseInfoPackages();
 
@@ -61,7 +61,7 @@ export async function getPackageInfo(pkgName: string) {
     throw new Error(`@auto-blog/libraries: package [${pkgName}] not found`);
   }
 
-  const pkg: npmPackagesDB.DBPackage = {
+  const pkg: npmPackagesDB.Package = {
     name: pkgName,
     homepage,
     repository_url,

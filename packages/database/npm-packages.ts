@@ -1,29 +1,45 @@
-import path from 'path';
-import { JSONPreset } from 'lowdb/node';
-import { Low } from 'lowdb';
 import { merge } from 'lodash';
 import { getRandomItem } from '@auto-blog/utils';
-import { DBData, DBPackage, DBPackageStepsStatusKeys, DBPublishedPlatforms, DBPublishedPlatformStatus } from './types';
-export * from './types';
+import { defineDatabase } from './common';
 
-let db: Low<DBData>;
+export type PublishedPlatforms = 'weixin' | 'github';
 
-export const openLocalDatabase = async () => {
-  if (!db) {
-    db = await JSONPreset<DBData>(path.resolve(__dirname, './db/npm-packages.json'), {
-      pageNumber: 0,
-      packages: [],
-      generatedArticleHistory: {},
-      weixinMaterials: {}
-    });
-  }
+export interface PublishedPlatformStatus {
+  publishedWeixinDraft: boolean;
+  publishedGithub: boolean;
+}
 
-  return [db, db.data] as [Low<DBData>, DBData];
-};
+export interface PackageStepsStatus extends PublishedPlatformStatus {
+  gottenBaseInfo: boolean;
+  collectedGuide: boolean;
+  generatedArticle: boolean;
+}
+
+export type PackageStepsStatusKeys = keyof PackageStepsStatus;
+
+export interface Package {
+  name: string;
+  homepage?: string;
+  repository_url?: string;
+  stepsStatus?: PackageStepsStatus;
+
+  [key: string]: any;
+}
+
+export type DBPackages = Package[];
+export interface NpmPackagesDB {
+  pageNumber: number;
+  packages: DBPackages;
+}
+
+export const openDatabase = defineDatabase<NpmPackagesDB>('npm-packages', {
+  pageNumber: 0,
+  packages: []
+});
 
 // 替换或插入包信息
-export const replaceOrInsertPackage = async (newPkg: DBPackage) => {
-  const [db, data] = await openLocalDatabase();
+export const replaceOrInsertPackage = async (newPkg: Package) => {
+  const [db, data] = await openDatabase();
 
   const index = data.packages.findIndex((item) => item.name === newPkg.name);
 
@@ -38,10 +54,10 @@ export const replaceOrInsertPackage = async (newPkg: DBPackage) => {
 };
 
 // 获取所有未发布到指定平台的包
-export async function getNotPublishedPackages(platform: DBPublishedPlatforms) {
-  const [_, data] = await openLocalDatabase();
+export async function getNotPublishedPackages(platform: PublishedPlatforms) {
+  const [_, data] = await openDatabase();
 
-  const keyMap: Record<DBPublishedPlatforms, keyof DBPublishedPlatformStatus> = {
+  const keyMap: Record<PublishedPlatforms, keyof PublishedPlatformStatus> = {
     weixin: 'publishedWeixinDraft',
     github: 'publishedGithub'
   };
@@ -92,8 +108,8 @@ export async function getRandomNotPublishedGithubDraft() {
 }
 
 // 设置包的某个状态
-export const setPackageStatus = async (name: string, key: DBPackageStepsStatusKeys, status: boolean = true) => {
-  const [db, data] = await openLocalDatabase();
+export const setPackageStatus = async (name: string, key: PackageStepsStatusKeys, status: boolean = true) => {
+  const [db, data] = await openDatabase();
 
   const pkg = data.packages.find((item) => item.name === name);
 
@@ -106,8 +122,8 @@ export const setPackageStatus = async (name: string, key: DBPackageStepsStatusKe
 };
 
 // 获取包的某个状态
-export const getPackageStatus = async (name: string, key: DBPackageStepsStatusKeys) => {
-  const [_, data] = await openLocalDatabase();
+export const getPackageStatus = async (name: string, key: PackageStepsStatusKeys) => {
+  const [_, data] = await openDatabase();
 
   const pkg = data.packages.find((item) => item.name === name);
 
@@ -116,7 +132,7 @@ export const getPackageStatus = async (name: string, key: DBPackageStepsStatusKe
 
 // 获取所有未获取基本信息的包
 export const getNotGottenBaseInfoPackages = async () => {
-  const [_, data] = await openLocalDatabase();
+  const [_, data] = await openDatabase();
 
   return data.packages.filter((item) => !item.stepsStatus?.gottenBaseInfo);
 };
