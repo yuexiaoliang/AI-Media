@@ -1,44 +1,55 @@
-import path from 'path';
-import { JSONPreset } from 'lowdb/node';
-import { Low } from 'lowdb';
-import { DBData, DBWeixinMaterial } from './types';
-export * from './types';
+import { defineDatabase } from './common';
+import { Project } from './types';
 
-let db: Low<DBData>;
+export interface WeixinMaterialItemMaterialInfo {
+  media_id: string;
+  url: string;
+}
 
-export const openLocalDatabase = async () => {
-  if (!db) {
-    db = await JSONPreset<DBData>(path.resolve(__dirname, './db/weixin-materials.json'), {
-      pageNumber: 0,
-      packages: [],
-      generatedArticleHistory: {},
-      weixinMaterials: {}
-    });
-  }
+export interface WeixinMaterialItemItemInfo {
+  pkgName: string;
+}
 
-  return [db, db.data] as [Low<DBData>, DBData];
-};
+export interface WeixinMaterialItem {
+  project: Project;
+  info: WeixinMaterialItemItemInfo;
+  materialInfo: WeixinMaterialItemMaterialInfo;
+}
 
+export interface WeixinMaterialDB {
+  list: WeixinMaterialItem[];
+}
+
+const openDatabase = defineDatabase<WeixinMaterialDB>('weixin-materials', {
+  list: []
+});
 
 // 设置微信素材
-export const setWeixinMaterial = async (pkgName: string, material: DBWeixinMaterial) => {
-  const [db, dbData] = await openLocalDatabase();
+export const setWeixinMaterial = async (pkgName: string, material: WeixinMaterialItemMaterialInfo) => {
+  const [db, data] = await openDatabase();
 
-  dbData.weixinMaterials[pkgName] = material;
+  const index = data.list.findIndex((item) => item.info.pkgName === pkgName);
+
+  const item = {
+    project: 'npm-packages',
+    info: {
+      pkgName
+    },
+    materialInfo: material
+  } as WeixinMaterialItem;
+
+  if (index > -1) {
+    data.list[index] = item;
+  } else {
+    data.list.push(item);
+  }
 
   db.write();
 };
 
-// 是否存在微信素材
-export const hasWeixinMaterial = async (pkgName: string) => {
-  const [_, dbData] = await openLocalDatabase();
-
-  return !!dbData.weixinMaterials[pkgName];
-};
-
 // 获取微信素材
 export const getWeixinMaterial = async (pkgName: string) => {
-  const [_, dbData] = await openLocalDatabase();
+  const [_, data] = await openDatabase();
 
-  return dbData.weixinMaterials[pkgName];
+  return data.list.find((item) => item.info.pkgName === pkgName);
 };

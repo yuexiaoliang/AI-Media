@@ -8,17 +8,9 @@ type MaterialType = 'image' | 'video' | 'voice' | 'thumb';
 
 const http = createHttp('material');
 
-export const getMaterials = async (type: string = 'image', offset: number = 0, count: number = 10) => {
-  const { data } = await http.post('/batchget_material', {
-    type,
-    offset,
-    count
-  });
-  return data;
-};
-
 export const addMaterial = async (pkgName: string, filepath: string, type: MaterialType = 'image') => {
-  if (await weixinMaterialsDB.hasWeixinMaterial(pkgName)) return await weixinMaterialsDB.getWeixinMaterial(pkgName);
+  const material = await weixinMaterialsDB.getWeixinMaterial(pkgName);
+  if (material) return material.materialInfo;
 
   const formData = new FormData();
   formData.append('media', fs.createReadStream(path.resolve(__dirname, filepath)));
@@ -31,5 +23,5 @@ export const addMaterial = async (pkgName: string, filepath: string, type: Mater
 
   await weixinMaterialsDB.setWeixinMaterial(pkgName, rest);
 
-  return rest as weixinMaterialsDB.DBWeixinMaterial;
+  return rest as weixinMaterialsDB.WeixinMaterialItemMaterialInfo;
 };
