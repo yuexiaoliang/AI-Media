@@ -103,24 +103,24 @@
     {
       "name": "inherits",
       "stepsStatus": {
-        "gottenBaseInfo": true,
-        "collectedGuide": true,
-        "generatedArticle": true,
-        "publishedWeixinDraft": true,
-        "publishedGithub": false
-      },
-      "homepage": "https://github.com/isaacs/inherits#readme",
-      "repository_url": "https://github.com/isaacs/inherits"
-    },
-    {
-      "name": "concat-map",
-      "stepsStatus": {
         "gottenBaseInfo": false,
         "collectedGuide": false,
         "generatedArticle": false,
         "publishedWeixinDraft": false,
         "publishedGithub": false
       }
+    },
+    {
+      "name": "concat-map",
+      "stepsStatus": {
+        "gottenBaseInfo": true,
+        "collectedGuide": true,
+        "generatedArticle": true,
+        "publishedWeixinDraft": true,
+        "publishedGithub": false
+      },
+      "homepage": "https://github.com/ljharb/concat-map#readme",
+      "repository_url": "https://github.com/ljharb/concat-map"
     },
     {
       "name": "core-util-is",
@@ -273,22 +273,26 @@
     {
       "name": "mkdirp",
       "stepsStatus": {
-        "gottenBaseInfo": false,
-        "collectedGuide": false,
-        "generatedArticle": false,
-        "publishedWeixinDraft": false,
+        "gottenBaseInfo": true,
+        "collectedGuide": true,
+        "generatedArticle": true,
+        "publishedWeixinDraft": true,
         "publishedGithub": false
-      }
+      },
+      "homepage": "https://github.com/isaacs/node-mkdirp#readme",
+      "repository_url": "https://github.com/isaacs/node-mkdirp"
     },
     {
       "name": "semver",
       "stepsStatus": {
-        "gottenBaseInfo": false,
-        "collectedGuide": false,
-        "generatedArticle": false,
-        "publishedWeixinDraft": false,
+        "gottenBaseInfo": true,
+        "collectedGuide": true,
+        "generatedArticle": true,
+        "publishedWeixinDraft": true,
         "publishedGithub": false
-      }
+      },
+      "homepage": "https://github.com/npm/node-semver#readme",
+      "repository_url": "https://github.com/npm/node-semver"
     },
     {
       "name": "isarray",
@@ -303,14 +307,12 @@
     {
       "name": "graceful-fs",
       "stepsStatus": {
-        "gottenBaseInfo": true,
-        "collectedGuide": true,
-        "generatedArticle": true,
-        "publishedWeixinDraft": true,
+        "gottenBaseInfo": false,
+        "collectedGuide": false,
+        "generatedArticle": false,
+        "publishedWeixinDraft": false,
         "publishedGithub": false
-      },
-      "homepage": "https://github.com/isaacs/node-graceful-fs#readme",
-      "repository_url": "https://github.com/isaacs/node-graceful-fs"
+      }
     },
     {
       "name": "rimraf",
@@ -335,12 +337,14 @@
     {
       "name": "argparse",
       "stepsStatus": {
-        "gottenBaseInfo": false,
-        "collectedGuide": false,
-        "generatedArticle": false,
-        "publishedWeixinDraft": false,
+        "gottenBaseInfo": true,
+        "collectedGuide": true,
+        "generatedArticle": true,
+        "publishedWeixinDraft": true,
         "publishedGithub": false
-      }
+      },
+      "homepage": "https://github.com/nodeca/argparse#readme",
+      "repository_url": "https://github.com/nodeca/argparse"
     },
     {
       "name": "inflight",
@@ -377,12 +381,14 @@
     {
       "name": "safe-buffer",
       "stepsStatus": {
-        "gottenBaseInfo": false,
-        "collectedGuide": false,
-        "generatedArticle": false,
-        "publishedWeixinDraft": false,
+        "gottenBaseInfo": true,
+        "collectedGuide": true,
+        "generatedArticle": true,
+        "publishedWeixinDraft": true,
         "publishedGithub": false
-      }
+      },
+      "homepage": "https://github.com/feross/safe-buffer",
+      "repository_url": "https://github.com/feross/safe-buffer"
     },
     {
       "name": "iconv-lite",
@@ -417,12 +423,14 @@
     {
       "name": "assert-plus",
       "stepsStatus": {
-        "gottenBaseInfo": false,
-        "collectedGuide": false,
-        "generatedArticle": false,
-        "publishedWeixinDraft": false,
+        "gottenBaseInfo": true,
+        "collectedGuide": true,
+        "generatedArticle": true,
+        "publishedWeixinDraft": true,
         "publishedGithub": false
-      }
+      },
+      "homepage": "https://github.com/mcavage/node-assert-plus#readme",
+      "repository_url": "https://github.com/mcavage/node-assert-plus"
     },
     {
       "name": "path-is-absolute",
@@ -464,8 +472,8 @@
         "gottenBaseInfo": true,
         "collectedGuide": true,
         "generatedArticle": true,
-        "publishedWeixinDraft": true,
-        "publishedGithub": true
+        "publishedWeixinDraft": false,
+        "publishedGithub": false
       },
       "homepage": "https://github.com/isaacs/once#readme",
       "repository_url": "https://github.com/isaacs/once"
@@ -515,12 +523,14 @@
     {
       "name": "decamelize",
       "stepsStatus": {
-        "gottenBaseInfo": false,
-        "collectedGuide": false,
-        "generatedArticle": false,
-        "publishedWeixinDraft": false,
+        "gottenBaseInfo": true,
+        "collectedGuide": true,
+        "generatedArticle": true,
+        "publishedWeixinDraft": true,
         "publishedGithub": false
-      }
+      },
+      "homepage": "https://github.com/sindresorhus/decamelize#readme",
+      "repository_url": "https://github.com/sindresorhus/decamelize"
     },
     {
       "name": "readable-stream",
@@ -535,12 +545,14 @@
     {
       "name": "has-flag",
       "stepsStatus": {
-        "gottenBaseInfo": false,
-        "collectedGuide": false,
-        "generatedArticle": false,
-        "publishedWeixinDraft": false,
+        "gottenBaseInfo": true,
+        "collectedGuide": true,
+        "generatedArticle": true,
+        "publishedWeixinDraft": true,
         "publishedGithub": false
-      }
+      },
+      "homepage": "https://github.com/sindresorhus/has-flag#readme",
+      "repository_url": "https://github.com/sindresorhus/has-flag"
     },
     {
       "name": "request",
