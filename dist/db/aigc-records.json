@@ -455,6 +455,25 @@
           "total_tokens": 2115
         }
       }
+    },
+    {
+      "project": "npm-packages",
+      "info": {
+        "pkgName": "inherits",
+        "title": "继承精髓：在Node.js与浏览器环境中优雅地使用inherits"
+      },
+      "completionInfo": {
+        "id": "chatcmpl-8Ts1DhAStvqlC4nMNhhxhe84njRTN",
+        "object": "chat.completion",
+        "created": 1702129851,
+        "model": "gpt-4-1106-preview",
+        "system_fingerprint": "fp_a24b4d720c",
+        "usage": {
+          "prompt_tokens": 947,
+          "completion_tokens": 1033,
+          "total_tokens": 1980
+        }
+      }
     }
   ]
 }
