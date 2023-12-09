@@ -329,6 +329,21 @@
           "total_tokens": 2711
         }
       }
+    },
+    "code-point-at": {
+      "title": "使用code-point-at进行Unicode码点获取",
+      "completionInfo": {
+        "id": "chatcmpl-8TpQQAsFsDn3tlKTgcDa9EJaxWCrA",
+        "object": "chat.completion",
+        "created": 1702119882,
+        "model": "gpt-4-1106-preview",
+        "system_fingerprint": "fp_a24b4d720c",
+        "usage": {
+          "prompt_tokens": 830,
+          "completion_tokens": 742,
+          "total_tokens": 1572
+        }
+      }
     }
   }
 }

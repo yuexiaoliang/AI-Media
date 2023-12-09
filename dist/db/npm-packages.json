@@ -591,12 +591,14 @@
     {
       "name": "code-point-at",
       "stepsStatus": {
-        "gottenBaseInfo": false,
-        "collectedGuide": false,
-        "generatedArticle": false,
-        "publishedWeixinDraft": false,
+        "gottenBaseInfo": true,
+        "collectedGuide": true,
+        "generatedArticle": true,
+        "publishedWeixinDraft": true,
         "publishedGithub": false
-      }
+      },
+      "homepage": "https://github.com/sindresorhus/code-point-at#readme",
+      "repository_url": "https://github.com/sindresorhus/code-point-at"
     },
     {
       "name": "supports-color",
