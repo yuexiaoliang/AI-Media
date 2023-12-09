@@ -273,12 +273,14 @@
     {
       "name": "mkdirp",
       "stepsStatus": {
-        "gottenBaseInfo": false,
-        "collectedGuide": false,
-        "generatedArticle": false,
-        "publishedWeixinDraft": false,
+        "gottenBaseInfo": true,
+        "collectedGuide": true,
+        "generatedArticle": true,
+        "publishedWeixinDraft": true,
         "publishedGithub": false
-      }
+      },
+      "homepage": "https://github.com/isaacs/node-mkdirp#readme",
+      "repository_url": "https://github.com/isaacs/node-mkdirp"
     },
     {
       "name": "semver",
@@ -335,12 +337,14 @@
     {
       "name": "argparse",
       "stepsStatus": {
-        "gottenBaseInfo": false,
-        "collectedGuide": false,
-        "generatedArticle": false,
-        "publishedWeixinDraft": false,
+        "gottenBaseInfo": true,
+        "collectedGuide": true,
+        "generatedArticle": true,
+        "publishedWeixinDraft": true,
         "publishedGithub": false
-      }
+      },
+      "homepage": "https://github.com/nodeca/argparse#readme",
+      "repository_url": "https://github.com/nodeca/argparse"
     },
     {
       "name": "inflight",
@@ -419,12 +423,14 @@
     {
       "name": "assert-plus",
       "stepsStatus": {
-        "gottenBaseInfo": false,
-        "collectedGuide": false,
-        "generatedArticle": false,
-        "publishedWeixinDraft": false,
+        "gottenBaseInfo": true,
+        "collectedGuide": true,
+        "generatedArticle": true,
+        "publishedWeixinDraft": true,
         "publishedGithub": false
-      }
+      },
+      "homepage": "https://github.com/mcavage/node-assert-plus#readme",
+      "repository_url": "https://github.com/mcavage/node-assert-plus"
     },
     {
       "name": "path-is-absolute",
@@ -537,12 +543,14 @@
     {
       "name": "has-flag",
       "stepsStatus": {
-        "gottenBaseInfo": false,
-        "collectedGuide": false,
-        "generatedArticle": false,
-        "publishedWeixinDraft": false,
+        "gottenBaseInfo": true,
+        "collectedGuide": true,
+        "generatedArticle": true,
+        "publishedWeixinDraft": true,
         "publishedGithub": false
-      }
+      },
+      "homepage": "https://github.com/sindresorhus/has-flag#readme",
+      "repository_url": "https://github.com/sindresorhus/has-flag"
     },
     {
       "name": "request",
@@ -939,6 +947,66 @@
           "total_tokens": 7104
         }
       }
+    },
+    "mkdirp": {
+      "title": "Node.js实现递归创建目录的利器—mkdirp",
+      "completionInfo": {
+        "id": "chatcmpl-8ToyEmJOmUtneRw69AaVSfPfqDFAb",
+        "object": "chat.completion",
+        "created": 1702118134,
+        "model": "gpt-4-1106-preview",
+        "system_fingerprint": "fp_a24b4d720c",
+        "usage": {
+          "prompt_tokens": 2748,
+          "completion_tokens": 1144,
+          "total_tokens": 3892
+        }
+      }
+    },
+    "has-flag": {
+      "title": "深入解析命令行标志检测包 has-flag 的妙用",
+      "completionInfo": {
+        "id": "chatcmpl-8Tozt3OLsM8q5wrcUbIldbpexPv4Z",
+        "object": "chat.completion",
+        "created": 1702118237,
+        "model": "gpt-4-1106-preview",
+        "system_fingerprint": "fp_6aca3b5ce1",
+        "usage": {
+          "prompt_tokens": 956,
+          "completion_tokens": 1008,
+          "total_tokens": 1964
+        }
+      }
+    },
+    "argparse": {
+      "title": "深入解析 Node.js 命令行参数解析库 argparse",
+      "completionInfo": {
+        "id": "chatcmpl-8Tp136NQ4rSVglh29iiasR38iSTef",
+        "object": "chat.completion",
+        "created": 1702118309,
+        "model": "gpt-4-1106-preview",
+        "system_fingerprint": "fp_a24b4d720c",
+        "usage": {
+          "prompt_tokens": 1635,
+          "completion_tokens": 1150,
+          "total_tokens": 2785
+        }
+      }
+    },
+    "assert-plus": {
+      "title": "强化JavaScript断言：使用assert-plus提升代码可靠性",
+      "completionInfo": {
+        "id": "chatcmpl-8Tp2xrcrqiFYnWtnHRgQkVV6CTZhx",
+        "object": "chat.completion",
+        "created": 1702118427,
+        "model": "gpt-4-1106-preview",
+        "system_fingerprint": "fp_6aca3b5ce1",
+        "usage": {
+          "prompt_tokens": 1705,
+          "completion_tokens": 1006,
+          "total_tokens": 2711
+        }
+      }
     }
   },
   "weixinMaterials": {
@@ -1013,6 +1081,22 @@
     "safe-buffer": {
       "media_id": "3TI8XMZiLsZyu-QJGQpsXFfnsDp4qNNxsG4SLTXaUWDkOjAt0YlM2204N6yGYbac",
       "url": "http://mmbiz.qpic.cn/mmbiz_png/QPCr6EnHPrypobcAURxgOw7gptcAnOwKCFsqLSrIW0M2eJHZTEYBxicLeeItea8KQw3dxwdIlbrwReh97NCiaEdw/0?wx_fmt=png"
+    },
+    "mkdirp": {
+      "media_id": "3TI8XMZiLsZyu-QJGQpsXN6xkZWXaPWL8M6yDfFEXFqT40kfm-n19NDQ_hbgoTQv",
+      "url": "http://mmbiz.qpic.cn/mmbiz_png/QPCr6EnHPrypobcAURxgOw7gptcAnOwKwdqJIEOJftVfC0Dlsp6uFtvteNHfcvHHa6USLia1mHKPP4MHyKYpddg/0?wx_fmt=png"
+    },
+    "has-flag": {
+      "media_id": "3TI8XMZiLsZyu-QJGQpsXEbuiBbdkILRuHaKdz7NzymEID7ASYTgwdyoL92KaZkI",
+      "url": "http://mmbiz.qpic.cn/mmbiz_png/QPCr6EnHPrypobcAURxgOw7gptcAnOwKr3YrXxz1JKiafY1B26icNIiawNtWqSuNtG4ye8H6h3m46ax2UKc8ffiayQ/0?wx_fmt=png"
+    },
+    "argparse": {
+      "media_id": "3TI8XMZiLsZyu-QJGQpsXIQV5FNEtfkwhW7qusmF4pjsB5_niTKIwlxTGiBCKhCC",
+      "url": "http://mmbiz.qpic.cn/mmbiz_png/QPCr6EnHPrypobcAURxgOw7gptcAnOwK8ExYAp9AgcfmjC0annJWeWGt7LQlVgibWqndBbThJJ9pL9FJnZuy5Fw/0?wx_fmt=png"
+    },
+    "assert-plus": {
+      "media_id": "3TI8XMZiLsZyu-QJGQpsXGDmGGXt-gI2hEQ8AZi66NtVEdb7LOCGqrSXBP3baWVE",
+      "url": "http://mmbiz.qpic.cn/mmbiz_png/QPCr6EnHPrypobcAURxgOw7gptcAnOwKBB1ngicQn0dHS9YmkLxU4PxYGLVqfMJCteV6HcIVHBziaBNBiavE2RTxA/0?wx_fmt=png"
     }
   }
 }
