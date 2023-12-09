@@ -1,6 +1,5 @@
 import 'dotenv/config';
-import { chat } from '@auto-blog/openai';
-import * as database from '@auto-blog/database';
+import { npmPackagesDB } from '@auto-blog/database';
 import { weixin } from '@auto-blog/platform';
 import * as cover from './cover';
 import { npm, github } from './libraries';
@@ -12,7 +11,7 @@ export async function publisher() {
     await npm.collectPackages();
 
     console.log('\n 正在获取未发布到微信公众号的包...');
-    let pkg = await database.getRandomNotPublishedWeixinDraft();
+    let pkg = await npmPackagesDB.getRandomNotPublishedWeixinDraft();
     console.log(`\n 已选择包名：${pkg.name}`);
 
     if (!pkg.stepsStatus?.gottenBaseInfo) {
@@ -29,11 +28,11 @@ export async function publisher() {
     console.log('\n 正在生成缩略图...');
     const coverPath = await cover.generateCover(pkg.name);
 
-    // console.log('\n 正在上传图片到公众号素材库...');
-    // const { media_id: thumb_media_id } = await weixin.material.addMaterial(pkg.name, coverPath);
+    console.log('\n 正在上传图片到公众号素材库...');
+    const { media_id: thumb_media_id } = await weixin.material.addMaterial(pkg.name, coverPath);
 
-    // console.log('\n 正在新增公众号草稿...');
-    // await weixin.draft.addDraft(pkg.name, { title: meta.title, digest: meta.desc, content: html, thumb_media_id });
+    console.log('\n 正在新增公众号草稿...');
+    await weixin.draft.addDraft(pkg.name, { title: meta.title, digest: meta.desc, content: html, thumb_media_id });
 
     console.log('\n 完成了！');
   } catch (error: any) {

@@ -1,5 +1,5 @@
 import { chat, images } from '@auto-blog/openai';
-import * as database from '@auto-blog/database';
+import { aigcRecordsDB, npmPackagesDB } from '@auto-blog/database';
 import { getRandomItem, renderTemplate } from '@auto-blog/utils';
 import { mdToWeixin } from '@auto-blog/md-render';
 
@@ -9,8 +9,8 @@ import genImagePromptPrompt from './prompts/genImagePrompt.txt';
 
 export const genArticle = async (readme: string, pkgName: string) => {
   // 如果生成过文章，则需要获取以生成的文章，避免重复请求浪费资源
-  if (await database.getPackageGeneratedArticleStatus(pkgName)) {
-    const history = await database.getPackageGeneratedArticleHistory(pkgName);
+  if (await npmPackagesDB.getPackageGeneratedArticleStatus(pkgName)) {
+    const history = await aigcRecordsDB.getPackageGeneratedArticleHistory(pkgName);
     if (history) {
       const { title } = history;
       const md = file.getArticleFile(pkgName, `${title}.md`);
@@ -37,8 +37,8 @@ export const genArticle = async (readme: string, pkgName: string) => {
 
   const { html, meta } = renderAndSave(content);
 
-  await database.setPackageGeneratedArticleHistory(pkgName, { title: meta.title, completionInfo });
-  await database.setPackageGeneratedArticleStatus(pkgName, true);
+  await aigcRecordsDB.setPackageGeneratedArticleHistory(pkgName, { title: meta.title, completionInfo });
+  await npmPackagesDB.setPackageGeneratedArticleStatus(pkgName, true);
 
   return { md: content, html, meta };
 

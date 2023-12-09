@@ -130,11 +130,7 @@ importers:
 
   packages/database: {}
 
-  packages/libraries: {}
-
   packages/md-render: {}
-
-  packages/md-renders: {}
 
   packages/openai: {}
 
@@ -143,8 +139,6 @@ importers:
   packages/utils: {}
 
   projects/npm-packages: {}
-
-  projects/weixin: {}
 
 packages:
 

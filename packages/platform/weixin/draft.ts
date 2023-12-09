@@ -1,5 +1,5 @@
 import createHttp from './http';
-import * as database from '@auto-blog/database';
+import { npmPackagesDB } from '@auto-blog/database';
 
 const http = createHttp('draft');
 
@@ -18,7 +18,7 @@ export const addDraft = async (pkgName: string, article: any) => {
     articles: [article]
   });
 
-  await database.setPackagePublishedWeixinDraftStatus(pkgName, true);
+  await npmPackagesDB.setPackagePublishedWeixinDraftStatus(pkgName, true);
 
   return data;
 };

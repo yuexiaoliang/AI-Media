@@ -2,7 +2,7 @@ import fs from 'fs-extra';
 import path from 'path';
 import FormData from 'form-data';
 import createHttp from './http';
-import * as database from '@auto-blog/database'
+import { weixinMaterialsDB } from '@auto-blog/database';
 
 type MaterialType = 'image' | 'video' | 'voice' | 'thumb';
 
@@ -18,7 +18,7 @@ export const getMaterials = async (type: string = 'image', offset: number = 0, c
 };
 
 export const addMaterial = async (pkgName: string, filepath: string, type: MaterialType = 'image') => {
-  if (await database.hasWeixinMaterial(pkgName)) return await database.getWeixinMaterial(pkgName);
+  if (await weixinMaterialsDB.hasWeixinMaterial(pkgName)) return await weixinMaterialsDB.getWeixinMaterial(pkgName);
 
   const formData = new FormData();
   formData.append('media', fs.createReadStream(path.resolve(__dirname, filepath)));
@@ -29,7 +29,7 @@ export const addMaterial = async (pkgName: string, filepath: string, type: Mater
     params: { type }
   });
 
-  await database.setWeixinMaterial(pkgName, rest);
+  await weixinMaterialsDB.setWeixinMaterial(pkgName, rest);
 
-  return rest as database.DBWeixinMaterial;
+  return rest as weixinMaterialsDB.DBWeixinMaterial;
 };

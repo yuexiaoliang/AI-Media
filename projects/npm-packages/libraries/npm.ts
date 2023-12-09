@@ -1,13 +1,13 @@
 import * as cheerio from 'cheerio';
 import axios from 'axios';
 import http from './http';
-import * as database from '@auto-blog/database';
+import { npmPackagesDB } from '@auto-blog/database';
 
 // 采集包列表
 export const collectPackages = async () => {
-  const [db, data] = await database.openLocalDatabase();
+  const [db, data] = await npmPackagesDB.openLocalDatabase();
 
-  const notPublished = await database.getNotGottenBaseInfoPackages();
+  const notPublished = await npmPackagesDB.getNotGottenBaseInfoPackages();
 
   if (data.pageNumber && notPublished.length >= 30) return data.packages;
 
@@ -21,7 +21,7 @@ export const collectPackages = async () => {
   try {
     const { data: html } = await axios.get('https://libraries.io/search', { params });
 
-    const projects: database.DBPackages = [];
+    const projects: npmPackagesDB.DBPackages = [];
 
     const $ = cheerio.load(html);
     const $projects = $('.project');
@@ -61,7 +61,7 @@ export async function getPackageInfo(pkgName: string) {
     throw new Error(`@auto-blog/libraries: package [${pkgName}] not found`);
   }
 
-  const pkg: database.DBPackage = {
+  const pkg: npmPackagesDB.DBPackage = {
     name: pkgName,
     homepage,
     repository_url,
@@ -74,7 +74,7 @@ export async function getPackageInfo(pkgName: string) {
     }
   };
 
-  await database.replaceOrInsertPackage(pkg);
+  await npmPackagesDB.replaceOrInsertPackage(pkg);
 
   return pkg;
 }

@@ -1,11 +1,11 @@
 import axios from 'axios';
 import html2md from 'html-to-md';
 import * as cheerio from 'cheerio';
-import * as database from '@auto-blog/database';
+import { npmPackagesDB } from '@auto-blog/database';
 import * as file from '../file';
 
 export const collectPackageReadme = async (name: string) => {
-  if (await database.getPackageCollectedGuideStatus(name)) {
+  if (await npmPackagesDB.getPackageCollectedGuideStatus(name)) {
     const md = file.getReadmeMD(name);
     if (md) return md;
   }
@@ -26,7 +26,7 @@ export const collectPackageReadme = async (name: string) => {
 
   file.saveReadmeMD(md, name);
 
-  await database.setPackageCollectedGuideStatus(name);
+  await npmPackagesDB.setPackageCollectedGuideStatus(name);
 
   return md;
 };
