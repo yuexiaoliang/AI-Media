@@ -29,6 +29,9 @@ importers:
       '@auto-blog/platform':
         specifier: workspace:^
         version: link:packages/platform
+      '@auto-blog/type-challenges':
+        specifier: workspace:^
+        version: link:projects/type-challenges
       '@auto-blog/utils':
         specifier: workspace:^
         version: link:packages/utils
@@ -139,6 +142,8 @@ importers:
   packages/utils: {}
 
   projects/npm-packages: {}
+
+  projects/type-challenges: {}
 
 packages:
 

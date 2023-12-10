@@ -1,4 +1,3 @@
-import 'dotenv/config';
 import { npmPackagesDB } from '@auto-blog/database';
 import { weixin } from '@auto-blog/platform';
 import * as cover from './cover';

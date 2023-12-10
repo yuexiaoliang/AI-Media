@@ -33,6 +33,7 @@
     "@auto-blog/npm-packages": "workspace:^",
     "@auto-blog/openai": "workspace:^",
     "@auto-blog/platform": "workspace:^",
+    "@auto-blog/type-challenges": "workspace:^",
     "@auto-blog/utils": "workspace:^",
     "axios": "^1.6.2",
     "cheerio": "1.0.0-rc.12",

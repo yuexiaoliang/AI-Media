@@ -1,11 +1,15 @@
 node_modules
 .env
+
 /dist/html-templates
 /dist/*.cjs
 /dist/token.json
 /dist/packages/*/*
 !/dist/packages/*/*.md
 /dist/packages/*/README.md
+/dist/type-challenges/*/*
+!/dist/type-challenges/*/*.md
+
 .cache
 
 .VSCodeCounter
