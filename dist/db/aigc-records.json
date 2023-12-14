@@ -365,18 +365,18 @@
       "project": "npm-packages",
       "info": {
         "pkgName": "has-flag",
-        "title": "深入解析命令行标志检测包 has-flag 的妙用"
+        "title": "如何在Node.js命令行中检测特定标志（has-flag包使用教程）"
       },
       "completionInfo": {
-        "id": "chatcmpl-8Tozt3OLsM8q5wrcUbIldbpexPv4Z",
+        "id": "chatcmpl-8VYgSaTZhoNxwlCQcrdJT8m0cBtVp",
         "object": "chat.completion",
-        "created": 1702118237,
+        "created": 1702532184,
         "model": "gpt-4-1106-preview",
         "system_fingerprint": "fp_6aca3b5ce1",
         "usage": {
           "prompt_tokens": 956,
-          "completion_tokens": 1008,
-          "total_tokens": 1964
+          "completion_tokens": 1063,
+          "total_tokens": 2019
         }
       }
     },
