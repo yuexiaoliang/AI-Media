@@ -23,7 +23,7 @@ export async function publisher() {
     const readme = await github.collectPackageReadme(pkg.name);
 
     console.log('\n 正在生成文章内容...');
-    const { html, meta } = await aigc.genArticle(readme, pkg.name);
+    const { html, meta } = await aigc.genArticle(readme, pkg.name, pkg.repository_url!);
 
     console.log('\n 正在生成缩略图...');
     const coverPath = await cover.generateCover(pkg.name);

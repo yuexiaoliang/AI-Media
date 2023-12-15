@@ -25,7 +25,7 @@
 5. 确保在 Markdown 代码块的开头包含编程语言名称。
 6. 文章需要有大量的代码示例，并且包含代码注释。
 7. 文章需要包含仓库地址。
-8. 仓库地址只写 url 不要用 markdown 语法，如：https://github.com/yuexiaoliang/v-fill。
+8. 仓库地址只写 url 不要用 markdown 语法，如：[[repositoryUrl]]
 9. 文章中不要出现和文章无关的叙述内容。
 10. 编写风格应该多样化，需要适合在各种自媒体平台进行发布。
 11. 文章内容要清晰、准确，同时保持文章的可读性和吸引力。
@@ -57,7 +57,7 @@ pkgName: [[pkgName]]
 
 内容...
 
-> 仓库地址：https://github.com/yuexiaoliang/v-fill
+> 仓库地址：[[repositoryUrl]]
 ```
 
 # Initialization:
