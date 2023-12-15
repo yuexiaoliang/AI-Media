@@ -531,6 +531,63 @@
           "total_tokens": 13560
         }
       }
+    },
+    {
+      "project": "npm-packages",
+      "info": {
+        "pkgName": "accepts",
+        "title": "掌握 HTTP 内容协商：Node.js 中的 Accepts 模块详解"
+      },
+      "completionInfo": {
+        "id": "chatcmpl-8VtV87IvCCZR5biD6OwuwOZXh5vFH",
+        "object": "chat.completion",
+        "created": 1702612206,
+        "model": "gpt-4-1106-preview",
+        "system_fingerprint": "fp_6aca3b5ce1",
+        "usage": {
+          "prompt_tokens": 2001,
+          "completion_tokens": 1105,
+          "total_tokens": 3106
+        }
+      }
+    },
+    {
+      "project": "npm-packages",
+      "info": {
+        "pkgName": "strip-ansi",
+        "title": "清除字符串中的ANSI转义码：strip-ansi使用手册"
+      },
+      "completionInfo": {
+        "id": "chatcmpl-8VwEqFOsRGDfzCXYlobDwYFc9dCjw",
+        "object": "chat.completion",
+        "created": 1702622728,
+        "model": "gpt-4-1106-preview",
+        "system_fingerprint": "fp_6aca3b5ce1",
+        "usage": {
+          "prompt_tokens": 1079,
+          "completion_tokens": 909,
+          "total_tokens": 1988
+        }
+      }
+    },
+    {
+      "project": "npm-packages",
+      "info": {
+        "pkgName": "iconv-lite",
+        "title": "纯 JavaScript 字符编码转换：iconv-lite 的使用指南"
+      },
+      "completionInfo": {
+        "id": "chatcmpl-8VwGi0Go6JOpR4Y8vOnJW37f5aNg1",
+        "object": "chat.completion",
+        "created": 1702622844,
+        "model": "gpt-4-1106-preview",
+        "system_fingerprint": "fp_6aca3b5ce1",
+        "usage": {
+          "prompt_tokens": 2895,
+          "completion_tokens": 1178,
+          "total_tokens": 4073
+        }
+      }
     }
   ]
 }

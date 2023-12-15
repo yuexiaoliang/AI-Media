@@ -235,12 +235,14 @@
     {
       "name": "accepts",
       "stepsStatus": {
-        "gottenBaseInfo": false,
-        "collectedGuide": false,
-        "generatedArticle": false,
-        "publishedWeixinDraft": false,
+        "gottenBaseInfo": true,
+        "collectedGuide": true,
+        "generatedArticle": true,
+        "publishedWeixinDraft": true,
         "publishedGithub": false
-      }
+      },
+      "homepage": "https://github.com/jshttp/accepts#readme",
+      "repository_url": "https://github.com/jshttp/accepts"
     },
     {
       "name": "minimist",
@@ -397,12 +399,14 @@
     {
       "name": "iconv-lite",
       "stepsStatus": {
-        "gottenBaseInfo": false,
-        "collectedGuide": false,
-        "generatedArticle": false,
-        "publishedWeixinDraft": false,
+        "gottenBaseInfo": true,
+        "collectedGuide": true,
+        "generatedArticle": true,
+        "publishedWeixinDraft": true,
         "publishedGithub": false
-      }
+      },
+      "homepage": "https://github.com/ashtuchkin/iconv-lite",
+      "repository_url": "https://github.com/ashtuchkin/iconv-lite"
     },
     {
       "name": "asn1",
@@ -641,12 +645,14 @@
     {
       "name": "strip-ansi",
       "stepsStatus": {
-        "gottenBaseInfo": false,
-        "collectedGuide": false,
-        "generatedArticle": false,
-        "publishedWeixinDraft": false,
+        "gottenBaseInfo": true,
+        "collectedGuide": true,
+        "generatedArticle": true,
+        "publishedWeixinDraft": true,
         "publishedGithub": false
-      }
+      },
+      "homepage": "https://github.com/chalk/strip-ansi#readme",
+      "repository_url": "https://github.com/chalk/strip-ansi"
     },
     {
       "name": "object-assign",
