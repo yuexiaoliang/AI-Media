@@ -1,5 +1,5 @@
 {
-  "pageNumber": 2,
+  "pageNumber": 3,
   "packages": [
     {
       "name": "isarray",
@@ -63,12 +63,14 @@
     {
       "name": "ansi-regex",
       "stepsStatus": {
-        "gottenBaseInfo": false,
-        "collectedGuide": false,
-        "generatedArticle": false,
-        "publishedWeixinDraft": false,
+        "gottenBaseInfo": true,
+        "collectedGuide": true,
+        "generatedArticle": true,
+        "publishedWeixinDraft": true,
         "publishedGithub": false
-      }
+      },
+      "homepage": "https://github.com/chalk/ansi-regex#readme",
+      "repository_url": "https://github.com/chalk/ansi-regex"
     },
     {
       "name": "chalk",
@@ -95,12 +97,14 @@
     {
       "name": "async",
       "stepsStatus": {
-        "gottenBaseInfo": false,
-        "collectedGuide": false,
-        "generatedArticle": false,
-        "publishedWeixinDraft": false,
+        "gottenBaseInfo": true,
+        "collectedGuide": true,
+        "generatedArticle": true,
+        "publishedWeixinDraft": true,
         "publishedGithub": false
-      }
+      },
+      "homepage": "https://caolan.github.io/async/",
+      "repository_url": "https://github.com/caolan/async"
     },
     {
       "name": "inherits",
@@ -175,12 +179,14 @@
     {
       "name": "arr-flatten",
       "stepsStatus": {
-        "gottenBaseInfo": false,
-        "collectedGuide": false,
-        "generatedArticle": false,
-        "publishedWeixinDraft": false,
+        "gottenBaseInfo": true,
+        "collectedGuide": true,
+        "generatedArticle": true,
+        "publishedWeixinDraft": true,
         "publishedGithub": false
-      }
+      },
+      "homepage": "https://github.com/jonschlinkert/arr-flatten",
+      "repository_url": "https://github.com/jonschlinkert/arr-flatten"
     },
     {
       "name": "arr-diff",
@@ -688,6 +694,310 @@
     },
     {
       "name": "depd",
+      "stepsStatus": {
+        "gottenBaseInfo": false,
+        "collectedGuide": false,
+        "generatedArticle": false,
+        "publishedWeixinDraft": false,
+        "publishedGithub": false
+      }
+    },
+    {
+      "name": "process-nextick-args",
+      "stepsStatus": {
+        "gottenBaseInfo": false,
+        "collectedGuide": false,
+        "generatedArticle": false,
+        "publishedWeixinDraft": false,
+        "publishedGithub": false
+      }
+    },
+    {
+      "name": "bytes",
+      "stepsStatus": {
+        "gottenBaseInfo": true,
+        "collectedGuide": true,
+        "generatedArticle": true,
+        "publishedWeixinDraft": true,
+        "publishedGithub": false
+      },
+      "homepage": "https://github.com/visionmedia/bytes.js#readme",
+      "repository_url": "https://github.com/visionmedia/bytes.js"
+    },
+    {
+      "name": "wrappy",
+      "stepsStatus": {
+        "gottenBaseInfo": false,
+        "collectedGuide": false,
+        "generatedArticle": false,
+        "publishedWeixinDraft": false,
+        "publishedGithub": false
+      }
+    },
+    {
+      "name": "util-deprecate",
+      "stepsStatus": {
+        "gottenBaseInfo": false,
+        "collectedGuide": false,
+        "generatedArticle": false,
+        "publishedWeixinDraft": false,
+        "publishedGithub": false
+      }
+    },
+    {
+      "name": "fill-range",
+      "stepsStatus": {
+        "gottenBaseInfo": false,
+        "collectedGuide": false,
+        "generatedArticle": false,
+        "publishedWeixinDraft": false,
+        "publishedGithub": false
+      }
+    },
+    {
+      "name": "expand-brackets",
+      "stepsStatus": {
+        "gottenBaseInfo": false,
+        "collectedGuide": false,
+        "generatedArticle": false,
+        "publishedWeixinDraft": false,
+        "publishedGithub": false
+      }
+    },
+    {
+      "name": "ee-first",
+      "stepsStatus": {
+        "gottenBaseInfo": false,
+        "collectedGuide": false,
+        "generatedArticle": false,
+        "publishedWeixinDraft": false,
+        "publishedGithub": false
+      }
+    },
+    {
+      "name": "extglob",
+      "stepsStatus": {
+        "gottenBaseInfo": true,
+        "collectedGuide": true,
+        "generatedArticle": true,
+        "publishedWeixinDraft": true,
+        "publishedGithub": false
+      },
+      "homepage": "https://github.com/micromatch/extglob",
+      "repository_url": "https://github.com/micromatch/extglob"
+    },
+    {
+      "name": "bluebird",
+      "stepsStatus": {
+        "gottenBaseInfo": false,
+        "collectedGuide": false,
+        "generatedArticle": false,
+        "publishedWeixinDraft": false,
+        "publishedGithub": false
+      }
+    },
+    {
+      "name": "combined-stream",
+      "stepsStatus": {
+        "gottenBaseInfo": false,
+        "collectedGuide": false,
+        "generatedArticle": false,
+        "publishedWeixinDraft": false,
+        "publishedGithub": false
+      }
+    },
+    {
+      "name": "for-in",
+      "stepsStatus": {
+        "gottenBaseInfo": false,
+        "collectedGuide": false,
+        "generatedArticle": false,
+        "publishedWeixinDraft": false,
+        "publishedGithub": false
+      }
+    },
+    {
+      "name": "bcrypt-pbkdf",
+      "stepsStatus": {
+        "gottenBaseInfo": false,
+        "collectedGuide": false,
+        "generatedArticle": false,
+        "publishedWeixinDraft": false,
+        "publishedGithub": false
+      }
+    },
+    {
+      "name": "isexe",
+      "stepsStatus": {
+        "gottenBaseInfo": false,
+        "collectedGuide": false,
+        "generatedArticle": false,
+        "publishedWeixinDraft": false,
+        "publishedGithub": false
+      }
+    },
+    {
+      "name": "escape-html",
+      "stepsStatus": {
+        "gottenBaseInfo": false,
+        "collectedGuide": false,
+        "generatedArticle": false,
+        "publishedWeixinDraft": false,
+        "publishedGithub": false
+      }
+    },
+    {
+      "name": "find-up",
+      "stepsStatus": {
+        "gottenBaseInfo": false,
+        "collectedGuide": false,
+        "generatedArticle": false,
+        "publishedWeixinDraft": false,
+        "publishedGithub": false
+      }
+    },
+    {
+      "name": "destroy",
+      "stepsStatus": {
+        "gottenBaseInfo": false,
+        "collectedGuide": false,
+        "generatedArticle": false,
+        "publishedWeixinDraft": false,
+        "publishedGithub": false
+      }
+    },
+    {
+      "name": "webpack",
+      "stepsStatus": {
+        "gottenBaseInfo": false,
+        "collectedGuide": false,
+        "generatedArticle": false,
+        "publishedWeixinDraft": false,
+        "publishedGithub": false
+      }
+    },
+    {
+      "name": "extend",
+      "stepsStatus": {
+        "gottenBaseInfo": false,
+        "collectedGuide": false,
+        "generatedArticle": false,
+        "publishedWeixinDraft": false,
+        "publishedGithub": false
+      }
+    },
+    {
+      "name": "esutils",
+      "stepsStatus": {
+        "gottenBaseInfo": false,
+        "collectedGuide": false,
+        "generatedArticle": false,
+        "publishedWeixinDraft": false,
+        "publishedGithub": false
+      }
+    },
+    {
+      "name": "caseless",
+      "stepsStatus": {
+        "gottenBaseInfo": false,
+        "collectedGuide": false,
+        "generatedArticle": false,
+        "publishedWeixinDraft": false,
+        "publishedGithub": false
+      }
+    },
+    {
+      "name": "babel-core",
+      "stepsStatus": {
+        "gottenBaseInfo": false,
+        "collectedGuide": false,
+        "generatedArticle": false,
+        "publishedWeixinDraft": false,
+        "publishedGithub": false
+      }
+    },
+    {
+      "name": "cookie",
+      "stepsStatus": {
+        "gottenBaseInfo": false,
+        "collectedGuide": false,
+        "generatedArticle": false,
+        "publishedWeixinDraft": false,
+        "publishedGithub": false
+      }
+    },
+    {
+      "name": "mime",
+      "stepsStatus": {
+        "gottenBaseInfo": false,
+        "collectedGuide": false,
+        "generatedArticle": false,
+        "publishedWeixinDraft": false,
+        "publishedGithub": false
+      }
+    },
+    {
+      "name": "array-uniq",
+      "stepsStatus": {
+        "gottenBaseInfo": false,
+        "collectedGuide": false,
+        "generatedArticle": false,
+        "publishedWeixinDraft": false,
+        "publishedGithub": false
+      }
+    },
+    {
+      "name": "glob-parent",
+      "stepsStatus": {
+        "gottenBaseInfo": false,
+        "collectedGuide": false,
+        "generatedArticle": false,
+        "publishedWeixinDraft": false,
+        "publishedGithub": false
+      }
+    },
+    {
+      "name": "esprima",
+      "stepsStatus": {
+        "gottenBaseInfo": false,
+        "collectedGuide": false,
+        "generatedArticle": false,
+        "publishedWeixinDraft": false,
+        "publishedGithub": false
+      }
+    },
+    {
+      "name": "delayed-stream",
+      "stepsStatus": {
+        "gottenBaseInfo": false,
+        "collectedGuide": false,
+        "generatedArticle": false,
+        "publishedWeixinDraft": false,
+        "publishedGithub": false
+      }
+    },
+    {
+      "name": "error-ex",
+      "stepsStatus": {
+        "gottenBaseInfo": false,
+        "collectedGuide": false,
+        "generatedArticle": false,
+        "publishedWeixinDraft": false,
+        "publishedGithub": false
+      }
+    },
+    {
+      "name": "chokidar",
+      "stepsStatus": {
+        "gottenBaseInfo": false,
+        "collectedGuide": false,
+        "generatedArticle": false,
+        "publishedWeixinDraft": false,
+        "publishedGithub": false
+      }
+    },
+    {
+      "name": "is-extendable",
       "stepsStatus": {
         "gottenBaseInfo": false,
         "collectedGuide": false,

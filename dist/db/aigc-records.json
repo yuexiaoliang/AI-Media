@@ -4,18 +4,18 @@
       "project": "npm-packages",
       "info": {
         "pkgName": "isarray",
-        "title": "深入浅出isarray：彻底理解数组类型判定"
+        "title": "JavaScript 老版本浏览器的 isArray 兼容处理攻略"
       },
       "completionInfo": {
-        "id": "chatcmpl-8PQg6FSuPcUj0LIiXFS0kTDNwvSxG",
+        "id": "chatcmpl-8Ww3TozHnW3rR3lM6pEdnOATXGLbz",
         "object": "chat.completion",
-        "created": 1701071442,
+        "created": 1702860351,
         "model": "gpt-4-1106-preview",
-        "system_fingerprint": "fp_a24b4d720c",
+        "system_fingerprint": "fp_3905aa4f79",
         "usage": {
-          "prompt_tokens": 1123,
-          "completion_tokens": 878,
-          "total_tokens": 2001
+          "prompt_tokens": 1207,
+          "completion_tokens": 854,
+          "total_tokens": 2061
         }
       }
     },
@@ -605,6 +605,101 @@
           "prompt_tokens": 4668,
           "completion_tokens": 1246,
           "total_tokens": 5914
+        }
+      }
+    },
+    {
+      "project": "npm-packages",
+      "info": {
+        "pkgName": "ansi-regex",
+        "title": "利用ansi-regex轻松匹配ANSI转义码"
+      },
+      "completionInfo": {
+        "id": "chatcmpl-8WvyOSEQfmSZVFCFOYXhCTR1SD9EP",
+        "object": "chat.completion",
+        "created": 1702860036,
+        "model": "gpt-4-1106-preview",
+        "system_fingerprint": "fp_6aca3b5ce1",
+        "usage": {
+          "prompt_tokens": 1421,
+          "completion_tokens": 812,
+          "total_tokens": 2233
+        }
+      }
+    },
+    {
+      "project": "npm-packages",
+      "info": {
+        "pkgName": "async",
+        "title": "异步不再难 —— 深入解析 Async 库的魅力"
+      },
+      "completionInfo": {
+        "id": "chatcmpl-8Ww052wO1shVaHBwSjWToZtuyVyel",
+        "object": "chat.completion",
+        "created": 1702860141,
+        "model": "gpt-4-1106-preview",
+        "system_fingerprint": "fp_3905aa4f79",
+        "usage": {
+          "prompt_tokens": 1696,
+          "completion_tokens": 1018,
+          "total_tokens": 2714
+        }
+      }
+    },
+    {
+      "project": "npm-packages",
+      "info": {
+        "pkgName": "bytes",
+        "title": "理解并掌握字符串和字节之间的转换：使用bytes模块"
+      },
+      "completionInfo": {
+        "id": "chatcmpl-8Ww0vgIavfmL76mKDFKdMxTSmNglK",
+        "object": "chat.completion",
+        "created": 1702860193,
+        "model": "gpt-4-1106-preview",
+        "system_fingerprint": "fp_3905aa4f79",
+        "usage": {
+          "prompt_tokens": 2069,
+          "completion_tokens": 848,
+          "total_tokens": 2917
+        }
+      }
+    },
+    {
+      "project": "npm-packages",
+      "info": {
+        "pkgName": "arr-flatten",
+        "title": "简洁而高效的数组扁平化处理 - 探秘arr-flatten包"
+      },
+      "completionInfo": {
+        "id": "chatcmpl-8Ww2RyLXe3vPFIiUpjb6G6yVHdhSU",
+        "object": "chat.completion",
+        "created": 1702860287,
+        "model": "gpt-4-1106-preview",
+        "system_fingerprint": "fp_3905aa4f79",
+        "usage": {
+          "prompt_tokens": 2143,
+          "completion_tokens": 1125,
+          "total_tokens": 3268
+        }
+      }
+    },
+    {
+      "project": "npm-packages",
+      "info": {
+        "pkgName": "extglob",
+        "title": "使用extglob强化JavaScript的glob模式匹配"
+      },
+      "completionInfo": {
+        "id": "chatcmpl-8Ww4sxumQDuIUiHUE6CgDBjvn1ruB",
+        "object": "chat.completion",
+        "created": 1702860438,
+        "model": "gpt-4-1106-preview",
+        "system_fingerprint": "fp_3905aa4f79",
+        "usage": {
+          "prompt_tokens": 4358,
+          "completion_tokens": 1172,
+          "total_tokens": 5530
         }
       }
     }

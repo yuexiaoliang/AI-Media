@@ -319,6 +319,56 @@
         "media_id": "3TI8XMZiLsZyu-QJGQpsXMepl2hNVrzdR28JSKYCFtq30eVZZJxXmJbueNKpu8wz",
         "url": "http://mmbiz.qpic.cn/mmbiz_png/QPCr6EnHPryhicAbM54ycVBfDQyibNyNiatZI8ZIfffnu8MfMEYialtibByOqCZnbLFLCK9HVW6BThTLWdxTibU2Oz8A/0?wx_fmt=png"
       }
+    },
+    {
+      "project": "npm-packages",
+      "info": {
+        "pkgName": "ansi-regex"
+      },
+      "materialInfo": {
+        "media_id": "3TI8XMZiLsZyu-QJGQpsXDenOskfK4rdg8a_6ar89P4_UhpVU5J7Z4tLvOwM5ASy",
+        "url": "http://mmbiz.qpic.cn/mmbiz_png/QPCr6EnHPrzUzpDS5UPCGUgy6u0QgibxXbGat9mLKAb5Nv9iaHoQiavsKINFNOCKNumPOj8ljWH8PCWfzk9ria4Qfg/0?wx_fmt=png"
+      }
+    },
+    {
+      "project": "npm-packages",
+      "info": {
+        "pkgName": "async"
+      },
+      "materialInfo": {
+        "media_id": "3TI8XMZiLsZyu-QJGQpsXPUNof9uqgUwKG20jD05Mjvl97Y7UcMcMO11FUewkPTO",
+        "url": "http://mmbiz.qpic.cn/mmbiz_png/QPCr6EnHPrzUzpDS5UPCGUgy6u0QgibxXC5YJn08U33Xa5xkIIkF7DMGYDs4GX4rn5VKqbAhjvXEJvHAvn8sBZA/0?wx_fmt=png"
+      }
+    },
+    {
+      "project": "npm-packages",
+      "info": {
+        "pkgName": "bytes"
+      },
+      "materialInfo": {
+        "media_id": "3TI8XMZiLsZyu-QJGQpsXCWre_-xZQcz896OtjdUsYNDK7ZdH_chOBxhu3CVgbAy",
+        "url": "http://mmbiz.qpic.cn/mmbiz_png/QPCr6EnHPrzUzpDS5UPCGUgy6u0QgibxXbE8QaSgO3uvo0GSCz8WTDC5aFicpEwXWbEwaXFzLBxVuSibPtcA3pQTQ/0?wx_fmt=png"
+      }
+    },
+    {
+      "project": "npm-packages",
+      "info": {
+        "pkgName": "arr-flatten"
+      },
+      "materialInfo": {
+        "media_id": "3TI8XMZiLsZyu-QJGQpsXA2bEPf6n-B2V0jLQJK1MPzf3WLbG6dynZJsfGPilSLg",
+        "url": "http://mmbiz.qpic.cn/mmbiz_png/QPCr6EnHPrzUzpDS5UPCGUgy6u0QgibxXSxWYiblNxMHaoaNLGhBvKIJkibBvltG5OUsO8ODosM19W8ibiaWvtHmBUA/0?wx_fmt=png"
+      }
+    },
+    {
+      "project": "npm-packages",
+      "info": {
+        "pkgName": "extglob"
+      },
+      "materialInfo": {
+        "media_id": "3TI8XMZiLsZyu-QJGQpsXNpf6AEO3j8ynsWsUBfWpdYXmxKNAcDXrRzbFmLvkXoJ",
+        "url": "http://mmbiz.qpic.cn/mmbiz_png/QPCr6EnHPrzUzpDS5UPCGUgy6u0QgibxXrz5lXbFBp4CBnwQgSf5xVtIlIzVGHt0aR8iaCb2zSLvAdy59b7lU62Q/0?wx_fmt=png"
+      }
     }
   ]
 }
