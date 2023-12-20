@@ -41,12 +41,14 @@
     {
       "name": "express",
       "stepsStatus": {
-        "gottenBaseInfo": false,
-        "collectedGuide": false,
-        "generatedArticle": false,
-        "publishedWeixinDraft": false,
+        "gottenBaseInfo": true,
+        "collectedGuide": true,
+        "generatedArticle": true,
+        "publishedWeixinDraft": true,
         "publishedGithub": false
-      }
+      },
+      "homepage": "http://expressjs.com/",
+      "repository_url": "https://github.com/expressjs/express"
     },
     {
       "name": "debug",
@@ -319,12 +321,14 @@
     {
       "name": "graceful-fs",
       "stepsStatus": {
-        "gottenBaseInfo": false,
-        "collectedGuide": false,
-        "generatedArticle": false,
-        "publishedWeixinDraft": false,
+        "gottenBaseInfo": true,
+        "collectedGuide": true,
+        "generatedArticle": true,
+        "publishedWeixinDraft": true,
         "publishedGithub": false
-      }
+      },
+      "homepage": "https://github.com/isaacs/node-graceful-fs#readme",
+      "repository_url": "https://github.com/isaacs/node-graceful-fs"
     },
     {
       "name": "rimraf",
@@ -665,12 +669,14 @@
     {
       "name": "object-assign",
       "stepsStatus": {
-        "gottenBaseInfo": false,
-        "collectedGuide": false,
-        "generatedArticle": false,
-        "publishedWeixinDraft": false,
+        "gottenBaseInfo": true,
+        "collectedGuide": true,
+        "generatedArticle": true,
+        "publishedWeixinDraft": true,
         "publishedGithub": false
-      }
+      },
+      "homepage": "https://github.com/sindresorhus/object-assign#readme",
+      "repository_url": "https://github.com/sindresorhus/object-assign"
     },
     {
       "name": "core-js",
@@ -959,22 +965,26 @@
     {
       "name": "esprima",
       "stepsStatus": {
-        "gottenBaseInfo": false,
-        "collectedGuide": false,
-        "generatedArticle": false,
-        "publishedWeixinDraft": false,
+        "gottenBaseInfo": true,
+        "collectedGuide": true,
+        "generatedArticle": true,
+        "publishedWeixinDraft": true,
         "publishedGithub": false
-      }
+      },
+      "homepage": "http://esprima.org",
+      "repository_url": "https://github.com/jquery/esprima"
     },
     {
       "name": "delayed-stream",
       "stepsStatus": {
-        "gottenBaseInfo": false,
-        "collectedGuide": false,
-        "generatedArticle": false,
-        "publishedWeixinDraft": false,
+        "gottenBaseInfo": true,
+        "collectedGuide": true,
+        "generatedArticle": true,
+        "publishedWeixinDraft": true,
         "publishedGithub": false
-      }
+      },
+      "homepage": "https://github.com/felixge/node-delayed-stream",
+      "repository_url": "https://github.com/felixge/node-delayed-stream"
     },
     {
       "name": "error-ex",
