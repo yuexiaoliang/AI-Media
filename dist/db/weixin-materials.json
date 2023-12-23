@@ -419,6 +419,66 @@
         "media_id": "3TI8XMZiLsZyu-QJGQpsXFOZh9iip-WlIS_puI-vBvOJDXxcBCirquBxyDVzVBem",
         "url": "http://mmbiz.qpic.cn/mmbiz_png/QPCr6EnHPry0P70y4kJlrDGnKTjicqxxTyciaxziaxqOSu3eeoyKrs3WPxFThWyQxfekZKGMxibS8QiaoYUGeibmIXOw/0?wx_fmt=png"
       }
+    },
+    {
+      "project": "npm-packages",
+      "info": {
+        "pkgName": "error-ex"
+      },
+      "materialInfo": {
+        "media_id": "3TI8XMZiLsZyu-QJGQpsXAjvAHU0QLTDoEljBaiXv7W6YlXl1zaLre3UdYsqWgUo",
+        "url": "http://mmbiz.qpic.cn/mmbiz_png/QPCr6EnHPrxa6ac57tROKictM7VEfAQRvsz0uSLeUsdnyJHkmSiaZBrmbdREENcDNPcPp1Kt2dTt23Iny74J4wXg/0?wx_fmt=png"
+      }
+    },
+    {
+      "project": "npm-packages",
+      "info": {
+        "pkgName": "wrappy"
+      },
+      "materialInfo": {
+        "media_id": "3TI8XMZiLsZyu-QJGQpsXNYk-xiYB9f9v-LbbGoSSwsz6jphAWbi_H-8xkKqQMIl",
+        "url": "http://mmbiz.qpic.cn/mmbiz_png/QPCr6EnHPrxa6ac57tROKictM7VEfAQRvFyXbGrckUeYzzsMWiaLzyQ6VtibYia7ciceezpFFdScMYZT0h86lweyqGA/0?wx_fmt=png"
+      }
+    },
+    {
+      "project": "npm-packages",
+      "info": {
+        "pkgName": "asn1"
+      },
+      "materialInfo": {
+        "media_id": "3TI8XMZiLsZyu-QJGQpsXBJX4ifI5Tk5hnuVWGYFZxMzu-PYE3oFPW0VP9nP4XOn",
+        "url": "http://mmbiz.qpic.cn/mmbiz_png/QPCr6EnHPrxa6ac57tROKictM7VEfAQRv4KtAMaZV2RU2rTSl89OXSNOFvdcibld3vFWiatzV2qqXeRlO0iax7cjLA/0?wx_fmt=png"
+      }
+    },
+    {
+      "project": "npm-packages",
+      "info": {
+        "pkgName": "isexe"
+      },
+      "materialInfo": {
+        "media_id": "3TI8XMZiLsZyu-QJGQpsXPbGdKM4Odc6uV-pkRMAcS3zDXPxH6HYuAIqvsu2RtmD",
+        "url": "http://mmbiz.qpic.cn/mmbiz_png/QPCr6EnHPrxa6ac57tROKictM7VEfAQRv8RWjRap2MgHuHc0wxeJyfONtS9ibgEHbBchEbvIRd5WvrYI6wWeYKow/0?wx_fmt=png"
+      }
+    },
+    {
+      "project": "npm-packages",
+      "info": {
+        "pkgName": "aws-sign2"
+      },
+      "materialInfo": {
+        "media_id": "3TI8XMZiLsZyu-QJGQpsXEBWpNMfKQ6GcNMPPytOOS-U8AKprZqC4pdpdtv_wO8L",
+        "url": "http://mmbiz.qpic.cn/mmbiz_png/QPCr6EnHPrxa6ac57tROKictM7VEfAQRvAtbWqbxnGpIMkjpQnlK2hZ9jMLYicLDibcfFGb3W9qbPCdgBNUE06Wjg/0?wx_fmt=png"
+      }
+    },
+    {
+      "project": "npm-packages",
+      "info": {
+        "pkgName": "rimraf"
+      },
+      "materialInfo": {
+        "media_id": "3TI8XMZiLsZyu-QJGQpsXLN7tg-HRlyMREIglrNdSGrENJ0gGVy4PyZDlnGv1hcc",
+        "url": "http://mmbiz.qpic.cn/mmbiz_png/QPCr6EnHPrxa6ac57tROKictM7VEfAQRvDVN3s0o2gge9Qgz7J1LicDvib6laPicrt3QYqkiaMxpV8nya2gLy8nokRA/0?wx_fmt=png"
+      }
     }
   ]
 }

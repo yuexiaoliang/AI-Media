@@ -333,12 +333,14 @@
     {
       "name": "rimraf",
       "stepsStatus": {
-        "gottenBaseInfo": false,
-        "collectedGuide": false,
-        "generatedArticle": false,
-        "publishedWeixinDraft": false,
+        "gottenBaseInfo": true,
+        "collectedGuide": true,
+        "generatedArticle": true,
+        "publishedWeixinDraft": true,
         "publishedGithub": false
-      }
+      },
+      "homepage": "https://github.com/isaacs/rimraf#readme",
+      "repository_url": "https://github.com/isaacs/rimraf"
     },
     {
       "name": "minimatch",
@@ -423,12 +425,14 @@
     {
       "name": "asn1",
       "stepsStatus": {
-        "gottenBaseInfo": false,
-        "collectedGuide": false,
-        "generatedArticle": false,
-        "publishedWeixinDraft": false,
+        "gottenBaseInfo": true,
+        "collectedGuide": true,
+        "generatedArticle": true,
+        "publishedWeixinDraft": true,
         "publishedGithub": false
-      }
+      },
+      "homepage": "https://github.com/joyent/node-asn1#readme",
+      "repository_url": "https://github.com/joyent/node-asn1"
     },
     {
       "name": "mime-db",
@@ -501,12 +505,14 @@
     {
       "name": "aws-sign2",
       "stepsStatus": {
-        "gottenBaseInfo": false,
-        "collectedGuide": false,
-        "generatedArticle": false,
-        "publishedWeixinDraft": false,
+        "gottenBaseInfo": true,
+        "collectedGuide": true,
+        "generatedArticle": true,
+        "publishedWeixinDraft": true,
         "publishedGithub": false
-      }
+      },
+      "homepage": "https://github.com/mikeal/aws-sign#readme",
+      "repository_url": "https://github.com/mikeal/aws-sign"
     },
     {
       "name": "qs",
@@ -733,12 +739,14 @@
     {
       "name": "wrappy",
       "stepsStatus": {
-        "gottenBaseInfo": false,
-        "collectedGuide": false,
-        "generatedArticle": false,
-        "publishedWeixinDraft": false,
+        "gottenBaseInfo": true,
+        "collectedGuide": true,
+        "generatedArticle": true,
+        "publishedWeixinDraft": true,
         "publishedGithub": false
-      }
+      },
+      "homepage": "https://github.com/npm/wrappy",
+      "repository_url": "https://github.com/npm/wrappy"
     },
     {
       "name": "util-deprecate",
@@ -835,12 +843,14 @@
     {
       "name": "isexe",
       "stepsStatus": {
-        "gottenBaseInfo": false,
-        "collectedGuide": false,
-        "generatedArticle": false,
-        "publishedWeixinDraft": false,
+        "gottenBaseInfo": true,
+        "collectedGuide": true,
+        "generatedArticle": true,
+        "publishedWeixinDraft": true,
         "publishedGithub": false
-      }
+      },
+      "homepage": "https://github.com/isaacs/isexe#readme",
+      "repository_url": "https://github.com/isaacs/isexe"
     },
     {
       "name": "escape-html",
@@ -989,12 +999,14 @@
     {
       "name": "error-ex",
       "stepsStatus": {
-        "gottenBaseInfo": false,
-        "collectedGuide": false,
-        "generatedArticle": false,
-        "publishedWeixinDraft": false,
+        "gottenBaseInfo": true,
+        "collectedGuide": true,
+        "generatedArticle": true,
+        "publishedWeixinDraft": true,
         "publishedGithub": false
-      }
+      },
+      "homepage": "https://github.com/qix-/node-error-ex#readme",
+      "repository_url": "https://github.com/qix-/node-error-ex"
     },
     {
       "name": "chokidar",
