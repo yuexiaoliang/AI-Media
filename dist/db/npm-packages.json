@@ -1023,12 +1023,14 @@
     {
       "name": "is-extendable",
       "stepsStatus": {
-        "gottenBaseInfo": false,
-        "collectedGuide": false,
-        "generatedArticle": false,
-        "publishedWeixinDraft": false,
+        "gottenBaseInfo": true,
+        "collectedGuide": true,
+        "generatedArticle": true,
+        "publishedWeixinDraft": true,
         "publishedGithub": false
-      }
+      },
+      "homepage": "https://github.com/jonschlinkert/is-extendable",
+      "repository_url": "https://github.com/jonschlinkert/is-extendable"
     }
   ]
 }
