@@ -499,6 +499,26 @@
         "media_id": "3TI8XMZiLsZyu-QJGQpsXJrH5nJb5pPpv1SG5SHK0XWZgUmVM0joMmP3nCnRzn1Y",
         "url": "http://mmbiz.qpic.cn/mmbiz_png/QPCr6EnHPrxa6ac57tROKictM7VEfAQRvMGhnylr8o41yRbUHsku207nicUth625bDuMv7SNQcAgicaw8a0n8f0ag/0?wx_fmt=png"
       }
+    },
+    {
+      "project": "npm-packages",
+      "info": {
+        "pkgName": "ee-first"
+      },
+      "materialInfo": {
+        "media_id": "3TI8XMZiLsZyu-QJGQpsXLvdkOAOrZkhoBc5ppohCkAvMnJLIA4DM9WacmnluC2H",
+        "url": "http://mmbiz.qpic.cn/mmbiz_png/QPCr6EnHPrzQqRWmH5POYoaT9J3zMbiagOf8Lv96icZT6eBK2sYe4lBJZwXyf0axh4IwrGX0M70hAR6OxlMwNnOg/0?wx_fmt=png"
+      }
+    },
+    {
+      "project": "npm-packages",
+      "info": {
+        "pkgName": "fill-range"
+      },
+      "materialInfo": {
+        "media_id": "3TI8XMZiLsZyu-QJGQpsXIBdOaN1quZCTxi8LVyEztff80tQMeRJ18vNN_3VLD-p",
+        "url": "http://mmbiz.qpic.cn/mmbiz_png/QPCr6EnHPrzQqRWmH5POYoaT9J3zMbiagUSamf3uez0aDt1excXUej6aVWA8U3ib6xX5rl9Qbbp2REuJVYj87qIg/0?wx_fmt=png"
+      }
     }
   ]
 }

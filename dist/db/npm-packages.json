@@ -761,12 +761,14 @@
     {
       "name": "fill-range",
       "stepsStatus": {
-        "gottenBaseInfo": false,
-        "collectedGuide": false,
-        "generatedArticle": false,
-        "publishedWeixinDraft": false,
+        "gottenBaseInfo": true,
+        "collectedGuide": true,
+        "generatedArticle": true,
+        "publishedWeixinDraft": true,
         "publishedGithub": false
-      }
+      },
+      "homepage": "https://github.com/jonschlinkert/fill-range",
+      "repository_url": "https://github.com/jonschlinkert/fill-range"
     },
     {
       "name": "expand-brackets",
@@ -783,12 +785,14 @@
     {
       "name": "ee-first",
       "stepsStatus": {
-        "gottenBaseInfo": false,
-        "collectedGuide": false,
-        "generatedArticle": false,
-        "publishedWeixinDraft": false,
+        "gottenBaseInfo": true,
+        "collectedGuide": true,
+        "generatedArticle": true,
+        "publishedWeixinDraft": true,
         "publishedGithub": false
-      }
+      },
+      "homepage": "https://github.com/jonathanong/ee-first",
+      "repository_url": "https://github.com/jonathanong/ee-first"
     },
     {
       "name": "extglob",
