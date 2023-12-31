@@ -28,6 +28,9 @@ export const collectPackages = async () => {
     if ($projects.length) {
       $projects.each((_, item) => {
         const name = $(item).find('h5 a').text();
+        const finded = data.packages.find(({ name: _name }) => _name === name);
+        if (finded) return;
+
         projects.push({
           name,
           stepsStatus: {
