@@ -819,12 +819,14 @@
     {
       "name": "combined-stream",
       "stepsStatus": {
-        "gottenBaseInfo": false,
-        "collectedGuide": false,
-        "generatedArticle": false,
+        "gottenBaseInfo": true,
+        "collectedGuide": true,
+        "generatedArticle": true,
         "publishedWeixinDraft": false,
         "publishedGithub": false
-      }
+      },
+      "homepage": "https://github.com/felixge/node-combined-stream",
+      "repository_url": "https://github.com/felixge/node-combined-stream"
     },
     {
       "name": "for-in",
