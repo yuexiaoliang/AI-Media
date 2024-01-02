@@ -7,7 +7,7 @@ import * as file from '../file';
 import genArticlePrompt from './prompts/genArticle.txt';
 import genImagePromptPrompt from './prompts/genImagePrompt.txt';
 
-export const genArticle = async (readme: string, pkgName: string) => {
+export const genArticle = async (readme: string, pkgName: string, repositoryUrl: string) => {
   // 如果生成过文章，则需要获取以生成的文章，避免重复请求浪费资源
   if (await npmPackagesDB.getPackageGeneratedArticleStatus(pkgName)) {
     const history = await aigcRecordsDB.getNpmPackageRecord(pkgName);
@@ -31,7 +31,7 @@ export const genArticle = async (readme: string, pkgName: string) => {
   const { content, completionInfo } = await completions([
     {
       role: 'user',
-      content: renderTemplate(genArticlePrompt, { readme, pkgName })
+      content: renderTemplate(genArticlePrompt, { readme, pkgName, repositoryUrl })
     }
   ]);
 

@@ -1,5 +1,5 @@
 {
-  "pageNumber": 2,
+  "pageNumber": 3,
   "packages": [
     {
       "name": "isarray",
@@ -41,32 +41,38 @@
     {
       "name": "express",
       "stepsStatus": {
-        "gottenBaseInfo": false,
-        "collectedGuide": false,
-        "generatedArticle": false,
-        "publishedWeixinDraft": false,
+        "gottenBaseInfo": true,
+        "collectedGuide": true,
+        "generatedArticle": true,
+        "publishedWeixinDraft": true,
         "publishedGithub": false
-      }
+      },
+      "homepage": "http://expressjs.com/",
+      "repository_url": "https://github.com/expressjs/express"
     },
     {
       "name": "debug",
       "stepsStatus": {
-        "gottenBaseInfo": false,
-        "collectedGuide": false,
-        "generatedArticle": false,
-        "publishedWeixinDraft": false,
+        "gottenBaseInfo": true,
+        "collectedGuide": true,
+        "generatedArticle": true,
+        "publishedWeixinDraft": true,
         "publishedGithub": false
-      }
+      },
+      "homepage": "https://github.com/debug-js/debug#readme",
+      "repository_url": "https://github.com/debug-js/debug"
     },
     {
       "name": "ansi-regex",
       "stepsStatus": {
-        "gottenBaseInfo": false,
-        "collectedGuide": false,
-        "generatedArticle": false,
-        "publishedWeixinDraft": false,
+        "gottenBaseInfo": true,
+        "collectedGuide": true,
+        "generatedArticle": true,
+        "publishedWeixinDraft": true,
         "publishedGithub": false
-      }
+      },
+      "homepage": "https://github.com/chalk/ansi-regex#readme",
+      "repository_url": "https://github.com/chalk/ansi-regex"
     },
     {
       "name": "chalk",
@@ -93,12 +99,14 @@
     {
       "name": "async",
       "stepsStatus": {
-        "gottenBaseInfo": false,
-        "collectedGuide": false,
-        "generatedArticle": false,
-        "publishedWeixinDraft": false,
+        "gottenBaseInfo": true,
+        "collectedGuide": true,
+        "generatedArticle": true,
+        "publishedWeixinDraft": true,
         "publishedGithub": false
-      }
+      },
+      "homepage": "https://caolan.github.io/async/",
+      "repository_url": "https://github.com/caolan/async"
     },
     {
       "name": "inherits",
@@ -173,12 +181,14 @@
     {
       "name": "arr-flatten",
       "stepsStatus": {
-        "gottenBaseInfo": false,
-        "collectedGuide": false,
-        "generatedArticle": false,
-        "publishedWeixinDraft": false,
+        "gottenBaseInfo": true,
+        "collectedGuide": true,
+        "generatedArticle": true,
+        "publishedWeixinDraft": true,
         "publishedGithub": false
-      }
+      },
+      "homepage": "https://github.com/jonschlinkert/arr-flatten",
+      "repository_url": "https://github.com/jonschlinkert/arr-flatten"
     },
     {
       "name": "arr-diff",
@@ -233,12 +243,14 @@
     {
       "name": "accepts",
       "stepsStatus": {
-        "gottenBaseInfo": false,
-        "collectedGuide": false,
-        "generatedArticle": false,
-        "publishedWeixinDraft": false,
+        "gottenBaseInfo": true,
+        "collectedGuide": true,
+        "generatedArticle": true,
+        "publishedWeixinDraft": true,
         "publishedGithub": false
-      }
+      },
+      "homepage": "https://github.com/jshttp/accepts#readme",
+      "repository_url": "https://github.com/jshttp/accepts"
     },
     {
       "name": "minimist",
@@ -297,44 +309,40 @@
       "repository_url": "https://github.com/npm/node-semver"
     },
     {
-      "name": "isarray",
-      "stepsStatus": {
-        "gottenBaseInfo": false,
-        "collectedGuide": false,
-        "generatedArticle": false,
-        "publishedWeixinDraft": false,
-        "publishedGithub": false
-      }
-    },
-    {
       "name": "graceful-fs",
       "stepsStatus": {
-        "gottenBaseInfo": false,
-        "collectedGuide": false,
-        "generatedArticle": false,
-        "publishedWeixinDraft": false,
+        "gottenBaseInfo": true,
+        "collectedGuide": true,
+        "generatedArticle": true,
+        "publishedWeixinDraft": true,
         "publishedGithub": false
-      }
+      },
+      "homepage": "https://github.com/isaacs/node-graceful-fs#readme",
+      "repository_url": "https://github.com/isaacs/node-graceful-fs"
     },
     {
       "name": "rimraf",
       "stepsStatus": {
-        "gottenBaseInfo": false,
-        "collectedGuide": false,
-        "generatedArticle": false,
-        "publishedWeixinDraft": false,
+        "gottenBaseInfo": true,
+        "collectedGuide": true,
+        "generatedArticle": true,
+        "publishedWeixinDraft": true,
         "publishedGithub": false
-      }
+      },
+      "homepage": "https://github.com/isaacs/rimraf#readme",
+      "repository_url": "https://github.com/isaacs/rimraf"
     },
     {
       "name": "minimatch",
       "stepsStatus": {
-        "gottenBaseInfo": false,
-        "collectedGuide": false,
-        "generatedArticle": false,
-        "publishedWeixinDraft": false,
+        "gottenBaseInfo": true,
+        "collectedGuide": true,
+        "generatedArticle": true,
+        "publishedWeixinDraft": true,
         "publishedGithub": false
-      }
+      },
+      "homepage": "https://github.com/isaacs/minimatch#readme",
+      "repository_url": "https://github.com/isaacs/minimatch"
     },
     {
       "name": "argparse",
@@ -395,22 +403,26 @@
     {
       "name": "iconv-lite",
       "stepsStatus": {
-        "gottenBaseInfo": false,
-        "collectedGuide": false,
-        "generatedArticle": false,
-        "publishedWeixinDraft": false,
+        "gottenBaseInfo": true,
+        "collectedGuide": true,
+        "generatedArticle": true,
+        "publishedWeixinDraft": true,
         "publishedGithub": false
-      }
+      },
+      "homepage": "https://github.com/ashtuchkin/iconv-lite",
+      "repository_url": "https://github.com/ashtuchkin/iconv-lite"
     },
     {
       "name": "asn1",
       "stepsStatus": {
-        "gottenBaseInfo": false,
-        "collectedGuide": false,
-        "generatedArticle": false,
-        "publishedWeixinDraft": false,
+        "gottenBaseInfo": true,
+        "collectedGuide": true,
+        "generatedArticle": true,
+        "publishedWeixinDraft": true,
         "publishedGithub": false
-      }
+      },
+      "homepage": "https://github.com/joyent/node-asn1#readme",
+      "repository_url": "https://github.com/joyent/node-asn1"
     },
     {
       "name": "mime-db",
@@ -483,12 +495,14 @@
     {
       "name": "aws-sign2",
       "stepsStatus": {
-        "gottenBaseInfo": false,
-        "collectedGuide": false,
-        "generatedArticle": false,
-        "publishedWeixinDraft": false,
+        "gottenBaseInfo": true,
+        "collectedGuide": true,
+        "generatedArticle": true,
+        "publishedWeixinDraft": true,
         "publishedGithub": false
-      }
+      },
+      "homepage": "https://github.com/mikeal/aws-sign#readme",
+      "repository_url": "https://github.com/mikeal/aws-sign"
     },
     {
       "name": "qs",
@@ -515,12 +529,14 @@
     {
       "name": "aws4",
       "stepsStatus": {
-        "gottenBaseInfo": false,
-        "collectedGuide": false,
-        "generatedArticle": false,
-        "publishedWeixinDraft": false,
+        "gottenBaseInfo": true,
+        "collectedGuide": true,
+        "generatedArticle": true,
+        "publishedWeixinDraft": true,
         "publishedGithub": false
-      }
+      },
+      "homepage": "https://github.com/mhart/aws4#readme",
+      "repository_url": "https://github.com/mhart/aws4"
     },
     {
       "name": "decamelize",
@@ -637,22 +653,26 @@
     {
       "name": "strip-ansi",
       "stepsStatus": {
-        "gottenBaseInfo": false,
-        "collectedGuide": false,
-        "generatedArticle": false,
-        "publishedWeixinDraft": false,
+        "gottenBaseInfo": true,
+        "collectedGuide": true,
+        "generatedArticle": true,
+        "publishedWeixinDraft": true,
         "publishedGithub": false
-      }
+      },
+      "homepage": "https://github.com/chalk/strip-ansi#readme",
+      "repository_url": "https://github.com/chalk/strip-ansi"
     },
     {
       "name": "object-assign",
       "stepsStatus": {
-        "gottenBaseInfo": false,
-        "collectedGuide": false,
-        "generatedArticle": false,
-        "publishedWeixinDraft": false,
+        "gottenBaseInfo": true,
+        "collectedGuide": true,
+        "generatedArticle": true,
+        "publishedWeixinDraft": true,
         "publishedGithub": false
-      }
+      },
+      "homepage": "https://github.com/sindresorhus/object-assign#readme",
+      "repository_url": "https://github.com/sindresorhus/object-assign"
     },
     {
       "name": "core-js",
@@ -683,6 +703,320 @@
         "publishedWeixinDraft": false,
         "publishedGithub": false
       }
+    },
+    {
+      "name": "process-nextick-args",
+      "stepsStatus": {
+        "gottenBaseInfo": false,
+        "collectedGuide": false,
+        "generatedArticle": false,
+        "publishedWeixinDraft": false,
+        "publishedGithub": false
+      }
+    },
+    {
+      "name": "bytes",
+      "stepsStatus": {
+        "gottenBaseInfo": true,
+        "collectedGuide": true,
+        "generatedArticle": true,
+        "publishedWeixinDraft": true,
+        "publishedGithub": false
+      },
+      "homepage": "https://github.com/visionmedia/bytes.js#readme",
+      "repository_url": "https://github.com/visionmedia/bytes.js"
+    },
+    {
+      "name": "wrappy",
+      "stepsStatus": {
+        "gottenBaseInfo": true,
+        "collectedGuide": true,
+        "generatedArticle": true,
+        "publishedWeixinDraft": true,
+        "publishedGithub": false
+      },
+      "homepage": "https://github.com/npm/wrappy",
+      "repository_url": "https://github.com/npm/wrappy"
+    },
+    {
+      "name": "util-deprecate",
+      "stepsStatus": {
+        "gottenBaseInfo": false,
+        "collectedGuide": false,
+        "generatedArticle": false,
+        "publishedWeixinDraft": false,
+        "publishedGithub": false
+      }
+    },
+    {
+      "name": "fill-range",
+      "stepsStatus": {
+        "gottenBaseInfo": true,
+        "collectedGuide": true,
+        "generatedArticle": true,
+        "publishedWeixinDraft": true,
+        "publishedGithub": false
+      },
+      "homepage": "https://github.com/jonschlinkert/fill-range",
+      "repository_url": "https://github.com/jonschlinkert/fill-range"
+    },
+    {
+      "name": "expand-brackets",
+      "stepsStatus": {
+        "gottenBaseInfo": true,
+        "collectedGuide": true,
+        "generatedArticle": true,
+        "publishedWeixinDraft": true,
+        "publishedGithub": false
+      },
+      "homepage": "https://github.com/micromatch/expand-brackets",
+      "repository_url": "https://github.com/micromatch/expand-brackets"
+    },
+    {
+      "name": "ee-first",
+      "stepsStatus": {
+        "gottenBaseInfo": true,
+        "collectedGuide": true,
+        "generatedArticle": true,
+        "publishedWeixinDraft": true,
+        "publishedGithub": false
+      },
+      "homepage": "https://github.com/jonathanong/ee-first",
+      "repository_url": "https://github.com/jonathanong/ee-first"
+    },
+    {
+      "name": "extglob",
+      "stepsStatus": {
+        "gottenBaseInfo": true,
+        "collectedGuide": true,
+        "generatedArticle": true,
+        "publishedWeixinDraft": true,
+        "publishedGithub": false
+      },
+      "homepage": "https://github.com/micromatch/extglob",
+      "repository_url": "https://github.com/micromatch/extglob"
+    },
+    {
+      "name": "bluebird",
+      "stepsStatus": {
+        "gottenBaseInfo": false,
+        "collectedGuide": false,
+        "generatedArticle": false,
+        "publishedWeixinDraft": false,
+        "publishedGithub": false
+      }
+    },
+    {
+      "name": "combined-stream",
+      "stepsStatus": {
+        "gottenBaseInfo": true,
+        "collectedGuide": true,
+        "generatedArticle": true,
+        "publishedWeixinDraft": false,
+        "publishedGithub": false
+      },
+      "homepage": "https://github.com/felixge/node-combined-stream",
+      "repository_url": "https://github.com/felixge/node-combined-stream"
+    },
+    {
+      "name": "for-in",
+      "stepsStatus": {
+        "gottenBaseInfo": false,
+        "collectedGuide": false,
+        "generatedArticle": false,
+        "publishedWeixinDraft": false,
+        "publishedGithub": false
+      }
+    },
+    {
+      "name": "bcrypt-pbkdf",
+      "stepsStatus": {
+        "gottenBaseInfo": false,
+        "collectedGuide": false,
+        "generatedArticle": false,
+        "publishedWeixinDraft": false,
+        "publishedGithub": false
+      }
+    },
+    {
+      "name": "isexe",
+      "stepsStatus": {
+        "gottenBaseInfo": true,
+        "collectedGuide": true,
+        "generatedArticle": true,
+        "publishedWeixinDraft": true,
+        "publishedGithub": false
+      },
+      "homepage": "https://github.com/isaacs/isexe#readme",
+      "repository_url": "https://github.com/isaacs/isexe"
+    },
+    {
+      "name": "escape-html",
+      "stepsStatus": {
+        "gottenBaseInfo": false,
+        "collectedGuide": false,
+        "generatedArticle": false,
+        "publishedWeixinDraft": false,
+        "publishedGithub": false
+      }
+    },
+    {
+      "name": "find-up",
+      "stepsStatus": {
+        "gottenBaseInfo": false,
+        "collectedGuide": false,
+        "generatedArticle": false,
+        "publishedWeixinDraft": false,
+        "publishedGithub": false
+      }
+    },
+    {
+      "name": "destroy",
+      "stepsStatus": {
+        "gottenBaseInfo": false,
+        "collectedGuide": false,
+        "generatedArticle": false,
+        "publishedWeixinDraft": false,
+        "publishedGithub": false
+      }
+    },
+    {
+      "name": "webpack",
+      "stepsStatus": {
+        "gottenBaseInfo": false,
+        "collectedGuide": false,
+        "generatedArticle": false,
+        "publishedWeixinDraft": false,
+        "publishedGithub": false
+      }
+    },
+    {
+      "name": "esutils",
+      "stepsStatus": {
+        "gottenBaseInfo": false,
+        "collectedGuide": false,
+        "generatedArticle": false,
+        "publishedWeixinDraft": false,
+        "publishedGithub": false
+      }
+    },
+    {
+      "name": "caseless",
+      "stepsStatus": {
+        "gottenBaseInfo": false,
+        "collectedGuide": false,
+        "generatedArticle": false,
+        "publishedWeixinDraft": false,
+        "publishedGithub": false
+      }
+    },
+    {
+      "name": "babel-core",
+      "stepsStatus": {
+        "gottenBaseInfo": false,
+        "collectedGuide": false,
+        "generatedArticle": false,
+        "publishedWeixinDraft": false,
+        "publishedGithub": false
+      }
+    },
+    {
+      "name": "cookie",
+      "stepsStatus": {
+        "gottenBaseInfo": false,
+        "collectedGuide": false,
+        "generatedArticle": false,
+        "publishedWeixinDraft": false,
+        "publishedGithub": false
+      }
+    },
+    {
+      "name": "mime",
+      "stepsStatus": {
+        "gottenBaseInfo": false,
+        "collectedGuide": false,
+        "generatedArticle": false,
+        "publishedWeixinDraft": false,
+        "publishedGithub": false
+      }
+    },
+    {
+      "name": "array-uniq",
+      "stepsStatus": {
+        "gottenBaseInfo": false,
+        "collectedGuide": false,
+        "generatedArticle": false,
+        "publishedWeixinDraft": false,
+        "publishedGithub": false
+      }
+    },
+    {
+      "name": "glob-parent",
+      "stepsStatus": {
+        "gottenBaseInfo": false,
+        "collectedGuide": false,
+        "generatedArticle": false,
+        "publishedWeixinDraft": false,
+        "publishedGithub": false
+      }
+    },
+    {
+      "name": "esprima",
+      "stepsStatus": {
+        "gottenBaseInfo": true,
+        "collectedGuide": true,
+        "generatedArticle": true,
+        "publishedWeixinDraft": true,
+        "publishedGithub": false
+      },
+      "homepage": "http://esprima.org",
+      "repository_url": "https://github.com/jquery/esprima"
+    },
+    {
+      "name": "delayed-stream",
+      "stepsStatus": {
+        "gottenBaseInfo": true,
+        "collectedGuide": true,
+        "generatedArticle": true,
+        "publishedWeixinDraft": true,
+        "publishedGithub": false
+      },
+      "homepage": "https://github.com/felixge/node-delayed-stream",
+      "repository_url": "https://github.com/felixge/node-delayed-stream"
+    },
+    {
+      "name": "error-ex",
+      "stepsStatus": {
+        "gottenBaseInfo": true,
+        "collectedGuide": true,
+        "generatedArticle": true,
+        "publishedWeixinDraft": true,
+        "publishedGithub": false
+      },
+      "homepage": "https://github.com/qix-/node-error-ex#readme",
+      "repository_url": "https://github.com/qix-/node-error-ex"
+    },
+    {
+      "name": "chokidar",
+      "stepsStatus": {
+        "gottenBaseInfo": false,
+        "collectedGuide": false,
+        "generatedArticle": false,
+        "publishedWeixinDraft": false,
+        "publishedGithub": false
+      }
+    },
+    {
+      "name": "is-extendable",
+      "stepsStatus": {
+        "gottenBaseInfo": true,
+        "collectedGuide": true,
+        "generatedArticle": true,
+        "publishedWeixinDraft": true,
+        "publishedGithub": false
+      },
+      "homepage": "https://github.com/jonschlinkert/is-extendable",
+      "repository_url": "https://github.com/jonschlinkert/is-extendable"
     }
   ]
 }

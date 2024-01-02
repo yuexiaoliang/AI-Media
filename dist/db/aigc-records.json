@@ -4,18 +4,18 @@
       "project": "npm-packages",
       "info": {
         "pkgName": "isarray",
-        "title": "深入浅出isarray：彻底理解数组类型判定"
+        "title": "JavaScript 老版本浏览器的 isArray 兼容处理攻略"
       },
       "completionInfo": {
-        "id": "chatcmpl-8PQg6FSuPcUj0LIiXFS0kTDNwvSxG",
+        "id": "chatcmpl-8Ww3TozHnW3rR3lM6pEdnOATXGLbz",
         "object": "chat.completion",
-        "created": 1701071442,
+        "created": 1702860351,
         "model": "gpt-4-1106-preview",
-        "system_fingerprint": "fp_a24b4d720c",
+        "system_fingerprint": "fp_3905aa4f79",
         "usage": {
-          "prompt_tokens": 1123,
-          "completion_tokens": 878,
-          "total_tokens": 2001
+          "prompt_tokens": 1207,
+          "completion_tokens": 854,
+          "total_tokens": 2061
         }
       }
     },
@@ -42,18 +42,18 @@
       "project": "npm-packages",
       "info": {
         "pkgName": "extend",
-        "title": "深入浅出 Node.js 对象扩展：使用 extend 实现无缝数据合并"
+        "title": "深入浅出 Node.js 对象拓展：使用 extend 实现深浅拷贝"
       },
       "completionInfo": {
-        "id": "chatcmpl-8PTg7W34ngEtb8tMb23YyA3I9nWDE",
+        "id": "chatcmpl-8bkThgP7d25Zo5uKfz1F3MBOyFfVG",
         "object": "chat.completion",
-        "created": 1701082975,
+        "created": 1704007489,
         "model": "gpt-4-1106-preview",
-        "system_fingerprint": "fp_a24b4d720c",
+        "system_fingerprint": "fp_3905aa4f79",
         "usage": {
-          "prompt_tokens": 1476,
-          "completion_tokens": 1049,
-          "total_tokens": 2525
+          "prompt_tokens": 1560,
+          "completion_tokens": 1083,
+          "total_tokens": 2643
         }
       }
     },
@@ -365,18 +365,18 @@
       "project": "npm-packages",
       "info": {
         "pkgName": "has-flag",
-        "title": "深入解析命令行标志检测包 has-flag 的妙用"
+        "title": "如何在Node.js命令行中检测特定标志（has-flag包使用教程）"
       },
       "completionInfo": {
-        "id": "chatcmpl-8Tozt3OLsM8q5wrcUbIldbpexPv4Z",
+        "id": "chatcmpl-8VYgSaTZhoNxwlCQcrdJT8m0cBtVp",
         "object": "chat.completion",
-        "created": 1702118237,
+        "created": 1702532184,
         "model": "gpt-4-1106-preview",
         "system_fingerprint": "fp_6aca3b5ce1",
         "usage": {
           "prompt_tokens": 956,
-          "completion_tokens": 1008,
-          "total_tokens": 1964
+          "completion_tokens": 1063,
+          "total_tokens": 2019
         }
       }
     },
@@ -491,6 +491,519 @@
           "prompt_tokens": 12619,
           "completion_tokens": 1327,
           "total_tokens": 13946
+        }
+      }
+    },
+    {
+      "project": "npm-packages",
+      "info": {
+        "pkgName": "aws4",
+        "title": "深入浅出Node.js中的AWS请求签名——aws4使用指南"
+      },
+      "completionInfo": {
+        "id": "chatcmpl-8VYy0bFQm4xj0tyE1higYbPbLuypu",
+        "object": "chat.completion",
+        "created": 1702533272,
+        "model": "gpt-4-1106-preview",
+        "system_fingerprint": "fp_6aca3b5ce1",
+        "usage": {
+          "prompt_tokens": 6504,
+          "completion_tokens": 1101,
+          "total_tokens": 7605
+        }
+      }
+    },
+    {
+      "project": "npm-packages",
+      "info": {
+        "pkgName": "debug",
+        "title": "掌握Node.js调试：使用debug包提升开发效率"
+      },
+      "completionInfo": {
+        "id": "chatcmpl-8VZ96cQ0g3UaQxB1YytneScahZbP3",
+        "object": "chat.completion",
+        "created": 1702533960,
+        "model": "gpt-4-1106-preview",
+        "system_fingerprint": "fp_6aca3b5ce1",
+        "usage": {
+          "prompt_tokens": 12059,
+          "completion_tokens": 1501,
+          "total_tokens": 13560
+        }
+      }
+    },
+    {
+      "project": "npm-packages",
+      "info": {
+        "pkgName": "accepts",
+        "title": "掌握 HTTP 内容协商：Node.js 中的 Accepts 模块详解"
+      },
+      "completionInfo": {
+        "id": "chatcmpl-8VtV87IvCCZR5biD6OwuwOZXh5vFH",
+        "object": "chat.completion",
+        "created": 1702612206,
+        "model": "gpt-4-1106-preview",
+        "system_fingerprint": "fp_6aca3b5ce1",
+        "usage": {
+          "prompt_tokens": 2001,
+          "completion_tokens": 1105,
+          "total_tokens": 3106
+        }
+      }
+    },
+    {
+      "project": "npm-packages",
+      "info": {
+        "pkgName": "strip-ansi",
+        "title": "清除字符串中的ANSI转义码：strip-ansi使用手册"
+      },
+      "completionInfo": {
+        "id": "chatcmpl-8VwEqFOsRGDfzCXYlobDwYFc9dCjw",
+        "object": "chat.completion",
+        "created": 1702622728,
+        "model": "gpt-4-1106-preview",
+        "system_fingerprint": "fp_6aca3b5ce1",
+        "usage": {
+          "prompt_tokens": 1079,
+          "completion_tokens": 909,
+          "total_tokens": 1988
+        }
+      }
+    },
+    {
+      "project": "npm-packages",
+      "info": {
+        "pkgName": "iconv-lite",
+        "title": "纯 JavaScript 字符编码转换：iconv-lite 的使用指南"
+      },
+      "completionInfo": {
+        "id": "chatcmpl-8VwGi0Go6JOpR4Y8vOnJW37f5aNg1",
+        "object": "chat.completion",
+        "created": 1702622844,
+        "model": "gpt-4-1106-preview",
+        "system_fingerprint": "fp_6aca3b5ce1",
+        "usage": {
+          "prompt_tokens": 2895,
+          "completion_tokens": 1178,
+          "total_tokens": 4073
+        }
+      }
+    },
+    {
+      "project": "npm-packages",
+      "info": {
+        "pkgName": "minimatch",
+        "title": "使用minimatch：匹配复杂文件模式的利器"
+      },
+      "completionInfo": {
+        "id": "chatcmpl-8VwQtpC3C8jlZ1OKnsmXloz5IOiYz",
+        "object": "chat.completion",
+        "created": 1702623475,
+        "model": "gpt-4-1106-preview",
+        "system_fingerprint": "fp_6aca3b5ce1",
+        "usage": {
+          "prompt_tokens": 4668,
+          "completion_tokens": 1246,
+          "total_tokens": 5914
+        }
+      }
+    },
+    {
+      "project": "npm-packages",
+      "info": {
+        "pkgName": "ansi-regex",
+        "title": "利用ansi-regex轻松匹配ANSI转义码"
+      },
+      "completionInfo": {
+        "id": "chatcmpl-8WvyOSEQfmSZVFCFOYXhCTR1SD9EP",
+        "object": "chat.completion",
+        "created": 1702860036,
+        "model": "gpt-4-1106-preview",
+        "system_fingerprint": "fp_6aca3b5ce1",
+        "usage": {
+          "prompt_tokens": 1421,
+          "completion_tokens": 812,
+          "total_tokens": 2233
+        }
+      }
+    },
+    {
+      "project": "npm-packages",
+      "info": {
+        "pkgName": "async",
+        "title": "异步不再难 —— 深入解析 Async 库的魅力"
+      },
+      "completionInfo": {
+        "id": "chatcmpl-8Ww052wO1shVaHBwSjWToZtuyVyel",
+        "object": "chat.completion",
+        "created": 1702860141,
+        "model": "gpt-4-1106-preview",
+        "system_fingerprint": "fp_3905aa4f79",
+        "usage": {
+          "prompt_tokens": 1696,
+          "completion_tokens": 1018,
+          "total_tokens": 2714
+        }
+      }
+    },
+    {
+      "project": "npm-packages",
+      "info": {
+        "pkgName": "bytes",
+        "title": "理解并掌握字符串和字节之间的转换：使用bytes模块"
+      },
+      "completionInfo": {
+        "id": "chatcmpl-8Ww0vgIavfmL76mKDFKdMxTSmNglK",
+        "object": "chat.completion",
+        "created": 1702860193,
+        "model": "gpt-4-1106-preview",
+        "system_fingerprint": "fp_3905aa4f79",
+        "usage": {
+          "prompt_tokens": 2069,
+          "completion_tokens": 848,
+          "total_tokens": 2917
+        }
+      }
+    },
+    {
+      "project": "npm-packages",
+      "info": {
+        "pkgName": "arr-flatten",
+        "title": "简洁而高效的数组扁平化处理 - 探秘arr-flatten包"
+      },
+      "completionInfo": {
+        "id": "chatcmpl-8Ww2RyLXe3vPFIiUpjb6G6yVHdhSU",
+        "object": "chat.completion",
+        "created": 1702860287,
+        "model": "gpt-4-1106-preview",
+        "system_fingerprint": "fp_3905aa4f79",
+        "usage": {
+          "prompt_tokens": 2143,
+          "completion_tokens": 1125,
+          "total_tokens": 3268
+        }
+      }
+    },
+    {
+      "project": "npm-packages",
+      "info": {
+        "pkgName": "extglob",
+        "title": "使用extglob强化JavaScript的glob模式匹配"
+      },
+      "completionInfo": {
+        "id": "chatcmpl-8Ww4sxumQDuIUiHUE6CgDBjvn1ruB",
+        "object": "chat.completion",
+        "created": 1702860438,
+        "model": "gpt-4-1106-preview",
+        "system_fingerprint": "fp_3905aa4f79",
+        "usage": {
+          "prompt_tokens": 4358,
+          "completion_tokens": 1172,
+          "total_tokens": 5530
+        }
+      }
+    },
+    {
+      "project": "npm-packages",
+      "info": {
+        "pkgName": "delayed-stream",
+        "title": "利用delayed-stream精准控制Node.js中的数据流延迟处理"
+      },
+      "completionInfo": {
+        "id": "chatcmpl-8XghsdIg6hzElY2ggBGc2blmri11Z",
+        "object": "chat.completion",
+        "created": 1703039680,
+        "model": "gpt-4-1106-preview",
+        "system_fingerprint": "fp_3905aa4f79",
+        "usage": {
+          "prompt_tokens": 1462,
+          "completion_tokens": 1125,
+          "total_tokens": 2587
+        }
+      }
+    },
+    {
+      "project": "npm-packages",
+      "info": {
+        "pkgName": "object-assign",
+        "title": "深入理解与运用Object.assign的替代者：object-assign"
+      },
+      "completionInfo": {
+        "id": "chatcmpl-8XgnJ1kdZI9i96gAi1X0kFBDkR1M8",
+        "object": "chat.completion",
+        "created": 1703040017,
+        "model": "gpt-4-1106-preview",
+        "system_fingerprint": "fp_3905aa4f79",
+        "usage": {
+          "prompt_tokens": 1114,
+          "completion_tokens": 1182,
+          "total_tokens": 2296
+        }
+      }
+    },
+    {
+      "project": "npm-packages",
+      "info": {
+        "pkgName": "express",
+        "title": "快速构建Node.js Web应用的利器：Express框架实战"
+      },
+      "completionInfo": {
+        "id": "chatcmpl-8XhFxNnqJXjrNC2NN2ASFsqa9GMH3",
+        "object": "chat.completion",
+        "created": 1703041793,
+        "model": "gpt-4-1106-preview",
+        "system_fingerprint": "fp_3905aa4f79",
+        "usage": {
+          "prompt_tokens": 2418,
+          "completion_tokens": 1069,
+          "total_tokens": 3487
+        }
+      }
+    },
+    {
+      "project": "npm-packages",
+      "info": {
+        "pkgName": "esprima",
+        "title": "Esprima：解锁JavaScript代码分析的秘密"
+      },
+      "completionInfo": {
+        "id": "chatcmpl-8XketAKL1R0ZBRMkHniPwh8XrFvL9",
+        "object": "chat.completion",
+        "created": 1703054871,
+        "model": "gpt-4-1106-preview",
+        "system_fingerprint": "fp_3905aa4f79",
+        "usage": {
+          "prompt_tokens": 1639,
+          "completion_tokens": 851,
+          "total_tokens": 2490
+        }
+      }
+    },
+    {
+      "project": "npm-packages",
+      "info": {
+        "pkgName": "graceful-fs",
+        "title": "强化文件系统：Node.js 中的 gracious-fs 模块"
+      },
+      "completionInfo": {
+        "id": "chatcmpl-8XnH8QoUseoT3xxabljIdY86YHwT6",
+        "object": "chat.completion",
+        "created": 1703064930,
+        "model": "gpt-4-1106-preview",
+        "system_fingerprint": "fp_3905aa4f79",
+        "usage": {
+          "prompt_tokens": 1787,
+          "completion_tokens": 1166,
+          "total_tokens": 2953
+        }
+      }
+    },
+    {
+      "project": "npm-packages",
+      "info": {
+        "pkgName": "error-ex",
+        "title": "玩转错误处理：使用 error-ex 扩展 Node.js 错误对象"
+      },
+      "completionInfo": {
+        "id": "chatcmpl-8YvnujFoc1AVeyJ7R0Mz37F68JiPh",
+        "object": "chat.completion",
+        "created": 1703336042,
+        "model": "gpt-4-1106-preview",
+        "system_fingerprint": "fp_3905aa4f79",
+        "usage": {
+          "prompt_tokens": 1850,
+          "completion_tokens": 1011,
+          "total_tokens": 2861
+        }
+      }
+    },
+    {
+      "project": "npm-packages",
+      "info": {
+        "pkgName": "wrappy",
+        "title": "确保回调只执行一次：探索 Nodejs 中的 wrappy 工具"
+      },
+      "completionInfo": {
+        "id": "chatcmpl-8YvpRCcypYyThlHKsWK4i3PtHfQRV",
+        "object": "chat.completion",
+        "created": 1703336137,
+        "model": "gpt-4-1106-preview",
+        "system_fingerprint": "fp_3905aa4f79",
+        "usage": {
+          "prompt_tokens": 794,
+          "completion_tokens": 1070,
+          "total_tokens": 1864
+        }
+      }
+    },
+    {
+      "project": "npm-packages",
+      "info": {
+        "pkgName": "asn1",
+        "title": "利用node-asn1包实现ASN.1数据类型的编解码"
+      },
+      "completionInfo": {
+        "id": "chatcmpl-8YvuTH5EZDGpema3s1a3oAfktpTT1",
+        "object": "chat.completion",
+        "created": 1703336449,
+        "model": "gpt-4-1106-preview",
+        "system_fingerprint": "fp_6aca3b5ce1",
+        "usage": {
+          "prompt_tokens": 920,
+          "completion_tokens": 959,
+          "total_tokens": 1879
+        }
+      }
+    },
+    {
+      "project": "npm-packages",
+      "info": {
+        "pkgName": "isexe",
+        "title": "如何在Node.js中判定文件是否可执行"
+      },
+      "completionInfo": {
+        "id": "chatcmpl-8YvvfI1G6O2Aat17BGxUlOY7o9wxj",
+        "object": "chat.completion",
+        "created": 1703336523,
+        "model": "gpt-4-1106-preview",
+        "system_fingerprint": "fp_6aca3b5ce1",
+        "usage": {
+          "prompt_tokens": 1170,
+          "completion_tokens": 1212,
+          "total_tokens": 2382
+        }
+      }
+    },
+    {
+      "project": "npm-packages",
+      "info": {
+        "pkgName": "aws-sign2",
+        "title": "Node.js 中的 AWS 请求签名实操：aws-sign2 快速入门"
+      },
+      "completionInfo": {
+        "id": "chatcmpl-8YvwmaQ7s7nE9D7LYgQliGU0nPXLA",
+        "object": "chat.completion",
+        "created": 1703336592,
+        "model": "gpt-4-1106-preview",
+        "system_fingerprint": "fp_3905aa4f79",
+        "usage": {
+          "prompt_tokens": 633,
+          "completion_tokens": 1053,
+          "total_tokens": 1686
+        }
+      }
+    },
+    {
+      "project": "npm-packages",
+      "info": {
+        "pkgName": "rimraf",
+        "title": "深入解析 Node.js：使用 rimraf 模拟 Unix 命令 rm -rf"
+      },
+      "completionInfo": {
+        "id": "chatcmpl-8YvyacvaoTzSYaMGHva8oIVlG5xSO",
+        "object": "chat.completion",
+        "created": 1703336704,
+        "model": "gpt-4-1106-preview",
+        "system_fingerprint": "fp_3905aa4f79",
+        "usage": {
+          "prompt_tokens": 2867,
+          "completion_tokens": 1206,
+          "total_tokens": 4073
+        }
+      }
+    },
+    {
+      "project": "npm-packages",
+      "info": {
+        "pkgName": "expand-brackets",
+        "title": "掌握POSIX字符类扩展：Node.js 中的 expand-brackets 库使用指南"
+      },
+      "completionInfo": {
+        "id": "chatcmpl-8Yw9mgPijzY83k9axWRYEAXjWiC0k",
+        "object": "chat.completion",
+        "created": 1703337398,
+        "model": "gpt-4-1106-preview",
+        "system_fingerprint": "fp_3905aa4f79",
+        "usage": {
+          "prompt_tokens": 3936,
+          "completion_tokens": 1183,
+          "total_tokens": 5119
+        }
+      }
+    },
+    {
+      "project": "npm-packages",
+      "info": {
+        "pkgName": "is-extendable",
+        "title": "深入理解 JavaScript 中的扩展性检查 - 探索 is-extendable 库的妙用"
+      },
+      "completionInfo": {
+        "id": "chatcmpl-8YwEcGOfgVNC3xvGgOjUFX4rRR66k",
+        "object": "chat.completion",
+        "created": 1703337698,
+        "model": "gpt-4-1106-preview",
+        "system_fingerprint": "fp_6aca3b5ce1",
+        "usage": {
+          "prompt_tokens": 2040,
+          "completion_tokens": 1198,
+          "total_tokens": 3238
+        }
+      }
+    },
+    {
+      "project": "npm-packages",
+      "info": {
+        "pkgName": "ee-first",
+        "title": "如何优雅地监听首个事件 — 一个对Node.js开发者的EE-First指南"
+      },
+      "completionInfo": {
+        "id": "chatcmpl-8bkUTNFHsAvRsSTXyE7xpqPmSG0pR",
+        "object": "chat.completion",
+        "created": 1704007537,
+        "model": "gpt-4-1106-preview",
+        "system_fingerprint": "fp_3905aa4f79",
+        "usage": {
+          "prompt_tokens": 1663,
+          "completion_tokens": 843,
+          "total_tokens": 2506
+        }
+      }
+    },
+    {
+      "project": "npm-packages",
+      "info": {
+        "pkgName": "fill-range",
+        "title": "Node.js 区间填充神器：掌握 fill-range 的妙用"
+      },
+      "completionInfo": {
+        "id": "chatcmpl-8bkVQO19UD43FW4o6KlJHgQYiBXt2",
+        "object": "chat.completion",
+        "created": 1704007596,
+        "model": "gpt-4-1106-preview",
+        "system_fingerprint": "fp_3905aa4f79",
+        "usage": {
+          "prompt_tokens": 3446,
+          "completion_tokens": 1316,
+          "total_tokens": 4762
+        }
+      }
+    },
+    {
+      "project": "npm-packages",
+      "info": {
+        "pkgName": "combined-stream",
+        "title": "Node.js中的流合流技术 - 如何优雅地合并多个流"
+      },
+      "completionInfo": {
+        "id": "chatcmpl-8bkiRy8bIgC17MSf9B9iLhX6PAAJO",
+        "object": "chat.completion",
+        "created": 1704008403,
+        "model": "gpt-4-1106-preview",
+        "system_fingerprint": "fp_3905aa4f79",
+        "usage": {
+          "prompt_tokens": 1587,
+          "completion_tokens": 1144,
+          "total_tokens": 2731
         }
       }
     }
