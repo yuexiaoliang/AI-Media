@@ -519,6 +519,46 @@
         "media_id": "3TI8XMZiLsZyu-QJGQpsXIBdOaN1quZCTxi8LVyEztff80tQMeRJ18vNN_3VLD-p",
         "url": "http://mmbiz.qpic.cn/mmbiz_png/QPCr6EnHPrzQqRWmH5POYoaT9J3zMbiagUSamf3uez0aDt1excXUej6aVWA8U3ib6xX5rl9Qbbp2REuJVYj87qIg/0?wx_fmt=png"
       }
+    },
+    {
+      "project": "npm-packages",
+      "info": {
+        "pkgName": "combined-stream"
+      },
+      "materialInfo": {
+        "media_id": "3TI8XMZiLsZyu-QJGQpsXPS31fEJ-ho4D4rRT_uGLzW_mxAfuvxDtytBMVPw1aIl",
+        "url": "http://mmbiz.qpic.cn/mmbiz_png/QPCr6EnHPrwBgjpt1nZjKJeiczm2HoVV6QjIVOcIrHEEyVsBXa1vzK8eJVtjWTxrZZdD06KJARmicJhDk2ekg6qg/0?wx_fmt=png"
+      }
+    },
+    {
+      "project": "npm-packages",
+      "info": {
+        "pkgName": "chokidar"
+      },
+      "materialInfo": {
+        "media_id": "3TI8XMZiLsZyu-QJGQpsXImbcr-48WASAcS-b8kkQ6SkIhSD6G6brcFEG2B97zRF",
+        "url": "http://mmbiz.qpic.cn/mmbiz_png/QPCr6EnHPrwBgjpt1nZjKJeiczm2HoVV6LL55R5rrcUI9MlL7SSAMzJhB9mGHLFrgE1KvA7l0licnk4LSDLmGI3Q/0?wx_fmt=png"
+      }
+    },
+    {
+      "project": "npm-packages",
+      "info": {
+        "pkgName": "supports-color"
+      },
+      "materialInfo": {
+        "media_id": "3TI8XMZiLsZyu-QJGQpsXCJ02O-r-5a4IxgFcIj8MOTuK3dIQ2vDctG9tJAOgXq-",
+        "url": "http://mmbiz.qpic.cn/mmbiz_png/QPCr6EnHPrwBgjpt1nZjKJeiczm2HoVV6IKqQPcN4tufPHl8jclhq2kUDfjO6QSScW2rFMviaoUPNTmHebgJ6hCg/0?wx_fmt=png"
+      }
+    },
+    {
+      "project": "npm-packages",
+      "info": {
+        "pkgName": "string_decoder"
+      },
+      "materialInfo": {
+        "media_id": "3TI8XMZiLsZyu-QJGQpsXOGptiGjqjvZkZ901D6Ntf37-v_nT9rLHU3MTOnlKLBJ",
+        "url": "http://mmbiz.qpic.cn/mmbiz_png/QPCr6EnHPrwBgjpt1nZjKJeiczm2HoVV6bN12hSPSGJ0j25h4My9ldf5bb3U8FN3ovRrvWGmZ0X0WpiaF6ic1hheQ/0?wx_fmt=png"
+      }
     }
   ]
 }

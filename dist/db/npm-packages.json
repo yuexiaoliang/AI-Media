@@ -623,12 +623,14 @@
     {
       "name": "supports-color",
       "stepsStatus": {
-        "gottenBaseInfo": false,
-        "collectedGuide": false,
-        "generatedArticle": false,
-        "publishedWeixinDraft": false,
+        "gottenBaseInfo": true,
+        "collectedGuide": true,
+        "generatedArticle": true,
+        "publishedWeixinDraft": true,
         "publishedGithub": false
-      }
+      },
+      "homepage": "https://github.com/chalk/supports-color#readme",
+      "repository_url": "https://github.com/chalk/supports-color"
     },
     {
       "name": "is-fullwidth-code-point",
@@ -687,12 +689,14 @@
     {
       "name": "string_decoder",
       "stepsStatus": {
-        "gottenBaseInfo": false,
-        "collectedGuide": false,
-        "generatedArticle": false,
-        "publishedWeixinDraft": false,
+        "gottenBaseInfo": true,
+        "collectedGuide": true,
+        "generatedArticle": true,
+        "publishedWeixinDraft": true,
         "publishedGithub": false
-      }
+      },
+      "homepage": "https://github.com/nodejs/string_decoder",
+      "repository_url": "https://github.com/nodejs/string_decoder"
     },
     {
       "name": "depd",
@@ -812,7 +816,7 @@
         "gottenBaseInfo": true,
         "collectedGuide": true,
         "generatedArticle": true,
-        "publishedWeixinDraft": false,
+        "publishedWeixinDraft": true,
         "publishedGithub": false
       },
       "homepage": "https://github.com/felixge/node-combined-stream",
@@ -913,12 +917,14 @@
     {
       "name": "babel-core",
       "stepsStatus": {
-        "gottenBaseInfo": false,
-        "collectedGuide": false,
+        "gottenBaseInfo": true,
+        "collectedGuide": true,
         "generatedArticle": false,
         "publishedWeixinDraft": false,
         "publishedGithub": false
-      }
+      },
+      "homepage": "https://babeljs.io/",
+      "repository_url": "https://github.com/babel/babel"
     },
     {
       "name": "cookie",
@@ -999,12 +1005,14 @@
     {
       "name": "chokidar",
       "stepsStatus": {
-        "gottenBaseInfo": false,
-        "collectedGuide": false,
-        "generatedArticle": false,
-        "publishedWeixinDraft": false,
+        "gottenBaseInfo": true,
+        "collectedGuide": true,
+        "generatedArticle": true,
+        "publishedWeixinDraft": true,
         "publishedGithub": false
-      }
+      },
+      "homepage": "https://github.com/paulmillr/chokidar",
+      "repository_url": "https://github.com/paulmillr/chokidar"
     },
     {
       "name": "is-extendable",
