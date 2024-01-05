@@ -255,12 +255,14 @@
     {
       "name": "minimist",
       "stepsStatus": {
-        "gottenBaseInfo": false,
-        "collectedGuide": false,
-        "generatedArticle": false,
-        "publishedWeixinDraft": false,
+        "gottenBaseInfo": true,
+        "collectedGuide": true,
+        "generatedArticle": true,
+        "publishedWeixinDraft": true,
         "publishedGithub": false
-      }
+      },
+      "homepage": "https://github.com/minimistjs/minimist",
+      "repository_url": "https://github.com/minimistjs/minimist"
     },
     {
       "name": "camelcase",
@@ -277,12 +279,14 @@
     {
       "name": "anymatch",
       "stepsStatus": {
-        "gottenBaseInfo": false,
-        "collectedGuide": false,
-        "generatedArticle": false,
-        "publishedWeixinDraft": false,
+        "gottenBaseInfo": true,
+        "collectedGuide": true,
+        "generatedArticle": true,
+        "publishedWeixinDraft": true,
         "publishedGithub": false
-      }
+      },
+      "homepage": "https://github.com/micromatch/anymatch",
+      "repository_url": "https://github.com/micromatch/anymatch"
     },
     {
       "name": "mkdirp",
@@ -371,22 +375,26 @@
     {
       "name": "fs.realpath",
       "stepsStatus": {
-        "gottenBaseInfo": false,
-        "collectedGuide": false,
-        "generatedArticle": false,
-        "publishedWeixinDraft": false,
+        "gottenBaseInfo": true,
+        "collectedGuide": true,
+        "generatedArticle": true,
+        "publishedWeixinDraft": true,
         "publishedGithub": false
-      }
+      },
+      "homepage": "https://github.com/isaacs/fs.realpath#readme",
+      "repository_url": "https://github.com/isaacs/fs.realpath"
     },
     {
       "name": "braces",
       "stepsStatus": {
-        "gottenBaseInfo": false,
-        "collectedGuide": false,
-        "generatedArticle": false,
-        "publishedWeixinDraft": false,
+        "gottenBaseInfo": true,
+        "collectedGuide": true,
+        "generatedArticle": true,
+        "publishedWeixinDraft": true,
         "publishedGithub": false
-      }
+      },
+      "homepage": "https://github.com/micromatch/braces",
+      "repository_url": "https://github.com/micromatch/braces"
     },
     {
       "name": "safe-buffer",
@@ -449,12 +457,14 @@
     {
       "name": "path-is-absolute",
       "stepsStatus": {
-        "gottenBaseInfo": false,
-        "collectedGuide": false,
-        "generatedArticle": false,
-        "publishedWeixinDraft": false,
+        "gottenBaseInfo": true,
+        "collectedGuide": true,
+        "generatedArticle": true,
+        "publishedWeixinDraft": true,
         "publishedGithub": false
-      }
+      },
+      "homepage": "https://github.com/sindresorhus/path-is-absolute#readme",
+      "repository_url": "https://github.com/sindresorhus/path-is-absolute"
     },
     {
       "name": "color-convert",

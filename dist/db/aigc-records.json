@@ -1082,6 +1082,101 @@
           "total_tokens": 5951
         }
       }
+    },
+    {
+      "project": "npm-packages",
+      "info": {
+        "pkgName": "minimist",
+        "title": "轻松解析命令行参数：掌握minimist的强大功能"
+      },
+      "completionInfo": {
+        "id": "chatcmpl-8dbDsqAHQ6WUfOHVV8qzRUfFldV01",
+        "object": "chat.completion",
+        "created": 1704448568,
+        "model": "gpt-4-1106-preview",
+        "system_fingerprint": "fp_6aca3b5ce1",
+        "usage": {
+          "prompt_tokens": 2194,
+          "completion_tokens": 1281,
+          "total_tokens": 3475
+        }
+      }
+    },
+    {
+      "project": "npm-packages",
+      "info": {
+        "pkgName": "braces",
+        "title": "JavaScript 中的 Bash 式大括号展开：Braces 库使用深度指南"
+      },
+      "completionInfo": {
+        "id": "chatcmpl-8dbFRFYfNPYsisH52S75GU7cgSLGs",
+        "object": "chat.completion",
+        "created": 1704448665,
+        "model": "gpt-4-1106-preview",
+        "system_fingerprint": "fp_c6efb4aa39",
+        "usage": {
+          "prompt_tokens": 7462,
+          "completion_tokens": 1243,
+          "total_tokens": 8705
+        }
+      }
+    },
+    {
+      "project": "npm-packages",
+      "info": {
+        "pkgName": "fs.realpath",
+        "title": "解决Node.js中长路径和符号链接问题：fs.realpath包使用指南"
+      },
+      "completionInfo": {
+        "id": "chatcmpl-8dbIHVDSxB7CGFQKgs9waTNlPHvFi",
+        "object": "chat.completion",
+        "created": 1704448841,
+        "model": "gpt-4-1106-preview",
+        "system_fingerprint": "fp_3905aa4f79",
+        "usage": {
+          "prompt_tokens": 809,
+          "completion_tokens": 970,
+          "total_tokens": 1779
+        }
+      }
+    },
+    {
+      "project": "npm-packages",
+      "info": {
+        "pkgName": "path-is-absolute",
+        "title": "如何在Node.js中判断路径是否绝对"
+      },
+      "completionInfo": {
+        "id": "chatcmpl-8dbKG59obM9h3y2gXe9yWBviVkgVE",
+        "object": "chat.completion",
+        "created": 1704448964,
+        "model": "gpt-4-1106-preview",
+        "system_fingerprint": "fp_c6efb4aa39",
+        "usage": {
+          "prompt_tokens": 1279,
+          "completion_tokens": 751,
+          "total_tokens": 2030
+        }
+      }
+    },
+    {
+      "project": "npm-packages",
+      "info": {
+        "pkgName": "anymatch",
+        "title": "让文件匹配更简单：初探anymatch的奥秘"
+      },
+      "completionInfo": {
+        "id": "chatcmpl-8dbLF2JYCHJqQoUrkyFWLZnBkd6Ej",
+        "object": "chat.completion",
+        "created": 1704449025,
+        "model": "gpt-4-1106-preview",
+        "system_fingerprint": "fp_3905aa4f79",
+        "usage": {
+          "prompt_tokens": 2184,
+          "completion_tokens": 1272,
+          "total_tokens": 3456
+        }
+      }
     }
   ]
 }
