@@ -1177,6 +1177,82 @@
           "total_tokens": 3456
         }
       }
+    },
+    {
+      "project": "npm-packages",
+      "info": {
+        "pkgName": "finalhandler",
+        "title": "Node.js HTTP请求的终极处理者: finalhandler模块解析"
+      },
+      "completionInfo": {
+        "id": "chatcmpl-8eZ81UJV0BaiK1qffsVl8daw6tkb8",
+        "object": "chat.completion",
+        "created": 1704678845,
+        "model": "gpt-4-1106-preview",
+        "system_fingerprint": "fp_168383a679",
+        "usage": {
+          "prompt_tokens": 2029,
+          "completion_tokens": 1269,
+          "total_tokens": 3298
+        }
+      }
+    },
+    {
+      "project": "npm-packages",
+      "info": {
+        "pkgName": "readable-stream",
+        "title": "跨版本流数据处理：探索readable-stream包的用法"
+      },
+      "completionInfo": {
+        "id": "chatcmpl-8g5c3luo1L2VYnzpB2gUtL7QQj8E5",
+        "object": "chat.completion",
+        "created": 1705042043,
+        "model": "gpt-4-1106-preview",
+        "system_fingerprint": "fp_168383a679",
+        "usage": {
+          "prompt_tokens": 2360,
+          "completion_tokens": 1231,
+          "total_tokens": 3591
+        }
+      }
+    },
+    {
+      "project": "npm-packages",
+      "info": {
+        "pkgName": "commander",
+        "title": "从零开始：使用Commander.js构建Node.js命令行界面"
+      },
+      "completionInfo": {
+        "id": "chatcmpl-8g5gdCtisg9yLwQCf8EoCTHTIWLP5",
+        "object": "chat.completion",
+        "created": 1705042327,
+        "model": "gpt-4-1106-preview",
+        "system_fingerprint": "fp_168383a679",
+        "usage": {
+          "prompt_tokens": 19766,
+          "completion_tokens": 1074,
+          "total_tokens": 20840
+        }
+      }
+    },
+    {
+      "project": "npm-packages",
+      "info": {
+        "pkgName": "async-each",
+        "title": "异步遍历大师：async-each 的简洁使用指北"
+      },
+      "completionInfo": {
+        "id": "chatcmpl-8g5ilLwrktz3oLxYQXxeJWYoB7M25",
+        "object": "chat.completion",
+        "created": 1705042459,
+        "model": "gpt-4-1106-preview",
+        "system_fingerprint": "fp_168383a679",
+        "usage": {
+          "prompt_tokens": 905,
+          "completion_tokens": 966,
+          "total_tokens": 1871
+        }
+      }
     }
   ]
 }
