@@ -1291,6 +1291,25 @@
           "total_tokens": 1624
         }
       }
+    },
+    {
+      "project": "npm-packages",
+      "info": {
+        "pkgName": "webpack",
+        "title": "深入浅出Webpack：打造前端工程化开发流程"
+      },
+      "completionInfo": {
+        "id": "chatcmpl-8hCTMtzKgBfZixmhO4m53x8IfUD9U",
+        "object": "chat.completion",
+        "created": 1705306740,
+        "model": "gpt-4-1106-preview",
+        "system_fingerprint": "fp_168383a679",
+        "usage": {
+          "prompt_tokens": 57684,
+          "completion_tokens": 949,
+          "total_tokens": 58633
+        }
+      }
     }
   ]
 }
