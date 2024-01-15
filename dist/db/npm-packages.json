@@ -851,12 +851,14 @@
     {
       "name": "bcrypt-pbkdf",
       "stepsStatus": {
-        "gottenBaseInfo": false,
+        "gottenBaseInfo": true,
         "collectedGuide": false,
         "generatedArticle": false,
         "publishedWeixinDraft": false,
         "publishedGithub": false
-      }
+      },
+      "homepage": "https://github.com/joyent/node-bcrypt-pbkdf#readme",
+      "repository_url": "https://github.com/joyent/node-bcrypt-pbkdf"
     },
     {
       "name": "isexe",
