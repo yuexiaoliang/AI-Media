@@ -819,12 +819,14 @@
     {
       "name": "bluebird",
       "stepsStatus": {
-        "gottenBaseInfo": false,
-        "collectedGuide": false,
-        "generatedArticle": false,
-        "publishedWeixinDraft": false,
+        "gottenBaseInfo": true,
+        "collectedGuide": true,
+        "generatedArticle": true,
+        "publishedWeixinDraft": true,
         "publishedGithub": false
-      }
+      },
+      "homepage": "https://github.com/petkaantonov/bluebird",
+      "repository_url": "https://github.com/petkaantonov/bluebird"
     },
     {
       "name": "combined-stream",
