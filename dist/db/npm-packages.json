@@ -853,7 +853,7 @@
       "stepsStatus": {
         "gottenBaseInfo": true,
         "collectedGuide": false,
-        "generatedArticle": false,
+        "generatedArticle": true,
         "publishedWeixinDraft": false,
         "publishedGithub": false
       },

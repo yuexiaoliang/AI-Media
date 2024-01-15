@@ -10,23 +10,30 @@ export const collectPackageReadme = async (name: string) => {
     if (md) return md;
   }
 
-  const { data } = await axios.get(`https://libraries.io/npm/${name}`);
-  const $ = cheerio.load(data);
+  try {
+    const { data } = await axios.get(`https://libraries.io/npm/${name}`);
+    const $ = cheerio.load(data);
 
-  const $projects = $('#readme .markdown-body');
-  const html = $projects.html();
-  if (!html) {
-    throw new Error('@auto-blog/libraries: package README not found');
+    const $projects = $('#readme .markdown-body');
+    const html = $projects.html();
+    if (!html) {
+      console.log('@auto-blog/libraries: package README not found');
+      return '';
+    }
+
+    const md = html2md(html);
+    if (!md) {
+      console.log('@auto-blog/libraries: package README convert to markdown failed');
+      return '';
+    }
+
+    file.saveReadmeMD(md, name);
+
+    await npmPackagesDB.setPackageCollectedGuideStatus(name);
+
+    return md;
+  } catch (error) {
+    console.log(error?.toString())
+    return '';
   }
-
-  const md = html2md(html);
-  if (!md) {
-    throw new Error('@auto-blog/libraries: package README convert to markdown failed');
-  }
-
-  file.saveReadmeMD(md, name);
-
-  await npmPackagesDB.setPackageCollectedGuideStatus(name);
-
-  return md;
 };
