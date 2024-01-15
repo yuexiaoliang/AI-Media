@@ -1253,6 +1253,25 @@
           "total_tokens": 1871
         }
       }
+    },
+    {
+      "project": "npm-packages",
+      "info": {
+        "pkgName": "glob-parent",
+        "title": "深入理解和应用glob-parent：从复杂的glob模式中提取父路径"
+      },
+      "completionInfo": {
+        "id": "chatcmpl-8hBpPbJ8I2YbJMUtNkZjkD5xXhFWB",
+        "object": "chat.completion",
+        "created": 1705304263,
+        "model": "gpt-4-1106-preview",
+        "system_fingerprint": "fp_168383a679",
+        "usage": {
+          "prompt_tokens": 2034,
+          "completion_tokens": 1026,
+          "total_tokens": 3060
+        }
+      }
     }
   ]
 }
