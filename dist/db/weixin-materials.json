@@ -669,6 +669,16 @@
         "media_id": "3TI8XMZiLsZyu-QJGQpsXCoz02r4UrO_zh_CMdebsiJwNWKne6_i5cKekHkv6-81",
         "url": "http://mmbiz.qpic.cn/mmbiz_png/QPCr6EnHPrwAWo37DejjBbJdIfUfllW5uE8HKicIJKwAIkaz7gqm5FL2gfsic1ZGlibiaI5P6DZpqY3mExJanMQibnQ/0?wx_fmt=png"
       }
+    },
+    {
+      "project": "npm-packages",
+      "info": {
+        "pkgName": "bcrypt-pbkdf"
+      },
+      "materialInfo": {
+        "media_id": "3TI8XMZiLsZyu-QJGQpsXPAex0vpJZ_OfzGro5CGsJDjH_OP6POcewOl8mtI_eqi",
+        "url": "http://mmbiz.qpic.cn/mmbiz_png/QPCr6EnHPrwAWo37DejjBbJdIfUfllW5zOEWibh8sIvicfsK3iczq9vrPAZ1m5545yV5ic0ribGLzUDNKPuhJUcnvtw/0?wx_fmt=png"
+      }
     }
   ]
 }

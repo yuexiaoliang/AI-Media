@@ -854,7 +854,7 @@
         "gottenBaseInfo": true,
         "collectedGuide": false,
         "generatedArticle": true,
-        "publishedWeixinDraft": false,
+        "publishedWeixinDraft": true,
         "publishedGithub": false
       },
       "homepage": "https://github.com/joyent/node-bcrypt-pbkdf#readme",
