@@ -1367,6 +1367,25 @@
           "total_tokens": 6190
         }
       }
+    },
+    {
+      "project": "npm-packages",
+      "info": {
+        "pkgName": "isobject",
+        "title": "如何在JavaScript中准确判断对象类型？"
+      },
+      "completionInfo": {
+        "id": "chatcmpl-8hg9BWU4IpAQI3Mbu9SCCc8x4pM86",
+        "object": "chat.completion",
+        "created": 1705420809,
+        "model": "gpt-4-1106-preview",
+        "system_fingerprint": "fp_866b9ef0a9",
+        "usage": {
+          "prompt_tokens": 2079,
+          "completion_tokens": 848,
+          "total_tokens": 2927
+        }
+      }
     }
   ]
 }
