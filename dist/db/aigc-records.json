@@ -1424,6 +1424,25 @@
           "total_tokens": 4101
         }
       }
+    },
+    {
+      "project": "npm-packages",
+      "info": {
+        "pkgName": "content-type",
+        "title": "掌握HTTP内容类型解析与构建：使用content-type库"
+      },
+      "completionInfo": {
+        "id": "chatcmpl-8iLM4LHWJjV4LVv5yne3GoqT1tjp5",
+        "object": "chat.completion",
+        "created": 1705579212,
+        "model": "gpt-4-1106-preview",
+        "system_fingerprint": "fp_b738595050",
+        "usage": {
+          "prompt_tokens": 1664,
+          "completion_tokens": 818,
+          "total_tokens": 2482
+        }
+      }
     }
   ]
 }
