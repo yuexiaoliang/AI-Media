@@ -1107,12 +1107,14 @@
     {
       "name": "is-glob",
       "stepsStatus": {
-        "gottenBaseInfo": false,
-        "collectedGuide": false,
-        "generatedArticle": false,
-        "publishedWeixinDraft": false,
+        "gottenBaseInfo": true,
+        "collectedGuide": true,
+        "generatedArticle": true,
+        "publishedWeixinDraft": true,
         "publishedGithub": false
-      }
+      },
+      "homepage": "https://github.com/micromatch/is-glob",
+      "repository_url": "https://github.com/micromatch/is-glob"
     },
     {
       "name": "isobject",
