@@ -1462,6 +1462,25 @@
           "total_tokens": 3942
         }
       }
+    },
+    {
+      "project": "npm-packages",
+      "info": {
+        "pkgName": "is-arrayish",
+        "title": "判断对象是否类数组的绝妙工具 - is-arrayish"
+      },
+      "completionInfo": {
+        "id": "chatcmpl-8ihpWMgFKSkSHm4LjMdWH7KUhmKZN",
+        "object": "chat.completion",
+        "created": 1705665606,
+        "model": "gpt-4-1106-preview",
+        "system_fingerprint": "fp_04de91a479",
+        "usage": {
+          "prompt_tokens": 992,
+          "completion_tokens": 807,
+          "total_tokens": 1799
+        }
+      }
     }
   ]
 }
