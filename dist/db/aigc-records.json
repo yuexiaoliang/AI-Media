@@ -1500,6 +1500,25 @@
           "total_tokens": 3010
         }
       }
+    },
+    {
+      "project": "npm-packages",
+      "info": {
+        "pkgName": "encodeurl",
+        "title": "安全编码：利用encodeurl有效防范URL注入"
+      },
+      "completionInfo": {
+        "id": "chatcmpl-8j4J4GEAJVMppO543FXQ5QSzuiOuU",
+        "object": "chat.completion",
+        "created": 1705752006,
+        "model": "gpt-4-1106-preview",
+        "system_fingerprint": "fp_04de91a479",
+        "usage": {
+          "prompt_tokens": 1861,
+          "completion_tokens": 1197,
+          "total_tokens": 3058
+        }
+      }
     }
   ]
 }
