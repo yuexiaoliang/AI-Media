@@ -1519,6 +1519,25 @@
           "total_tokens": 3058
         }
       }
+    },
+    {
+      "project": "npm-packages",
+      "info": {
+        "pkgName": "lru-cache",
+        "title": "玩转数据缓存：lru-cache 使用指南"
+      },
+      "completionInfo": {
+        "id": "chatcmpl-8j83S8Dom6lKQPBNpGR1oB118YBJ9",
+        "object": "chat.completion",
+        "created": 1705766414,
+        "model": "gpt-4-1106-preview",
+        "system_fingerprint": "fp_de93422283",
+        "usage": {
+          "prompt_tokens": 11635,
+          "completion_tokens": 1282,
+          "total_tokens": 12917
+        }
+      }
     }
   ]
 }
