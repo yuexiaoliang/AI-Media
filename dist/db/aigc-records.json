@@ -1557,6 +1557,25 @@
           "total_tokens": 123230
         }
       }
+    },
+    {
+      "project": "npm-packages",
+      "info": {
+        "pkgName": "process-nextick-args",
+        "title": "Node.js 跨平台nextTick参数传递终极指南"
+      },
+      "completionInfo": {
+        "id": "chatcmpl-8jUWvxEqmcnSATev4ujnqCYoI3Rjw",
+        "object": "chat.completion",
+        "created": 1705852809,
+        "model": "gpt-4-1106-preview",
+        "system_fingerprint": "fp_04de91a479",
+        "usage": {
+          "prompt_tokens": 841,
+          "completion_tokens": 962,
+          "total_tokens": 1803
+        }
+      }
     }
   ]
 }
