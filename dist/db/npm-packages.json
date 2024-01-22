@@ -1321,12 +1321,14 @@
     {
       "name": "convert-source-map",
       "stepsStatus": {
-        "gottenBaseInfo": false,
-        "collectedGuide": false,
-        "generatedArticle": false,
-        "publishedWeixinDraft": false,
+        "gottenBaseInfo": true,
+        "collectedGuide": true,
+        "generatedArticle": true,
+        "publishedWeixinDraft": true,
         "publishedGithub": false
-      }
+      },
+      "homepage": "https://github.com/thlorenz/convert-source-map",
+      "repository_url": "https://github.com/thlorenz/convert-source-map"
     },
     {
       "name": "array-union",

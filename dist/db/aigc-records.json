@@ -1595,6 +1595,25 @@
           "total_tokens": 2405
         }
       }
+    },
+    {
+      "project": "npm-packages",
+      "info": {
+        "pkgName": "convert-source-map",
+        "title": "深入理解和应用convert-source-map：管理JavaScript源代码映射的强大工具"
+      },
+      "completionInfo": {
+        "id": "chatcmpl-8jr0TrlM1cHuekRaFZfeorI8BM6wX",
+        "object": "chat.completion",
+        "created": 1705939209,
+        "model": "gpt-4-1106-preview",
+        "system_fingerprint": "fp_04de91a479",
+        "usage": {
+          "prompt_tokens": 2566,
+          "completion_tokens": 1229,
+          "total_tokens": 3795
+        }
+      }
     }
   ]
 }
