@@ -1576,6 +1576,25 @@
           "total_tokens": 1803
         }
       }
+    },
+    {
+      "project": "npm-packages",
+      "info": {
+        "pkgName": "string-width",
+        "title": "精确计算字符串可视宽度的秘诀：string-width 使用指南"
+      },
+      "completionInfo": {
+        "id": "chatcmpl-8jnGDZlhDPeWf49Jpbr8bECI5l0C6",
+        "object": "chat.completion",
+        "created": 1705924809,
+        "model": "gpt-4-1106-preview",
+        "system_fingerprint": "fp_04de91a479",
+        "usage": {
+          "prompt_tokens": 1151,
+          "completion_tokens": 1254,
+          "total_tokens": 2405
+        }
+      }
     }
   ]
 }
