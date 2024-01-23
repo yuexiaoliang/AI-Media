@@ -1633,6 +1633,25 @@
           "total_tokens": 3120
         }
       }
+    },
+    {
+      "project": "npm-packages",
+      "info": {
+        "pkgName": "acorn",
+        "title": "精通Acorn：构建高性能JavaScript解析器"
+      },
+      "completionInfo": {
+        "id": "chatcmpl-8kDU2Z1gj1mgmawQ9JtcSTW8R8ree",
+        "object": "chat.completion",
+        "created": 1706025610,
+        "model": "gpt-4-1106-preview",
+        "system_fingerprint": "fp_de93422283",
+        "usage": {
+          "prompt_tokens": 1554,
+          "completion_tokens": 1080,
+          "total_tokens": 2634
+        }
+      }
     }
   ]
 }
