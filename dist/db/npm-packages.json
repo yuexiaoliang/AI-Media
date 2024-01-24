@@ -1231,12 +1231,14 @@
     {
       "name": "punycode",
       "stepsStatus": {
-        "gottenBaseInfo": false,
-        "collectedGuide": false,
-        "generatedArticle": false,
-        "publishedWeixinDraft": false,
+        "gottenBaseInfo": true,
+        "collectedGuide": true,
+        "generatedArticle": true,
+        "publishedWeixinDraft": true,
         "publishedGithub": false
-      }
+      },
+      "homepage": "https://mths.be/punycode",
+      "repository_url": "https://github.com/mathiasbynens/punycode.js"
     },
     {
       "name": "number-is-nan",
