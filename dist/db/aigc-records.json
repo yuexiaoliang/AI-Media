@@ -1709,6 +1709,25 @@
           "total_tokens": 6099
         }
       }
+    },
+    {
+      "project": "npm-packages",
+      "info": {
+        "pkgName": "util-deprecate",
+        "title": "如何在前端项目中优雅地实现废弃通知"
+      },
+      "completionInfo": {
+        "id": "chatcmpl-8kwR6FwaUO74yDX6qezDjYaO6kF5P",
+        "object": "chat.completion",
+        "created": 1706198408,
+        "model": "gpt-4-1106-preview",
+        "system_fingerprint": "fp_3de4f27bba",
+        "usage": {
+          "prompt_tokens": 992,
+          "completion_tokens": 798,
+          "total_tokens": 1790
+        }
+      }
     }
   ]
 }
