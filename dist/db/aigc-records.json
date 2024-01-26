@@ -1728,6 +1728,25 @@
           "total_tokens": 1790
         }
       }
+    },
+    {
+      "project": "npm-packages",
+      "info": {
+        "pkgName": "cross-spawn",
+        "title": "跨平台进程生成神器：cross-spawn 使用解析"
+      },
+      "completionInfo": {
+        "id": "chatcmpl-8lFAMepqr3xXrG3USKIT40tbDec2P",
+        "object": "chat.completion",
+        "created": 1706270406,
+        "model": "gpt-4-1106-preview",
+        "system_fingerprint": "fp_b4fb435f51",
+        "usage": {
+          "prompt_tokens": 2278,
+          "completion_tokens": 1142,
+          "total_tokens": 3420
+        }
+      }
     }
   ]
 }
