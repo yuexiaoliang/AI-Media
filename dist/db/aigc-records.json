@@ -1766,6 +1766,25 @@
           "total_tokens": 1697
         }
       }
+    },
+    {
+      "project": "npm-packages",
+      "info": {
+        "pkgName": "is-extglob",
+        "title": "Nodejs 实战：使用 is-extglob 进行扩展匹配检测"
+      },
+      "completionInfo": {
+        "id": "chatcmpl-8lbdvTYD5imfzQQuRXxFbJvZ8XLgT",
+        "object": "chat.completion",
+        "created": 1706356807,
+        "model": "gpt-4-1106-preview",
+        "system_fingerprint": "fp_f71eafccde",
+        "usage": {
+          "prompt_tokens": 1832,
+          "completion_tokens": 956,
+          "total_tokens": 2788
+        }
+      }
     }
   ]
 }
