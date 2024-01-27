@@ -1785,6 +1785,25 @@
           "total_tokens": 2788
         }
       }
+    },
+    {
+      "project": "npm-packages",
+      "info": {
+        "pkgName": "cookie-signature",
+        "title": "Node.js 中的 Cookie 签名与验证指南"
+      },
+      "completionInfo": {
+        "id": "chatcmpl-8lfOPLTasY3Vy5F3fb7lHSV01LzI1",
+        "object": "chat.completion",
+        "created": 1706371221,
+        "model": "gpt-4-1106-preview",
+        "system_fingerprint": "fp_b4fb435f51",
+        "usage": {
+          "prompt_tokens": 751,
+          "completion_tokens": 1301,
+          "total_tokens": 2052
+        }
+      }
     }
   ]
 }
