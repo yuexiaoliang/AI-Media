@@ -1861,6 +1861,25 @@
           "total_tokens": 1712
         }
       }
+    },
+    {
+      "project": "npm-packages",
+      "info": {
+        "pkgName": "is-fullwidth-code-point",
+        "title": "全宽字符判别神器：is-fullwidth-code-point解析与实践"
+      },
+      "completionInfo": {
+        "id": "chatcmpl-8mOLJaENYdRIsmz0zr7rL6vRtIHdq",
+        "object": "chat.completion",
+        "created": 1706544009,
+        "model": "gpt-4-1106-preview",
+        "system_fingerprint": "fp_b4fb435f51",
+        "usage": {
+          "prompt_tokens": 847,
+          "completion_tokens": 1213,
+          "total_tokens": 2060
+        }
+      }
     }
   ]
 }

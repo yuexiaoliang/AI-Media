@@ -979,6 +979,16 @@
         "media_id": "3TI8XMZiLsZyu-QJGQpsXJE1z8owx5n1R_j6POU6oqSI3ImQUhHdAjO2W9A77ttC",
         "url": "http://mmbiz.qpic.cn/mmbiz_png/QPCr6EnHPryQNdlAerdVadATYDW9O2KksEF2lacSgzAOicTjTU0bQpx5gOXnVE23hRZgCCGljeG2c6ocMMwJxwQ/0?wx_fmt=png"
       }
+    },
+    {
+      "project": "npm-packages",
+      "info": {
+        "pkgName": "is-fullwidth-code-point"
+      },
+      "materialInfo": {
+        "media_id": "3TI8XMZiLsZyu-QJGQpsXCYd06MivTU7nDvcsti8v77KHjbwC9tfZvW1gPo_KljV",
+        "url": "http://mmbiz.qpic.cn/mmbiz_png/QPCr6EnHPryQNdlAerdVadATYDW9O2KkUjgwxkjcXxNrYk7sIF4Is2mbDz1wf51au7BibkTJA8BMZxtBjqT7EJw/0?wx_fmt=png"
+      }
     }
   ]
 }
