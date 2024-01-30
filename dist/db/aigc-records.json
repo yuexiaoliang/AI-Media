@@ -1880,6 +1880,25 @@
           "total_tokens": 2060
         }
       }
+    },
+    {
+      "project": "npm-packages",
+      "info": {
+        "pkgName": "chalk",
+        "title": "让你的Nodejs终端彩色化：Chalk库实战指南"
+      },
+      "completionInfo": {
+        "id": "chatcmpl-8mh4aSwX90t6chEkzviUygZBllXJj",
+        "object": "chat.completion",
+        "created": 1706616008,
+        "model": "gpt-4-1106-preview",
+        "system_fingerprint": "fp_f71eafccde",
+        "usage": {
+          "prompt_tokens": 3953,
+          "completion_tokens": 1253,
+          "total_tokens": 5206
+        }
+      }
     }
   ]
 }
