@@ -1937,6 +1937,25 @@
           "total_tokens": 7457
         }
       }
+    },
+    {
+      "project": "npm-packages",
+      "info": {
+        "pkgName": "destroy",
+        "title": "彻底销毁流：Node.js流管理利器Destroy包使用指南"
+      },
+      "completionInfo": {
+        "id": "chatcmpl-8n7IT5xxscVdzs9jxvPpvHtM1f4OQ",
+        "object": "chat.completion",
+        "created": 1706716813,
+        "model": "gpt-4-1106-preview",
+        "system_fingerprint": "fp_b4fb435f51",
+        "usage": {
+          "prompt_tokens": 1570,
+          "completion_tokens": 1179,
+          "total_tokens": 2749
+        }
+      }
     }
   ]
 }
