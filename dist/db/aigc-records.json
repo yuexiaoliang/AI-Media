@@ -1918,6 +1918,25 @@
           "total_tokens": 1448
         }
       }
+    },
+    {
+      "project": "npm-packages",
+      "info": {
+        "pkgName": "eslint",
+        "title": "掌握ESLint：提升JavaScript代码质量的利器"
+      },
+      "completionInfo": {
+        "id": "chatcmpl-8n3YCdmWoIrIKKLIWQS6o9u60crkD",
+        "object": "chat.completion",
+        "created": 1706702412,
+        "model": "gpt-4-1106-preview",
+        "system_fingerprint": "fp_f71eafccde",
+        "usage": {
+          "prompt_tokens": 6387,
+          "completion_tokens": 1070,
+          "total_tokens": 7457
+        }
+      }
     }
   ]
 }
