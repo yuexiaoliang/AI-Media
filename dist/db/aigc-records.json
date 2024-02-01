@@ -1994,6 +1994,25 @@
           "total_tokens": 1934
         }
       }
+    },
+    {
+      "project": "npm-packages",
+      "info": {
+        "pkgName": "babel-loader",
+        "title": "全面解读：如何使用babel-loader让你的JavaScript代码转译高效又现代"
+      },
+      "completionInfo": {
+        "id": "chatcmpl-8nQ1h2pmnF2o8xguBKnD3yRuV0BlZ",
+        "object": "chat.completion",
+        "created": 1706788809,
+        "model": "gpt-4-1106-preview",
+        "system_fingerprint": "fp_b4fb435f51",
+        "usage": {
+          "prompt_tokens": 4370,
+          "completion_tokens": 1450,
+          "total_tokens": 5820
+        }
+      }
     }
   ]
 }
