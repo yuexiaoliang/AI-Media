@@ -6,6 +6,7 @@
     "dirpath",
     "errcode",
     "errmsg",
+    "filenamify",
     "freepublish",
     "highlightjs",
     "outdir",

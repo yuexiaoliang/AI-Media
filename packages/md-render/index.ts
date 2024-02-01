@@ -1,6 +1,7 @@
 import { load } from 'js-yaml';
 import juice from 'juice';
 import MarkdownIt from 'markdown-it';
+import filenamify from 'filenamify';
 import type StateBlock from 'markdown-it/lib/rules_block/state_block';
 import mdHighlight from 'markdown-it-highlightjs';
 import theme from './styles/theme.css';
@@ -18,6 +19,7 @@ export const mdToWeixin = <T>(val: string) => {
   // 解析 yaml meta
   md.use(metaYaml, {
     cb(json) {
+      json.title = filenamify(json.title, { replacement: ' ' });
       _meta = json as T;
     }
   } as MetaYamlOptions);
