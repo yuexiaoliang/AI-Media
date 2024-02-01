@@ -1975,6 +1975,25 @@
           "total_tokens": 2276
         }
       }
+    },
+    {
+      "project": "npm-packages",
+      "info": {
+        "pkgName": "globals",
+        "title": "解锁JavaScript环境全局变量的秘密：使用globals包"
+      },
+      "completionInfo": {
+        "id": "chatcmpl-8nM8GP0L1oLrecx33Bx0JTejtesrx",
+        "object": "chat.completion",
+        "created": 1706773840,
+        "model": "gpt-4-1106-preview",
+        "system_fingerprint": "fp_b4fb435f51",
+        "usage": {
+          "prompt_tokens": 1025,
+          "completion_tokens": 909,
+          "total_tokens": 1934
+        }
+      }
     }
   ]
 }
