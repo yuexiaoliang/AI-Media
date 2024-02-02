@@ -2051,6 +2051,25 @@
           "total_tokens": 2104
         }
       }
+    },
+    {
+      "project": "npm-packages",
+      "info": {
+        "pkgName": "escape-string-regexp",
+        "title": "正则表达式特殊字符转义工具：应用 escape-string-regexp 提高正则匹配安全性"
+      },
+      "completionInfo": {
+        "id": "chatcmpl-8nqFVZg8QmNZJXOYZJ4jBJ6gZqFxw",
+        "object": "chat.completion",
+        "created": 1706889609,
+        "model": "gpt-4-1106-preview",
+        "system_fingerprint": "fp_3de4f27bba",
+        "usage": {
+          "prompt_tokens": 832,
+          "completion_tokens": 996,
+          "total_tokens": 1828
+        }
+      }
     }
   ]
 }
