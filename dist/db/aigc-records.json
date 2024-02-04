@@ -2559,6 +2559,25 @@
           "total_tokens": 15896
         }
       }
+    },
+    {
+      "project": "npm-packages",
+      "info": {
+        "pkgName": "on-finished",
+        "title": "掌握HTTP请求的终结：Node.js中on-finished包的使用实践"
+      },
+      "completionInfo": {
+        "id": "chatcmpl-8oZCbSfQuSmaaNlXaeB6GqWyXjpI7",
+        "object": "chat.completion",
+        "created": 1707062409,
+        "model": "gpt-4-1106-preview",
+        "system_fingerprint": "fp_f71eafccde",
+        "usage": {
+          "prompt_tokens": 2159,
+          "completion_tokens": 1110,
+          "total_tokens": 3269
+        }
+      }
     }
   ]
 }

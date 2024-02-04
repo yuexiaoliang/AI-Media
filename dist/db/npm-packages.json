@@ -1545,12 +1545,14 @@
     {
       "name": "on-finished",
       "stepsStatus": {
-        "gottenBaseInfo": false,
-        "collectedGuide": false,
-        "generatedArticle": false,
-        "publishedWeixinDraft": false,
+        "gottenBaseInfo": true,
+        "collectedGuide": true,
+        "generatedArticle": true,
+        "publishedWeixinDraft": true,
         "publishedGithub": false
-      }
+      },
+      "homepage": "https://github.com/jshttp/on-finished#readme",
+      "repository_url": "https://github.com/jshttp/on-finished"
     },
     {
       "name": "hosted-git-info",
