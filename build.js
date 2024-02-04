@@ -6,7 +6,8 @@ import { copy } from 'esbuild-plugin-copy';
 import yargs from 'yargs-parser';
 import { rimrafSync } from 'rimraf'
 
-const argv = yargs(process.argv.slice(2))
+const argvRaw = process.argv.slice(2)
+const argv = yargs(argvRaw)
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 
@@ -18,7 +19,7 @@ const buildEnd = {
   name: 'build-end',
   setup(build) {
     build.onEnd(() => {
-      spawnSync('node', [outfile], { stdio: 'inherit' });
+      spawnSync('node', [outfile, ...argvRaw], { stdio: 'inherit' });
     });
   }
 };
@@ -28,7 +29,6 @@ const esbuildOptions = {
   platform: 'node',
   outfile,
   bundle: true,
-  // minify: !argv.watch,
   assetNames: 'assets/[name]-[hash]',
   loader: { '.txt': 'text', '.css': 'text', '.html': 'text' },
   plugins: [
@@ -42,21 +42,23 @@ const esbuildOptions = {
 }
 
 if (argv.watch) {
-  // rimrafSync(outdir)
   rimrafSync(`${outdir}/html-templates`)
+
   let ctx = await esbuild.context({
     ...esbuildOptions,
     plugins: [...esbuildOptions.plugins, buildEnd],
   })
+
   ctx.watch()
 } else {
-  // rimrafSync(outdir)
   rimrafSync(`${outdir}/html-templates`)
-  const opts = { ...esbuildOptions };
+
+  const opts = { ...esbuildOptions, minify: true};
 
   if (argv.run) {
     opts.plugins = [...esbuildOptions.plugins, buildEnd]
   }
+
   esbuild.build(opts)
 }
 

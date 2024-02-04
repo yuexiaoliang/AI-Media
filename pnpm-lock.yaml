@@ -17,6 +17,9 @@ importers:
       '@auto-blog/database':
         specifier: workspace:^
         version: link:packages/database
+      '@auto-blog/english-words':
+        specifier: workspace:^
+        version: link:projects/english-wrods
       '@auto-blog/md-render':
         specifier: workspace:^
         version: link:packages/md-render
@@ -143,6 +146,8 @@ importers:
   packages/platform: {}
 
   packages/utils: {}
+
+  projects/english-wrods: {}
 
   projects/npm-packages: {}
 
