@@ -60,26 +60,27 @@ const dataExample = [
 const logStr = defineLogStr('english-words');
 
 export async function start() {
-  console.log(logStr('开始生成单词卡片'));
-
-  console.log(logStr('正在获取单词', 'info'));
+  console.log(logStr('正在获取单词...'));
   const word = await getWord();
 
-  console.log(logStr('正在获取词源信息', 'info'));
+  console.log(logStr('正在获取词源信息...'));
   const etymology = await fetchEtymologyMD(word);
 
-  console.log(logStr('正在获取词义信息', 'info'));
+  console.log(logStr('正在获取词义信息...'));
   const meaning = await fetchWordMeaning(word);
 
-  console.log(logStr('正在生成单词数据', 'info'));
+  console.log(logStr('正在生成单词数据...'));
   await genData({
     word,
     etymology,
     meaning
   });
 
-  console.log(logStr('正在生成单词卡片', 'info'));
+  console.log(logStr('正在生成单词卡片...'));
   await genCards(word);
+
+  // console.log(logStr('正在生成单词图片...'));
+  // await genWordImage(word);
 
   console.log(logStr(`单词“${word}”生成完成！`, 'success'));
 }
@@ -119,6 +120,21 @@ async function genData({ word, etymology, meaning }: { word: Word; etymology: st
   }
 }
 
+export async function genWordImage(word: Word) {
+  const files = file.getFiles(dir(word));
+  let filepath = files?.find((file) => file.startsWith('cover.'));
+  if (filepath) return filepath;
+
+  const generator = images.defineImagesGenerations({
+    model: 'dall-e-3',
+    size: '1024x1024'
+  });
+
+  const { b64_json } = await generator(`Create a hand-drawn style illustration that visually represents the word "${word}".`);
+
+  return file.saveFileByB64(dir(word), b64_json, 'cover');
+}
+
 /**
  * 保存 AIGC 记录
  */
@@ -145,7 +161,7 @@ async function saveAigcRecord(word: Word, completionInfo: CompletionInfo) {
  * 获取单词
  */
 function getWord(): Word {
-  const words = ['person', 'time', 'year', 'good', 'now', 'I', 'you', 'this', 'is', 'want'];
+  const words = ['good', 'you', 'this'];
   return getRandomItem(words);
 }
 

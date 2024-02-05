@@ -32,10 +32,10 @@ export function defineLogStr(platform: string) {
 
   return (text: string, type: Type = 'default') => {
     const iconMap = {
-      info: '️⭕',
+      default: '⭕️',
+      info: '⭕️',
       error: '❎',
-      success: '✅',
-      default: '⭕️'
+      success: '✅'
     };
     const icon = iconMap[type] || iconMap['default'];
 

@@ -13,7 +13,7 @@ export function saveFile(filepath: string, content: string | NodeJS.ArrayBufferV
 }
 
 // 保存 b64json 文件到本地
-export async function saveFileByB64(dirpath: string, b64Json: string) {
+export async function saveFileByB64(dirpath: string, b64Json: string, filename?: string) {
   const buffer = Buffer.from(b64Json, 'base64');
 
   // 获取文件类型
@@ -22,8 +22,8 @@ export async function saveFileByB64(dirpath: string, b64Json: string) {
     throw new Error('保存文件到本地时，获取文件类型失败');
   }
 
-  const md5 = crypto.createHash('md5').update(buffer).digest('hex');
-  const filepath = path.resolve(dirpath, `${md5}.${type.ext}`);
+  const name = filename || crypto.createHash('md5').update(buffer).digest('hex');
+  const filepath = path.resolve(dirpath, `${name}.${type.ext}`);
 
   saveFile(filepath, buffer);
 
