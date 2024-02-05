@@ -19,7 +19,7 @@ export interface NpmPackageInfo {
   title: string;
 }
 
-const openDatabase = defineDatabase<AigcDB>('aigc-records', {
+export const openDatabase = defineDatabase<AigcDB>('aigc-records', {
   list: []
 });
 

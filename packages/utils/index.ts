@@ -26,3 +26,7 @@ export function stringToMd5(str: string): string {
 export function getRandomItem<T>(arr: T[]): T {
   return arr[Math.floor(Math.random() * arr.length)];
 }
+
+export function defineLogStr(platform: string) {
+  return (text: string, type: 'error' | 'info' = 'error') => `${type === 'error' ? '❎' : 'ℹ️'} [${platform}] => ${text}`;
+}

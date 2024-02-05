@@ -1,1 +1,1 @@
-export type Project = 'npm-packages';
+export type Project = 'npm-packages' | 'english-words'
