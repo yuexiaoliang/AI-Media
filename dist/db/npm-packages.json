@@ -905,12 +905,14 @@
     {
       "name": "find-up",
       "stepsStatus": {
-        "gottenBaseInfo": false,
-        "collectedGuide": false,
-        "generatedArticle": false,
-        "publishedWeixinDraft": false,
+        "gottenBaseInfo": true,
+        "collectedGuide": true,
+        "generatedArticle": true,
+        "publishedWeixinDraft": true,
         "publishedGithub": false
-      }
+      },
+      "homepage": "https://github.com/sindresorhus/find-up#readme",
+      "repository_url": "https://github.com/sindresorhus/find-up"
     },
     {
       "name": "destroy",

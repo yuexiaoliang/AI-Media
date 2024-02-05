@@ -2597,6 +2597,25 @@
           "total_tokens": 2861
         }
       }
+    },
+    {
+      "project": "npm-packages",
+      "info": {
+        "pkgName": "find-up",
+        "title": "向上搜索：如何在父目录中高效寻找文件与目录"
+      },
+      "completionInfo": {
+        "id": "chatcmpl-8ovgBXJTh3ZrqEfyo8856Bmrz1kkk",
+        "object": "chat.completion",
+        "created": 1707148811,
+        "model": "gpt-4-1106-preview",
+        "system_fingerprint": "fp_c3e45ce344",
+        "usage": {
+          "prompt_tokens": 1768,
+          "completion_tokens": 1278,
+          "total_tokens": 3046
+        }
+      }
     }
   ]
 }
