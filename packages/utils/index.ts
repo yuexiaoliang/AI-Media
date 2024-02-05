@@ -28,5 +28,17 @@ export function getRandomItem<T>(arr: T[]): T {
 }
 
 export function defineLogStr(platform: string) {
-  return (text: string, type: 'error' | 'info' = 'error') => `${type === 'error' ? '❎' : 'ℹ️'} [${platform}] => ${text}`;
+  type Type = 'error' | 'info' | 'success' | 'default';
+
+  return (text: string, type: Type = 'default') => {
+    const iconMap = {
+      info: '️⭕',
+      error: '❎',
+      success: '✅',
+      default: '⭕️'
+    };
+    const icon = iconMap[type] || iconMap['default'];
+
+    return `${icon} [${platform}] -> ${text}`;
+  };
 }

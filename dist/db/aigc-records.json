@@ -2126,6 +2126,42 @@
           "total_tokens": 2746
         }
       }
+    },
+    {
+      "project": "english-words",
+      "info": {
+        "word": "you"
+      },
+      "completionInfo": {
+        "id": "chatcmpl-8opPo47r2exP5o0uiUEIOdN5REeKf",
+        "object": "chat.completion",
+        "created": 1707124732,
+        "model": "gpt-4-1106-preview",
+        "system_fingerprint": "fp_c3e45ce344",
+        "usage": {
+          "prompt_tokens": 1684,
+          "completion_tokens": 618,
+          "total_tokens": 2302
+        }
+      }
+    },
+    {
+      "project": "english-words",
+      "info": {
+        "word": "this"
+      },
+      "completionInfo": {
+        "id": "chatcmpl-8opTDvdE7aHwE4KJ2nqCtIwomhdVu",
+        "object": "chat.completion",
+        "created": 1707124943,
+        "model": "gpt-4-1106-preview",
+        "system_fingerprint": "fp_c3e45ce344",
+        "usage": {
+          "prompt_tokens": 1665,
+          "completion_tokens": 808,
+          "total_tokens": 2473
+        }
+      }
     }
   ]
 }

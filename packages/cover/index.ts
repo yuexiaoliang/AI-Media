@@ -7,11 +7,11 @@ export interface CoverGenerationOptions {
   pageOpened?: (page: Page) => void | Promise<void>;
 }
 
-export function defineCoverGeneration(savePath: string) {
+export function defineCoverGeneration(savePath: string, debug = false) {
   return async (gotoUrl: string, options: CoverGenerationOptions = {}) => {
     const { pageOpened } = options;
 
-    const browser = await puppeteer.launch({ headless: 'new', args: ['--no-sandbox'] });
+    const browser = await puppeteer.launch(debug ? { headless: false, devtools: true } : { headless: 'new', args: ['--no-sandbox'] });
     const page = await browser.newPage();
 
     await page.goto(gotoUrl);
@@ -34,7 +34,7 @@ export function defineCoverGeneration(savePath: string) {
     await element.screenshot({ path: savePath });
 
     // 关闭浏览器
-    await browser.close();
+    if (!debug) await browser.close();
 
     return savePath;
   };

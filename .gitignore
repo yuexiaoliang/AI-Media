@@ -10,6 +10,9 @@ node_modules
 /dist/type-challenges/*/*
 !/dist/type-challenges/*/*.md
 
+/dist/english-words/*/*
+!/dist/english-words/*/data.json
+
 .cache
 
 .VSCodeCounter

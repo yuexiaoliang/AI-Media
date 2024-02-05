@@ -3,7 +3,7 @@ import yargs from 'yargs-parser';
 
 import { publisher as npmPackagesWeixinPublisher } from '@auto-blog/npm-packages';
 import { publisher as typeChallengesPublisher } from '@auto-blog/type-challenges';
-import { publisher as englishWordsPublisher } from '@auto-blog/english-words';
+import { start as englishWordsStart } from '@auto-blog/english-words';
 
 main().catch((error) => {
   console.error(error);
@@ -17,7 +17,7 @@ async function main() {
   const platformMap = {
     'npm-packages': npmPackagesWeixinPublisher,
     'type-challenges': typeChallengesPublisher,
-    'english-words': englishWordsPublisher
+    'english-words': englishWordsStart
   };
 
   if (!platform || !platformMap[platform]) {

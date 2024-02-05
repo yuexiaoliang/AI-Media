@@ -36,9 +36,16 @@ export function getFile(filepath: string) {
   return fs.readFileSync(filepath, 'utf-8');
 }
 
+// 获取文件夹下的所有文件
+export function getFiles(dirpath: string) {
+  if (!fs.existsSync(dirpath)) return;
+  return fs.readdirSync(dirpath);
+}
+
 // 随机文件夹下的一个文件
 export function getRandomFile(dirpath: string) {
-  if (!fs.existsSync(dirpath)) return;
-  const files = fs.readdirSync(dirpath);
+  const files = getFiles(dirpath)
+  if (!files) return;
+
   return getRandomItem(files);
 }
