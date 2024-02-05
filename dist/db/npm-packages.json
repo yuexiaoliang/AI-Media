@@ -1525,12 +1525,14 @@
     {
       "name": "estraverse",
       "stepsStatus": {
-        "gottenBaseInfo": false,
-        "collectedGuide": false,
-        "generatedArticle": false,
-        "publishedWeixinDraft": false,
+        "gottenBaseInfo": true,
+        "collectedGuide": true,
+        "generatedArticle": true,
+        "publishedWeixinDraft": true,
         "publishedGithub": false
-      }
+      },
+      "homepage": "https://github.com/estools/estraverse",
+      "repository_url": "https://github.com/estools/estraverse"
     },
     {
       "name": "nan",

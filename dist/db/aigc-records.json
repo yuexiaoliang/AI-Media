@@ -2578,6 +2578,25 @@
           "total_tokens": 3269
         }
       }
+    },
+    {
+      "project": "npm-packages",
+      "info": {
+        "pkgName": "estraverse",
+        "title": "使用Estraverse遍历与操作JavaScript AST"
+      },
+      "completionInfo": {
+        "id": "chatcmpl-8orvs2mYA8L6X2QAKTgNeIc9ZlWYK",
+        "object": "chat.completion",
+        "created": 1707134408,
+        "model": "gpt-4-1106-preview",
+        "system_fingerprint": "fp_c3e45ce344",
+        "usage": {
+          "prompt_tokens": 1774,
+          "completion_tokens": 1087,
+          "total_tokens": 2861
+        }
+      }
     }
   ]
 }
