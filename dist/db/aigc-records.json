@@ -2234,6 +2234,42 @@
           "total_tokens": 1856
         }
       }
+    },
+    {
+      "project": "english-words",
+      "info": {
+        "word": "initially"
+      },
+      "completionInfo": {
+        "id": "chatcmpl-8pBt7KECc5ikG5ghFneP0wq3ml41T",
+        "object": "chat.completion",
+        "created": 1707211117,
+        "model": "gpt-4-1106-preview",
+        "system_fingerprint": "fp_c3e45ce344",
+        "usage": {
+          "prompt_tokens": 970,
+          "completion_tokens": 376,
+          "total_tokens": 1346
+        }
+      }
+    },
+    {
+      "project": "english-words",
+      "info": {
+        "word": "greasy"
+      },
+      "completionInfo": {
+        "id": "chatcmpl-8pBuVKFI39RCfYtpSLHL5vhRPNtPg",
+        "object": "chat.completion",
+        "created": 1707211203,
+        "model": "gpt-4-1106-preview",
+        "system_fingerprint": "fp_c3e45ce344",
+        "usage": {
+          "prompt_tokens": 1051,
+          "completion_tokens": 947,
+          "total_tokens": 1998
+        }
+      }
     }
   ]
 }

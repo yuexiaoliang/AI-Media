@@ -6710,7 +6710,7 @@
     },
     {
       "word": "discover",
-      "generated": true
+      "generated": false
     },
     {
       "word": "discovery",
@@ -10134,7 +10134,7 @@
     },
     {
       "word": "greasy",
-      "generated": false
+      "generated": true
     },
     {
       "word": "great",
@@ -10554,7 +10554,7 @@
     },
     {
       "word": "initially",
-      "generated": false
+      "generated": true
     },
     {
       "word": "initiate",
