@@ -2616,6 +2616,25 @@
           "total_tokens": 3046
         }
       }
+    },
+    {
+      "project": "npm-packages",
+      "info": {
+        "pkgName": "fresh",
+        "title": "深入浅出HTTP缓存  利用Node.js与fresh模块优化网页性能"
+      },
+      "completionInfo": {
+        "id": "chatcmpl-8pI9dzea4uX8lvjK5T8tFXHmD2Wlj",
+        "object": "chat.completion",
+        "created": 1707235205,
+        "model": "gpt-4-1106-preview",
+        "system_fingerprint": "fp_b4fb435f51",
+        "usage": {
+          "prompt_tokens": 1659,
+          "completion_tokens": 1153,
+          "total_tokens": 2812
+        }
+      }
     }
   ]
 }
