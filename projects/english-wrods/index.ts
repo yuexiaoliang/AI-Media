@@ -200,6 +200,7 @@ const genCards = async (word: Word) => {
       })
     );
   } catch (error) {
+    removeCardsDir(word);
     console.error(error);
     throw new Error(logStr('生成卡片出错', 'error'));
   }
@@ -241,6 +242,10 @@ function cardsDir(word: Word) {
 
 function dataPath(word: Word) {
   return path.resolve(dir(word), 'data.json');
+}
+
+function removeCardsDir(word: Word) {
+  file.removeDir(cardsDir(word));
 }
 
 function saveDataFile(word: Word, content: string) {

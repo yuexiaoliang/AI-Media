@@ -44,8 +44,14 @@ export function getFiles(dirpath: string) {
 
 // 随机文件夹下的一个文件
 export function getRandomFile(dirpath: string) {
-  const files = getFiles(dirpath)
+  const files = getFiles(dirpath);
   if (!files) return;
 
   return getRandomItem(files);
+}
+
+// 删除文件夹
+export function removeDir(dirpath: string) {
+  if (!fs.existsSync(dirpath)) return;
+  fs.removeSync(dirpath);
 }
