@@ -43,16 +43,13 @@ const dataExample = [
     ]
   },
   {
-    title: '词源探秘',
+    title: '相关单词',
     content: [
-      ['来源时期', '1848年'],
-      ['词典引述', '用于接近住所或吸引他人注意'],
-      ['词根演变', '- 最初：美国边境的“hello, the house” - 演变：hallo → holla/hollo → hello'],
-      ['相关词形', '- 古英语动词“halouen” - 古高地德语的“hala”(取回)、“hola”'],
-      ['文化连接', '电话发明与“hello”普及同期，改变了传统的问候方式']
+      ['单词一', '例句', '翻译'],
+      ['单词二', '例句', '翻译'],
+      ['单词三', '例句', '翻译']
     ]
   },
-  { title: '提炼思考', content: ['“hello”如何成为全球通用的招呼语？', '“hello”与“hi”有何异同？', '使用“hello”时，身体语言如何更佳传达友好？'] },
   { title: '使用小贴士', content: ['电话中首选hello，体现礼貌。', '见面时，可配合微笑，增强亲切感。', '在寻求注意时加强语气，但避免喊叫。', '调侃时轻松语气，避免冒犯。'] },
   { title: '今日鼓励', content: '学习新单词是打开世界大门的钥匙。每一个你掌握的词汇，都是你向知识深渊迈进的一步。继续前行，你的努力会开花结果。加油！' }
 ];
@@ -63,8 +60,9 @@ export async function start() {
   console.log(logStr('正在获取单词...'));
   const word = await getWord();
 
-  console.log(logStr('正在获取词源信息...'));
-  const etymology = await fetchEtymologyMD(word);
+  // 暂时去掉
+  // console.log(logStr('正在获取词源信息...'));
+  // const etymology = await fetchEtymologyMD(word);
 
   console.log(logStr('正在获取词义信息...'));
   const meaning = await fetchWordMeaning(word);
@@ -72,7 +70,7 @@ export async function start() {
   console.log(logStr('正在生成单词数据...'));
   await genData({
     word,
-    etymology,
+    etymology: '',
     meaning
   });
 
@@ -161,7 +159,7 @@ async function saveAigcRecord(word: Word, completionInfo: CompletionInfo) {
  * 获取单词
  */
 function getWord(): Word {
-  const words = ['good', 'you', 'this'];
+  const words = ['import', 'export', 'auto', 'usage', 'constants', 'good', 'you', 'this'];
   return getRandomItem(words);
 }
 
