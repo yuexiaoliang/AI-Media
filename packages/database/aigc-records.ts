@@ -1,6 +1,7 @@
 import { defineDatabase } from './common';
 import { ChatCompletion } from '@auto-blog/openai';
 import { Project } from './types';
+import { Word } from './english-words';
 
 export type CompletionInfo = Omit<ChatCompletion, 'choices'>;
 
@@ -56,3 +57,25 @@ export const setNpmPackageRecord = async (info: NpmPackageInfo, completionInfo: 
 
   db.write();
 };
+
+/**
+ * 保存 AIGC 记录
+ */
+export async function saveAigcRecord(word: Word, completionInfo: CompletionInfo) {
+  const [db, data] = await openDatabase();
+  const index = data.list.findIndex((item) => item.info.word === word);
+
+  const item = {
+    project: 'english-words',
+    info: { word },
+    completionInfo
+  } as AigcListItem<any>;
+
+  if (index > -1) {
+    data.list[index] = item;
+  } else {
+    data.list.push(item);
+  }
+
+  db.write();
+}

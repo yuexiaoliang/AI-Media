@@ -7,11 +7,9 @@ import { defineLogStr, file, getRandomItem, renderTemplate } from '@auto-blog/ut
 import { AIModel, chat, images } from '@auto-blog/openai';
 
 import genDataPrompt from './prompts/genData.txt';
-import { AigcListItem, CompletionInfo } from '@auto-blog/database/aigc-records';
-import { openDatabase } from '@auto-blog/database/aigc-records';
+import { saveAigcRecord } from '@auto-blog/database/aigc-records';
+import { Word, getRandomNotGeneratedWord, updateWordRecord } from '@auto-blog/database/english-words';
 import { defineCoverGeneration } from '@auto-blog/cover';
-
-type Word = string;
 
 type Data = typeof dataExample;
 
@@ -45,9 +43,9 @@ const dataExample = [
   {
     title: '相关单词',
     content: [
-      ['单词一', '例句', '翻译'],
-      ['单词二', '例句', '翻译'],
-      ['单词三', '例句', '翻译']
+      ['单词一', '释义', '例句', '翻译'],
+      ['单词二', '释义', '例句', '翻译'],
+      ['单词三', '释义', '例句', '翻译']
     ]
   },
   { title: '使用小贴士', content: ['电话中首选hello，体现礼貌。', '见面时，可配合微笑，增强亲切感。', '在寻求注意时加强语气，但避免喊叫。', '调侃时轻松语气，避免冒犯。'] },
@@ -58,7 +56,8 @@ const logStr = defineLogStr('english-words');
 
 export async function start() {
   console.log(logStr('正在获取单词...'));
-  const word = await getWord();
+  const word = await getRandomNotGeneratedWord();
+  if (!word) return;
 
   // 暂时去掉
   // console.log(logStr('正在获取词源信息...'));
@@ -110,6 +109,7 @@ async function genData({ word, etymology, meaning }: { word: Word; etymology: st
     const data = JSON.parse(content).data as Data;
     saveDataFile(word, JSON.stringify(data));
     await saveAigcRecord(word, completionInfo);
+    await updateWordRecord(word, { generated: true });
 
     return data;
   } catch (error) {
@@ -131,36 +131,6 @@ export async function genWordImage(word: Word) {
   const { b64_json } = await generator(`Create a hand-drawn style illustration that visually represents the word "${word}".`);
 
   return file.saveFileByB64(dir(word), b64_json, 'cover');
-}
-
-/**
- * 保存 AIGC 记录
- */
-async function saveAigcRecord(word: Word, completionInfo: CompletionInfo) {
-  const [db, data] = await openDatabase();
-  const index = data.list.findIndex((item) => item.info.word === word);
-
-  const item = {
-    project: 'english-words',
-    info: { word },
-    completionInfo
-  } as AigcListItem<any>;
-
-  if (index > -1) {
-    data.list[index] = item;
-  } else {
-    data.list.push(item);
-  }
-
-  db.write();
-}
-
-/**
- * 获取单词
- */
-function getWord(): Word {
-  const words = ['import', 'export', 'auto', 'usage', 'constants', 'good', 'you', 'this'];
-  return getRandomItem(words);
 }
 
 /**

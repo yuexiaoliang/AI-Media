@@ -2198,6 +2198,42 @@
           "total_tokens": 1792
         }
       }
+    },
+    {
+      "project": "english-words",
+      "info": {
+        "word": "solution"
+      },
+      "completionInfo": {
+        "id": "chatcmpl-8pBXhyanj3FQWxfXsAE6V34sfwopD",
+        "object": "chat.completion",
+        "created": 1707209789,
+        "model": "gpt-4-1106-preview",
+        "system_fingerprint": "fp_f71eafccde",
+        "usage": {
+          "prompt_tokens": 1146,
+          "completion_tokens": 612,
+          "total_tokens": 1758
+        }
+      }
+    },
+    {
+      "project": "english-words",
+      "info": {
+        "word": "discover"
+      },
+      "completionInfo": {
+        "id": "chatcmpl-8pBcn3wYJ2RvvyTEz9o7U6sWppRux",
+        "object": "chat.completion",
+        "created": 1707210105,
+        "model": "gpt-4-1106-preview",
+        "system_fingerprint": "fp_c3e45ce344",
+        "usage": {
+          "prompt_tokens": 1157,
+          "completion_tokens": 699,
+          "total_tokens": 1856
+        }
+      }
     }
   ]
 }

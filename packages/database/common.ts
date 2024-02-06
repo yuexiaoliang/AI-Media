@@ -2,7 +2,7 @@ import path from 'path';
 import { JSONPreset } from 'lowdb/node';
 import { Low } from 'lowdb';
 
-export type DBName = 'aigc-records' | 'npm-packages' | 'weixin-materials';
+export type DBName = 'aigc-records' | 'npm-packages' | 'weixin-materials' | 'english-words';
 
 export const defineDatabase = <T extends Record<string, any>>(name: DBName, defaultData: T) => {
   let db: Low<T>;
