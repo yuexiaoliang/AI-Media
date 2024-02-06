@@ -1081,12 +1081,14 @@
     {
       "name": "fresh",
       "stepsStatus": {
-        "gottenBaseInfo": false,
-        "collectedGuide": false,
+        "gottenBaseInfo": true,
+        "collectedGuide": true,
         "generatedArticle": false,
         "publishedWeixinDraft": false,
         "publishedGithub": false
-      }
+      },
+      "homepage": "https://github.com/jshttp/fresh#readme",
+      "repository_url": "https://github.com/jshttp/fresh"
     },
     {
       "name": "etag",
