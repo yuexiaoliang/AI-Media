@@ -2654,6 +2654,25 @@
           "total_tokens": 3217
         }
       }
+    },
+    {
+      "project": "npm-packages",
+      "info": {
+        "pkgName": "js-tokens",
+        "title": "玩转 js-tokens：JavaScript 代码的强力分词器"
+      },
+      "completionInfo": {
+        "id": "chatcmpl-8pedFO7YDoh7KhPQBkUmi8G0k26we",
+        "object": "chat.completion",
+        "created": 1707321609,
+        "model": "gpt-4-1106-preview",
+        "system_fingerprint": "fp_225a6f324c",
+        "usage": {
+          "prompt_tokens": 8077,
+          "completion_tokens": 971,
+          "total_tokens": 9048
+        }
+      }
     }
   ]
 }
