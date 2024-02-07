@@ -2635,6 +2635,25 @@
           "total_tokens": 2812
         }
       }
+    },
+    {
+      "project": "npm-packages",
+      "info": {
+        "pkgName": "mime-db",
+        "title": "深入探索mime-db：前端开发中的MIME类型大全"
+      },
+      "completionInfo": {
+        "id": "chatcmpl-8pasy2silCl3EVzcw2NM8xkLFQd9Q",
+        "object": "chat.completion",
+        "created": 1707307208,
+        "model": "gpt-4-1106-preview",
+        "system_fingerprint": "fp_225a6f324c",
+        "usage": {
+          "prompt_tokens": 2040,
+          "completion_tokens": 1177,
+          "total_tokens": 3217
+        }
+      }
     }
   ]
 }
