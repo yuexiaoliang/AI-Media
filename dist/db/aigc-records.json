@@ -2692,6 +2692,25 @@
           "total_tokens": 2457
         }
       }
+    },
+    {
+      "project": "npm-packages",
+      "info": {
+        "pkgName": "nan",
+        "title": "解锁Node.js原生插件开发：NAN包的魔法"
+      },
+      "completionInfo": {
+        "id": "chatcmpl-8qJq09ORmYz8mIBejlFIXRry8Jrs4",
+        "object": "chat.completion",
+        "created": 1707480004,
+        "model": "gpt-4-1106-preview",
+        "system_fingerprint": "fp_c3e45ce344",
+        "usage": {
+          "prompt_tokens": 8990,
+          "completion_tokens": 1436,
+          "total_tokens": 10426
+        }
+      }
     }
   ]
 }
