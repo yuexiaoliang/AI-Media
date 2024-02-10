@@ -2730,6 +2730,25 @@
           "total_tokens": 1873
         }
       }
+    },
+    {
+      "project": "npm-packages",
+      "info": {
+        "pkgName": "depd",
+        "title": "彻底掌握 Node.js 弃用警告：使用 depd 包优雅地引导代码升级"
+      },
+      "completionInfo": {
+        "id": "chatcmpl-8qgJaFYgCg9zWDEPJPUcXAQSWHsJK",
+        "object": "chat.completion",
+        "created": 1707566406,
+        "model": "gpt-4-1106-preview",
+        "system_fingerprint": "fp_225a6f324c",
+        "usage": {
+          "prompt_tokens": 3291,
+          "completion_tokens": 1324,
+          "total_tokens": 4615
+        }
+      }
     }
   ]
 }
