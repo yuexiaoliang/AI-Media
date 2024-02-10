@@ -1,5 +1,5 @@
 {
-  "pageNumber": 5,
+  "pageNumber": 6,
   "packages": [
     {
       "name": "isarray",
@@ -957,12 +957,14 @@
     {
       "name": "caseless",
       "stepsStatus": {
-        "gottenBaseInfo": false,
-        "collectedGuide": false,
-        "generatedArticle": false,
-        "publishedWeixinDraft": false,
+        "gottenBaseInfo": true,
+        "collectedGuide": true,
+        "generatedArticle": true,
+        "publishedWeixinDraft": true,
         "publishedGithub": false
-      }
+      },
+      "homepage": "https://github.com/mikeal/caseless#readme",
+      "repository_url": "https://github.com/mikeal/caseless"
     },
     {
       "name": "babel-core",
@@ -1755,6 +1757,306 @@
       },
       "homepage": "https://github.com/sindresorhus/component-emitter#readme",
       "repository_url": "https://github.com/sindresorhus/component-emitter"
+    },
+    {
+      "name": "range-parser",
+      "stepsStatus": {
+        "gottenBaseInfo": false,
+        "collectedGuide": false,
+        "generatedArticle": false,
+        "publishedWeixinDraft": false,
+        "publishedGithub": false
+      }
+    },
+    {
+      "name": "get-caller-file",
+      "stepsStatus": {
+        "gottenBaseInfo": false,
+        "collectedGuide": false,
+        "generatedArticle": false,
+        "publishedWeixinDraft": false,
+        "publishedGithub": false
+      }
+    },
+    {
+      "name": "statuses",
+      "stepsStatus": {
+        "gottenBaseInfo": false,
+        "collectedGuide": false,
+        "generatedArticle": false,
+        "publishedWeixinDraft": false,
+        "publishedGithub": false
+      }
+    },
+    {
+      "name": "serve-static",
+      "stepsStatus": {
+        "gottenBaseInfo": false,
+        "collectedGuide": false,
+        "generatedArticle": false,
+        "publishedWeixinDraft": false,
+        "publishedGithub": false
+      }
+    },
+    {
+      "name": "json-stringify-safe",
+      "stepsStatus": {
+        "gottenBaseInfo": false,
+        "collectedGuide": false,
+        "generatedArticle": false,
+        "publishedWeixinDraft": false,
+        "publishedGithub": false
+      }
+    },
+    {
+      "name": "function-bind",
+      "stepsStatus": {
+        "gottenBaseInfo": false,
+        "collectedGuide": false,
+        "generatedArticle": false,
+        "publishedWeixinDraft": false,
+        "publishedGithub": false
+      }
+    },
+    {
+      "name": "isstream",
+      "stepsStatus": {
+        "gottenBaseInfo": false,
+        "collectedGuide": false,
+        "generatedArticle": false,
+        "publishedWeixinDraft": false,
+        "publishedGithub": false
+      }
+    },
+    {
+      "name": "json-schema-traverse",
+      "stepsStatus": {
+        "gottenBaseInfo": false,
+        "collectedGuide": false,
+        "generatedArticle": false,
+        "publishedWeixinDraft": false,
+        "publishedGithub": false
+      }
+    },
+    {
+      "name": "del",
+      "stepsStatus": {
+        "gottenBaseInfo": false,
+        "collectedGuide": false,
+        "generatedArticle": false,
+        "publishedWeixinDraft": false,
+        "publishedGithub": false
+      }
+    },
+    {
+      "name": "is-typedarray",
+      "stepsStatus": {
+        "gottenBaseInfo": false,
+        "collectedGuide": false,
+        "generatedArticle": false,
+        "publishedWeixinDraft": false,
+        "publishedGithub": false
+      }
+    },
+    {
+      "name": "ansi-escapes",
+      "stepsStatus": {
+        "gottenBaseInfo": false,
+        "collectedGuide": false,
+        "generatedArticle": false,
+        "publishedWeixinDraft": false,
+        "publishedGithub": false
+      }
+    },
+    {
+      "name": "send",
+      "stepsStatus": {
+        "gottenBaseInfo": false,
+        "collectedGuide": false,
+        "generatedArticle": false,
+        "publishedWeixinDraft": false,
+        "publishedGithub": false
+      }
+    },
+    {
+      "name": "parse-json",
+      "stepsStatus": {
+        "gottenBaseInfo": false,
+        "collectedGuide": false,
+        "generatedArticle": false,
+        "publishedWeixinDraft": false,
+        "publishedGithub": false
+      }
+    },
+    {
+      "name": "xtend",
+      "stepsStatus": {
+        "gottenBaseInfo": false,
+        "collectedGuide": false,
+        "generatedArticle": false,
+        "publishedWeixinDraft": false,
+        "publishedGithub": false
+      }
+    },
+    {
+      "name": "imurmurhash",
+      "stepsStatus": {
+        "gottenBaseInfo": false,
+        "collectedGuide": false,
+        "generatedArticle": false,
+        "publishedWeixinDraft": false,
+        "publishedGithub": false
+      }
+    },
+    {
+      "name": "unpipe",
+      "stepsStatus": {
+        "gottenBaseInfo": false,
+        "collectedGuide": false,
+        "generatedArticle": false,
+        "publishedWeixinDraft": false,
+        "publishedGithub": false
+      }
+    },
+    {
+      "name": "remove-trailing-separator",
+      "stepsStatus": {
+        "gottenBaseInfo": false,
+        "collectedGuide": false,
+        "generatedArticle": false,
+        "publishedWeixinDraft": false,
+        "publishedGithub": false
+      }
+    },
+    {
+      "name": "setprototypeof",
+      "stepsStatus": {
+        "gottenBaseInfo": false,
+        "collectedGuide": false,
+        "generatedArticle": false,
+        "publishedWeixinDraft": false,
+        "publishedGithub": false
+      }
+    },
+    {
+      "name": "path-parse",
+      "stepsStatus": {
+        "gottenBaseInfo": false,
+        "collectedGuide": false,
+        "generatedArticle": false,
+        "publishedWeixinDraft": false,
+        "publishedGithub": false
+      }
+    },
+    {
+      "name": "jsbn",
+      "stepsStatus": {
+        "gottenBaseInfo": false,
+        "collectedGuide": false,
+        "generatedArticle": false,
+        "publishedWeixinDraft": false,
+        "publishedGithub": false
+      }
+    },
+    {
+      "name": "uglify-js",
+      "stepsStatus": {
+        "gottenBaseInfo": false,
+        "collectedGuide": false,
+        "generatedArticle": false,
+        "publishedWeixinDraft": false,
+        "publishedGithub": false
+      }
+    },
+    {
+      "name": "json-schema",
+      "stepsStatus": {
+        "gottenBaseInfo": false,
+        "collectedGuide": false,
+        "generatedArticle": false,
+        "publishedWeixinDraft": false,
+        "publishedGithub": false
+      }
+    },
+    {
+      "name": "invert-kv",
+      "stepsStatus": {
+        "gottenBaseInfo": false,
+        "collectedGuide": false,
+        "generatedArticle": false,
+        "publishedWeixinDraft": false,
+        "publishedGithub": false
+      }
+    },
+    {
+      "name": "normalize-package-data",
+      "stepsStatus": {
+        "gottenBaseInfo": false,
+        "collectedGuide": false,
+        "generatedArticle": false,
+        "publishedWeixinDraft": false,
+        "publishedGithub": false
+      }
+    },
+    {
+      "name": "fast-json-stable-stringify",
+      "stepsStatus": {
+        "gottenBaseInfo": false,
+        "collectedGuide": false,
+        "generatedArticle": false,
+        "publishedWeixinDraft": false,
+        "publishedGithub": false
+      }
+    },
+    {
+      "name": "jsprim",
+      "stepsStatus": {
+        "gottenBaseInfo": false,
+        "collectedGuide": false,
+        "generatedArticle": false,
+        "publishedWeixinDraft": false,
+        "publishedGithub": false
+      }
+    },
+    {
+      "name": "is-binary-path",
+      "stepsStatus": {
+        "gottenBaseInfo": false,
+        "collectedGuide": false,
+        "generatedArticle": false,
+        "publishedWeixinDraft": false,
+        "publishedGithub": false
+      }
+    },
+    {
+      "name": "yallist",
+      "stepsStatus": {
+        "gottenBaseInfo": false,
+        "collectedGuide": false,
+        "generatedArticle": false,
+        "publishedWeixinDraft": false,
+        "publishedGithub": false
+      }
+    },
+    {
+      "name": "path-type",
+      "stepsStatus": {
+        "gottenBaseInfo": false,
+        "collectedGuide": false,
+        "generatedArticle": false,
+        "publishedWeixinDraft": false,
+        "publishedGithub": false
+      }
+    },
+    {
+      "name": "assert",
+      "stepsStatus": {
+        "gottenBaseInfo": false,
+        "collectedGuide": false,
+        "generatedArticle": false,
+        "publishedWeixinDraft": false,
+        "publishedGithub": false
+      }
     }
   ]
 }
