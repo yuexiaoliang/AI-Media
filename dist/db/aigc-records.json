@@ -2787,6 +2787,25 @@
           "total_tokens": 1702
         }
       }
+    },
+    {
+      "project": "npm-packages",
+      "info": {
+        "pkgName": "statuses",
+        "title": "处理 HTTP 状态码的超实用 Node.js 库：statuses"
+      },
+      "completionInfo": {
+        "id": "chatcmpl-8r6XUreQZBkfS21B5uytrQD88f02C",
+        "object": "chat.completion",
+        "created": 1707667212,
+        "model": "gpt-4-1106-preview",
+        "system_fingerprint": "fp_c3e45ce344",
+        "usage": {
+          "prompt_tokens": 1827,
+          "completion_tokens": 929,
+          "total_tokens": 2756
+        }
+      }
     }
   ]
 }
