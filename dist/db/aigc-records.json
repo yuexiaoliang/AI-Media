@@ -2806,6 +2806,25 @@
           "total_tokens": 2756
         }
       }
+    },
+    {
+      "project": "npm-packages",
+      "info": {
+        "pkgName": "fast-json-stable-stringify",
+        "title": "稳定性与速度兼具：深入 fast-json-stable-stringify 的高性能 JSON 序列化"
+      },
+      "completionInfo": {
+        "id": "chatcmpl-8rPGjoDZDtXLzYJ66Cdl6JvmDTXk3",
+        "object": "chat.completion",
+        "created": 1707739209,
+        "model": "gpt-4-1106-preview",
+        "system_fingerprint": "fp_c3e45ce344",
+        "usage": {
+          "prompt_tokens": 1842,
+          "completion_tokens": 1068,
+          "total_tokens": 2910
+        }
+      }
     }
   ]
 }
