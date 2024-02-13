@@ -2844,6 +2844,25 @@
           "total_tokens": 3983
         }
       }
+    },
+    {
+      "project": "npm-packages",
+      "info": {
+        "pkgName": "repeat-string",
+        "title": "轻松实现字符串重复：使用 repeat-string 包"
+      },
+      "completionInfo": {
+        "id": "chatcmpl-8rlkIu6aqUYCL8YiL5OWhdfcun123",
+        "object": "chat.completion",
+        "created": 1707825610,
+        "model": "gpt-4-1106-preview",
+        "system_fingerprint": "fp_225a6f324c",
+        "usage": {
+          "prompt_tokens": 2231,
+          "completion_tokens": 860,
+          "total_tokens": 3091
+        }
+      }
     }
   ]
 }
