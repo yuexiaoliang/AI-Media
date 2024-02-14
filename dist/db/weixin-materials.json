@@ -1299,6 +1299,16 @@
         "media_id": "3TI8XMZiLsZyu-QJGQpsXHgcpdrzL4hghyHGOAAR4uzCfsvD7fI5XcgThFp_CNos",
         "url": "http://mmbiz.qpic.cn/mmbiz_png/QPCr6EnHPrxYrmr2yrOicP0eibD66wdVgrWhWfp9iaSPwrYTlaqs8emvUqicRWA1XurPU0lr69lcyr4Eiaq1LNIK8Vw/0?wx_fmt=png"
       }
+    },
+    {
+      "project": "npm-packages",
+      "info": {
+        "pkgName": "signal-exit"
+      },
+      "materialInfo": {
+        "media_id": "3TI8XMZiLsZyu-QJGQpsXPktNm_sAGmOrexdrTJAJqQ1oO3IpnCoiw0R5QSZdRwH",
+        "url": "http://mmbiz.qpic.cn/mmbiz_png/QPCr6EnHPrxYrmr2yrOicP0eibD66wdVgrYOwYw2MJiaaK6PMUXLAovMRSCvcBoMPrYmwVe0wbeqQIS6tHqeAaX0w/0?wx_fmt=png"
+      }
     }
   ]
 }
