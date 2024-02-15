@@ -2920,6 +2920,25 @@
           "total_tokens": 2166
         }
       }
+    },
+    {
+      "project": "npm-packages",
+      "info": {
+        "pkgName": "content-disposition",
+        "title": "掌握 HTTP Content-Disposition  实现文件下载与内容呈现"
+      },
+      "completionInfo": {
+        "id": "chatcmpl-8sUhLqtuqkhExUdgCFiBYUpkD5luZ",
+        "object": "chat.completion",
+        "created": 1707998407,
+        "model": "gpt-4-1106-preview",
+        "system_fingerprint": "fp_9e42505611",
+        "usage": {
+          "prompt_tokens": 2215,
+          "completion_tokens": 943,
+          "total_tokens": 3158
+        }
+      }
     }
   ]
 }
