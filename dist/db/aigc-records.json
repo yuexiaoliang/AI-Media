@@ -2939,6 +2939,25 @@
           "total_tokens": 3158
         }
       }
+    },
+    {
+      "project": "npm-packages",
+      "info": {
+        "pkgName": "json-stringify-safe",
+        "title": "解决JSON循环引用问题：使用json-stringify-safe优雅地序列化数据"
+      },
+      "completionInfo": {
+        "id": "chatcmpl-8sYRdNw2IWGrqqvK0DKKivmBb0cTF",
+        "object": "chat.completion",
+        "created": 1708012809,
+        "model": "gpt-4-1106-preview",
+        "system_fingerprint": "fp_afb83c0ce7",
+        "usage": {
+          "prompt_tokens": 923,
+          "completion_tokens": 948,
+          "total_tokens": 1871
+        }
+      }
     }
   ]
 }
