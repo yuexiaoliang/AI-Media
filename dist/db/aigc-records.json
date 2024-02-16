@@ -2977,6 +2977,25 @@
           "total_tokens": 3550
         }
       }
+    },
+    {
+      "project": "npm-packages",
+      "info": {
+        "pkgName": "is-binary-path",
+        "title": "如何使用is-binary-path判断文件是否为二进制格式"
+      },
+      "completionInfo": {
+        "id": "chatcmpl-8suvIrlREkTPu83pYRGGEFaLWADee",
+        "object": "chat.completion",
+        "created": 1708099216,
+        "model": "gpt-4-1106-preview",
+        "system_fingerprint": "fp_225a6f324c",
+        "usage": {
+          "prompt_tokens": 955,
+          "completion_tokens": 900,
+          "total_tokens": 1855
+        }
+      }
     }
   ]
 }
