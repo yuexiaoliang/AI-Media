@@ -2958,6 +2958,25 @@
           "total_tokens": 1871
         }
       }
+    },
+    {
+      "project": "npm-packages",
+      "info": {
+        "pkgName": "normalize-package-data",
+        "title": "让您的package.json文件规范化：使用normalize-package-data一探究竟"
+      },
+      "completionInfo": {
+        "id": "chatcmpl-8srAtoTSmBf1ZQk6G0i3kDxrbKTog",
+        "object": "chat.completion",
+        "created": 1708084807,
+        "model": "gpt-4-1106-preview",
+        "system_fingerprint": "fp_edf37c94b7",
+        "usage": {
+          "prompt_tokens": 2476,
+          "completion_tokens": 1074,
+          "total_tokens": 3550
+        }
+      }
     }
   ]
 }

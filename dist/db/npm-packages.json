@@ -2007,12 +2007,14 @@
     {
       "name": "normalize-package-data",
       "stepsStatus": {
-        "gottenBaseInfo": false,
-        "collectedGuide": false,
-        "generatedArticle": false,
-        "publishedWeixinDraft": false,
+        "gottenBaseInfo": true,
+        "collectedGuide": true,
+        "generatedArticle": true,
+        "publishedWeixinDraft": true,
         "publishedGithub": false
-      }
+      },
+      "homepage": "https://github.com/npm/normalize-package-data#readme",
+      "repository_url": "https://github.com/npm/normalize-package-data"
     },
     {
       "name": "fast-json-stable-stringify",
