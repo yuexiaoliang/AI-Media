@@ -3015,6 +3015,25 @@
           "total_tokens": 2067
         }
       }
+    },
+    {
+      "project": "npm-packages",
+      "info": {
+        "pkgName": "hosted-git-info",
+        "title": "掌握各种 Git 服务仓库信息的解析与转换"
+      },
+      "completionInfo": {
+        "id": "chatcmpl-8tHOmLxxDUtWnTzHUWHDVFWtGg0aJ",
+        "object": "chat.completion",
+        "created": 1708185612,
+        "model": "gpt-4-1106-preview",
+        "system_fingerprint": "fp_225a6f324c",
+        "usage": {
+          "prompt_tokens": 1666,
+          "completion_tokens": 897,
+          "total_tokens": 2563
+        }
+      }
     }
   ]
 }
