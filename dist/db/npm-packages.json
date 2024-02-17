@@ -1945,12 +1945,14 @@
     {
       "name": "setprototypeof",
       "stepsStatus": {
-        "gottenBaseInfo": false,
-        "collectedGuide": false,
-        "generatedArticle": false,
-        "publishedWeixinDraft": false,
+        "gottenBaseInfo": true,
+        "collectedGuide": true,
+        "generatedArticle": true,
+        "publishedWeixinDraft": true,
         "publishedGithub": false
-      }
+      },
+      "homepage": "https://github.com/wesleytodd/setprototypeof",
+      "repository_url": "https://github.com/wesleytodd/setprototypeof"
     },
     {
       "name": "path-parse",

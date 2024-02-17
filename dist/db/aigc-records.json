@@ -2996,6 +2996,25 @@
           "total_tokens": 1855
         }
       }
+    },
+    {
+      "project": "npm-packages",
+      "info": {
+        "pkgName": "setprototypeof",
+        "title": "在现代浏览器中优雅地设置对象原型"
+      },
+      "completionInfo": {
+        "id": "chatcmpl-8tDeQ3MEy1ZCsRu9MpTIsK8IZVZpf",
+        "object": "chat.completion",
+        "created": 1708171206,
+        "model": "gpt-4-1106-preview",
+        "system_fingerprint": "fp_c3e45ce344",
+        "usage": {
+          "prompt_tokens": 1077,
+          "completion_tokens": 990,
+          "total_tokens": 2067
+        }
+      }
     }
   ]
 }
