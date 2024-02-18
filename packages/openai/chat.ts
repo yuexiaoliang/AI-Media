@@ -14,21 +14,25 @@ export const defineCompletions = (config: Record<string, any> = {}) => {
   );
 
   return async (messages: ChatCompletionMessage[]) => {
-    const res = (await http.post('completions', {
-      ..._config,
-      messages
-    })) as ChatCompletion;
+    try {
+      const res = (await http.post('completions', {
+        ..._config,
+        messages
+      })) as ChatCompletion;
 
-    const { choices, usage, ...rest } = res;
+      const { choices, usage, ...rest } = res;
 
-    const [completion] = choices;
-    const content = completion.message.content;
+      const [completion] = choices;
+      const content = completion.message.content;
 
-    const completionInfo = {
-      ...rest,
-      usage
-    };
+      const completionInfo = {
+        ...rest,
+        usage
+      };
 
-    return { choices, content, completionInfo };
+      return { choices, content, completionInfo };
+    } catch (error) {
+      throw new Error(error?.toString());
+    }
   };
 };

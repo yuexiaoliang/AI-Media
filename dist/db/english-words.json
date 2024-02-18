@@ -3766,7 +3766,7 @@
     },
     {
       "word": "circle",
-      "generated": false
+      "generated": true
     },
     {
       "word": "circuit",
@@ -9438,7 +9438,7 @@
     },
     {
       "word": "from",
-      "generated": false
+      "generated": true
     },
     {
       "word": "front",
@@ -10134,7 +10134,7 @@
     },
     {
       "word": "greasy",
-      "generated": true
+      "generated": false
     },
     {
       "word": "great",
@@ -10554,7 +10554,7 @@
     },
     {
       "word": "initially",
-      "generated": true
+      "generated": false
     },
     {
       "word": "initiate",
@@ -19582,7 +19582,7 @@
     },
     {
       "word": "snap",
-      "generated": false
+      "generated": true
     },
     {
       "word": "snatch",

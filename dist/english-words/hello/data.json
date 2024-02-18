@@ -1,0 +1,35 @@
+[
+  {
+    "word": "hello",
+    "content": [
+      ["英式", "/həˈləʊ/"],
+      ["美式", "/hɛˈloʊ/"]
+    ]
+  },
+  {
+    "title": "词义简析",
+    "content": [
+      ["名词(n.)", "一种问候语，用于见面打招呼"],
+      ["动词(v.)", "表达通过说‘hello’来问候"],
+      ["感叹词(int.)", "在会面、接电话或发现新事物时表达问候、注意或惊奇"]
+    ]
+  },
+  {
+    "title": "场景例句",
+    "content": [
+      ["迎接他人", "Hello, everyone.", "大家好。"],
+      ["接听电话", "Hello? How may I help you?", "你好？需要我帮忙吗？"],
+      ["确认是否有人", "Hello? Is anyone there?", "喂？有人吗？"]
+    ]
+  },
+  {
+    "title": "相关单词",
+    "content": [
+      ["greeting", "问候", "Greetings, everyone here tonight.", "今晚在场的每个人，你们好。"],
+      ["bye", "告别", "Bye, see you tomorrow.", "再见，明天见面。"],
+      ["goodbye", "辞别", "It's hard to say goodbye.", "说再见总是不易。"]
+    ]
+  },
+  { "title": "使用小贴士", "content": ["接听电话时先说hello，然后礼貌询问对方需求。", "见面时说hello并微笑，营造友好的氛围。", "当感觉被忽略或寻找某人时，可以提高语调说hello。"] },
+  { "title": "今日鼓励", "content": "探索英语世界是一段精彩的旅程，每一个单词都充满魔力。📖 持之以恒，你将在语言的海洋中自由航行。⛵ 记住，每个hello都是一次新的开始。🌟 加油！" }
+]

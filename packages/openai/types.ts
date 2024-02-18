@@ -2,7 +2,7 @@ export type AIRoles = 'system' | 'assistant' | 'user';
 
 export enum AIModel {
   GPT3 = 'gpt-3.5-turbo',
-  GPT4 = 'gpt-4-1106-preview'
+  GPT4 = 'gpt-4-turbo-preview'
 }
 
 export type AIModelKeys = keyof typeof AIModel;

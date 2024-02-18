@@ -3,10 +3,11 @@ import url from 'url';
 import path from 'path';
 import html2md from 'html-to-md';
 import * as cheerio from 'cheerio';
-import { defineLogStr, file, getRandomItem, renderTemplate } from '@auto-blog/utils';
+import { defineLogStr, file, renderTemplate } from '@auto-blog/utils';
 import { AIModel, chat, images } from '@auto-blog/openai';
 
-import genDataPrompt from './prompts/genData.txt';
+import genDataSystemPrompt from './prompts/genDataSystem.txt';
+import genDataUserPrompt from './prompts/genDataUser.txt';
 import { saveAigcRecord } from '@auto-blog/database/aigc-records';
 import { Word, getRandomNotGeneratedWord, updateWordRecord } from '@auto-blog/database/english-words';
 import { defineCoverGeneration } from '@auto-blog/cover';
@@ -16,9 +17,8 @@ type Data = typeof dataExample;
 type DataItem = (typeof dataExample)[0];
 
 const dataExample = [
-  { title: '单词', content: 'hello' },
   {
-    title: '发音',
+    word: 'hello',
     content: [
       ['英式', '/həˈləʊ/'],
       ['美式', '/hɛˈloʊ/']
@@ -27,9 +27,9 @@ const dataExample = [
   {
     title: '词义简析',
     content: [
-      ['名词(n.)', '问候，招呼'],
-      ['动词(v.)', '打招呼'],
-      ['感叹词(int.)', '用于迎接、引起注意或表达惊讶']
+      ['名词(n.)', '一种问候语，用于见面打招呼'],
+      ['动词(v.)', '表达通过说‘hello’来问候'],
+      ['感叹词(int.)', '在会面、接电话或发现新事物时表达问候、注意或惊奇']
     ]
   },
   {
@@ -43,13 +43,13 @@ const dataExample = [
   {
     title: '相关单词',
     content: [
-      ['单词一', '释义', '例句', '翻译'],
-      ['单词二', '释义', '例句', '翻译'],
-      ['单词三', '释义', '例句', '翻译']
+      ['greeting', '问候', 'Greetings, everyone here tonight.', '今晚在此的各位，大家好。'],
+      ['bye', '告别', 'Bye, see you tomorrow.', '再见，明天见。'],
+      ['goodbye', '辞别', "It's hard to say goodbye.", '说再见总是很难。']
     ]
   },
-  { title: '使用小贴士', content: ['电话中首选hello，体现礼貌。', '见面时，可配合微笑，增强亲切感。', '在寻求注意时加强语气，但避免喊叫。', '调侃时轻松语气，避免冒犯。'] },
-  { title: '今日鼓励', content: '学习新单词是打开世界大门的钥匙。每一个你掌握的词汇，都是你向知识深渊迈进的一步。继续前行，你的努力会开花结果。加油！' }
+  { title: '用法小贴士', content: ['接听电话时先说hello，然后礼貌询问对方需求。', '见面时说hello并微笑，营造友好的氛围。', '若有人做出滑稽行为，可以用略带讽刺的语气轻声说hello。'] },
+  { title: '今日鼓励', content: '探索英语世界是一段精彩的旅程，每一个单词都充满魔力。📖 持之以恒，你将在语言的海洋中自由航行。 🌟 加油！' }
 ];
 
 const logStr = defineLogStr('english-words');
@@ -58,6 +58,7 @@ export async function start() {
   console.log(logStr('正在获取单词...'));
   const word = await getRandomNotGeneratedWord();
   if (!word) return;
+  console.log(logStr(`单词为：${word}`));
 
   // 暂时去掉
   // console.log(logStr('正在获取词源信息...'));
@@ -94,14 +95,19 @@ async function genData({ word, etymology, meaning }: { word: Word; etymology: st
 
     const { content, completionInfo } = await completions([
       {
-        role: 'user',
-        content: renderTemplate(genDataPrompt, {
-          word,
-          etymology,
-          meaning,
+        role: 'system',
+        content: renderTemplate(genDataSystemPrompt, {
           example: JSON.stringify({
             data: dataExample
           })
+        })
+      },
+      {
+        role: 'user',
+        content: renderTemplate(genDataUserPrompt, {
+          word,
+          etymology,
+          meaning
         })
       }
     ]);

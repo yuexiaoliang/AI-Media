@@ -2270,6 +2270,186 @@
           "total_tokens": 1998
         }
       }
+    },
+    {
+      "project": "english-words",
+      "info": {
+        "word": "good evening"
+      },
+      "completionInfo": {
+        "id": "chatcmpl-8pCRg32pM8Ch7C7jLU5DgmNKxItfQ",
+        "object": "chat.completion",
+        "created": 1707213260,
+        "model": "gpt-4-1106-preview",
+        "system_fingerprint": "fp_c3e45ce344",
+        "usage": {
+          "prompt_tokens": 926,
+          "completion_tokens": 496,
+          "total_tokens": 1422
+        }
+      }
+    },
+    {
+      "project": "english-words",
+      "info": {
+        "word": "row"
+      },
+      "completionInfo": {
+        "id": "chatcmpl-8pCTs0w1oDDFXNBao3Y3oNVbU16wS",
+        "object": "chat.completion",
+        "created": 1707213396,
+        "model": "gpt-4-1106-preview",
+        "system_fingerprint": "fp_c3e45ce344",
+        "usage": {
+          "prompt_tokens": 1000,
+          "completion_tokens": 497,
+          "total_tokens": 1497
+        }
+      }
+    },
+    {
+      "project": "english-words",
+      "info": {
+        "word": "unite"
+      },
+      "completionInfo": {
+        "id": "chatcmpl-8pCVTY2OMz7sKIf6Kfo1fpEYLUeI5",
+        "object": "chat.completion",
+        "created": 1707213495,
+        "model": "gpt-4-1106-preview",
+        "system_fingerprint": "fp_c3e45ce344",
+        "usage": {
+          "prompt_tokens": 1052,
+          "completion_tokens": 715,
+          "total_tokens": 1767
+        }
+      }
+    },
+    {
+      "project": "english-words",
+      "info": {
+        "word": "pulse"
+      },
+      "completionInfo": {
+        "id": "chatcmpl-8pCY1KJSt4fMAe1mvte8miisMLUJ0",
+        "object": "chat.completion",
+        "created": 1707213653,
+        "model": "gpt-4-1106-preview",
+        "system_fingerprint": "fp_c3e45ce344",
+        "usage": {
+          "prompt_tokens": 996,
+          "completion_tokens": 558,
+          "total_tokens": 1554
+        }
+      }
+    },
+    {
+      "project": "english-words",
+      "info": {
+        "word": "hello"
+      },
+      "completionInfo": {
+        "id": "chatcmpl-8tVcWFQM1HkIhauA3W4Nn2I133rfQ",
+        "object": "chat.completion",
+        "created": 1708240280,
+        "model": "gpt-4-1106-preview",
+        "system_fingerprint": "fp_9e42505611",
+        "usage": {
+          "prompt_tokens": 1171,
+          "completion_tokens": 614,
+          "total_tokens": 1785
+        }
+      }
+    },
+    {
+      "project": "english-words",
+      "info": {
+        "word": "snap"
+      },
+      "completionInfo": {
+        "id": "chatcmpl-8tWInxNbAwajya6w7fp6RLrLVI7FE",
+        "object": "chat.completion",
+        "created": 1708242901,
+        "model": "gpt-4-0125-preview",
+        "system_fingerprint": "fp_9ae14f8f63",
+        "usage": {
+          "prompt_tokens": 3173,
+          "completion_tokens": 611,
+          "total_tokens": 3784
+        }
+      }
+    },
+    {
+      "project": "english-words",
+      "info": {
+        "word": "silk"
+      },
+      "completionInfo": {
+        "id": "chatcmpl-8tWMxY3PTwXbSu6IwParEeDXqi9f4",
+        "object": "chat.completion",
+        "created": 1708243159,
+        "model": "gpt-4-0125-preview",
+        "system_fingerprint": "fp_f084bcfc79",
+        "usage": {
+          "prompt_tokens": 1644,
+          "completion_tokens": 762,
+          "total_tokens": 2406
+        }
+      }
+    },
+    {
+      "project": "english-words",
+      "info": {
+        "word": "hairdresser"
+      },
+      "completionInfo": {
+        "id": "chatcmpl-8tWR3tIlHZZC7neOWCx0uv5EvuJOu",
+        "object": "chat.completion",
+        "created": 1708243413,
+        "model": "gpt-4-0125-preview",
+        "system_fingerprint": "fp_9ae14f8f63",
+        "usage": {
+          "prompt_tokens": 1387,
+          "completion_tokens": 600,
+          "total_tokens": 1987
+        }
+      }
+    },
+    {
+      "project": "english-words",
+      "info": {
+        "word": "circle"
+      },
+      "completionInfo": {
+        "id": "chatcmpl-8tWU6YMIZxe6CDYNWMazQs0TmRqSE",
+        "object": "chat.completion",
+        "created": 1708243602,
+        "model": "gpt-4-0125-preview",
+        "system_fingerprint": "fp_1297aa77f4",
+        "usage": {
+          "prompt_tokens": 2147,
+          "completion_tokens": 660,
+          "total_tokens": 2807
+        }
+      }
+    },
+    {
+      "project": "english-words",
+      "info": {
+        "word": "from"
+      },
+      "completionInfo": {
+        "id": "chatcmpl-8tWaDG3TyEV78FiNVmiOloEEvMROu",
+        "object": "chat.completion",
+        "created": 1708243981,
+        "model": "gpt-4-0125-preview",
+        "system_fingerprint": "fp_f084bcfc79",
+        "usage": {
+          "prompt_tokens": 1598,
+          "completion_tokens": 525,
+          "total_tokens": 2123
+        }
+      }
     }
   ]
 }
