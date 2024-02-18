@@ -1697,12 +1697,14 @@
     {
       "name": "concat-stream",
       "stepsStatus": {
-        "gottenBaseInfo": false,
-        "collectedGuide": false,
-        "generatedArticle": false,
-        "publishedWeixinDraft": false,
+        "gottenBaseInfo": true,
+        "collectedGuide": true,
+        "generatedArticle": true,
+        "publishedWeixinDraft": true,
         "publishedGithub": false
-      }
+      },
+      "homepage": "https://github.com/maxogden/concat-stream#readme",
+      "repository_url": "https://github.com/maxogden/concat-stream"
     },
     {
       "name": "fsevents",

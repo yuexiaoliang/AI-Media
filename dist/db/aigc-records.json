@@ -3053,6 +3053,25 @@
           "total_tokens": 2000
         }
       }
+    },
+    {
+      "project": "npm-packages",
+      "info": {
+        "pkgName": "concat-stream",
+        "title": "如何在Node.js中优雅地拼接流数据？深入解析concat-stream的使用"
+      },
+      "completionInfo": {
+        "id": "chatcmpl-8tdsLQj7Ed3vE7VZBPTGEXfafbJ3Y",
+        "object": "chat.completion",
+        "created": 1708272013,
+        "model": "gpt-4-1106-preview",
+        "system_fingerprint": "fp_c3e45ce344",
+        "usage": {
+          "prompt_tokens": 1642,
+          "completion_tokens": 1222,
+          "total_tokens": 2864
+        }
+      }
     }
   ]
 }
