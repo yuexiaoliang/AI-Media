@@ -1,16 +1,10 @@
 {
-  "cSpell.words": [
-    "aigc",
-    "batchget",
-    "dall",
-    "deadcode",
-    "dirpath",
-    "errcode",
-    "errmsg",
-    "filenamify",
-    "freepublish",
-    "highlightjs",
-    "outdir",
-    "outfile"
+  "cSpell.words": ["aigc", "batchget", "dall", "deadcode", "dirpath", "errcode", "errmsg", "filenamify", "freepublish", "highlightjs", "outdir", "outfile"],
+  "liveSassCompile.settings.formats": [
+    {
+      "format": "compressed",
+      "extensionName": ".min.css",
+      "savePath": "~/../styles/"
+    }
   ]
 }

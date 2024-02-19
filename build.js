@@ -15,6 +15,16 @@ const entryPoints = [path.resolve(__dirname, './index.ts')];
 const outdir = './dist/';
 const outfile = outdir + 'index.cjs';
 
+const buildStart = {
+  name: 'build-start',
+  setup(build) {
+    build.onStart(() => {
+      rimrafSync(`${outdir}/html-templates`)
+      spawnSync('pnpm', ['build:temp'], { stdio: 'inherit', shell: true });
+    });
+  }
+}
+
 const buildEnd = {
   name: 'build-end',
   setup(build) {
@@ -35,28 +45,28 @@ const esbuildOptions = {
     copy({
       resolveFrom: 'cwd',
       assets: [
-        { from: './html-templates/**/*', to: './dist/html-templates' },
+        { from: './html-templates/dist/**/*', to: './dist/html-templates' },
       ],
     }),
+    buildStart,
+    buildEnd
   ]
 }
 
 if (argv.watch) {
-  rimrafSync(`${outdir}/html-templates`)
 
   let ctx = await esbuild.context({
     ...esbuildOptions,
-    plugins: [...esbuildOptions.plugins, buildEnd],
+    plugins: [...esbuildOptions.plugins,],
   })
 
   ctx.watch()
 } else {
-  rimrafSync(`${outdir}/html-templates`)
 
-  const opts = { ...esbuildOptions, minify: true};
+  const opts = { ...esbuildOptions, minify: true };
 
   if (argv.run) {
-    opts.plugins = [...esbuildOptions.plugins, buildEnd]
+    opts.plugins = [...esbuildOptions.plugins]
   }
 
   esbuild.build(opts)
