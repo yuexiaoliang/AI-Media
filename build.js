@@ -23,7 +23,7 @@ const buildStart = {
       if (!tempBuilded) {
         rimrafSync(`${outdir}/html-templates`)
 
-        spawnSync('pnpm', ['build:temp'], { stdio: 'inherit', shell: true });
+        spawnSync('pnpm', ['build:html'], { stdio: 'inherit', shell: true });
 
         tempBuilded = true
       }
