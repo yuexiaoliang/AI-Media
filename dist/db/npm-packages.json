@@ -1881,12 +1881,14 @@
     {
       "name": "ansi-escapes",
       "stepsStatus": {
-        "gottenBaseInfo": false,
-        "collectedGuide": false,
-        "generatedArticle": false,
-        "publishedWeixinDraft": false,
+        "gottenBaseInfo": true,
+        "collectedGuide": true,
+        "generatedArticle": true,
+        "publishedWeixinDraft": true,
         "publishedGithub": false
-      }
+      },
+      "homepage": "https://github.com/sindresorhus/ansi-escapes#readme",
+      "repository_url": "https://github.com/sindresorhus/ansi-escapes"
     },
     {
       "name": "send",
