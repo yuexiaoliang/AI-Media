@@ -60,22 +60,11 @@ export async function start() {
   if (!word) return;
   console.log(logStr(`单词为：${word}`));
 
-  // 暂时去掉
-  // console.log(logStr('正在获取词源信息...'));
-  // const etymology = await fetchEtymologyMD(word);
-
-  console.log(logStr('正在获取词义信息...'));
-  const meaning = await fetchWordMeaning(word);
-
   console.log(logStr('正在生成单词数据...'));
-  await genData({
-    word,
-    etymology: '',
-    meaning
-  });
+  await genData(word);
 
   console.log(logStr('正在生成单词卡片...'));
-  await genCards(word);
+  await genCards(word)
 
   // console.log(logStr('正在生成单词图片...'));
   // await genWordImage(word);
@@ -86,9 +75,16 @@ export async function start() {
 /**
  * 生成数据
  */
-async function genData({ word, etymology, meaning }: { word: Word; etymology: string; meaning: string }) {
+async function genData(word: Word) {
   const data = readDataFile(word);
   if (data) return data;
+
+  console.log(logStr('正在获取词义信息...'));
+  const meaning = await fetchWordMeaning(word);
+
+  // 暂时去掉
+  // console.log(logStr('正在获取词源信息...'));
+  // const etymology = await fetchEtymologyMD(word);
 
   try {
     const completions = chat.defineCompletions({ model: AIModel.GPT4, response_format: { type: 'json_object' } });
@@ -106,7 +102,6 @@ async function genData({ word, etymology, meaning }: { word: Word; etymology: st
         role: 'user',
         content: renderTemplate(genDataUserPrompt, {
           word,
-          etymology,
           meaning
         })
       }
@@ -115,7 +110,7 @@ async function genData({ word, etymology, meaning }: { word: Word; etymology: st
     const data = JSON.parse(content).data as Data;
     saveDataFile(word, JSON.stringify(data));
     await saveAigcRecord(word, completionInfo);
-    await updateWordRecord(word, { generated: true });
+    await updateWordRecord(word, { dataGenerated: true });
 
     return data;
   } catch (error) {
@@ -199,12 +194,11 @@ const genCards = async (word: Word) => {
   const data = readDataFile(word);
   if (!data) throw new Error(logStr('生成卡片时，数据文件不存在', 'error'));
 
+  const cards = file.getFiles(cardsDir(word));
+  if (cards?.length === data.length) return cards.map((item) => cardPath(word, item));
+
   try {
-    return await Promise.all(
-      data.map((item, index) => {
-        return genCard(path.resolve(cardsDir(word), `${index}.png`), item);
-      })
-    );
+    return await Promise.all(data.map((item, index) => genCard(cardPath(word, `${index}.png`), item)));
   } catch (error) {
     removeCardsDir(word);
     console.error(error);
@@ -218,19 +212,16 @@ const genCards = async (word: Word) => {
 
     await generator(gotoUrl, {
       async pageOpened(page) {
-        await page.evaluate((itemData) => {
+        // @ts-ignore
+        await page.waitForFunction(() => typeof window.render === 'function');
+
+        await page.evaluate(async (itemData) => {
           window.sessionStorage.setItem('card-data', JSON.stringify(itemData));
 
           // 为了保证数据正确，这里主动在 sessionStorage 设置完成后调用页面内定义的 render 函数
           // @ts-ignore
           window.render();
         }, item);
-
-        // 等待页面内的数据渲染完成
-        await page.waitForFunction(() => {
-          const element = document.querySelector('#cover .content');
-          return !!element;
-        });
       }
     });
 
@@ -244,6 +235,10 @@ function dir(word: Word) {
 
 function cardsDir(word: Word) {
   return path.resolve(dir(word), 'cards');
+}
+
+function cardPath(word: Word, name: string) {
+  return path.resolve(cardsDir(word), `${name}`);
 }
 
 function dataPath(word: Word) {

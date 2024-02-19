@@ -68,3 +68,5 @@ function createContent(data) {
   const { title, content } = data
   const titleEl = `<h2 class="title">${data.title}</h2>`
 }
+
+window.render = render

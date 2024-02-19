@@ -11,6 +11,7 @@ const argv = yargs(argvRaw)
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 
+let tempBuilded = false
 const entryPoints = [path.resolve(__dirname, './index.ts')];
 const outdir = './dist/';
 const outfile = outdir + 'index.cjs';
@@ -19,8 +20,13 @@ const buildStart = {
   name: 'build-start',
   setup(build) {
     build.onStart(() => {
-      rimrafSync(`${outdir}/html-templates`)
-      spawnSync('pnpm', ['build:temp'], { stdio: 'inherit', shell: true });
+      if (!tempBuilded) {
+        rimrafSync(`${outdir}/html-templates`)
+
+        spawnSync('pnpm', ['build:temp'], { stdio: 'inherit', shell: true });
+
+        tempBuilded = true
+      }
     });
   }
 }

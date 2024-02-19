@@ -6,7 +6,16 @@ export type Word = string;
 
 export interface EnglishWordsListItem {
   word: Word;
-  generated: boolean;
+
+  /**
+   * 数据生成状态
+   */
+  dataGenerated?: boolean;
+
+  /**
+   * 小红书发布状态
+   */
+  xhsPublished?: boolean;
 }
 export type EnglishWordsList = EnglishWordsListItem[];
 
@@ -29,7 +38,7 @@ export const insertMultipleWords = async (words: Word[]) => {
 
   const _words = words.map((word) => word.toLocaleLowerCase()).filter((word) => data.list.every((item) => item.word !== word));
 
-  data.list.push(..._words.map((word) => ({ word, generated: false })));
+  data.list.push(..._words.map((word) => ({ word, dataGenerated: false })));
 
   db.write();
 };
@@ -37,7 +46,12 @@ export const insertMultipleWords = async (words: Word[]) => {
 export const getRandomNotGeneratedWord = async () => {
   const [_db, data] = await openDatabase();
 
-  const notGeneratedWords = data.list.filter((item) => !item.generated);
+  // 生成了数据但是没有发布的单词
+  const notPublishedWords = data.list.filter((item) => item.dataGenerated && !item.xhsPublished);
+  if (notPublishedWords.length > 0) return getRandomItem(notPublishedWords).word;
+
+  // 所有没生成数据的单词
+  const notGeneratedWords = data.list.filter((item) => !item.dataGenerated);
   if (notGeneratedWords.length === 0) return;
 
   return getRandomItem(notGeneratedWords).word;

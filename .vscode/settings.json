@@ -1,5 +1,19 @@
 {
-  "cSpell.words": ["aigc", "batchget", "dall", "deadcode", "dirpath", "errcode", "errmsg", "filenamify", "freepublish", "highlightjs", "outdir", "outfile"],
+  "cSpell.words": [
+    "aigc",
+    "batchget",
+    "dall",
+    "deadcode",
+    "dirpath",
+    "errcode",
+    "errmsg",
+    "filenamify",
+    "freepublish",
+    "highlightjs",
+    "outdir",
+    "outfile",
+    "xiaohongshu"
+  ],
   "liveSassCompile.settings.formats": [
     {
       "format": "compressed",
