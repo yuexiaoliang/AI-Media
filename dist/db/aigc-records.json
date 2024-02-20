@@ -3129,6 +3129,25 @@
           "total_tokens": 2342
         }
       }
+    },
+    {
+      "project": "npm-packages",
+      "info": {
+        "pkgName": "del",
+        "title": "Node.js文件清理利器：使用del模块彻底删除文件和目录"
+      },
+      "completionInfo": {
+        "id": "chatcmpl-8uMpOReLHqnvpvbEpwSN3FYcNXQFd",
+        "object": "chat.completion",
+        "created": 1708444810,
+        "model": "gpt-4-1106-preview",
+        "system_fingerprint": "fp_c3e45ce344",
+        "usage": {
+          "prompt_tokens": 1776,
+          "completion_tokens": 1075,
+          "total_tokens": 2851
+        }
+      }
     }
   ]
 }
