@@ -3148,6 +3148,25 @@
           "total_tokens": 2851
         }
       }
+    },
+    {
+      "project": "npm-packages",
+      "info": {
+        "pkgName": "remove-trailing-separator",
+        "title": "优雅去除路径尾部分隔符的艺术：remove-trailing-separator"
+      },
+      "completionInfo": {
+        "id": "chatcmpl-8ufYcNXjzgWMKvON94H7Dr9fWCXCJ",
+        "object": "chat.completion",
+        "created": 1708516806,
+        "model": "gpt-4-1106-preview",
+        "system_fingerprint": "fp_225a6f324c",
+        "usage": {
+          "prompt_tokens": 1355,
+          "completion_tokens": 802,
+          "total_tokens": 2157
+        }
+      }
     }
   ]
 }

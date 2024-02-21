@@ -1949,12 +1949,14 @@
     {
       "name": "remove-trailing-separator",
       "stepsStatus": {
-        "gottenBaseInfo": false,
-        "collectedGuide": false,
-        "generatedArticle": false,
-        "publishedWeixinDraft": false,
+        "gottenBaseInfo": true,
+        "collectedGuide": true,
+        "generatedArticle": true,
+        "publishedWeixinDraft": true,
         "publishedGithub": false
-      }
+      },
+      "homepage": "https://github.com/darsain/remove-trailing-separator#readme",
+      "repository_url": "https://github.com/darsain/remove-trailing-separator"
     },
     {
       "name": "setprototypeof",
