@@ -1787,12 +1787,14 @@
     {
       "name": "get-caller-file",
       "stepsStatus": {
-        "gottenBaseInfo": false,
-        "collectedGuide": false,
-        "generatedArticle": false,
-        "publishedWeixinDraft": false,
+        "gottenBaseInfo": true,
+        "collectedGuide": true,
+        "generatedArticle": true,
+        "publishedWeixinDraft": true,
         "publishedGithub": false
-      }
+      },
+      "homepage": "https://github.com/stefanpenner/get-caller-file#readme",
+      "repository_url": "https://github.com/stefanpenner/get-caller-file"
     },
     {
       "name": "statuses",

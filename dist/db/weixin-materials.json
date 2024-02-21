@@ -1439,6 +1439,16 @@
         "media_id": "3TI8XMZiLsZyu-QJGQpsXLaME2pVFXdOhHTXdoVo5OUfClw5y3R3_Hpd4TrqlV2W",
         "url": "http://mmbiz.qpic.cn/mmbiz_png/QPCr6EnHPrwuwFJuZcG7EaRu6AP345Un8ziaUV6TRx2F5mX8JPEiadPsv3PfsEdzcQia3wV8ePWibKP5icFHnSzOLiaQ/0?wx_fmt=png"
       }
+    },
+    {
+      "project": "npm-packages",
+      "info": {
+        "pkgName": "get-caller-file"
+      },
+      "materialInfo": {
+        "media_id": "3TI8XMZiLsZyu-QJGQpsXNcpcPe-WRczyFpugWDb3UfTI3CdATiQSxAL3lDyv6o_",
+        "url": "http://mmbiz.qpic.cn/mmbiz_png/QPCr6EnHPrwuwFJuZcG7EaRu6AP345UnjhuJ1KBo9TXFUN7dxeQicgAduJEEx9BXZrwicAs0Ga0m1FH070qKyDDQ/0?wx_fmt=png"
+      }
     }
   ]
 }

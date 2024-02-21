@@ -3167,6 +3167,25 @@
           "total_tokens": 2157
         }
       }
+    },
+    {
+      "project": "npm-packages",
+      "info": {
+        "pkgName": "get-caller-file",
+        "title": "深入探索Nodejs：如何轻松获得函数的调用文件路径"
+      },
+      "completionInfo": {
+        "id": "chatcmpl-8ujIu4e0ooEpkfM3iHDu81oLP6JhV",
+        "object": "chat.completion",
+        "created": 1708531208,
+        "model": "gpt-4-1106-preview",
+        "system_fingerprint": "fp_9e42505611",
+        "usage": {
+          "prompt_tokens": 1087,
+          "completion_tokens": 867,
+          "total_tokens": 1954
+        }
+      }
     }
   ]
 }
