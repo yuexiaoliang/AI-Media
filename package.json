@@ -65,6 +65,7 @@
     "puppeteer": "^21.5.2",
     "query-string": "^8.1.0",
     "rimraf": "^5.0.5",
+    "wait": "^0.4.2",
     "yargs-parser": "^21.1.1"
   }
 }

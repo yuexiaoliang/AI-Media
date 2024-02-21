@@ -101,6 +101,9 @@ importers:
       rimraf:
         specifier: ^5.0.5
         version: 5.0.5
+      wait:
+        specifier: ^0.4.2
+        version: 0.4.2
       yargs-parser:
         specifier: ^21.1.1
         version: 21.1.1
@@ -141,13 +144,16 @@ importers:
       roughjs:
         specifier: ^4.6.6
         version: 4.6.6
+      svg2roughjs:
+        specifier: ^3.2.0
+        version: 3.2.0
     devDependencies:
       sass:
         specifier: ^1.71.0
         version: 1.71.0
       vite:
         specifier: ^5.1.3
-        version: 5.1.3(sass@1.71.0)
+        version: 5.1.3(@types/node@20.9.4)(sass@1.71.0)
 
   packages/constants: {}
 
@@ -2190,6 +2196,19 @@ packages:
       has-flag: 4.0.0
     dev: false
 
+  /svg-pathdata@6.0.3:
+    resolution: {integrity: sha512-qsjeeq5YjBZ5eMdFuUa4ZosMLxgr5RZ+F+Y1OrDhuOCEInRMA3x74XdBtggJcj9kOeInz0WE+LgCPDkZFlBYJw==}
+    engines: {node: '>=12.0.0'}
+    dev: false
+
+  /svg2roughjs@3.2.0:
+    resolution: {integrity: sha512-w3/KM8H+0bkGtsq7292+xs6JTQ3RyPk98qu1voxs58Tw2oiqXCTDfuh1o9EN3mLpL/QOPi6e6kRu3diveNnvrg==}
+    dependencies:
+      roughjs: 4.6.6
+      svg-pathdata: 6.0.3
+      tinycolor2: 1.6.0
+    dev: false
+
   /tar-fs@3.0.4:
     resolution: {integrity: sha512-5AFQU8b9qLfZCX9zp2duONhPmZv0hGYiBPJsyUdqMjzq/mqVpy/rEUSeHk1+YitmxugaptgBh5oDGU3VsAJq4w==}
     dependencies:
@@ -2208,6 +2227,10 @@ packages:
 
   /through@2.3.8:
     resolution: {integrity: sha512-w89qg7PI8wAdvX60bMDP+bFoD5Dvhm9oLheFp5O4a2QF0cSBGsBX4qZmadPMvVqlLJBBci+WqGGOAPvcDeNSVg==}
+    dev: false
+
+  /tinycolor2@1.6.0:
+    resolution: {integrity: sha512-XPaBkWQJdsf3pLKJV9p4qN/S+fm2Oj8AIPo1BTUhg5oxkvm9+SVEGFdhyOz7tTdUTfvxMiAs4sp6/eZO2Ew+pw==}
     dev: false
 
   /to-regex-range@5.0.1:
@@ -2274,7 +2297,7 @@ packages:
     engines: {node: '>=10'}
     dev: false
 
-  /vite@5.1.3(sass@1.71.0):
+  /vite@5.1.3(@types/node@20.9.4)(sass@1.71.0):
     resolution: {integrity: sha512-UfmUD36DKkqhi/F75RrxvPpry+9+tTkrXfMNZD+SboZqBCMsxKtO52XeGzzuh7ioz+Eo/SYDBbdb0Z7vgcDJew==}
     engines: {node: ^18.0.0 || >=20.0.0}
     hasBin: true
@@ -2302,6 +2325,7 @@ packages:
       terser:
         optional: true
     dependencies:
+      '@types/node': 20.9.4
       esbuild: 0.19.7
       postcss: 8.4.35
       rollup: 4.12.0
@@ -2309,6 +2333,11 @@ packages:
     optionalDependencies:
       fsevents: 2.3.3
     dev: true
+
+  /wait@0.4.2:
+    resolution: {integrity: sha512-g4Uu25y9MJ3jtBcrRDDXeI/f7lBNtVmNUM3Xd78S19tm1gZutDkL/f6UEcMi/NqWvKZ74Mhrb+4LwpYbjG6XYA==}
+    hasBin: true
+    dev: false
 
   /web-resource-inliner@6.0.1:
     resolution: {integrity: sha512-kfqDxt5dTB1JhqsCUQVFDj0rmY+4HLwGQIsLPbyrsN9y9WV/1oFDSx3BQ4GfCv9X+jVeQ7rouTqwK53rA/7t8A==}

@@ -64,7 +64,7 @@ export async function start() {
   await genData(word);
 
   console.log(logStr('正在生成单词卡片...'));
-  await genCards(word)
+  await genCards(word);
 
   // console.log(logStr('正在生成单词图片...'));
   // await genWordImage(word);
@@ -194,11 +194,13 @@ const genCards = async (word: Word) => {
   const data = readDataFile(word);
   if (!data) throw new Error(logStr('生成卡片时，数据文件不存在', 'error'));
 
+  const [wordInfo, ..._data] = data;
+
   const cards = file.getFiles(cardsDir(word));
-  if (cards?.length === data.length) return cards.map((item) => cardPath(word, item));
+  if (cards?.length === _data.length) return cards.map((item) => cardPath(word, item));
 
   try {
-    return await Promise.all(data.map((item, index) => genCard(cardPath(word, `${index}.png`), item)));
+    return await Promise.all(_data.map((item, index) => genCard(cardPath(word, `${index}.png`), item)));
   } catch (error) {
     removeCardsDir(word);
     console.error(error);
@@ -215,13 +217,18 @@ const genCards = async (word: Word) => {
         // @ts-ignore
         await page.waitForFunction(() => typeof window.render === 'function');
 
-        await page.evaluate(async (itemData) => {
-          window.sessionStorage.setItem('card-data', JSON.stringify(itemData));
+        await page.evaluate(
+          async (itemData, wordInfo) => {
+            window.sessionStorage.setItem('card-data', JSON.stringify(itemData));
+            window.sessionStorage.setItem('word-info', JSON.stringify(wordInfo));
 
-          // 为了保证数据正确，这里主动在 sessionStorage 设置完成后调用页面内定义的 render 函数
-          // @ts-ignore
-          window.render();
-        }, item);
+            // 为了保证数据正确，这里主动在 sessionStorage 设置完成后调用页面内定义的 render 函数
+            // @ts-ignore
+            window.render();
+          },
+          item,
+          wordInfo
+        );
       }
     });
 

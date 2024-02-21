@@ -12,7 +12,9 @@
     "highlightjs",
     "outdir",
     "outfile",
-    "xiaohongshu"
+    "roughjs",
+    "xiaohongshu",
+    "xlink"
   ],
   "liveSassCompile.settings.formats": [
     {
