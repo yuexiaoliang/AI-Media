@@ -219,12 +219,14 @@
     {
       "name": "array-unique",
       "stepsStatus": {
-        "gottenBaseInfo": false,
-        "collectedGuide": false,
-        "generatedArticle": false,
-        "publishedWeixinDraft": false,
+        "gottenBaseInfo": true,
+        "collectedGuide": true,
+        "generatedArticle": true,
+        "publishedWeixinDraft": true,
         "publishedGithub": false
-      }
+      },
+      "homepage": "https://github.com/jonschlinkert/array-unique",
+      "repository_url": "https://github.com/jonschlinkert/array-unique"
     },
     {
       "name": "commander",
