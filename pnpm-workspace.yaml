@@ -2,3 +2,4 @@ packages:
   - 'packages/*'
   - 'projects/*'
   - 'html-templates'
+  - 'desktop'
