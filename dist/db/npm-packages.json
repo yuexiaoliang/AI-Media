@@ -1633,12 +1633,14 @@
     {
       "name": "js-yaml",
       "stepsStatus": {
-        "gottenBaseInfo": false,
-        "collectedGuide": false,
-        "generatedArticle": false,
-        "publishedWeixinDraft": false,
+        "gottenBaseInfo": true,
+        "collectedGuide": true,
+        "generatedArticle": true,
+        "publishedWeixinDraft": true,
         "publishedGithub": false
-      }
+      },
+      "homepage": "https://github.com/nodeca/js-yaml#readme",
+      "repository_url": "https://github.com/nodeca/js-yaml"
     },
     {
       "name": "os-tmpdir",
