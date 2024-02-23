@@ -3224,6 +3224,25 @@
           "total_tokens": 3088
         }
       }
+    },
+    {
+      "project": "npm-packages",
+      "info": {
+        "pkgName": "form-data",
+        "title": "用 Node.js 处理 multipart form-data 表单数据"
+      },
+      "completionInfo": {
+        "id": "chatcmpl-8vOVkZZpwp4AQvgIOp9XTZKnofEvL",
+        "object": "chat.completion",
+        "created": 1708689608,
+        "model": "gpt-4-1106-preview",
+        "system_fingerprint": "fp_2034c3217b",
+        "usage": {
+          "prompt_tokens": 4238,
+          "completion_tokens": 1214,
+          "total_tokens": 5452
+        }
+      }
     }
   ]
 }
