@@ -1,14 +1,17 @@
 import { app, BrowserWindow, ipcMain } from 'electron';
 import path from 'node:path';
+import { register } from './controller';
 
 process.env.DIST = path.join(__dirname, '../dist');
 process.env.VITE_PUBLIC = app.isPackaged ? process.env.DIST : path.join(process.env.DIST, '../public');
+
+const isDev = process.env.NODE_ENV === 'development';
 
 let win: BrowserWindow | null;
 
 function createWindow() {
   win = new BrowserWindow({
-    width: 800,
+    width: isDev ? 1200 : 800,
     height: 600,
     icon: path.join(process.env.VITE_PUBLIC, 'electron-vite.svg'),
     webPreferences: {
@@ -16,7 +19,7 @@ function createWindow() {
     }
   });
 
-  win.webContents.openDevTools({ mode: 'detach' });
+  if (isDev) win.webContents.openDevTools();
 
   const dev_url = process.env['VITE_DEV_SERVER_URL'];
   if (dev_url) {
@@ -26,14 +29,29 @@ function createWindow() {
   }
 }
 
-app.whenReady().then(() => {
-  createWindow();
-});
+const gotTheLock = app.requestSingleInstanceLock();
 
-ipcMain.on('send-test', (_, val) => {
-  console.log(val);
-});
+if (!gotTheLock) {
+  app.quit();
+} else {
+  app.on('second-instance', () => {
+    if (win) {
+      if (win.isMinimized()) win.restore();
+      win.focus();
+    }
+  });
 
-ipcMain.handle('invoke-test', async (_, val) => {
-  return val + 'bc';
-});
+  app.whenReady().then(() => {
+    createWindow();
+
+    register();
+  });
+
+  ipcMain.on('send-test', (_, val) => {
+    console.log(val);
+  });
+
+  ipcMain.handle('invoke-test', async (_, val) => {
+    return val + 'bc';
+  });
+}

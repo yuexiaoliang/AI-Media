@@ -8,4 +8,8 @@ contextBridge.exposeInMainWorld('ipcRenderer', {
   invoke: ipcRenderer.invoke
 });
 
-contextBridge.exposeInMainWorld('ipcRequest', ipcRenderer.invoke)
+contextBridge.exposeInMainWorld('ipcRequest', {
+  englishWords: async (channel: string, ...args: any[]) => {
+    return ipcRenderer.invoke(`english-words/${channel}`, ...args);
+  }
+});

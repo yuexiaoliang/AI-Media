@@ -8,7 +8,10 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@arco-design/web-vue": "^2.54.5",
+    "@vueuse/core": "^10.8.0",
     "pinia": "^2.1.7",
+    "reset.css": "^2.0.2",
     "vue": "^3.3.4",
     "vue-router": "^4.3.0"
   },

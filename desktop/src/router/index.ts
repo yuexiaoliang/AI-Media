@@ -1,15 +1,30 @@
-import { createRouter, createWebHashHistory } from 'vue-router'
+import { createRouter, createWebHashHistory } from 'vue-router';
 
-import type {} from 'vue-router'
+import Home from '@/views/Home.vue';
+
+export const rootRoutes = [
+  {
+    name: 'Home',
+    path: '/',
+    component: Home
+  },
+
+  {
+    name: 'EnglishWords',
+    path: '/english-words',
+    component: () => import('@/views/EnglishWords.vue')
+  },
+
+  {
+    name: 'NpmPackages',
+    path: '/npm-packages',
+    component: () => import('@/views/NpmPackages.vue')
+  }
+];
 
 const router = createRouter({
   history: createWebHashHistory(),
-  routes: [
-    {
-      path: '/',
-      component: () => import('@/views/Home.vue')
-    }
-  ]
-})
+  routes: [...rootRoutes]
+});
 
-export default router
+export default router;
