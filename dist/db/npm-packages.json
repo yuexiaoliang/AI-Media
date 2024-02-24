@@ -1357,12 +1357,14 @@
     {
       "name": "micromatch",
       "stepsStatus": {
-        "gottenBaseInfo": false,
-        "collectedGuide": false,
-        "generatedArticle": false,
-        "publishedWeixinDraft": false,
+        "gottenBaseInfo": true,
+        "collectedGuide": true,
+        "generatedArticle": true,
+        "publishedWeixinDraft": true,
         "publishedGithub": false
-      }
+      },
+      "homepage": "https://github.com/micromatch/micromatch",
+      "repository_url": "https://github.com/micromatch/micromatch"
     },
     {
       "name": "convert-source-map",
