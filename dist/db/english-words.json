@@ -2825,7 +2825,8 @@
     },
     {
       "word": "circle",
-      "dataGenerated": true
+      "dataGenerated": true,
+      "xhsPublished": true
     },
     {
       "word": "circuit"
@@ -14000,7 +14001,8 @@
     },
     {
       "word": "secret",
-      "dataGenerated": true
+      "dataGenerated": true,
+      "xhsPublished": true
     },
     {
       "word": "secretary"
