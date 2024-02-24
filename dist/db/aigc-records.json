@@ -3262,6 +3262,25 @@
           "total_tokens": 4642
         }
       }
+    },
+    {
+      "project": "npm-packages",
+      "info": {
+        "pkgName": "send",
+        "title": "借助 send 实现高效 Node.js 文件传输"
+      },
+      "completionInfo": {
+        "id": "chatcmpl-8vkzIhgGQRDgvqaYO9YmexVa9qX13",
+        "object": "chat.completion",
+        "created": 1708776008,
+        "model": "gpt-4-1106-preview",
+        "system_fingerprint": "fp_c3e45ce344",
+        "usage": {
+          "prompt_tokens": 3245,
+          "completion_tokens": 1192,
+          "total_tokens": 4437
+        }
+      }
     }
   ]
 }
