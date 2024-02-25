@@ -3300,6 +3300,25 @@
           "total_tokens": 14141
         }
       }
+    },
+    {
+      "project": "npm-packages",
+      "info": {
+        "pkgName": "http-signature",
+        "title": "Node.js HTTP 签名机制深入实践"
+      },
+      "completionInfo": {
+        "id": "chatcmpl-8w7SxyZHItHsGqUTSrepdYt7cXBUT",
+        "object": "chat.completion",
+        "created": 1708862415,
+        "model": "gpt-4-1106-preview",
+        "system_fingerprint": "fp_6832856db8",
+        "usage": {
+          "prompt_tokens": 1089,
+          "completion_tokens": 926,
+          "total_tokens": 2015
+        }
+      }
     }
   ]
 }
