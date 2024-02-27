@@ -3357,6 +3357,25 @@
           "total_tokens": 1848
         }
       }
+    },
+    {
+      "project": "npm-packages",
+      "info": {
+        "pkgName": "ini",
+        "title": "轻松解析与生成INI配置文件：Nodejs INI处理指南"
+      },
+      "completionInfo": {
+        "id": "chatcmpl-8wqPwvvxWu49W3Ik1dMHqCHy8mTXJ",
+        "object": "chat.completion",
+        "created": 1709035208,
+        "model": "gpt-4-1106-preview",
+        "system_fingerprint": "fp_7cc080b25b",
+        "usage": {
+          "prompt_tokens": 1583,
+          "completion_tokens": 954,
+          "total_tokens": 2537
+        }
+      }
     }
   ]
 }
