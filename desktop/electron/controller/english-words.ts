@@ -19,12 +19,13 @@ export const getNotPublishedXhsWords = async () => {
 };
 export type GetNotPublishedXhsWords = typeof getNotPublishedXhsWords;
 
-export const getNotPublishedXhsWord = async (name?: string) => {
-  console.log(name)
+export const getNotPublishedXhsWord = async () => {
   const words = await getNotPublishedXhsWords();
   const { word } = getRandomItem(words);
-  const dir = path.resolve(dist, `english-words/${word}/cards`);
-  return { word, dir };
+  const dir = path.resolve(dist, `english-words/${word}`);
+  const cardsDir = path.resolve(dir, 'cards');
+  const data = await fs.readJson(path.resolve(dir, 'data.json'));
+  return { word, cardsDir, data };
 };
 
 export type GetNotPublishedXhsWord = typeof getNotPublishedXhsWord;
