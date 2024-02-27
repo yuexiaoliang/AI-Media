@@ -1,6 +1,6 @@
 interface EnglishWords {
   getNotPublishedXhsWord: import('./controller/english-words').GetNotPublishedXhsWord;
-  getNotPublishedXhsWords: import('./controller/english-words').GetNotPublishedXhsWords;
+  updateWordRecord: import('./controller/english-words').UpdateWordRecord;
 }
 
 type EnglishWordsReturnType<T> = T extends keyof EnglishWords ? Awaited<ReturnType<EnglishWords[T]>> : never;

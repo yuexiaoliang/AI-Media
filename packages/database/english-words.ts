@@ -57,6 +57,15 @@ export const getRandomNotGeneratedWord = async () => {
   return getRandomItem(notGeneratedWords).word;
 };
 
+export const getRandomNotPublishXhsWord = async () => {
+  const [_db, data] = await openDatabase();
+
+  const notPublishedWords = data.list.filter((item) => item.dataGenerated && !item.xhsPublished);
+  if (notPublishedWords.length === 0) return;
+
+  return getRandomItem(notPublishedWords).word;
+};
+
 export const updateWordRecord = async (word: Word, record: Partial<EnglishWordsListItem>) => {
   const [db, data] = await openDatabase();
 

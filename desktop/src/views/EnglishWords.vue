@@ -4,7 +4,7 @@ import { useClipboard } from '@vueuse/core';
 
 const { copy } = useClipboard();
 
-const word = ref<EnglishWordsReturnType<'getNotPublishedXhsWord'>>();
+const word = ref<EnglishWordsReturnType<'getNotPublishedXhsWord'> | null>(null);
 
 const getTitle = () => {
   const d = '看呀~';
@@ -22,11 +22,19 @@ const getTitle = () => {
 
 const getWord = async () => {
   const res = await window.ipcRequest.englishWords('getNotPublishedXhsWord');
+  if (!res) return;
+
   word.value = res;
   getTitle();
 };
 
-getWord();
+const update = async () => {
+  if (!word.value?.word) return;
+
+  await window.ipcRequest.englishWords('updateWordRecord', word.value.word, { xhsPublished: true });
+
+  word.value = null;
+};
 </script>
 
 <template>
@@ -35,19 +43,21 @@ getWord();
       <a-button size="large" type="primary" long @click="getWord">挑个单词</a-button>
 
       <template v-if="word">
+        <a-button type="primary" long @click="update">设置为已发布</a-button>
+
         <a-button-group style="width: 100%">
           <a-button type="outline" long disabled>{{ word.word }}</a-button>
-          <a-button type="primary" class="copy-button">复制单词</a-button>
+          <a-button type="primary" class="copy-button" @click="copy(word.word)">复制单词</a-button>
         </a-button-group>
 
         <a-button-group style="width: 100%">
           <a-button type="outline" long disabled>{{ word.cardsDir }}</a-button>
-          <a-button type="primary" class="copy-button">复制卡片目录</a-button>
+          <a-button type="primary" class="copy-button" @click="copy(word.cardsDir)">复制卡片目录</a-button>
         </a-button-group>
 
         <a-button-group style="width: 100%">
           <a-button type="outline" long disabled>{{ getTitle() }}</a-button>
-          <a-button type="primary" class="copy-button">复制标题</a-button>
+          <a-button type="primary" class="copy-button" @click="copy(getTitle())">复制标题</a-button>
         </a-button-group>
       </template>
     </a-space>
