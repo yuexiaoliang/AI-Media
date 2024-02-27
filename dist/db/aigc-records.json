@@ -3376,6 +3376,25 @@
           "total_tokens": 2537
         }
       }
+    },
+    {
+      "project": "npm-packages",
+      "info": {
+        "pkgName": "json-schema-traverse",
+        "title": "深入理解 JSON Schema 遍历：使用 json-schema-traverse 操作复杂模式"
+      },
+      "completionInfo": {
+        "id": "chatcmpl-8wuACo5v92EGzWLjeLJGKYFmr5HFo",
+        "object": "chat.completion",
+        "created": 1709049608,
+        "model": "gpt-4-1106-preview",
+        "system_fingerprint": "fp_7cc080b25b",
+        "usage": {
+          "prompt_tokens": 1656,
+          "completion_tokens": 1153,
+          "total_tokens": 2809
+        }
+      }
     }
   ]
 }
