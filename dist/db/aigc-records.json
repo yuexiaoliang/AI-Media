@@ -2468,6 +2468,78 @@
           "total_tokens": 2281
         }
       }
+    },
+    {
+      "project": "english-words",
+      "info": {
+        "word": "dip"
+      },
+      "completionInfo": {
+        "id": "chatcmpl-8x4PeBHpZaYI2Cw7CwkWYOjtsS0yv",
+        "object": "chat.completion",
+        "created": 1709089006,
+        "model": "gpt-4-0125-preview",
+        "system_fingerprint": "fp_89b1a570e1",
+        "usage": {
+          "prompt_tokens": 2501,
+          "completion_tokens": 567,
+          "total_tokens": 3068
+        }
+      }
+    },
+    {
+      "project": "english-words",
+      "info": {
+        "word": "consequence"
+      },
+      "completionInfo": {
+        "id": "chatcmpl-8x4bD3M959FN8XjSPI0rTEU5t7VHC",
+        "object": "chat.completion",
+        "created": 1709089723,
+        "model": "gpt-4-0125-preview",
+        "system_fingerprint": "fp_89b1a570e1",
+        "usage": {
+          "prompt_tokens": 1615,
+          "completion_tokens": 594,
+          "total_tokens": 2209
+        }
+      }
+    },
+    {
+      "project": "english-words",
+      "info": {
+        "word": "overwhelming"
+      },
+      "completionInfo": {
+        "id": "chatcmpl-8x4o7zmRUCWDZBuXu8fqivspz6LDP",
+        "object": "chat.completion",
+        "created": 1709090523,
+        "model": "gpt-4-0125-preview",
+        "system_fingerprint": "fp_91aa3742b1",
+        "usage": {
+          "prompt_tokens": 1578,
+          "completion_tokens": 561,
+          "total_tokens": 2139
+        }
+      }
+    },
+    {
+      "project": "english-words",
+      "info": {
+        "word": "predictable"
+      },
+      "completionInfo": {
+        "id": "chatcmpl-8x4zQxLReZL2BJfkXCXzBQngSoFYD",
+        "object": "chat.completion",
+        "created": 1709091224,
+        "model": "gpt-4-0125-preview",
+        "system_fingerprint": "fp_89b1a570e1",
+        "usage": {
+          "prompt_tokens": 1389,
+          "completion_tokens": 451,
+          "total_tokens": 1840
+        }
+      }
     }
   ]
 }

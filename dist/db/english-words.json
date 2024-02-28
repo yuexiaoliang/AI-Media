@@ -3600,7 +3600,8 @@
       "word": "consent"
     },
     {
-      "word": "consequence"
+      "word": "consequence",
+      "dataGenerated": true
     },
     {
       "word": "consequent"
@@ -4938,7 +4939,8 @@
       "word": "dinosaur"
     },
     {
-      "word": "dip"
+      "word": "dip",
+      "dataGenerated": true
     },
     {
       "word": "diplomatic"
@@ -10964,7 +10966,8 @@
       "word": "overwhelm"
     },
     {
-      "word": "overwhelming"
+      "word": "overwhelming",
+      "dataGenerated": true
     },
     {
       "word": "overwhelmingly"
@@ -11948,7 +11951,9 @@
       "word": "predict"
     },
     {
-      "word": "predictable"
+      "word": "predictable",
+      "dataGenerated": true,
+      "xhsPublished": true
     },
     {
       "word": "prediction"
