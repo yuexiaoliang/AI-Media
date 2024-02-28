@@ -2198,7 +2198,7 @@
         "gottenBaseInfo": true,
         "collectedGuide": true,
         "generatedArticle": true,
-        "publishedWeixinDraft": false,
+        "publishedWeixinDraft": true,
         "publishedGithub": false
       },
       "homepage": "https://git.coolaj86.com/coolaj86/atob.js.git",
