@@ -1,5 +1,5 @@
 {
-  "pageNumber": 7,
+  "pageNumber": 9,
   "packages": [
     {
       "name": "isarray",
@@ -2195,12 +2195,14 @@
     {
       "name": "atob",
       "stepsStatus": {
-        "gottenBaseInfo": false,
-        "collectedGuide": false,
-        "generatedArticle": false,
+        "gottenBaseInfo": true,
+        "collectedGuide": true,
+        "generatedArticle": true,
         "publishedWeixinDraft": false,
         "publishedGithub": false
-      }
+      },
+      "homepage": "https://git.coolaj86.com/coolaj86/atob.js.git",
+      "repository_url": "git://git.coolaj86.com/coolaj86/atob.js.git"
     },
     {
       "name": "sprintf-js",
@@ -2406,6 +2408,606 @@
     },
     {
       "name": "read-pkg",
+      "stepsStatus": {
+        "gottenBaseInfo": false,
+        "collectedGuide": false,
+        "generatedArticle": false,
+        "publishedWeixinDraft": false,
+        "publishedGithub": false
+      }
+    },
+    {
+      "name": "arr-union",
+      "stepsStatus": {
+        "gottenBaseInfo": false,
+        "collectedGuide": false,
+        "generatedArticle": false,
+        "publishedWeixinDraft": false,
+        "publishedGithub": false
+      }
+    },
+    {
+      "name": "validate-npm-package-license",
+      "stepsStatus": {
+        "gottenBaseInfo": false,
+        "collectedGuide": false,
+        "generatedArticle": false,
+        "publishedWeixinDraft": false,
+        "publishedGithub": false
+      }
+    },
+    {
+      "name": "path-key",
+      "stepsStatus": {
+        "gottenBaseInfo": false,
+        "collectedGuide": false,
+        "generatedArticle": false,
+        "publishedWeixinDraft": false,
+        "publishedGithub": false
+      }
+    },
+    {
+      "name": "has",
+      "stepsStatus": {
+        "gottenBaseInfo": false,
+        "collectedGuide": false,
+        "generatedArticle": false,
+        "publishedWeixinDraft": false,
+        "publishedGithub": false
+      }
+    },
+    {
+      "name": "tunnel-agent",
+      "stepsStatus": {
+        "gottenBaseInfo": false,
+        "collectedGuide": false,
+        "generatedArticle": false,
+        "publishedWeixinDraft": false,
+        "publishedGithub": false
+      }
+    },
+    {
+      "name": "jsesc",
+      "stepsStatus": {
+        "gottenBaseInfo": false,
+        "collectedGuide": false,
+        "generatedArticle": false,
+        "publishedWeixinDraft": false,
+        "publishedGithub": false
+      }
+    },
+    {
+      "name": "invariant",
+      "stepsStatus": {
+        "gottenBaseInfo": false,
+        "collectedGuide": false,
+        "generatedArticle": false,
+        "publishedWeixinDraft": false,
+        "publishedGithub": false
+      }
+    },
+    {
+      "name": "os-locale",
+      "stepsStatus": {
+        "gottenBaseInfo": false,
+        "collectedGuide": false,
+        "generatedArticle": false,
+        "publishedWeixinDraft": false,
+        "publishedGithub": false
+      }
+    },
+    {
+      "name": "y18n",
+      "stepsStatus": {
+        "gottenBaseInfo": false,
+        "collectedGuide": false,
+        "generatedArticle": false,
+        "publishedWeixinDraft": false,
+        "publishedGithub": false
+      }
+    },
+    {
+      "name": "wrap-ansi",
+      "stepsStatus": {
+        "gottenBaseInfo": false,
+        "collectedGuide": false,
+        "generatedArticle": false,
+        "publishedWeixinDraft": false,
+        "publishedGithub": false
+      }
+    },
+    {
+      "name": "buffer",
+      "stepsStatus": {
+        "gottenBaseInfo": false,
+        "collectedGuide": false,
+        "generatedArticle": false,
+        "publishedWeixinDraft": false,
+        "publishedGithub": false
+      }
+    },
+    {
+      "name": "require-directory",
+      "stepsStatus": {
+        "gottenBaseInfo": false,
+        "collectedGuide": false,
+        "generatedArticle": false,
+        "publishedWeixinDraft": false,
+        "publishedGithub": false
+      }
+    },
+    {
+      "name": "tough-cookie",
+      "stepsStatus": {
+        "gottenBaseInfo": false,
+        "collectedGuide": false,
+        "generatedArticle": false,
+        "publishedWeixinDraft": false,
+        "publishedGithub": false
+      }
+    },
+    {
+      "name": "tweetnacl",
+      "stepsStatus": {
+        "gottenBaseInfo": false,
+        "collectedGuide": false,
+        "generatedArticle": false,
+        "publishedWeixinDraft": false,
+        "publishedGithub": false
+      }
+    },
+    {
+      "name": "vary",
+      "stepsStatus": {
+        "gottenBaseInfo": false,
+        "collectedGuide": false,
+        "generatedArticle": false,
+        "publishedWeixinDraft": false,
+        "publishedGithub": false
+      }
+    },
+    {
+      "name": "sshpk",
+      "stepsStatus": {
+        "gottenBaseInfo": false,
+        "collectedGuide": false,
+        "generatedArticle": false,
+        "publishedWeixinDraft": false,
+        "publishedGithub": false
+      }
+    },
+    {
+      "name": "mimic-fn",
+      "stepsStatus": {
+        "gottenBaseInfo": false,
+        "collectedGuide": false,
+        "generatedArticle": false,
+        "publishedWeixinDraft": false,
+        "publishedGithub": false
+      }
+    },
+    {
+      "name": "builtin-modules",
+      "stepsStatus": {
+        "gottenBaseInfo": false,
+        "collectedGuide": false,
+        "generatedArticle": false,
+        "publishedWeixinDraft": false,
+        "publishedGithub": false
+      }
+    },
+    {
+      "name": "locate-path",
+      "stepsStatus": {
+        "gottenBaseInfo": false,
+        "collectedGuide": false,
+        "generatedArticle": false,
+        "publishedWeixinDraft": false,
+        "publishedGithub": false
+      }
+    },
+    {
+      "name": "require-main-filename",
+      "stepsStatus": {
+        "gottenBaseInfo": false,
+        "collectedGuide": false,
+        "generatedArticle": false,
+        "publishedWeixinDraft": false,
+        "publishedGithub": false
+      }
+    },
+    {
+      "name": "merge-descriptors",
+      "stepsStatus": {
+        "gottenBaseInfo": false,
+        "collectedGuide": false,
+        "generatedArticle": false,
+        "publishedWeixinDraft": false,
+        "publishedGithub": false
+      }
+    },
+    {
+      "name": "readdirp",
+      "stepsStatus": {
+        "gottenBaseInfo": false,
+        "collectedGuide": false,
+        "generatedArticle": false,
+        "publishedWeixinDraft": false,
+        "publishedGithub": false
+      }
+    },
+    {
+      "name": "loose-envify",
+      "stepsStatus": {
+        "gottenBaseInfo": false,
+        "collectedGuide": false,
+        "generatedArticle": false,
+        "publishedWeixinDraft": false,
+        "publishedGithub": false
+      }
+    },
+    {
+      "name": "verror",
+      "stepsStatus": {
+        "gottenBaseInfo": false,
+        "collectedGuide": false,
+        "generatedArticle": false,
+        "publishedWeixinDraft": false,
+        "publishedGithub": false
+      }
+    },
+    {
+      "name": "through",
+      "stepsStatus": {
+        "gottenBaseInfo": false,
+        "collectedGuide": false,
+        "generatedArticle": false,
+        "publishedWeixinDraft": false,
+        "publishedGithub": false
+      }
+    },
+    {
+      "name": "for-own",
+      "stepsStatus": {
+        "gottenBaseInfo": false,
+        "collectedGuide": false,
+        "generatedArticle": false,
+        "publishedWeixinDraft": false,
+        "publishedGithub": false
+      }
+    },
+    {
+      "name": "is-windows",
+      "stepsStatus": {
+        "gottenBaseInfo": false,
+        "collectedGuide": false,
+        "generatedArticle": false,
+        "publishedWeixinDraft": false,
+        "publishedGithub": false
+      }
+    },
+    {
+      "name": "yargs-parser",
+      "stepsStatus": {
+        "gottenBaseInfo": false,
+        "collectedGuide": false,
+        "generatedArticle": false,
+        "publishedWeixinDraft": false,
+        "publishedGithub": false
+      }
+    },
+    {
+      "name": "is-plain-object",
+      "stepsStatus": {
+        "gottenBaseInfo": false,
+        "collectedGuide": false,
+        "generatedArticle": false,
+        "publishedWeixinDraft": false,
+        "publishedGithub": false
+      }
+    },
+    {
+      "name": "assign-symbols",
+      "stepsStatus": {
+        "gottenBaseInfo": false,
+        "collectedGuide": false,
+        "generatedArticle": false,
+        "publishedWeixinDraft": false,
+        "publishedGithub": false
+      }
+    },
+    {
+      "name": "source-map-support",
+      "stepsStatus": {
+        "gottenBaseInfo": false,
+        "collectedGuide": false,
+        "generatedArticle": false,
+        "publishedWeixinDraft": false,
+        "publishedGithub": false
+      }
+    },
+    {
+      "name": "read-pkg-up",
+      "stepsStatus": {
+        "gottenBaseInfo": false,
+        "collectedGuide": false,
+        "generatedArticle": false,
+        "publishedWeixinDraft": false,
+        "publishedGithub": false
+      }
+    },
+    {
+      "name": "esrecurse",
+      "stepsStatus": {
+        "gottenBaseInfo": false,
+        "collectedGuide": false,
+        "generatedArticle": false,
+        "publishedWeixinDraft": false,
+        "publishedGithub": false
+      }
+    },
+    {
+      "name": "os-homedir",
+      "stepsStatus": {
+        "gottenBaseInfo": false,
+        "collectedGuide": false,
+        "generatedArticle": false,
+        "publishedWeixinDraft": false,
+        "publishedGithub": false
+      }
+    },
+    {
+      "name": "p-limit",
+      "stepsStatus": {
+        "gottenBaseInfo": false,
+        "collectedGuide": false,
+        "generatedArticle": false,
+        "publishedWeixinDraft": false,
+        "publishedGithub": false
+      }
+    },
+    {
+      "name": "p-locate",
+      "stepsStatus": {
+        "gottenBaseInfo": false,
+        "collectedGuide": false,
+        "generatedArticle": false,
+        "publishedWeixinDraft": false,
+        "publishedGithub": false
+      }
+    },
+    {
+      "name": "define-properties",
+      "stepsStatus": {
+        "gottenBaseInfo": false,
+        "collectedGuide": false,
+        "generatedArticle": false,
+        "publishedWeixinDraft": false,
+        "publishedGithub": false
+      }
+    },
+    {
+      "name": "browserify-zlib",
+      "stepsStatus": {
+        "gottenBaseInfo": false,
+        "collectedGuide": false,
+        "generatedArticle": false,
+        "publishedWeixinDraft": false,
+        "publishedGithub": false
+      }
+    },
+    {
+      "name": "npm-run-path",
+      "stepsStatus": {
+        "gottenBaseInfo": false,
+        "collectedGuide": false,
+        "generatedArticle": false,
+        "publishedWeixinDraft": false,
+        "publishedGithub": false
+      }
+    },
+    {
+      "name": "which-module",
+      "stepsStatus": {
+        "gottenBaseInfo": false,
+        "collectedGuide": false,
+        "generatedArticle": false,
+        "publishedWeixinDraft": false,
+        "publishedGithub": false
+      }
+    },
+    {
+      "name": "p-finally",
+      "stepsStatus": {
+        "gottenBaseInfo": false,
+        "collectedGuide": false,
+        "generatedArticle": false,
+        "publishedWeixinDraft": false,
+        "publishedGithub": false
+      }
+    },
+    {
+      "name": "strip-json-comments",
+      "stepsStatus": {
+        "gottenBaseInfo": false,
+        "collectedGuide": false,
+        "generatedArticle": false,
+        "publishedWeixinDraft": false,
+        "publishedGithub": false
+      }
+    },
+    {
+      "name": "pseudomap",
+      "stepsStatus": {
+        "gottenBaseInfo": false,
+        "collectedGuide": false,
+        "generatedArticle": false,
+        "publishedWeixinDraft": false,
+        "publishedGithub": false
+      }
+    },
+    {
+      "name": "base",
+      "stepsStatus": {
+        "gottenBaseInfo": false,
+        "collectedGuide": false,
+        "generatedArticle": false,
+        "publishedWeixinDraft": false,
+        "publishedGithub": false
+      }
+    },
+    {
+      "name": "extend-shallow",
+      "stepsStatus": {
+        "gottenBaseInfo": false,
+        "collectedGuide": false,
+        "generatedArticle": false,
+        "publishedWeixinDraft": false,
+        "publishedGithub": false
+      }
+    },
+    {
+      "name": "amdefine",
+      "stepsStatus": {
+        "gottenBaseInfo": false,
+        "collectedGuide": false,
+        "generatedArticle": false,
+        "publishedWeixinDraft": false,
+        "publishedGithub": false
+      }
+    },
+    {
+      "name": "performance-now",
+      "stepsStatus": {
+        "gottenBaseInfo": false,
+        "collectedGuide": false,
+        "generatedArticle": false,
+        "publishedWeixinDraft": false,
+        "publishedGithub": false
+      }
+    },
+    {
+      "name": "proxy-addr",
+      "stepsStatus": {
+        "gottenBaseInfo": false,
+        "collectedGuide": false,
+        "generatedArticle": false,
+        "publishedWeixinDraft": false,
+        "publishedGithub": false
+      }
+    },
+    {
+      "name": "cache-base",
+      "stepsStatus": {
+        "gottenBaseInfo": false,
+        "collectedGuide": false,
+        "generatedArticle": false,
+        "publishedWeixinDraft": false,
+        "publishedGithub": false
+      }
+    },
+    {
+      "name": "browserify-aes",
+      "stepsStatus": {
+        "gottenBaseInfo": false,
+        "collectedGuide": false,
+        "generatedArticle": false,
+        "publishedWeixinDraft": false,
+        "publishedGithub": false
+      }
+    },
+    {
+      "name": "console-browserify",
+      "stepsStatus": {
+        "gottenBaseInfo": false,
+        "collectedGuide": false,
+        "generatedArticle": false,
+        "publishedWeixinDraft": false,
+        "publishedGithub": false
+      }
+    },
+    {
+      "name": "css-loader",
+      "stepsStatus": {
+        "gottenBaseInfo": false,
+        "collectedGuide": false,
+        "generatedArticle": false,
+        "publishedWeixinDraft": false,
+        "publishedGithub": false
+      }
+    },
+    {
+      "name": "cli-cursor",
+      "stepsStatus": {
+        "gottenBaseInfo": false,
+        "collectedGuide": false,
+        "generatedArticle": false,
+        "publishedWeixinDraft": false,
+        "publishedGithub": false
+      }
+    },
+    {
+      "name": "class-utils",
+      "stepsStatus": {
+        "gottenBaseInfo": false,
+        "collectedGuide": false,
+        "generatedArticle": false,
+        "publishedWeixinDraft": false,
+        "publishedGithub": false
+      }
+    },
+    {
+      "name": "collection-visit",
+      "stepsStatus": {
+        "gottenBaseInfo": false,
+        "collectedGuide": false,
+        "generatedArticle": false,
+        "publishedWeixinDraft": false,
+        "publishedGithub": false
+      }
+    },
+    {
+      "name": "to-fast-properties",
+      "stepsStatus": {
+        "gottenBaseInfo": false,
+        "collectedGuide": false,
+        "generatedArticle": false,
+        "publishedWeixinDraft": false,
+        "publishedGithub": false
+      }
+    },
+    {
+      "name": "big.js",
+      "stepsStatus": {
+        "gottenBaseInfo": false,
+        "collectedGuide": false,
+        "generatedArticle": false,
+        "publishedWeixinDraft": false,
+        "publishedGithub": false
+      }
+    },
+    {
+      "name": "are-we-there-yet",
+      "stepsStatus": {
+        "gottenBaseInfo": false,
+        "collectedGuide": false,
+        "generatedArticle": false,
+        "publishedWeixinDraft": false,
+        "publishedGithub": false
+      }
+    },
+    {
+      "name": "strip-eof",
+      "stepsStatus": {
+        "gottenBaseInfo": false,
+        "collectedGuide": false,
+        "generatedArticle": false,
+        "publishedWeixinDraft": false,
+        "publishedGithub": false
+      }
+    },
+    {
+      "name": "copy-descriptor",
       "stepsStatus": {
         "gottenBaseInfo": false,
         "collectedGuide": false,

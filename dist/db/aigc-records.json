@@ -3395,6 +3395,25 @@
           "total_tokens": 2809
         }
       }
+    },
+    {
+      "project": "npm-packages",
+      "info": {
+        "pkgName": "atob",
+        "title": "深入浅出Node.js中的Base64编码与解码"
+      },
+      "completionInfo": {
+        "id": "chatcmpl-8x8SuHHYUy7aCzZKI1blpIvqXyYMd",
+        "object": "chat.completion",
+        "created": 1709104584,
+        "model": "gpt-4-0125-preview",
+        "system_fingerprint": "fp_89b1a570e1",
+        "usage": {
+          "prompt_tokens": 732,
+          "completion_tokens": 878,
+          "total_tokens": 1610
+        }
+      }
     }
   ]
 }

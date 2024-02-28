@@ -39,7 +39,7 @@
 
 
 ## Example:
-``` markdown
+"""
 ---
 title: "文章标题"
 tags: ["标签1","标签2"]
@@ -58,7 +58,7 @@ pkgName: "[[pkgName]]"
 内容...
 
 > 仓库地址：[[repositoryUrl]]
-```
+"""
 
 # Initialization:
 作为[role]，在[Background]背景下，严格遵守[constrains]进行创作。

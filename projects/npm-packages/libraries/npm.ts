@@ -1,7 +1,7 @@
 import * as cheerio from 'cheerio';
-import axios from 'axios';
-import http from './http';
+import constants from '@auto-blog/constants';
 import { npmPackagesDB } from '@auto-blog/database';
+import httpsGet from '@auto-blog/utils/httpsGet';
 
 // 采集包列表
 export const collectPackages = async () => {
@@ -19,7 +19,7 @@ export const collectPackages = async () => {
   };
 
   try {
-    const { data: html } = await axios.get('https://libraries.io/search', { params });
+    const html = await httpsGet('https://libraries.io/search', { params });
 
     const projects: npmPackagesDB.DBPackages = [];
 
@@ -58,7 +58,7 @@ export const collectPackages = async () => {
 
 // 获取包的基本信息
 export async function getPackageInfo(pkgName: string) {
-  const { repository_url, homepage } = (await http.get(pkgName)) as Record<string, any>;
+  const { repository_url, homepage } = (await httpsGet(`https://libraries.io/api/npm/${pkgName}`, { params: { api_key: constants.LIBRARIES_API_KEY } })) as Record<string, any>;
 
   if (!repository_url) {
     throw new Error(`@auto-blog/libraries: package [${pkgName}] not found`);

@@ -19,19 +19,21 @@
     import qs from 'qs';
     import './cover.scss';
 
-    const query = qs.parse(location.search, {
-      ignoreQueryPrefix: true
-    })
+    window.onload = () => {
+      const query = qs.parse(location.search, {
+        ignoreQueryPrefix: true
+      })
 
-    const { pkgName, bgImage } = query
-    if (pkgName) {
-      const text = document.querySelector('.pkg-name')
-      text.innerHTML = pkgName
-    }
+      const { pkgName, bgImage } = query
+      if (pkgName) {
+        const text = document.querySelector('.pkg-name')
+        text.innerHTML = pkgName
+      }
 
-    if (bgImage) {
-      const cover = document.querySelector('.cover')
-      cover.style.backgroundImage = `url(./images/cover-bgs/${bgImage})`
+      if (bgImage) {
+        const cover = document.querySelector('.cover')
+        cover.style.backgroundImage = `url(./images/cover-bgs/${bgImage})`
+      }
     }
   </script>
 </body>
