@@ -17,8 +17,15 @@ const getTitle = () => {
 
   if (!Array.isArray(list)) return d;
 
-  return list[0];
+  let r = list[0];
+
+  if (r.length >= 20) {
+    r = r.slice(0, 17) + '...';
+  }
+
+  return r;
 };
+
 
 const getWord = async () => {
   const res = await window.ipcRequest.englishWords('getNotPublishedXhsWord');
