@@ -3414,6 +3414,25 @@
           "total_tokens": 1610
         }
       }
+    },
+    {
+      "project": "npm-packages",
+      "info": {
+        "pkgName": "cache-base",
+        "title": "深入探索 cache-base：轻松管理JavaScript对象缓存"
+      },
+      "completionInfo": {
+        "id": "chatcmpl-8x8iZCugXsuOcpsexbMdI6dbBfWgD",
+        "object": "chat.completion",
+        "created": 1709105555,
+        "model": "gpt-4-0125-preview",
+        "system_fingerprint": "fp_89b1a570e1",
+        "usage": {
+          "prompt_tokens": 5223,
+          "completion_tokens": 1079,
+          "total_tokens": 6302
+        }
+      }
     }
   ]
 }
