@@ -3,6 +3,7 @@ import url from 'url';
 import path from 'path';
 import html2md from 'html-to-md';
 import * as cheerio from 'cheerio';
+import wait from 'wait'
 import { defineLogStr, file, renderTemplate } from '@auto-blog/utils';
 import { AIModel, chat, images } from '@auto-blog/openai';
 
@@ -70,6 +71,8 @@ export async function start() {
   // await genWordImage(word);
 
   console.log(logStr(`单词“${word}”生成完成！`, 'success'));
+
+  await wait(2000)
 }
 
 /**
