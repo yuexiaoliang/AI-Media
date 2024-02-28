@@ -28,12 +28,15 @@ const getWord = async () => {
   getTitle();
 };
 
-const update = async () => {
-  if (!word.value?.word) return;
+const inputWord = ref('');
 
-  await window.ipcRequest.englishWords('updateWordRecord', word.value.word, { xhsPublished: true });
+const update = async () => {
+  if (!inputWord.value) return;
+
+  await window.ipcRequest.englishWords('updateWordRecord', inputWord.value, { xhsPublished: true });
 
   word.value = null;
+  inputWord.value = '';
 };
 </script>
 
@@ -41,10 +44,13 @@ const update = async () => {
   <div class="english-words">
     <a-space class="word-info" direction="vertical">
       <a-button size="large" type="primary" long @click="getWord">挑个单词</a-button>
+      <a-input v-model="inputWord" class="update-input">
+        <template #append>
+          <a-button type="primary" long :disabled="!inputWord" @click="update">设置为已发布</a-button>
+        </template>
+      </a-input>
 
       <template v-if="word">
-        <a-button type="primary" long @click="update">设置为已发布</a-button>
-
         <a-button-group style="width: 100%">
           <a-button type="outline" long disabled>{{ word.word }}</a-button>
           <a-button type="primary" class="copy-button" @click="copy(word.word)">复制单词</a-button>
@@ -67,6 +73,18 @@ const update = async () => {
 <style lang="scss" scoped>
 .english-words {
   text-align: center;
+
+  .update-input {
+    :deep(.arco-input-append) {
+      padding: 0;
+      border: 0;
+
+      .arco-btn {
+        border-top-left-radius: 0;
+        border-bottom-left-radius: 0;
+      }
+    }
+  }
 
   .word-info {
     width: 600px;
