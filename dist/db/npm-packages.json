@@ -2879,12 +2879,14 @@
     {
       "name": "performance-now",
       "stepsStatus": {
-        "gottenBaseInfo": false,
-        "collectedGuide": false,
+        "gottenBaseInfo": true,
+        "collectedGuide": true,
         "generatedArticle": false,
         "publishedWeixinDraft": false,
         "publishedGithub": false
-      }
+      },
+      "homepage": "https://github.com/braveg1rl/performance-now",
+      "repository_url": "https://github.com/braveg1rl/performance-now"
     },
     {
       "name": "proxy-addr",
