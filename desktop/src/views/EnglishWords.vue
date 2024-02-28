@@ -68,6 +68,10 @@ const update = async () => {
 .english-words {
   text-align: center;
 
+  .word-info {
+    width: 600px;
+  }
+
   .copy-button {
     width: 180px;
   }
