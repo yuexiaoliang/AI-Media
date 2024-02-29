@@ -7,20 +7,14 @@ const { copy } = useClipboard();
 const word = ref<EnglishWordsReturnType<'getNotPublishedXhsWord'> | null>(null);
 
 const getTitle = () => {
-  const d = '看呀~';
+  const d = 'AI单词卡';
 
-  if (!Array.isArray(word.value?.data)) return d;
+  if (!word.value?.word) return d;
 
-  const list = word.value?.data?.find((item) => {
-    return item.title?.includes?.('小贴士');
-  })?.content;
-
-  if (!Array.isArray(list)) return d;
-
-  let r = list[0];
+  let r = d + '-' + word.value.word
 
   if (r.length >= 20) {
-    r = r.slice(0, 17) + '...';
+    r = r.slice(0, 20);
   }
 
   return r;
