@@ -3438,18 +3438,18 @@
       "project": "npm-packages",
       "info": {
         "pkgName": "performance-now",
-        "title": "揭秘performance-now：高精度时间测量的利器"
+        "title": "精确测量代码性能：深入了解 performance-now 包"
       },
       "completionInfo": {
-        "id": "chatcmpl-8xRkFw5R5nWxCHMv31JD17CJ5rDs5",
+        "id": "chatcmpl-8xZN3dFkIc9rA2q2glWde47RZFS2z",
         "object": "chat.completion",
-        "created": 1709178695,
+        "created": 1709208009,
         "model": "gpt-4-0125-preview",
-        "system_fingerprint": "fp_89b1a570e1",
+        "system_fingerprint": "fp_91aa3742b1",
         "usage": {
-          "prompt_tokens": 641,
-          "completion_tokens": 771,
-          "total_tokens": 1412
+          "prompt_tokens": 637,
+          "completion_tokens": 986,
+          "total_tokens": 1623
         }
       }
     },
