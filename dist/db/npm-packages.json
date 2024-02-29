@@ -3033,12 +3033,14 @@
     {
       "name": "decode-uri-component",
       "stepsStatus": {
-        "gottenBaseInfo": false,
-        "collectedGuide": false,
+        "gottenBaseInfo": true,
+        "collectedGuide": true,
         "generatedArticle": false,
         "publishedWeixinDraft": false,
         "publishedGithub": false
-      }
+      },
+      "homepage": "https://github.com/SamVerschueren/decode-uri-component#readme",
+      "repository_url": "https://github.com/SamVerschueren/decode-uri-component"
     },
     {
       "name": "regenerator-runtime",
