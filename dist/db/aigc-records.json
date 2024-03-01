@@ -3471,6 +3471,25 @@
           "total_tokens": 2316
         }
       }
+    },
+    {
+      "project": "npm-packages",
+      "info": {
+        "pkgName": "builtin-modules",
+        "title": "探索Node.js内置模块列表：使用builtin-modules简化开发流程"
+      },
+      "completionInfo": {
+        "id": "chatcmpl-8xzb0SDNfYrA3UVjrycTzDvG46iSx",
+        "object": "chat.completion",
+        "created": 1709308818,
+        "model": "gpt-4-0125-preview",
+        "system_fingerprint": "fp_00ceb2df5b",
+        "usage": {
+          "prompt_tokens": 889,
+          "completion_tokens": 900,
+          "total_tokens": 1789
+        }
+      }
     }
   ]
 }
