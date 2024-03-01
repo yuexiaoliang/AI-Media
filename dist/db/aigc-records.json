@@ -3470,6 +3470,24 @@
           "total_tokens": 2358
         }
       }
+    },
+    {
+      "project": "english-words",
+      "info": {
+        "word": "joint"
+      },
+      "completionInfo": {
+        "id": "chatcmpl-8xlSLVnFoIUla7Qi3kjrm7R5bfpS9",
+        "object": "chat.completion",
+        "created": 1709254465,
+        "model": "gpt-4-0125-preview",
+        "system_fingerprint": "fp_00ceb2df5b",
+        "usage": {
+          "prompt_tokens": 2006,
+          "completion_tokens": 555,
+          "total_tokens": 2561
+        }
+      }
     }
   ]
 }
