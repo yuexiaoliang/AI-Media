@@ -4941,7 +4941,8 @@
     },
     {
       "word": "dip",
-      "dataGenerated": true
+      "dataGenerated": true,
+      "xhsPublished": true
     },
     {
       "word": "diplomatic"
@@ -16672,7 +16673,9 @@
       "word": "trigger off"
     },
     {
-      "word": "trigger"
+      "word": "trigger",
+      "dataGenerated": true,
+      "xhsPublished": true
     },
     {
       "word": "trim"
