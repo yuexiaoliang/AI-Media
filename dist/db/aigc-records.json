@@ -3670,6 +3670,25 @@
           "total_tokens": 1789
         }
       }
+    },
+    {
+      "project": "npm-packages",
+      "info": {
+        "pkgName": "object-copy",
+        "title": "深入浅出object-copy：实现对象的深拷贝与属性筛选"
+      },
+      "completionInfo": {
+        "id": "chatcmpl-8yIKGEYQwsAVaTyLL5hb9Vd14ukoS",
+        "object": "chat.completion",
+        "created": 1709380816,
+        "model": "gpt-4-0125-preview",
+        "system_fingerprint": "fp_00ceb2df5b",
+        "usage": {
+          "prompt_tokens": 1824,
+          "completion_tokens": 859,
+          "total_tokens": 2683
+        }
+      }
     }
   ]
 }
