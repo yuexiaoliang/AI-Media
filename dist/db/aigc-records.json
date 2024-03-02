@@ -3689,6 +3689,25 @@
           "total_tokens": 2683
         }
       }
+    },
+    {
+      "project": "npm-packages",
+      "info": {
+        "pkgName": "wordwrap",
+        "title": "Nodejs 文本自动换行工具：wordwrap 使用全攻略"
+      },
+      "completionInfo": {
+        "id": "chatcmpl-8yM4bIW7QgIsHIxurmUoB5vyj3aGI",
+        "object": "chat.completion",
+        "created": 1709395221,
+        "model": "gpt-4-0125-preview",
+        "system_fingerprint": "fp_70b2088885",
+        "usage": {
+          "prompt_tokens": 1003,
+          "completion_tokens": 1027,
+          "total_tokens": 2030
+        }
+      }
     }
   ]
 }
