@@ -3761,12 +3761,14 @@
     {
       "name": "array-find-index",
       "stepsStatus": {
-        "gottenBaseInfo": false,
-        "collectedGuide": false,
+        "gottenBaseInfo": true,
+        "collectedGuide": true,
         "generatedArticle": false,
         "publishedWeixinDraft": false,
         "publishedGithub": false
-      }
+      },
+      "homepage": "https://github.com/sindresorhus/array-find-index#readme",
+      "repository_url": "https://github.com/sindresorhus/array-find-index"
     },
     {
       "name": "set-value",
