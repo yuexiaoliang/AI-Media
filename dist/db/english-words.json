@@ -3072,7 +3072,9 @@
       "word": "coin"
     },
     {
-      "word": "coincide"
+      "word": "coincide",
+      "dataGenerated": true,
+      "xhsPublished": true
     },
     {
       "word": "coincidence"

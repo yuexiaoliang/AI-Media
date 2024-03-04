@@ -3596,6 +3596,24 @@
           "total_tokens": 2028
         }
       }
+    },
+    {
+      "project": "english-words",
+      "info": {
+        "word": "coincide"
+      },
+      "completionInfo": {
+        "id": "chatcmpl-8z0kYDeSQVFMaKH1dL0oad5slBoCC",
+        "object": "chat.completion",
+        "created": 1709551582,
+        "model": "gpt-4-0125-preview",
+        "system_fingerprint": "fp_70b2088885",
+        "usage": {
+          "prompt_tokens": 1444,
+          "completion_tokens": 498,
+          "total_tokens": 1942
+        }
+      }
     }
   ]
 }
