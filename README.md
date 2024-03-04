@@ -28,8 +28,3 @@
 
 1. 将远程图片下载到本地。
 1. 将图片地址替换本本地地址。
-
-## TODO
-
-- [ ] ts 类型体操: <https://github.com/type-challenges/type-challenges>
-
