@@ -3763,8 +3763,8 @@
       "stepsStatus": {
         "gottenBaseInfo": true,
         "collectedGuide": true,
-        "generatedArticle": false,
-        "publishedWeixinDraft": false,
+        "generatedArticle": true,
+        "publishedWeixinDraft": true,
         "publishedGithub": false
       },
       "homepage": "https://github.com/sindresorhus/array-find-index#readme",
