@@ -772,7 +772,9 @@
       "word": "apparent"
     },
     {
-      "word": "apparently"
+      "word": "apparently",
+      "dataGenerated": true,
+      "xhsPublished": true
     },
     {
       "word": "appeal"
@@ -943,7 +945,9 @@
       "word": "arrest"
     },
     {
-      "word": "arrival"
+      "word": "arrival",
+      "dataGenerated": true,
+      "xhsPublished": true
     },
     {
       "word": "arrive"
@@ -1714,7 +1718,9 @@
       "word": "biography"
     },
     {
-      "word": "biological"
+      "word": "biological",
+      "dataGenerated": true,
+      "xhsPublished": true
     },
     {
       "word": "biologist"
@@ -10064,7 +10070,9 @@
       "word": "mumble"
     },
     {
-      "word": "municipal"
+      "word": "municipal",
+      "dataGenerated": true,
+      "xhsPublished": true
     },
     {
       "word": "murder"
@@ -16372,7 +16380,9 @@
       "word": "to"
     },
     {
-      "word": "toast"
+      "word": "toast",
+      "dataGenerated": true,
+      "xhsPublished": true
     },
     {
       "word": "tobacco"
@@ -16707,7 +16717,9 @@
       "word": "tropical"
     },
     {
-      "word": "trot"
+      "word": "trot",
+      "dataGenerated": true,
+      "xhsPublished": true
     },
     {
       "word": "trouble"
