@@ -3708,6 +3708,25 @@
           "total_tokens": 2030
         }
       }
+    },
+    {
+      "project": "npm-packages",
+      "info": {
+        "pkgName": "array-find-index",
+        "title": "深入探索array-find-index：在数组中寻找索引的高效方法"
+      },
+      "completionInfo": {
+        "id": "chatcmpl-8z51WP0NtOovWd2MUoBx9SoKMAAQD",
+        "object": "chat.completion",
+        "created": 1709568010,
+        "model": "gpt-4-0125-preview",
+        "system_fingerprint": "fp_00ceb2df5b",
+        "usage": {
+          "prompt_tokens": 891,
+          "completion_tokens": 909,
+          "total_tokens": 1800
+        }
+      }
     }
   ]
 }
