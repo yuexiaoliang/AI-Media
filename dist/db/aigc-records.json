@@ -3841,6 +3841,24 @@
           "total_tokens": 1715
         }
       }
+    },
+    {
+      "project": "english-words",
+      "info": {
+        "word": "menu"
+      },
+      "completionInfo": {
+        "id": "chatcmpl-8zNAvG79AYau0XrLsqvXOds6pYEJ2",
+        "object": "chat.completion",
+        "created": 1709637785,
+        "model": "gpt-4-0125-preview",
+        "system_fingerprint": "fp_70b2088885",
+        "usage": {
+          "prompt_tokens": 1438,
+          "completion_tokens": 568,
+          "total_tokens": 2006
+        }
+      }
     }
   ]
 }
