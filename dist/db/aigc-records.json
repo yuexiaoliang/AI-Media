@@ -3446,7 +3446,6 @@
         "created": 1709208009,
         "model": "gpt-4-0125-preview",
         "system_fingerprint": "fp_91aa3742b1",
-<<<<<<< HEAD
         "usage": {
           "prompt_tokens": 637,
           "completion_tokens": 986,
@@ -3546,12 +3545,6 @@
           "prompt_tokens": 891,
           "completion_tokens": 909,
           "total_tokens": 1800
-=======
-        "usage": {
-          "prompt_tokens": 637,
-          "completion_tokens": 986,
-          "total_tokens": 1623
->>>>>>> 8f27a264c56cc9bc0fc9cf0688336a23c6b18d55
         }
       }
     },
