@@ -3727,6 +3727,25 @@
           "total_tokens": 1800
         }
       }
+    },
+    {
+      "project": "npm-packages",
+      "info": {
+        "pkgName": "shebang-regex",
+        "title": "用shebang-regex轻松匹配Unix Shebang行"
+      },
+      "completionInfo": {
+        "id": "chatcmpl-8zIDWXvigVWQmVCe4hNuPySb3P5if",
+        "object": "chat.completion",
+        "created": 1709618726,
+        "model": "gpt-4-0125-preview",
+        "system_fingerprint": "fp_00ceb2df5b",
+        "usage": {
+          "prompt_tokens": 872,
+          "completion_tokens": 843,
+          "total_tokens": 1715
+        }
+      }
     }
   ]
 }
