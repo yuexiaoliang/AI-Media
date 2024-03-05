@@ -3446,6 +3446,7 @@
         "created": 1709208009,
         "model": "gpt-4-0125-preview",
         "system_fingerprint": "fp_91aa3742b1",
+<<<<<<< HEAD
         "usage": {
           "prompt_tokens": 637,
           "completion_tokens": 986,
@@ -3545,6 +3546,12 @@
           "prompt_tokens": 891,
           "completion_tokens": 909,
           "total_tokens": 1800
+=======
+        "usage": {
+          "prompt_tokens": 637,
+          "completion_tokens": 986,
+          "total_tokens": 1623
+>>>>>>> 8f27a264c56cc9bc0fc9cf0688336a23c6b18d55
         }
       }
     },
@@ -3725,6 +3732,120 @@
           "prompt_tokens": 1828,
           "completion_tokens": 663,
           "total_tokens": 2491
+        }
+      }
+    },
+    {
+      "project": "npm-packages",
+      "info": {
+        "pkgName": "decode-uri-component",
+        "title": "深入理解和使用decode-uri-component：呵护你的URI解码过程"
+      },
+      "completionInfo": {
+        "id": "chatcmpl-8xvqdoJv3U2Vj45aTPXUp5m1INJFh",
+        "object": "chat.completion",
+        "created": 1709294411,
+        "model": "gpt-4-0125-preview",
+        "system_fingerprint": "fp_91aa3742b1",
+        "usage": {
+          "prompt_tokens": 1403,
+          "completion_tokens": 913,
+          "total_tokens": 2316
+        }
+      }
+    },
+    {
+      "project": "npm-packages",
+      "info": {
+        "pkgName": "builtin-modules",
+        "title": "探索Node.js内置模块列表：使用builtin-modules简化开发流程"
+      },
+      "completionInfo": {
+        "id": "chatcmpl-8xzb0SDNfYrA3UVjrycTzDvG46iSx",
+        "object": "chat.completion",
+        "created": 1709308818,
+        "model": "gpt-4-0125-preview",
+        "system_fingerprint": "fp_00ceb2df5b",
+        "usage": {
+          "prompt_tokens": 889,
+          "completion_tokens": 900,
+          "total_tokens": 1789
+        }
+      }
+    },
+    {
+      "project": "npm-packages",
+      "info": {
+        "pkgName": "object-copy",
+        "title": "深入浅出object-copy：实现对象的深拷贝与属性筛选"
+      },
+      "completionInfo": {
+        "id": "chatcmpl-8yIKGEYQwsAVaTyLL5hb9Vd14ukoS",
+        "object": "chat.completion",
+        "created": 1709380816,
+        "model": "gpt-4-0125-preview",
+        "system_fingerprint": "fp_00ceb2df5b",
+        "usage": {
+          "prompt_tokens": 1824,
+          "completion_tokens": 859,
+          "total_tokens": 2683
+        }
+      }
+    },
+    {
+      "project": "npm-packages",
+      "info": {
+        "pkgName": "wordwrap",
+        "title": "Nodejs 文本自动换行工具：wordwrap 使用全攻略"
+      },
+      "completionInfo": {
+        "id": "chatcmpl-8yM4bIW7QgIsHIxurmUoB5vyj3aGI",
+        "object": "chat.completion",
+        "created": 1709395221,
+        "model": "gpt-4-0125-preview",
+        "system_fingerprint": "fp_70b2088885",
+        "usage": {
+          "prompt_tokens": 1003,
+          "completion_tokens": 1027,
+          "total_tokens": 2030
+        }
+      }
+    },
+    {
+      "project": "npm-packages",
+      "info": {
+        "pkgName": "array-find-index",
+        "title": "深入探索array-find-index：在数组中寻找索引的高效方法"
+      },
+      "completionInfo": {
+        "id": "chatcmpl-8z51WP0NtOovWd2MUoBx9SoKMAAQD",
+        "object": "chat.completion",
+        "created": 1709568010,
+        "model": "gpt-4-0125-preview",
+        "system_fingerprint": "fp_00ceb2df5b",
+        "usage": {
+          "prompt_tokens": 891,
+          "completion_tokens": 909,
+          "total_tokens": 1800
+        }
+      }
+    },
+    {
+      "project": "npm-packages",
+      "info": {
+        "pkgName": "shebang-regex",
+        "title": "用shebang-regex轻松匹配Unix Shebang行"
+      },
+      "completionInfo": {
+        "id": "chatcmpl-8zIDWXvigVWQmVCe4hNuPySb3P5if",
+        "object": "chat.completion",
+        "created": 1709618726,
+        "model": "gpt-4-0125-preview",
+        "system_fingerprint": "fp_00ceb2df5b",
+        "usage": {
+          "prompt_tokens": 872,
+          "completion_tokens": 843,
+          "total_tokens": 1715
         }
       }
     }

@@ -7,7 +7,7 @@ const { copy } = useClipboard();
 const word = ref<EnglishWordsReturnType<'getNotPublishedXhsWord'> | null>(null);
 
 const getTitle = () => {
-  const d = 'AI单词卡';
+  const d = '高考英语3500词';
 
   if (!word.value?.word) return d;
 
