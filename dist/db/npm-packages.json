@@ -2260,7 +2260,7 @@
         "gottenBaseInfo": true,
         "collectedGuide": true,
         "generatedArticle": true,
-        "publishedWeixinDraft": false,
+        "publishedWeixinDraft": true,
         "publishedGithub": false
       },
       "homepage": "https://github.com/sindresorhus/shebang-regex#readme",
