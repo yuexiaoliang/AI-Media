@@ -3859,6 +3859,24 @@
           "total_tokens": 2006
         }
       }
+    },
+    {
+      "project": "english-words",
+      "info": {
+        "word": "rise"
+      },
+      "completionInfo": {
+        "id": "chatcmpl-8zXH9ZbLLSM3hfmgmTUsWercAIytU",
+        "object": "chat.completion",
+        "created": 1709676611,
+        "model": "gpt-4-0125-preview",
+        "system_fingerprint": "fp_70b2088885",
+        "usage": {
+          "prompt_tokens": 1593,
+          "completion_tokens": 500,
+          "total_tokens": 2093
+        }
+      }
     }
   ]
 }
