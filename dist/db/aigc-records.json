@@ -3632,6 +3632,25 @@
           "total_tokens": 2491
         }
       }
+    },
+    {
+      "project": "npm-packages",
+      "info": {
+        "pkgName": "decode-uri-component",
+        "title": "深入理解和使用decode-uri-component：呵护你的URI解码过程"
+      },
+      "completionInfo": {
+        "id": "chatcmpl-8xvqdoJv3U2Vj45aTPXUp5m1INJFh",
+        "object": "chat.completion",
+        "created": 1709294411,
+        "model": "gpt-4-0125-preview",
+        "system_fingerprint": "fp_91aa3742b1",
+        "usage": {
+          "prompt_tokens": 1403,
+          "completion_tokens": 913,
+          "total_tokens": 2316
+        }
+      }
     }
   ]
 }
