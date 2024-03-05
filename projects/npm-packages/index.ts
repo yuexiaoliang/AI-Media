@@ -5,15 +5,23 @@ import { npm, github } from './libraries';
 import * as aigc from './aigc';
 import { PublishedPlatforms } from '@auto-blog/database/npm-packages';
 
-export async function publisher(argv: { platform?: PublishedPlatforms }) {
+export async function publisher(argv: { platform?: PublishedPlatforms; pkg?: string }) {
   const platform: PublishedPlatforms = argv?.platform || 'weixin';
+  const pkgName: string = argv?.pkg || '';
 
   try {
-    console.log('\n 正在获取 npm 包列表...');
-    await npm.collectPackages();
+    let pkg: npmPackagesDB.Package | undefined;
+    if (pkgName) {
+      pkg = await npmPackagesDB.getPackageByName(pkgName);
+    }
 
-    console.log(`\n 正在获取未发布到 ${platform} 的包...`);
-    let pkg = await npmPackagesDB.getRandomNotPublishedPkg(platform);
+    if (!pkg) {
+      console.log('\n 正在获取 npm 包列表...');
+      await npm.collectPackages();
+
+      console.log(`\n 正在获取未发布到 ${platform} 的包...`);
+      pkg = await npmPackagesDB.getRandomNotPublishedPkg(platform);
+    }
     console.log(`\n 已选择包名：${pkg.name}`);
 
     if (!pkg.stepsStatus?.gottenBaseInfo) {

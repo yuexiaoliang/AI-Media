@@ -11,5 +11,9 @@ contextBridge.exposeInMainWorld('ipcRenderer', {
 contextBridge.exposeInMainWorld('ipcRequest', {
   englishWords: async (channel: string, ...args: any[]) => {
     return ipcRenderer.invoke(`english-words/${channel}`, ...args);
+  },
+
+  npmPackages: async (channel: string, ...args: any[]) => {
+    return ipcRenderer.invoke(`npm-packages/${channel}`, ...args);
   }
 });

@@ -2,7 +2,10 @@ import { merge } from 'lodash';
 import { getRandomItem } from '@auto-blog/utils';
 import { defineDatabase } from './common';
 
-export type PublishedPlatforms = 'weixin' | 'github' | 'juejin' | 'xiaohongshu' | 'zhihu';
+export type PublishedPlatformsMap = typeof publishedPlatformsMap
+export type PublishedPlatforms = keyof PublishedPlatformsMap
+export const publishedPlatformsMap = { weixin: '微信', github: 'Github', juejin: '掘金', xiaohongshu: '小红书', zhihu: '知乎' };
+export const publishedPlatforms = Object.keys(publishedPlatformsMap) as PublishedPlatforms[];
 
 export interface PublishedPlatformStatus {
   publishedWeixinDraft: boolean;
@@ -56,6 +59,13 @@ export const replaceOrInsertPackage = async (newPkg: Package) => {
   db.write();
 };
 
+// 根据宝名获取包信息
+export const getPackageByName = async (name: string) => {
+  const [_, data] = await openDatabase();
+
+  return data.packages.find((item) => item.name === name);
+};
+
 // 获取所有未发布到指定平台的包
 export async function getNotPublishedPackages(platform: PublishedPlatforms) {
   const [_, data] = await openDatabase();
@@ -88,7 +98,9 @@ export async function getNotPublishedPackages(platform: PublishedPlatforms) {
     return !item.stepsStatus[s];
   });
 
-  return notPublished;
+  const articleGenerated = notPublished.filter((item) => item.stepsStatus?.generatedArticle);
+
+  return articleGenerated?.length > 0 ? articleGenerated : notPublished;
 }
 
 // 获取所有未发布到微信公众号的包
