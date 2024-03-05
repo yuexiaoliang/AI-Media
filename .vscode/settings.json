@@ -10,11 +10,13 @@
     "filenamify",
     "freepublish",
     "highlightjs",
+    "juejin",
     "outdir",
     "outfile",
     "roughjs",
     "xiaohongshu",
-    "xlink"
+    "xlink",
+    "zhihu"
   ],
   "liveSassCompile.settings.formats": [
     {

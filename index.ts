@@ -12,20 +12,20 @@ main().catch((error) => {
 
 async function main() {
   const argv = yargs(process.argv.slice(2));
-  const platform = argv?.p;
+  const project = argv?.p;
 
-  const platformMap = {
+  const projectsMap = {
     'npm-packages': npmPackagesWeixinPublisher,
     'type-challenges': typeChallengesPublisher,
     'english-words': englishWordsStart
   };
 
-  if (!platform || !platformMap[platform]) {
-    throw new Error('❌ > platform not found');
+  if (!project || !projectsMap[project]) {
+    throw new Error('❌ > project not found');
   }
 
   try {
-    await platformMap[platform](argv);
+    await projectsMap[project](argv);
   } catch (error) {
     throw new Error(error);
   }

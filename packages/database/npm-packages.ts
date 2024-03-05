@@ -2,11 +2,14 @@ import { merge } from 'lodash';
 import { getRandomItem } from '@auto-blog/utils';
 import { defineDatabase } from './common';
 
-export type PublishedPlatforms = 'weixin' | 'github';
+export type PublishedPlatforms = 'weixin' | 'github' | 'juejin' | 'xiaohongshu' | 'zhihu';
 
 export interface PublishedPlatformStatus {
   publishedWeixinDraft: boolean;
   publishedGithub: boolean;
+  publishedJuejin: boolean;
+  publishedXiaohongshu: boolean;
+  publishedZhihu: boolean;
 }
 
 export interface PackageStepsStatus extends PublishedPlatformStatus {
@@ -59,7 +62,10 @@ export async function getNotPublishedPackages(platform: PublishedPlatforms) {
 
   const keyMap: Record<PublishedPlatforms, keyof PublishedPlatformStatus> = {
     weixin: 'publishedWeixinDraft',
-    github: 'publishedGithub'
+    github: 'publishedGithub',
+    juejin: 'publishedJuejin',
+    xiaohongshu: 'publishedXiaohongshu',
+    zhihu: 'publishedZhihu'
   };
 
   const s = keyMap[platform];
@@ -104,6 +110,12 @@ export async function getRandomNotPublishedWeixinDraft() {
 // 随机获取未发布到 Github 的包
 export async function getRandomNotPublishedGithubDraft() {
   const pkgs = await getNotPublishedPackages('github');
+  return getRandomItem(pkgs);
+}
+
+// 随机获取未发布到指定平台的包
+export async function getRandomNotPublishedPkg(platform: PublishedPlatforms) {
+  const pkgs = await getNotPublishedPackages(platform);
   return getRandomItem(pkgs);
 }
 
