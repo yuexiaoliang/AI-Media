@@ -3614,6 +3614,24 @@
           "total_tokens": 1942
         }
       }
+    },
+    {
+      "project": "english-words",
+      "info": {
+        "word": "way"
+      },
+      "completionInfo": {
+        "id": "chatcmpl-8zD4BOtwP4xuPpBKWFOaa4Z1Tt0AX",
+        "object": "chat.completion",
+        "created": 1709598927,
+        "model": "gpt-4-0125-preview",
+        "system_fingerprint": "fp_70b2088885",
+        "usage": {
+          "prompt_tokens": 1828,
+          "completion_tokens": 663,
+          "total_tokens": 2491
+        }
+      }
     }
   ]
 }
