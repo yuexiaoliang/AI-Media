@@ -3547,6 +3547,186 @@
           "total_tokens": 1800
         }
       }
+    },
+    {
+      "project": "english-words",
+      "info": {
+        "word": "trigger"
+      },
+      "completionInfo": {
+        "id": "chatcmpl-8xj6CaP30w9ovs9OFMsjCHUx0b5dt",
+        "object": "chat.completion",
+        "created": 1709245404,
+        "model": "gpt-4-0125-preview",
+        "system_fingerprint": "fp_91aa3742b1",
+        "usage": {
+          "prompt_tokens": 1842,
+          "completion_tokens": 516,
+          "total_tokens": 2358
+        }
+      }
+    },
+    {
+      "project": "english-words",
+      "info": {
+        "word": "joint"
+      },
+      "completionInfo": {
+        "id": "chatcmpl-8xlSLVnFoIUla7Qi3kjrm7R5bfpS9",
+        "object": "chat.completion",
+        "created": 1709254465,
+        "model": "gpt-4-0125-preview",
+        "system_fingerprint": "fp_00ceb2df5b",
+        "usage": {
+          "prompt_tokens": 2006,
+          "completion_tokens": 555,
+          "total_tokens": 2561
+        }
+      }
+    },
+    {
+      "project": "english-words",
+      "info": {
+        "word": "arrival"
+      },
+      "completionInfo": {
+        "id": "chatcmpl-8xuBFj1DrpJQmleP4rdUrcNDGpsPQ",
+        "object": "chat.completion",
+        "created": 1709288001,
+        "model": "gpt-4-0125-preview",
+        "system_fingerprint": "fp_00ceb2df5b",
+        "usage": {
+          "prompt_tokens": 1462,
+          "completion_tokens": 537,
+          "total_tokens": 1999
+        }
+      }
+    },
+    {
+      "project": "english-words",
+      "info": {
+        "word": "municipal"
+      },
+      "completionInfo": {
+        "id": "chatcmpl-8xuF0uXx0LdQsWIFFYVfN497abXRV",
+        "object": "chat.completion",
+        "created": 1709288234,
+        "model": "gpt-4-0125-preview",
+        "system_fingerprint": "fp_70b2088885",
+        "usage": {
+          "prompt_tokens": 1450,
+          "completion_tokens": 627,
+          "total_tokens": 2077
+        }
+      }
+    },
+    {
+      "project": "english-words",
+      "info": {
+        "word": "biological"
+      },
+      "completionInfo": {
+        "id": "chatcmpl-8yHelkDhaAzasFh6G5q2arFlVTgq6",
+        "object": "chat.completion",
+        "created": 1709378243,
+        "model": "gpt-4-0125-preview",
+        "system_fingerprint": "fp_70b2088885",
+        "usage": {
+          "prompt_tokens": 1470,
+          "completion_tokens": 680,
+          "total_tokens": 2150
+        }
+      }
+    },
+    {
+      "project": "english-words",
+      "info": {
+        "word": "toast"
+      },
+      "completionInfo": {
+        "id": "chatcmpl-8yS1MmQNC8WqcYU0ZCHEKkWXBPJZp",
+        "object": "chat.completion",
+        "created": 1709418084,
+        "model": "gpt-4-0125-preview",
+        "system_fingerprint": "fp_00ceb2df5b",
+        "usage": {
+          "prompt_tokens": 1560,
+          "completion_tokens": 693,
+          "total_tokens": 2253
+        }
+      }
+    },
+    {
+      "project": "english-words",
+      "info": {
+        "word": "trot"
+      },
+      "completionInfo": {
+        "id": "chatcmpl-8yeRdIcdpFfIrGXcwQfxCPFuHKWFh",
+        "object": "chat.completion",
+        "created": 1709465841,
+        "model": "gpt-4-0125-preview",
+        "system_fingerprint": "fp_70b2088885",
+        "usage": {
+          "prompt_tokens": 2171,
+          "completion_tokens": 623,
+          "total_tokens": 2794
+        }
+      }
+    },
+    {
+      "project": "english-words",
+      "info": {
+        "word": "apparently"
+      },
+      "completionInfo": {
+        "id": "chatcmpl-8yoDQDYslnu0O8KpKjXPWcBSCAAMy",
+        "object": "chat.completion",
+        "created": 1709503400,
+        "model": "gpt-4-0125-preview",
+        "system_fingerprint": "fp_70b2088885",
+        "usage": {
+          "prompt_tokens": 1495,
+          "completion_tokens": 533,
+          "total_tokens": 2028
+        }
+      }
+    },
+    {
+      "project": "english-words",
+      "info": {
+        "word": "coincide"
+      },
+      "completionInfo": {
+        "id": "chatcmpl-8z0kYDeSQVFMaKH1dL0oad5slBoCC",
+        "object": "chat.completion",
+        "created": 1709551582,
+        "model": "gpt-4-0125-preview",
+        "system_fingerprint": "fp_70b2088885",
+        "usage": {
+          "prompt_tokens": 1444,
+          "completion_tokens": 498,
+          "total_tokens": 1942
+        }
+      }
+    },
+    {
+      "project": "english-words",
+      "info": {
+        "word": "way"
+      },
+      "completionInfo": {
+        "id": "chatcmpl-8zD4BOtwP4xuPpBKWFOaa4Z1Tt0AX",
+        "object": "chat.completion",
+        "created": 1709598927,
+        "model": "gpt-4-0125-preview",
+        "system_fingerprint": "fp_70b2088885",
+        "usage": {
+          "prompt_tokens": 1828,
+          "completion_tokens": 663,
+          "total_tokens": 2491
+        }
+      }
     }
   ]
 }
