@@ -3895,6 +3895,24 @@
           "total_tokens": 1992
         }
       }
+    },
+    {
+      "project": "english-words",
+      "info": {
+        "word": "concrete"
+      },
+      "completionInfo": {
+        "id": "chatcmpl-8zuDvFVl73af2bG088YegxnsialfP",
+        "object": "chat.completion",
+        "created": 1709764823,
+        "model": "gpt-4-0125-preview",
+        "system_fingerprint": "fp_00ceb2df5b",
+        "usage": {
+          "prompt_tokens": 1857,
+          "completion_tokens": 728,
+          "total_tokens": 2585
+        }
+      }
     }
   ]
 }

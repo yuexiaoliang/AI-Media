@@ -2587,7 +2587,9 @@
       "word": "conclusion"
     },
     {
-      "word": "concrete"
+      "word": "concrete",
+      "dataGenerated": true,
+      "xhsPublished": true
     },
     {
       "word": "condition"
