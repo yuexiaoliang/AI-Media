@@ -49,6 +49,6 @@ export async function publisher(argv: { platform?: PublishedPlatforms; pkg?: str
     console.log('\n 完成了！');
     return { pkg, html, meta, coverPath, md };
   } catch (error: any) {
-    console.log(`Error:`, error);
+    throw error
   }
 }
