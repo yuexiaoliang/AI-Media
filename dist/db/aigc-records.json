@@ -3877,6 +3877,24 @@
           "total_tokens": 2093
         }
       }
+    },
+    {
+      "project": "english-words",
+      "info": {
+        "word": "harmful"
+      },
+      "completionInfo": {
+        "id": "chatcmpl-8zifmmxlpwoGJr7FniZ94Wflrxqhz",
+        "object": "chat.completion",
+        "created": 1709720422,
+        "model": "gpt-4-0125-preview",
+        "system_fingerprint": "fp_70b2088885",
+        "usage": {
+          "prompt_tokens": 1402,
+          "completion_tokens": 590,
+          "total_tokens": 1992
+        }
+      }
     }
   ]
 }
