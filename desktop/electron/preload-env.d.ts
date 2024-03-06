@@ -8,6 +8,8 @@ type EnglishWordsReturnType<T extends keyof EnglishWords> = Awaited<ReturnType<E
 interface NPMPackages {
   getRandomNotPublishedPkg: import('./controller/npm-packages').GetRandomNotPublishedPkg;
   getPublishedPlatformsMap: import('./controller/npm-packages').GetPublishedPlatformsMap;
+  getArticleFile: import('./controller/npm-packages').GetArticleFile;
+  getCover: import('./controller/npm-packages').GetCover;
 }
 
 type NPMPackagesReturnType<T extends keyof NPMPackages> = Awaited<ReturnType<NPMPackages[T]>>;

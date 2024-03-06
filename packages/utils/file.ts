@@ -4,6 +4,15 @@ import crypto from 'crypto';
 import { fileTypeFromBuffer } from 'file-type';
 import { getRandomItem } from './index';
 
+export function getRootDir(isDist = true) {
+  const cwd = process.cwd();
+  const root = path.resolve(cwd.split('auto-blog')[0], 'auto-blog');
+
+  if (isDist) return path.resolve(root, 'dist');
+
+  return root;
+}
+
 // 保存文件到本地
 export function saveFile(filepath: string, content: string | NodeJS.ArrayBufferView) {
   const dir = path.dirname(filepath);
