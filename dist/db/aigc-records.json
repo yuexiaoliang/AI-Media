@@ -3913,6 +3913,24 @@
           "total_tokens": 2585
         }
       }
+    },
+    {
+      "project": "english-words",
+      "info": {
+        "word": "five"
+      },
+      "completionInfo": {
+        "id": "chatcmpl-905Soil0LVl4uBEun0ryj9m9WBnT1",
+        "object": "chat.completion",
+        "created": 1709808030,
+        "model": "gpt-4-0125-preview",
+        "system_fingerprint": "fp_00ceb2df5b",
+        "usage": {
+          "prompt_tokens": 1622,
+          "completion_tokens": 534,
+          "total_tokens": 2156
+        }
+      }
     }
   ]
 }
