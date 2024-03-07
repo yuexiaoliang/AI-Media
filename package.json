@@ -55,6 +55,7 @@
     "filenamify": "^6.0.0",
     "form-data": "^4.0.0",
     "fs-extra": "^11.1.1",
+    "html-entities": "^2.5.2",
     "html-to-md": "^0.8.4",
     "js-yaml": "^4.1.0",
     "jsonfile": "^6.1.0",
