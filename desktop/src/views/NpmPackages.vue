@@ -18,14 +18,12 @@ async function getPlatforms() {
   });
 }
 
-const info = ref<NPMPackagesReturnType<'getRandomNotPublishedPkg'> | null>(null);
 async function getInfo() {
   if (!platform.value?.value) return;
 
   const res = await window.ipcRequest.npmPackages('getRandomNotPublishedPkg', platform.value.value);
   if (!res) return;
 
-  info.value = res;
   pkgName.value = res.name;
 }
 
@@ -36,6 +34,7 @@ const getDetails = async () => {
   try {
     const res = await window.ipcRequest.npmPackages('getArticleFile', pkgName.value);
     if (!res) return;
+    console.log(`🚀 > getDetails > res:`, res);
 
     details.value = res;
   } catch (error) {
@@ -48,7 +47,6 @@ async function update() {
 
   await window.ipcRequest.englishWords('updateWordRecord', pkgName.value, { xhsPublished: true });
 
-  info.value = null;
   pkgName.value = '';
   details.value = null;
 }
@@ -71,13 +69,9 @@ init();
 
       <a-button-group style="width: 100%">
         <a-input v-model="pkgName" class="update-input" />
-        <a-button type="primary" long :disabled="!pkgName" status="success" style="width: 120px">设置为已发布</a-button>
         <a-button type="primary" long :disabled="!pkgName" style="width: 120px" @click="getDetails">获取包详情</a-button>
-      </a-button-group>
-
-      <a-button-group v-if="info?.name" style="width: 100%">
-        <a-button type="outline" long disabled>{{ info.name }}</a-button>
-        <a-button type="primary" class="copy-button" @click="copy(info.name)">复制包名</a-button>
+        <a-button type="primary" status="warning" @click="copy(pkgName)">复制包名</a-button>
+        <a-button type="primary" long :disabled="!pkgName" status="success" style="width: 120px">设置为已发布</a-button>
       </a-button-group>
 
       <template v-if="pkgName === details?.name">
@@ -102,6 +96,9 @@ init();
 
 <style lang="scss" scoped>
 .npm-packages {
+  display: flex;
+  justify-content: center;
+
   .update-input {
     :deep(.arco-input-append) {
       padding: 0;
