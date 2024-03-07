@@ -3931,6 +3931,24 @@
           "total_tokens": 2156
         }
       }
+    },
+    {
+      "project": "english-words",
+      "info": {
+        "word": "scan"
+      },
+      "completionInfo": {
+        "id": "chatcmpl-90Fv7xkdTAD6COFBwy3iQ0MsbtRCD",
+        "object": "chat.completion",
+        "created": 1709848225,
+        "model": "gpt-4-0125-preview",
+        "system_fingerprint": "fp_70b2088885",
+        "usage": {
+          "prompt_tokens": 1628,
+          "completion_tokens": 585,
+          "total_tokens": 2213
+        }
+      }
     }
   ]
 }
