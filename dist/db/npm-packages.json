@@ -751,7 +751,8 @@
         "collectedGuide": true,
         "generatedArticle": true,
         "publishedWeixinDraft": true,
-        "publishedGithub": false
+        "publishedGithub": false,
+        "publishedJuejin": true
       },
       "homepage": "https://github.com/calvinmetcalf/process-nextick-args",
       "repository_url": "https://github.com/calvinmetcalf/process-nextick-args"
