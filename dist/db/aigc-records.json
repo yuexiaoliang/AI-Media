@@ -4024,6 +4024,24 @@
           "total_tokens": 1698
         }
       }
+    },
+    {
+      "project": "english-words",
+      "info": {
+        "word": "forbid"
+      },
+      "completionInfo": {
+        "id": "chatcmpl-90d1A3gDI75eJByIV7Fb5gW5YRCqZ",
+        "object": "chat.completion",
+        "created": 1709937012,
+        "model": "gpt-4-0125-preview",
+        "system_fingerprint": "fp_31c0f205d1",
+        "usage": {
+          "prompt_tokens": 1511,
+          "completion_tokens": 679,
+          "total_tokens": 2190
+        }
+      }
     }
   ]
 }
