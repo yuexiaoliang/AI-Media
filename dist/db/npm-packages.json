@@ -2313,12 +2313,14 @@
     {
       "name": "shebang-command",
       "stepsStatus": {
-        "gottenBaseInfo": false,
-        "collectedGuide": false,
+        "gottenBaseInfo": true,
+        "collectedGuide": true,
         "generatedArticle": false,
         "publishedWeixinDraft": false,
         "publishedGithub": false
-      }
+      },
+      "homepage": "https://github.com/kevva/shebang-command#readme",
+      "repository_url": "https://github.com/kevva/shebang-command"
     },
     {
       "name": "json5",
@@ -3361,12 +3363,14 @@
     {
       "name": "pkg-dir",
       "stepsStatus": {
-        "gottenBaseInfo": false,
-        "collectedGuide": false,
-        "generatedArticle": false,
-        "publishedWeixinDraft": false,
+        "gottenBaseInfo": true,
+        "collectedGuide": true,
+        "generatedArticle": true,
+        "publishedWeixinDraft": true,
         "publishedGithub": false
-      }
+      },
+      "homepage": "https://github.com/sindresorhus/pkg-dir#readme",
+      "repository_url": "https://github.com/sindresorhus/pkg-dir"
     },
     {
       "name": "is-accessor-descriptor",

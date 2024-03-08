@@ -3967,6 +3967,25 @@
           "total_tokens": 2217
         }
       }
+    },
+    {
+      "project": "npm-packages",
+      "info": {
+        "pkgName": "pkg-dir",
+        "title": "深入pkg-dir：高效寻找Node.js项目根目录"
+      },
+      "completionInfo": {
+        "id": "chatcmpl-8zNl0lIcHIU9aZymgIFEhgkgrO31w",
+        "object": "chat.completion",
+        "created": 1709640022,
+        "model": "gpt-4-0125-preview",
+        "system_fingerprint": "fp_00ceb2df5b",
+        "usage": {
+          "prompt_tokens": 947,
+          "completion_tokens": 871,
+          "total_tokens": 1818
+        }
+      }
     }
   ]
 }
