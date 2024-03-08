@@ -4005,6 +4005,25 @@
           "total_tokens": 1614
         }
       }
+    },
+    {
+      "project": "npm-packages",
+      "info": {
+        "pkgName": "shebang-command",
+        "title": "如何使用shebang-command轻松获取Shebang中的命令"
+      },
+      "completionInfo": {
+        "id": "chatcmpl-90TCWqI4mat3Ig61lkd14TjnmTq4e",
+        "object": "chat.completion",
+        "created": 1709899276,
+        "model": "gpt-4-0125-preview",
+        "system_fingerprint": "fp_70b2088885",
+        "usage": {
+          "prompt_tokens": 831,
+          "completion_tokens": 867,
+          "total_tokens": 1698
+        }
+      }
     }
   ]
 }

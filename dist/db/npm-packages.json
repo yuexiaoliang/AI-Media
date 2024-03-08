@@ -367,7 +367,8 @@
         "collectedGuide": true,
         "generatedArticle": true,
         "publishedWeixinDraft": true,
-        "publishedGithub": false
+        "publishedGithub": false,
+        "publishedJuejin": true
       },
       "homepage": "https://github.com/nodeca/argparse#readme",
       "repository_url": "https://github.com/nodeca/argparse"
@@ -2317,7 +2318,7 @@
       "stepsStatus": {
         "gottenBaseInfo": true,
         "collectedGuide": true,
-        "generatedArticle": false,
+        "generatedArticle": true,
         "publishedWeixinDraft": false,
         "publishedGithub": false
       },
