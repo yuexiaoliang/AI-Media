@@ -1,3 +1,4 @@
+import html2md from 'html-to-md';
 import { npmPackagesDB } from '@auto-blog/database';
 import { weixin } from '@auto-blog/platform';
 import * as cover from './cover';
@@ -47,8 +48,9 @@ export async function publisher(argv: { platform?: PublishedPlatforms; pkg?: str
     }
 
     console.log('\n 完成了！');
-    return { pkg, html, meta, coverPath, md };
+
+    console.log(`###运行完成${JSON.stringify({ name: pkg.name, title: meta.title, desc: meta.desc, cover: coverPath, md: html2md(html) })}###运行完成`);
   } catch (error: any) {
-    throw error
+    throw error;
   }
 }
