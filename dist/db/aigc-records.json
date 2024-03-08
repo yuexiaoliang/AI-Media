@@ -3986,6 +3986,25 @@
           "total_tokens": 1818
         }
       }
+    },
+    {
+      "project": "npm-packages",
+      "info": {
+        "pkgName": "sshpk",
+        "title": "sshpk 使用指南：加解密和认证技巧"
+      },
+      "completionInfo": {
+        "id": "chatcmpl-8zc6Gc2UZKVira0F72ao7IZBmGMW8",
+        "object": "chat.completion",
+        "created": 1709695156,
+        "model": "gpt-4-0125-preview",
+        "system_fingerprint": "fp_70b2088885",
+        "usage": {
+          "prompt_tokens": 616,
+          "completion_tokens": 998,
+          "total_tokens": 1614
+        }
+      }
     }
   ]
 }

@@ -4,6 +4,7 @@ import yargs from 'yargs-parser';
 import { publisher as npmPackagesWeixinPublisher } from '@auto-blog/npm-packages';
 import { publisher as typeChallengesPublisher } from '@auto-blog/type-challenges';
 import { start as englishWordsStart } from '@auto-blog/english-words';
+import { setPackageStatus } from '@auto-blog/database/npm-packages';
 
 main().catch((error) => {
   console.error(error);
@@ -12,7 +13,20 @@ main().catch((error) => {
 
 async function main() {
   const argv = yargs(process.argv.slice(2));
-  const project = argv?.p;
+  const { setPublished, p: project, pkg } = argv;
+
+  // 设置包的发布状态
+  if (project === 'npm-packages' && setPublished && pkg) {
+    const key = {
+      juejin: 'publishedJuejin',
+      weixin: 'publishedWeixinDraft',
+      github: 'publishedGithub',
+      xiaohongshu: 'publishedXiaohongshu',
+      zhihu: 'publishedZhihu'
+    }[setPublished];
+    await setPackageStatus(pkg, key, true);
+    return;
+  }
 
   const projectsMap = {
     'npm-packages': npmPackagesWeixinPublisher,
