@@ -4010,7 +4010,6 @@
       "project": "npm-packages",
       "info": {
         "pkgName": "shebang-command",
-<<<<<<< HEAD
         "title": "如何使用shebang-command轻松获取Shebang中的命令"
       },
       "completionInfo": {
@@ -4041,20 +4040,6 @@
           "prompt_tokens": 1511,
           "completion_tokens": 679,
           "total_tokens": 2190
-=======
-        "title": "使用shebang-command提取脚本的解释器命令"
-      },
-      "completionInfo": {
-        "id": "chatcmpl-90WvmMeRKXgNmCZ8IZHmPxoBPrJnZ",
-        "object": "chat.completion",
-        "created": 1709913614,
-        "model": "gpt-4-0125-preview",
-        "system_fingerprint": "fp_c121a3f431",
-        "usage": {
-          "prompt_tokens": 827,
-          "completion_tokens": 770,
-          "total_tokens": 1597
->>>>>>> 46ba88d1c1ce3ec652143370b9ad9a1ce29d271d
         }
       }
     }
