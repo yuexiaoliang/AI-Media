@@ -1689,6 +1689,16 @@
         "media_id": "3TI8XMZiLsZyu-QJGQpsXGERLmbcNQdS8Mso-XCpRNKDWuey4nqt9VvJQHtUc8nN",
         "url": "http://mmbiz.qpic.cn/mmbiz_png/QPCr6EnHPrwgPHriaFjRcggw0trDeNHqBfoj7VHxXurdEmibib0HGP5iaMLly2TIsSazlLvaX3wFicT5lRiboAFVy8uQ/0?wx_fmt=png"
       }
+    },
+    {
+      "project": "npm-packages",
+      "info": {
+        "pkgName": "browserify-sign"
+      },
+      "materialInfo": {
+        "media_id": "3TI8XMZiLsZyu-QJGQpsXBD-FMIhU-P2dbv_OG-2BgjusB-1MIxin8o4kXQGf9ux",
+        "url": "http://mmbiz.qpic.cn/mmbiz_png/QPCr6EnHPrwgPHriaFjRcggw0trDeNHqBfcTNiadUEcfNwAjibPSsSZ1hD6YwbPeTFbpar5nU0SQXfTAOnEsBYpcA/0?wx_fmt=png"
+      }
     }
   ]
 }

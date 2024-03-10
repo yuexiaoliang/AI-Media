@@ -3189,12 +3189,14 @@
     {
       "name": "browserify-sign",
       "stepsStatus": {
-        "gottenBaseInfo": false,
-        "collectedGuide": false,
-        "generatedArticle": false,
-        "publishedWeixinDraft": false,
+        "gottenBaseInfo": true,
+        "collectedGuide": true,
+        "generatedArticle": true,
+        "publishedWeixinDraft": true,
         "publishedGithub": false
-      }
+      },
+      "homepage": "https://github.com/crypto-browserify/browserify-sign#readme",
+      "repository_url": "https://github.com/crypto-browserify/browserify-sign"
     },
     {
       "name": "buffer-xor",
