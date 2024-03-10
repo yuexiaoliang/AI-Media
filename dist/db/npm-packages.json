@@ -2319,11 +2319,7 @@
         "gottenBaseInfo": true,
         "collectedGuide": true,
         "generatedArticle": true,
-<<<<<<< HEAD
-        "publishedWeixinDraft": false,
-=======
         "publishedWeixinDraft": true,
->>>>>>> 46ba88d1c1ce3ec652143370b9ad9a1ce29d271d
         "publishedGithub": false
       },
       "homepage": "https://github.com/kevva/shebang-command#readme",
