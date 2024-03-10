@@ -4061,6 +4061,24 @@
           "total_tokens": 2116
         }
       }
+    },
+    {
+      "project": "english-words",
+      "info": {
+        "word": "traveler"
+      },
+      "completionInfo": {
+        "id": "chatcmpl-91BmhtmMT0Ce6PJbBiwUejTDR3W5P",
+        "object": "chat.completion",
+        "created": 1710070655,
+        "model": "gpt-4-0125-preview",
+        "system_fingerprint": "fp_31c0f205d1",
+        "usage": {
+          "prompt_tokens": 1652,
+          "completion_tokens": 659,
+          "total_tokens": 2311
+        }
+      }
     }
   ]
 }

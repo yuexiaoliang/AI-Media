@@ -10679,7 +10679,9 @@
       "word": "travel"
     },
     {
-      "word": "traveler"
+      "word": "traveler",
+      "dataGenerated": true,
+      "xhsPublished": true
     },
     {
       "word": "treasure"
