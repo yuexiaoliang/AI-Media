@@ -4042,6 +4042,25 @@
           "total_tokens": 2190
         }
       }
+    },
+    {
+      "project": "npm-packages",
+      "info": {
+        "pkgName": "deep-is",
+        "title": "深度比较神器：使用deep-is精准判断JavaScript对象"
+      },
+      "completionInfo": {
+        "id": "chatcmpl-91BkkuRIcyarediV57IHKp9zVaRmi",
+        "object": "chat.completion",
+        "created": 1710070534,
+        "model": "gpt-4-0125-preview",
+        "system_fingerprint": "fp_31c0f205d1",
+        "usage": {
+          "prompt_tokens": 1211,
+          "completion_tokens": 905,
+          "total_tokens": 2116
+        }
+      }
     }
   ]
 }
