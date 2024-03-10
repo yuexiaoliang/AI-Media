@@ -307,7 +307,8 @@
         "collectedGuide": true,
         "generatedArticle": true,
         "publishedWeixinDraft": true,
-        "publishedGithub": false
+        "publishedGithub": false,
+        "publishedJuejin": true
       },
       "homepage": "https://github.com/isaacs/node-mkdirp#readme",
       "repository_url": "https://github.com/isaacs/node-mkdirp"
