@@ -4079,6 +4079,24 @@
           "total_tokens": 2311
         }
       }
+    },
+    {
+      "project": "english-words",
+      "info": {
+        "word": "son"
+      },
+      "completionInfo": {
+        "id": "chatcmpl-91NX5Xy65m1LZGCDcRcaeqtbn0OfQ",
+        "object": "chat.completion",
+        "created": 1710115815,
+        "model": "gpt-4-0125-preview",
+        "system_fingerprint": "fp_32a098fbf7",
+        "usage": {
+          "prompt_tokens": 1573,
+          "completion_tokens": 605,
+          "total_tokens": 2178
+        }
+      }
     }
   ]
 }
