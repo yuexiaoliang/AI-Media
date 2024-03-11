@@ -4115,6 +4115,24 @@
           "total_tokens": 1897
         }
       }
+    },
+    {
+      "project": "english-words",
+      "info": {
+        "word": "level"
+      },
+      "completionInfo": {
+        "id": "chatcmpl-91iRsyla9ZYver6ZwTU57wXARd2RU",
+        "object": "chat.completion",
+        "created": 1710196216,
+        "model": "gpt-4-0125-preview",
+        "system_fingerprint": "fp_70b2088885",
+        "usage": {
+          "prompt_tokens": 2363,
+          "completion_tokens": 609,
+          "total_tokens": 2972
+        }
+      }
     }
   ]
 }
