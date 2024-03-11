@@ -1072,7 +1072,8 @@
         "collectedGuide": true,
         "generatedArticle": true,
         "publishedWeixinDraft": true,
-        "publishedGithub": false
+        "publishedGithub": false,
+        "publishedJuejin": true
       },
       "homepage": "https://github.com/paulmillr/chokidar",
       "repository_url": "https://github.com/paulmillr/chokidar"
