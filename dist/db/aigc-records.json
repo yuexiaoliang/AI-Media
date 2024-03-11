@@ -4098,6 +4098,25 @@
           "total_tokens": 2142
         }
       }
+    },
+    {
+      "project": "npm-packages",
+      "info": {
+        "pkgName": "wrap-ansi",
+        "title": "优雅地处理终端字符串换行：探索 wrap-ansi 的强大功能"
+      },
+      "completionInfo": {
+        "id": "chatcmpl-91Ycss7Nx8kLAcHVQCi0ENMmbN21n",
+        "object": "chat.completion",
+        "created": 1710158458,
+        "model": "gpt-4-0125-preview",
+        "system_fingerprint": "fp_31c0f205d1",
+        "usage": {
+          "prompt_tokens": 1108,
+          "completion_tokens": 1220,
+          "total_tokens": 2328
+        }
+      }
     }
   ]
 }
