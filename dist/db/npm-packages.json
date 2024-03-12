@@ -4026,12 +4026,14 @@
     {
       "name": "regexpu-core",
       "stepsStatus": {
-        "gottenBaseInfo": false,
-        "collectedGuide": false,
+        "gottenBaseInfo": true,
+        "collectedGuide": true,
         "generatedArticle": false,
         "publishedWeixinDraft": false,
         "publishedGithub": false
-      }
+      },
+      "homepage": "https://mths.be/regexpu",
+      "repository_url": "https://github.com/mathiasbynens/regexpu-core"
     },
     {
       "name": "babel-template",
