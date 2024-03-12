@@ -2522,12 +2522,14 @@
     {
       "name": "wrap-ansi",
       "stepsStatus": {
-        "gottenBaseInfo": false,
-        "collectedGuide": false,
-        "generatedArticle": false,
-        "publishedWeixinDraft": false,
+        "gottenBaseInfo": true,
+        "collectedGuide": true,
+        "generatedArticle": true,
+        "publishedWeixinDraft": true,
         "publishedGithub": false
-      }
+      },
+      "homepage": "https://github.com/chalk/wrap-ansi#readme",
+      "repository_url": "https://github.com/chalk/wrap-ansi"
     },
     {
       "name": "buffer",
@@ -2766,12 +2768,14 @@
     {
       "name": "os-homedir",
       "stepsStatus": {
-        "gottenBaseInfo": false,
-        "collectedGuide": false,
-        "generatedArticle": false,
-        "publishedWeixinDraft": false,
+        "gottenBaseInfo": true,
+        "collectedGuide": true,
+        "generatedArticle": true,
+        "publishedWeixinDraft": true,
         "publishedGithub": false
-      }
+      },
+      "homepage": "https://github.com/sindresorhus/os-homedir#readme",
+      "repository_url": "https://github.com/sindresorhus/os-homedir"
     },
     {
       "name": "p-limit",
@@ -3192,12 +3196,14 @@
     {
       "name": "browserify-sign",
       "stepsStatus": {
-        "gottenBaseInfo": false,
-        "collectedGuide": false,
-        "generatedArticle": false,
-        "publishedWeixinDraft": false,
+        "gottenBaseInfo": true,
+        "collectedGuide": true,
+        "generatedArticle": true,
+        "publishedWeixinDraft": true,
         "publishedGithub": false
-      }
+      },
+      "homepage": "https://github.com/crypto-browserify/browserify-sign#readme",
+      "repository_url": "https://github.com/crypto-browserify/browserify-sign"
     },
     {
       "name": "buffer-xor",
@@ -3397,7 +3403,7 @@
         "gottenBaseInfo": true,
         "collectedGuide": true,
         "generatedArticle": true,
-        "publishedWeixinDraft": false,
+        "publishedWeixinDraft": true,
         "publishedGithub": false
       },
       "homepage": "https://github.com/thlorenz/deep-is#readme",
