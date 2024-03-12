@@ -5,6 +5,8 @@
   "main": "index.js",
   "type": "module",
   "scripts": {
+    "tsup": "tsup --config tsup.config.ts",
+    "tsup:watch": "tsup --config tsup.config.ts --watch --onSuccess \"node dist/index.js\"",
     "dev:npm": "node ./build.js -p npm-packages --watch",
     "dev:ts": "node ./build.js -p type-challenges --watch",
     "dev:words": "node ./build.js -p english-words --watch",
@@ -25,6 +27,7 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "@swc/core": "^1.4.6",
     "@types/fs-extra": "^11.0.4",
     "@types/js-yaml": "^4.0.9",
     "@types/jsonfile": "^6.1.4",
@@ -33,6 +36,9 @@
     "@types/node": "^20.9.2",
     "@types/yargs-parser": "^21.0.3",
     "esbuild": "^0.19.6",
+    "ts-node": "^10.9.2",
+    "tsup": "^8.0.2",
+    "tsup-node": "^0.1.0",
     "typescript": "^5.2.2"
   },
   "dependencies": {
@@ -43,6 +49,7 @@
     "@auto-blog/md-render": "workspace:^",
     "@auto-blog/npm-packages": "workspace:^",
     "@auto-blog/openai": "workspace:^",
+    "@auto-blog/orm": "workspace:^",
     "@auto-blog/platform": "workspace:^",
     "@auto-blog/type-challenges": "workspace:^",
     "@auto-blog/utils": "workspace:^",
@@ -64,10 +71,13 @@
     "lowdb": "^6.1.1",
     "markdown-it": "^13.0.2",
     "markdown-it-highlightjs": "^4.0.1",
+    "mysql2": "^3.9.2",
     "nanoid": "^5.0.3",
     "puppeteer": "^21.5.2",
     "query-string": "^8.1.0",
+    "reflect-metadata": "^0.2.1",
     "rimraf": "^5.0.5",
+    "typeorm": "^0.3.20",
     "wait": "^0.4.2",
     "yargs-parser": "^21.1.1"
   }

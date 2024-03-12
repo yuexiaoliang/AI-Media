@@ -1,3 +1,4 @@
+import { dataToStatus } from '../abstracts/transform';
 import { initDataSource } from '../data-source';
 import { saveTags } from '../tags/services';
 import { NpmPackageEntity } from './entities';
@@ -15,8 +16,8 @@ export async function saveNpmPackage(data: NpmPackage) {
   await queryRunner.startTransaction();
 
   try {
-    const { tags, ...rest } = data;
-    const newData = (tags ? { ...rest, tags: await saveTags(data.tags) } : rest) as NpmPackageEntity;
+    const { tags, ...rest } = dataToStatus(data);
+    const newData = (tags ? { ...rest, tags: await saveTags(tags) } : rest) as NpmPackageEntity;
 
     let pkgEntity = await repository.findOne({ where: { pkg: data.pkg } });
 
@@ -32,7 +33,7 @@ export async function saveNpmPackage(data: NpmPackage) {
 
     return pkgEntity;
   } catch (error) {
-    console.error(`[Package: ${data.pkg}] -> 保存出错了（${error.message}）`);
+    console.error(`[Package: ${data.pkg}] -> 保存出错了（${error}）`);
     await queryRunner.rollbackTransaction();
   } finally {
     await queryRunner.release();
@@ -43,6 +44,7 @@ export async function saveNpmPackage(data: NpmPackage) {
  * 批量保存 npm 包
  */
 export const saveNpmPackages = async (data: NpmPackage[]) => {
+  const total = data.length;
   const dataSource = await initDataSource();
 
   const errorResult = [];
@@ -53,8 +55,9 @@ export const saveNpmPackages = async (data: NpmPackage[]) => {
       const pkgEntity = await saveNpmPackage(item);
       successResult.push(pkgEntity);
     } catch (error) {
-      errorResult.push({ pkg: item.pkg, error: error.message });
+      errorResult.push({ pkg: item.pkg, error });
     }
+    console.log(`[Package: ${item.pkg}] -> 已处理 ${successResult.length + errorResult.length}/${total}`);
   }
 
   await dataSource.destroy();

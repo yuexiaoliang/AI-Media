@@ -1,7 +1,6 @@
-import 'dotenv/config';
 import 'reflect-metadata';
-
 import { DataSource } from 'typeorm';
+import constants from '@auto-blog/constants';
 
 import { EnglishWordEntity } from './english-words/entities';
 import { NpmPackageEntity } from './npm-packages/entities';
@@ -9,11 +8,11 @@ import { TagEntity } from './tags/entities';
 
 export const AppDataSource = new DataSource({
   type: 'mysql',
-  host: '47.92.107.189',
-  port: 3306,
-  username: 'hFRoWG',
-  password: 'ZWMyYsdB4282Nt88',
-  database: 'auto_media',
+  host: constants.MYSQL_HOST,
+  port: constants.MYSQL_PORT,
+  username: constants.MYSQL_USER,
+  password: constants.MYSQL_PASSWORD,
+  database: constants.MYSQL_DATABASE,
   synchronize: true,
   entities: [EnglishWordEntity, NpmPackageEntity, TagEntity]
 });
