@@ -4190,6 +4190,24 @@
           "total_tokens": 1855
         }
       }
+    },
+    {
+      "project": "english-words",
+      "info": {
+        "word": "measure"
+      },
+      "completionInfo": {
+        "id": "chatcmpl-928CZRNIfG2puV16Z7TRlfVDEBwG7",
+        "object": "chat.completion",
+        "created": 1710295211,
+        "model": "gpt-4-0125-preview",
+        "system_fingerprint": "fp_c121a3f431",
+        "usage": {
+          "prompt_tokens": 1669,
+          "completion_tokens": 672,
+          "total_tokens": 2341
+        }
+      }
     }
   ]
 }
