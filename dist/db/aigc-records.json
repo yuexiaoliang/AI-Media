@@ -4208,6 +4208,25 @@
           "total_tokens": 2341
         }
       }
+    },
+    {
+      "project": "npm-packages",
+      "info": {
+        "pkgName": "regexpu-core",
+        "title": "在旧版JavaScript中使用ES2015+ Unicode正则表达式的终极指南"
+      },
+      "completionInfo": {
+        "id": "chatcmpl-928FT46wLTuybSkNrJ7Y1CioHafL7",
+        "object": "chat.completion",
+        "created": 1710295391,
+        "model": "gpt-4-0125-preview",
+        "system_fingerprint": "fp_31c0f205d1",
+        "usage": {
+          "prompt_tokens": 3604,
+          "completion_tokens": 1210,
+          "total_tokens": 4814
+        }
+      }
     }
   ]
 }
