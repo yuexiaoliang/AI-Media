@@ -1,5 +1,5 @@
 import { Column, Entity, PrimaryGeneratedColumn, JoinTable, ManyToMany } from 'typeorm';
-import { StatusAbstract, TimestampAbstract } from '../abstracts/entities';
+import { StatusAbstract, TimestampAbstract } from '../common/entities';
 import { TagEntity } from '../tags/entities';
 
 @Entity('npm-packages')

@@ -1,5 +1,5 @@
 import { Entity, PrimaryGeneratedColumn, Column } from 'typeorm';
-import { StatusAbstract, TimestampAbstract } from '../abstracts/entities';
+import { StatusAbstract, TimestampAbstract } from '../common/entities';
 
 @Entity('english_words')
 export class EnglishWordEntity {

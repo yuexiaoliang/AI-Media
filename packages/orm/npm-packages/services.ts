@@ -1,8 +1,14 @@
-import { dataToStatus } from '../abstracts/transform';
+import { dataToStatus } from '../common/transform';
+import { Status } from '../common/types';
+import { saveTags, Tag } from '../tags/services';
 import { initDataSource } from '../data-source';
-import { saveTags } from '../tags/services';
 import { NpmPackageEntity } from './entities';
-import { NpmPackage } from './types';
+
+// 批量导入
+export type NpmPackage = PartialKeys<Omit<NpmPackageEntity, 'status' | 'timestamp' | 'tags'>, 'id'> &
+  Status & {
+    tags?: Tag[];
+  };
 
 /**
  * 保存 npm 包
@@ -33,8 +39,8 @@ export async function saveNpmPackage(data: NpmPackage) {
 
     return pkgEntity;
   } catch (error) {
-    console.error(`[Package: ${data.pkg}] -> 保存出错了（${error}）`);
     await queryRunner.rollbackTransaction();
+    throw new Error(`[NpmPackage: ${data.pkg}] -> 保存出错了（${error}）`);
   } finally {
     await queryRunner.release();
   }
@@ -57,7 +63,7 @@ export const saveNpmPackages = async (data: NpmPackage[]) => {
     } catch (error) {
       errorResult.push({ pkg: item.pkg, error });
     }
-    console.log(`[Package: ${item.pkg}] -> 已处理 ${successResult.length + errorResult.length}/${total}`);
+    console.log(`[NpmPackages: ${item.pkg}] -> 已处理 ${successResult.length + errorResult.length}/${total}`);
   }
 
   await dataSource.destroy();

@@ -42,7 +42,7 @@ export abstract class StatusAbstract {
   published: PublishedStatusAbstract;
 }
 
-export class TimestampAbstract {
+export abstract class TimestampAbstract {
   @CreateDateColumn({ type: 'timestamp' })
   createdAt: Date;
 

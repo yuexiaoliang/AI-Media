@@ -3,6 +3,11 @@ node_modules
 
 /dist/html-templates
 /dist/*.cjs
+/dist/*.js
+/dist/*.ts
+/dist/*.cts
+/dist/*.css
+/dist/*.map
 /dist/token.json
 /dist/packages/*/*
 !/dist/packages/*/*.md
@@ -12,6 +17,8 @@ node_modules
 
 /dist/english-words/*/*
 !/dist/english-words/*/data.json
+dist2
+dist-tsup
 
 .cache
 

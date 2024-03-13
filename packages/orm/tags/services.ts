@@ -1,6 +1,7 @@
 import { initDataSource } from '../data-source';
 import { TagEntity } from './entities';
-import { Tag } from './types';
+
+export type Tag = TagEntity['name'];
 
 /**
  * 保存标签
@@ -20,7 +21,7 @@ export async function saveTag(tag: Tag) {
 
     return tagEntity;
   } catch (error) {
-    console.error(`[Tag: ${tag}] -> 保存出错了（${error.message}）`);
+    throw new Error(`[Tag: ${tag}] -> 保存出错了（${error}）`);
   }
 }
 
