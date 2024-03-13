@@ -1,17 +1,18 @@
 import https from 'https';
-import url from 'url';
+import url, { fileURLToPath } from 'url';
 import path from 'path';
 import html2md from 'html-to-md';
 import * as cheerio from 'cheerio';
-import wait from 'wait'
+import wait from 'wait';
 import { defineLogStr, file, renderTemplate } from '@auto-blog/utils';
 import { AIModel, chat, images } from '@auto-blog/openai';
 
 import genDataSystemPrompt from './prompts/genDataSystem.txt';
 import genDataUserPrompt from './prompts/genDataUser.txt';
-import { saveAigcRecord } from '@auto-blog/database/aigc-records';
-import { Word, getRandomNotGeneratedWord, updateWordRecord } from '@auto-blog/database/english-words';
 import { defineCoverGeneration } from '@auto-blog/cover';
+import { EnglishWordsServices } from '@auto-blog/orm';
+
+const __dirname = path.dirname(fileURLToPath(import.meta.url));
 
 type Data = typeof dataExample;
 
@@ -57,30 +58,40 @@ const logStr = defineLogStr('english-words');
 
 export async function start() {
   console.log(logStr('正在获取单词...'));
-  const word = await getRandomNotGeneratedWord();
-  if (!word) return;
-  console.log(logStr(`单词为：${word}`));
+  let data: EnglishWordsServices.EnglishWord | null = await EnglishWordsServices.getRandomEnglishWordByStatus({ generatedData: true, publishedXiaohongshu: false });
 
-  console.log(logStr('正在生成单词数据...'));
-  await genData(word);
+  if (!data) {
+    console.log(logStr('正在生成单词数据...'));
+    data = await EnglishWordsServices.getRandomEnglishWordByStatus({ generatedData: false });
+    if (!data) {
+      throw new Error(`[EnglishWord] -> 没有带生成数据的单词了`);
+    }
+
+    data = await genData(data.word);
+    if (!data) {
+      throw new Error(`[EnglishWord] -> 生成数据出错了`);
+    }
+  }
+  console.log(logStr(`单词为：${data.word}`));
 
   console.log(logStr('正在生成单词卡片...'));
-  await genCards(word);
+  await genCards(data.word);
 
   // console.log(logStr('正在生成单词图片...'));
   // await genWordImage(word);
 
-  console.log(logStr(`单词“${word}”生成完成！`, 'success'));
+  console.log(logStr(`单词“${data.word}”生成完成！`, 'success'));
 
-  await wait(2000)
+  await wait(2000);
 }
 
 /**
  * 生成数据
  */
-async function genData(word: Word) {
-  const data = readDataFile(word);
-  if (data) return data;
+async function genData(word: string) {
+  const data = await EnglishWordsServices.getEnglishWord(word);
+
+  if (data?.generatedData) return data;
 
   console.log(logStr('正在获取词义信息...'));
   const meaning = await fetchWordMeaning(word);
@@ -92,7 +103,7 @@ async function genData(word: Word) {
   try {
     const completions = chat.defineCompletions({ model: AIModel.GPT4, response_format: { type: 'json_object' } });
 
-    const { content, completionInfo } = await completions([
+    const { content } = await completions([
       {
         role: 'system',
         content: renderTemplate(genDataSystemPrompt, {
@@ -111,18 +122,13 @@ async function genData(word: Word) {
     ]);
 
     const data = JSON.parse(content).data as Data;
-    saveDataFile(word, JSON.stringify(data));
-    await saveAigcRecord(word, completionInfo);
-    await updateWordRecord(word, { dataGenerated: true });
-
-    return data;
+    return await EnglishWordsServices.saveEnglishWord({ word, generatedData: true, content: data });
   } catch (error) {
-    console.error(error);
     throw new Error(logStr('AI 生成内容出错', 'error'));
   }
 }
 
-export async function genWordImage(word: Word) {
+export async function genWordImage(word: string) {
   const files = file.getFiles(dir(word));
   let filepath = files?.find((file) => file.startsWith('cover.'));
   if (filepath) return filepath;
@@ -140,7 +146,7 @@ export async function genWordImage(word: Word) {
 /**
  * 获取单词的词源
  */
-async function fetchEtymologyMD(word: Word) {
+async function fetchEtymologyMD(word: string) {
   try {
     let soundCode = (await http(`https://www.etymonline.com/word/${word}`)) as string;
 
@@ -171,7 +177,7 @@ async function fetchEtymologyMD(word: Word) {
 /**
  * 获取单词词义
  */
-async function fetchWordMeaning(word: Word) {
+async function fetchWordMeaning(word: string) {
   try {
     const res = (await http(`https://api.dictionaryapi.dev/api/v2/entries/en/${word}`)) as string;
     const list = (JSON.parse(res) || []) as { license: any; sourceUrls: any; word: any; phonetics: any; meanings: any }[];
@@ -193,11 +199,11 @@ async function fetchWordMeaning(word: Word) {
 /**
  * 生成单词卡片
  */
-const genCards = async (word: Word) => {
-  const data = readDataFile(word);
-  if (!data) throw new Error(logStr('生成卡片时，数据文件不存在', 'error'));
+const genCards = async (word: string) => {
+  const data = await EnglishWordsServices.getEnglishWord(word);
+  if (!data?.content) throw new Error(logStr('生成卡片时，数据文件不存在', 'error'));
 
-  const [wordInfo, ..._data] = data;
+  const [wordInfo, ..._data] = data.content as Data;
 
   const cards = file.getFiles(cardsDir(word));
   if (cards?.length === _data.length) return cards.map((item) => cardPath(word, item));
@@ -239,31 +245,31 @@ const genCards = async (word: Word) => {
   }
 };
 
-function dir(word: Word) {
+function dir(word: string) {
   return path.resolve(__dirname, 'english-words', word);
 }
 
-function cardsDir(word: Word) {
+function cardsDir(word: string) {
   return path.resolve(dir(word), 'cards');
 }
 
-function cardPath(word: Word, name: string) {
+function cardPath(word: string, name: string) {
   return path.resolve(cardsDir(word), `${name}`);
 }
 
-function dataPath(word: Word) {
+function dataPath(word: string) {
   return path.resolve(dir(word), 'data.json');
 }
 
-function removeCardsDir(word: Word) {
+function removeCardsDir(word: string) {
   file.removeDir(cardsDir(word));
 }
 
-function saveDataFile(word: Word, content: string) {
+function saveDataFile(word: string, content: string) {
   file.saveFile(dataPath(word), content);
 }
 
-function readDataFile(word: Word) {
+function readDataFile(word: string) {
   const str = file.getFile(dataPath(word));
   if (!str) return;
 

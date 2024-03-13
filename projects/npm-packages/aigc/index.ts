@@ -1,59 +1,52 @@
+import html2md from 'html-to-md';
 import { AIModel, chat, images } from '@auto-blog/openai';
-import { aigcRecordsDB, npmPackagesDB } from '@auto-blog/database';
 import { getRandomItem, renderTemplate } from '@auto-blog/utils';
 import { mdToWeixin } from '@auto-blog/md-render';
 
 import * as file from '../file';
 import genArticlePrompt from './prompts/genArticle.txt';
 import genImagePromptPrompt from './prompts/genImagePrompt.txt';
+import { NpmPackagesServices } from '@auto-blog/orm';
 
-export const genArticle = async (readme: string, pkgName: string, repositoryUrl: string) => {
-  // 如果生成过文章，则需要获取以生成的文章，避免重复请求浪费资源
-  if (await npmPackagesDB.getPackageGeneratedArticleStatus(pkgName)) {
-    const history = await aigcRecordsDB.getNpmPackageRecord(pkgName);
-    if (history) {
-      const { title } = history.info;
-      const md = file.getArticleFile(pkgName, `${title}.md`);
+export const genArticle = async (readme: string, pkgName: string, repositoryUrl: string): Promise<NpmPackagesServices.NpmPackage> => {
+  const pkg = await NpmPackagesServices.getNpmPackage(pkgName);
 
-      if (md) {
-        const { html, meta } = renderAndSave(md);
-        if (html) {
-          return { md, html, meta };
-        } else {
-          const { html } = renderAndSave(md);
-          return { md, html, meta };
-        }
+  // 如果生成过文章，则直接返回
+  if (pkg && pkg.generatedData) return pkg;
+  try {
+    const completions = chat.defineCompletions({ model: AIModel.GPT4 });
+    const { content } = await completions([
+      {
+        role: 'user',
+        content: renderTemplate(genArticlePrompt, { readme, pkgName, repositoryUrl })
       }
-    }
-  }
+    ]);
+    console.log(`🚀 > genArticle > content:`, content);
 
-  const completions = chat.defineCompletions({ model: AIModel.GPT4 });
-  const { content, completionInfo } = await completions([
-    {
-      role: 'user',
-      content: renderTemplate(genArticlePrompt, { readme, pkgName, repositoryUrl })
-    }
-  ]);
-
-  const { html, meta } = renderAndSave(content);
-
-  await aigcRecordsDB.setNpmPackageRecord({ pkgName, title: meta.title }, completionInfo);
-  await npmPackagesDB.setPackageGeneratedArticleStatus(pkgName, true);
-
-  return { md: content, html, meta };
-
-  function renderAndSave(md: string) {
-    const [{ html, meta }] = mdToWeixin<{
+    const [
+      {
+        html,
+        meta: { title, desc, tags }
+      }
+    ] = mdToWeixin<{
       title: string;
       desc: string;
       tags: string[];
       pkgName: string;
-    }>(md);
+    }>(content);
 
-    file.saveArticleFile(pkgName, `${meta.title}.md`, md);
-    file.saveArticleFile(pkgName, `${meta.title}.html`, html);
+    const result = {
+      pkg: pkgName,
+      generatedData: true,
+      title,
+      tags,
+      description: desc,
+      content: html2md(html)
+    };
 
-    return { html, meta };
+    return await NpmPackagesServices.saveNpmPackage(result);
+  } catch (error) {
+    throw new Error(`@auto-blog/npm-packages: genArticle: ${error}`);
   }
 };
 

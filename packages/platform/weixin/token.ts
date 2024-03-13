@@ -1,11 +1,15 @@
-import { readFileSync, writeFileSync } from 'jsonfile';
+import jsonfile from 'jsonfile';
 import fs from 'fs-extra';
 import path from 'path';
 import createHttp from './http';
 import constants from '@auto-blog/constants';
 import { getTimestamp } from '@auto-blog/utils';
+import { fileURLToPath } from 'url';
+
+const { readFileSync, writeFileSync } = jsonfile;
 
 const http = createHttp();
+const __dirname = path.dirname(fileURLToPath(import.meta.url));
 
 export const getTokenInfo = async () => {
   let tokenInfo: { access_token: string; timestamp: number };

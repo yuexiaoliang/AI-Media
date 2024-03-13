@@ -12,3 +12,10 @@ declare module '*.html' {
   const content: string;
   export default content;
 }
+
+declare interface Argv {
+  platform?: CommonTypes.PublishedPlatforms;
+  setPublished?: CommonTypes.PublishedPlatforms;
+  pkg?: string;
+  p?: 'npm-packages' | 'type-challenges' | 'english-words';
+}

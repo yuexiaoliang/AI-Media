@@ -1,6 +1,8 @@
 import path from 'path';
 import fs from 'fs-extra';
 import { file } from '@auto-blog/utils';
+import { fileURLToPath } from 'url';
+const __dirname = path.dirname(fileURLToPath(import.meta.url));
 
 // 保存 README.md 文件到本地
 export function saveReadmeMD(md: string, tsUtil: string) {

@@ -2,14 +2,11 @@ import * as cheerio from 'cheerio';
 import constants from '@auto-blog/constants';
 import { npmPackagesDB } from '@auto-blog/database';
 import httpsGet from '@auto-blog/utils/httpsGet';
+import { NpmPackagesServices } from '@auto-blog/orm';
 
 // 采集包列表
 export const collectPackages = async () => {
   const [db, data] = await npmPackagesDB.openDatabase();
-
-  const notPublished = await npmPackagesDB.getNotGottenBaseInfoPackages();
-
-  if (data.pageNumber && notPublished.length >= 30) return data.packages;
 
   const params = {
     page: data.pageNumber + 1,
@@ -17,11 +14,12 @@ export const collectPackages = async () => {
     sort: 'dependent_repos_count',
     order: 'desc'
   };
+  console.log(`🚀 > collectPackages > params:`, params);
 
   try {
     const html = await httpsGet('https://libraries.io/search', { params });
 
-    const projects: npmPackagesDB.DBPackages = [];
+    const packages: NpmPackagesServices.NpmPackage[] = [];
 
     const $ = cheerio.load(html);
     const $projects = $('.project');
@@ -31,26 +29,16 @@ export const collectPackages = async () => {
         const finded = data.packages.find(({ name: _name }) => _name === name);
         if (finded) return;
 
-        projects.push({
-          name,
-          stepsStatus: {
-            gottenBaseInfo: false,
-            collectedGuide: false,
-            generatedArticle: false,
-            publishedWeixinDraft: false,
-            publishedGithub: false
-          }
-        });
+        packages.push({ pkg: name });
       });
-      data.packages = [...data.packages, ...projects];
-      data.pageNumber += 1;
 
-      db.write();
+      await NpmPackagesServices.saveNpmPackages(packages);
     }
   } catch (err: any) {
     if (err?.isAxiosError) {
-      console.error(`@auto-blog/libraries: Request [${err!.request.res.responseUrl}] returned a status code of ${err.response.status}.`);
+      throw new Error(`@auto-blog/libraries: Request [${err!.request.res.responseUrl}] returned a status code of ${err.response.status}.`);
     }
+    throw new Error(`@auto-blog/libraries: ${err}`);
   }
 
   return data.packages;
@@ -64,20 +52,11 @@ export async function getPackageInfo(pkgName: string) {
     throw new Error(`@auto-blog/libraries: package [${pkgName}] not found`);
   }
 
-  const pkg: npmPackagesDB.Package = {
-    name: pkgName,
+  const pkg: NpmPackagesServices.NpmPackage = {
+    pkg: pkgName,
     homepage,
-    repository_url,
-    stepsStatus: {
-      gottenBaseInfo: true,
-      collectedGuide: false,
-      generatedArticle: false,
-      publishedWeixinDraft: false,
-      publishedGithub: false
-    }
+    repositoryUrl: repository_url
   };
-
-  await npmPackagesDB.replaceOrInsertPackage(pkg);
 
   return pkg;
 }

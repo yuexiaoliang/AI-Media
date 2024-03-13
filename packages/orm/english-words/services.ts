@@ -1,3 +1,4 @@
+import { getRandomItem } from '@auto-blog/utils';
 import { DataSource } from '..';
 import { CommonTransforms, CommonTypes } from '..';
 import { EnglishWordsEntities } from '..';
@@ -8,7 +9,7 @@ export type EnglishWord = PartialKeys<Omit<EnglishWordsEntities.EnglishWordEntit
  * 获取单词数据
  * @param word 单词
  */
-export async function getEnglishWord(word: string) {
+export async function getEnglishWord(word: string): Promise<EnglishWord | null> {
   const dataSource = await DataSource.initDataSource();
   const repository = dataSource.getRepository(EnglishWordsEntities.EnglishWordEntity);
 
@@ -29,6 +30,15 @@ export async function getEnglishWordByStatus(status: CommonTypes.Status) {
   if (!result) return null;
 
   return CommonTransforms.dataToUserData(result);
+}
+
+/**
+ * 随机获取指定状态的单词数据
+ */
+export async function getRandomEnglishWordByStatus(status: CommonTypes.Status) {
+  const list = await getEnglishWordsByStatus(status);
+  if (!list?.length) return null;
+  return getRandomItem(list);
 }
 
 /**
@@ -70,7 +80,7 @@ export async function saveEnglishWord(data: EnglishWord) {
 
     await queryRunner.commitTransaction();
 
-    return entity;
+    return CommonTransforms.dataToUserData(entity);
   } catch (error) {
     await queryRunner.rollbackTransaction();
     throw new Error(`[EnglishWord: ${data.word}] -> 保存出错了（${error}）`);

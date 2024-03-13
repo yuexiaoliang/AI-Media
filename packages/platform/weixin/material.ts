@@ -2,16 +2,15 @@ import fs from 'fs-extra';
 import path from 'path';
 import FormData from 'form-data';
 import createHttp from './http';
-import { weixinMaterialsDB } from '@auto-blog/database';
+import { fileURLToPath } from 'url';
+
+const __dirname = path.dirname(fileURLToPath(import.meta.url));
 
 type MaterialType = 'image' | 'video' | 'voice' | 'thumb';
 
 const http = createHttp('material');
 
-export const addMaterial = async (pkgName: string, filepath: string, type: MaterialType = 'image') => {
-  const material = await weixinMaterialsDB.getWeixinMaterial(pkgName);
-  if (material) return material.materialInfo;
-
+export const addMaterial = async (filepath: string, type: MaterialType = 'image') => {
   const formData = new FormData();
   formData.append('media', fs.createReadStream(path.resolve(__dirname, filepath)));
 
@@ -21,7 +20,8 @@ export const addMaterial = async (pkgName: string, filepath: string, type: Mater
     params: { type }
   });
 
-  await weixinMaterialsDB.setWeixinMaterial(pkgName, rest);
-
-  return rest as weixinMaterialsDB.WeixinMaterialItemMaterialInfo;
+  return rest as {
+    media_id: string;
+    url: string;
+  };
 };

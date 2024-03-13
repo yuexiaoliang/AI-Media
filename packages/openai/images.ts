@@ -1,5 +1,7 @@
-import { merge } from 'lodash';
+import lodash from 'lodash';
 import createHttp from './http';
+
+const { merge } = lodash;
 
 const http = createHttp('images');
 

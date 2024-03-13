@@ -1,5 +1,5 @@
+import { NpmPackagesServices } from '@auto-blog/orm';
 import createHttp from './http';
-import { npmPackagesDB } from '@auto-blog/database';
 
 const http = createHttp('draft');
 
@@ -18,7 +18,7 @@ export const addDraft = async (pkgName: string, article: any) => {
     articles: [article]
   });
 
-  await npmPackagesDB.setPackagePublishedWeixinDraftStatus(pkgName, true);
+  await NpmPackagesServices.saveNpmPackage({ pkg: pkgName, publishedWeixin: true });
 
   return data;
 };

@@ -1,8 +1,9 @@
 import path from 'path';
-import url from 'url';
+import url, { fileURLToPath } from 'url';
 import { defineCoverGeneration } from '@auto-blog/cover';
 import * as file from '../file';
 import queryString from 'query-string';
+const __dirname = path.dirname(fileURLToPath(import.meta.url));
 
 export const generateCover = async (pkgName: string) => {
   const _cover = await file.getCover(pkgName);

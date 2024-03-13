@@ -1,55 +1,59 @@
-import html2md from 'html-to-md';
-import { npmPackagesDB } from '@auto-blog/database';
 import { weixin } from '@auto-blog/platform';
 import * as cover from './cover';
 import { npm, github } from './libraries';
 import * as aigc from './aigc';
-import { PublishedPlatforms } from '@auto-blog/database/npm-packages';
+import { NpmPackagesServices, CommonTypes, CommonTransforms } from '@auto-blog/orm';
+import { mdToHtml } from '@auto-blog/utils';
 
-export async function publisher(argv: { platform?: PublishedPlatforms; pkg?: string }) {
-  const platform: PublishedPlatforms = argv?.platform || 'weixin';
+export async function publisher(argv: Argv) {
+  const platform: CommonTypes.PublishedPlatforms = argv?.platform || 'weixin';
   const pkgName: string = argv?.pkg || '';
 
   try {
-    let pkg: npmPackagesDB.Package | undefined;
+    let data: NpmPackagesServices.NpmPackage | null = null;
+
     if (pkgName) {
-      pkg = await npmPackagesDB.getPackageByName(pkgName);
+      data = await NpmPackagesServices.getNpmPackage(pkgName);
     }
 
-    if (!pkg) {
+    if (!data) {
       console.log('\n 正在获取 npm 包列表...');
       await npm.collectPackages();
 
       console.log(`\n 正在获取未发布到 ${platform} 的包...`);
-      pkg = await npmPackagesDB.getRandomNotPublishedPkg(platform);
+      data = await NpmPackagesServices.getNpmPackageByStatus({ [CommonTransforms.platformToPublishedPlatformStatus(platform)]: false });
     }
-    console.log(`\n 已选择包名：${pkg.name}`);
+    if (!data) {
+      throw new Error('没有找到未发布的包');
+    }
 
-    if (!pkg.stepsStatus?.gottenBaseInfo) {
+    console.log(`\n 已选择包名：${data.pkg}`);
+
+    if (!data.generatedData) {
       console.log(`\n 正在获取包的基本信息...`);
-      pkg = await npm.getPackageInfo(pkg.name);
+      data = await npm.getPackageInfo(data.pkg);
+
+      console.log('\n 正在采集包的 README...');
+      const readme = await github.collectPackageReadme(data.pkg);
+
+      console.log('\n 正在生成文章内容...');
+      data = await aigc.genArticle(readme, data.pkg, data.repositoryUrl!);
     }
-
-    console.log('\n 正在采集包的 README...');
-    const readme = await github.collectPackageReadme(pkg.name);
-
-    console.log('\n 正在生成文章内容...');
-    const { html, meta, md } = await aigc.genArticle(readme, pkg.name, pkg.repository_url!);
 
     console.log('\n 正在生成缩略图...');
-    const coverPath = await cover.generateCover(pkg.name);
+    const coverPath = await cover.generateCover(data.pkg);
 
     if (platform === 'weixin') {
       console.log('\n 正在上传图片到公众号素材库...');
-      const { media_id: thumb_media_id } = await weixin.material.addMaterial(pkg.name, coverPath);
+      const { media_id: thumb_media_id } = await weixin.material.addMaterial(coverPath);
 
       console.log('\n 正在新增公众号草稿...');
-      await weixin.draft.addDraft(pkg.name, { title: meta.title, digest: meta.desc, content: html, thumb_media_id });
+      await weixin.draft.addDraft(data.pkg, { title: data.title, digest: data.description, content: mdToHtml(data.content!), thumb_media_id });
     }
 
     console.log('\n 完成了！');
 
-    console.log(`###运行完成${JSON.stringify({ name: pkg.name, title: meta.title, desc: meta.desc, cover: coverPath, md: html2md(html) })}###运行完成`);
+    console.log(`###运行完成${JSON.stringify({ name: data.pkg, title: data.title, desc: data.description, cover: coverPath, md: data.content })}###运行完成`);
   } catch (error: any) {
     throw error;
   }

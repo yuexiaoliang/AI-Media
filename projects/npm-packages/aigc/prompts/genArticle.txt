@@ -21,7 +21,7 @@
 1. 标题需要具备包的核心功能。
 2. H2标题需要以 emoji 开头。
 3. 文章需要使用 Markdown 格式。
-4. 确保在 Markdown 头部增加一些元信息，并且需要遵循 yaml 文件规范。
+4. 确保在 Markdown 头部增加一些元信息，并且需要遵循 yaml 文件规范，参考[Example]。
 5. 确保在 Markdown 代码块的开头包含编程语言名称。
 6. 文章需要有大量的代码示例，并且包含代码注释。
 7. 文章需要包含仓库地址。
@@ -61,4 +61,4 @@ pkgName: "[[pkgName]]"
 """
 
 # Initialization:
-作为[role]，在[Background]背景下，严格遵守[constrains]进行创作。
+作为[role]，在[Background]背景下，严格遵守[constrains]参考[Example]格式进行创作。

@@ -1,4 +1,4 @@
-import { CommonTransforms, CommonTypes } from '..';
+import { CommonTransforms, CommonTypes, NpmPackagesServices } from '..';
 import { TagsServices } from '..';
 import { NpmPackagesEntities } from '..';
 import { DataSource } from '..';
@@ -20,7 +20,7 @@ export async function getNpmPackage(pkg: string) {
   const result = await repository.findOne({ where: { pkg }, relations: ['tags'] });
   if (!result) return null;
 
-  return CommonTransforms.dataToUserData(result);
+  return CommonTransforms.dataToUserData(result) as NpmPackagesServices.NpmPackage;
 }
 
 /**
@@ -52,7 +52,7 @@ export async function getNpmPackagesByStatus(status: CommonTypes.Status) {
 /**
  * 保存 npm 包
  */
-export async function saveNpmPackage(data: NpmPackage) {
+export async function saveNpmPackage(data: NpmPackage): Promise<NpmPackage> {
   const dataSource = await DataSource.initDataSource();
   const repository = dataSource.getRepository(NpmPackagesEntities.NpmPackageEntity);
 
@@ -76,7 +76,7 @@ export async function saveNpmPackage(data: NpmPackage) {
 
     await queryRunner.commitTransaction();
 
-    return pkgEntity;
+    return CommonTransforms.dataToUserData(pkgEntity);
   } catch (error) {
     await queryRunner.rollbackTransaction();
     throw new Error(`[NpmPackage: ${data.pkg}] -> 保存出错了（${error}）`);

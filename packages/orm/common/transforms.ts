@@ -10,6 +10,10 @@ export function tagsToUserTags(tags: TagsEntities.TagEntity[]): TagsServices.Tag
   return tags.map(tagToUserTag);
 }
 
+export function platformToPublishedPlatformStatus(platform: CommonTypes.PublishedPlatforms) {
+  return `published${platform.charAt(0).toUpperCase()}${platform.slice(1)}` as CommonTypes.PublishedStatusKeys;
+}
+
 export function statusToUserStatus(status: CommonEntities.StatusAbstract): CommonTypes.Status {
   const { published, generated } = status;
 

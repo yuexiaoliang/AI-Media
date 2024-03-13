@@ -1,9 +1,11 @@
-import { merge } from 'lodash';
+import lodash from 'lodash';
 import { getRandomItem } from '@auto-blog/utils';
 import { defineDatabase } from './common';
 
-export type PublishedPlatformsMap = typeof publishedPlatformsMap
-export type PublishedPlatforms = keyof PublishedPlatformsMap
+const { merge } = lodash;
+
+export type PublishedPlatformsMap = typeof publishedPlatformsMap;
+export type PublishedPlatforms = keyof PublishedPlatformsMap;
 export const publishedPlatformsMap = { weixin: '微信', github: 'Github', juejin: '掘金', xiaohongshu: '小红书', zhihu: '知乎' };
 export const publishedPlatforms = Object.keys(publishedPlatformsMap) as PublishedPlatforms[];
 

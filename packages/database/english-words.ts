@@ -1,8 +1,9 @@
-import { merge } from 'lodash';
+import lodash from 'lodash';
 import { getRandomItem } from '@auto-blog/utils';
 import { defineDatabase } from './common';
 
 export type Word = string;
+const { merge } = lodash;
 
 export interface EnglishWordsListItem {
   word: Word;

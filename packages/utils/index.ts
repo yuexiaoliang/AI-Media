@@ -1,6 +1,11 @@
 import dayjs from 'dayjs';
 import crypto from 'crypto';
 export * as file from './file';
+import juice from 'juice';
+import { decode } from 'html-entities';
+
+import theme from './styles/theme.css';
+import hljs from './styles/hljs.css';
 
 // This function replaces all instances of [[KEY]] in the given template
 // with the corresponding value in the values object.
@@ -47,4 +52,8 @@ export function defineLogStr(platform: string) {
 export function dateFormat(date: dayjs.ConfigType, template: string = 'YYYY-MM-DD HH:mm:ss') {
   if (!date) return;
   return dayjs(date).format(template);
+}
+
+export function mdToHtml(md: string) {
+  return juice.inlineContent(decode(md), theme + hljs);
 }
