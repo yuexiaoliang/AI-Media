@@ -1355,7 +1355,8 @@
         "collectedGuide": true,
         "generatedArticle": true,
         "publishedWeixinDraft": true,
-        "publishedGithub": false
+        "publishedGithub": false,
+        "publishedJuejin": true
       },
       "homepage": "https://github.com/quartzjer/ecc-jsbn",
       "repository_url": "https://github.com/quartzjer/ecc-jsbn"
