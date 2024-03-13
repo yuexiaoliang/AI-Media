@@ -4227,6 +4227,24 @@
           "total_tokens": 4814
         }
       }
+    },
+    {
+      "project": "english-words",
+      "info": {
+        "word": "restriction"
+      },
+      "completionInfo": {
+        "id": "chatcmpl-92GTfR2uHFT7whZSEBFsKjKyvjeYg",
+        "object": "chat.completion",
+        "created": 1710327023,
+        "model": "gpt-4-0125-preview",
+        "system_fingerprint": "fp_c121a3f431",
+        "usage": {
+          "prompt_tokens": 1423,
+          "completion_tokens": 693,
+          "total_tokens": 2116
+        }
+      }
     }
   ]
 }

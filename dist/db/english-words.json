@@ -8467,7 +8467,9 @@
       "word": "restrict"
     },
     {
-      "word": "restriction"
+      "word": "restriction",
+      "dataGenerated": true,
+      "xhsPublished": true
     },
     {
       "word": "result"
