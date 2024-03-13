@@ -44,7 +44,6 @@
   "dependencies": {
     "@auto-blog/constants": "workspace:^",
     "@auto-blog/cover": "workspace:^",
-    "@auto-blog/database": "workspace:^",
     "@auto-blog/english-words": "workspace:^",
     "@auto-blog/md-render": "workspace:^",
     "@auto-blog/npm-packages": "workspace:^",

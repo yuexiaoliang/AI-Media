@@ -14,9 +14,6 @@ importers:
       '@auto-blog/cover':
         specifier: workspace:^
         version: link:packages/cover
-      '@auto-blog/database':
-        specifier: workspace:^
-        version: link:packages/database
       '@auto-blog/english-words':
         specifier: workspace:^
         version: link:projects/english-wrods

@@ -5,7 +5,7 @@ import html2md from 'html-to-md';
 import * as cheerio from 'cheerio';
 import wait from 'wait';
 import { defineLogStr, file, renderTemplate } from '@auto-blog/utils';
-import { AIModel, chat, images } from '@auto-blog/openai';
+import { AIModel, chat } from '@auto-blog/openai';
 
 import genDataSystemPrompt from './prompts/genDataSystem.txt';
 import genDataUserPrompt from './prompts/genDataUser.txt';
@@ -77,9 +77,6 @@ export async function start() {
   console.log(logStr('正在生成单词卡片...'));
   await genCards(data.word);
 
-  // console.log(logStr('正在生成单词图片...'));
-  // await genWordImage(word);
-
   console.log(logStr(`单词“${data.word}”生成完成！`, 'success'));
 
   await wait(2000);
@@ -126,21 +123,6 @@ async function genData(word: string) {
   } catch (error) {
     throw new Error(logStr('AI 生成内容出错', 'error'));
   }
-}
-
-export async function genWordImage(word: string) {
-  const files = file.getFiles(dir(word));
-  let filepath = files?.find((file) => file.startsWith('cover.'));
-  if (filepath) return filepath;
-
-  const generator = images.defineImagesGenerations({
-    model: 'dall-e-3',
-    size: '1024x1024'
-  });
-
-  const { b64_json } = await generator(`Create a hand-drawn style illustration that visually represents the word "${word}".`);
-
-  return file.saveFileByB64(dir(word), b64_json, 'cover');
 }
 
 /**

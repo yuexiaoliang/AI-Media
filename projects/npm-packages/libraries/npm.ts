@@ -1,15 +1,13 @@
 import * as cheerio from 'cheerio';
 import constants from '@auto-blog/constants';
-import { npmPackagesDB } from '@auto-blog/database';
 import httpsGet from '@auto-blog/utils/httpsGet';
 import { NpmPackagesServices } from '@auto-blog/orm';
 
 // 采集包列表
 export const collectPackages = async () => {
-  const [db, data] = await npmPackagesDB.openDatabase();
 
   const params = {
-    page: data.pageNumber + 1,
+    page: 13,
     platforms: 'npm',
     sort: 'dependent_repos_count',
     order: 'desc'
