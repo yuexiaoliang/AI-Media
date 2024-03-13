@@ -1,5 +1,5 @@
 import { Entity, PrimaryGeneratedColumn, Column } from 'typeorm';
-import { StatusAbstract, TimestampAbstract } from '../common/entities';
+import { CommonEntities } from '..';
 
 @Entity('english_words')
 export class EnglishWordEntity {
@@ -10,11 +10,11 @@ export class EnglishWordEntity {
   word: string;
 
   @Column({ type: 'json', nullable: true })
-  content: any;
+  content?: any;
 
-  @Column(() => StatusAbstract, { prefix: false })
-  status: StatusAbstract;
+  @Column(() => CommonEntities.StatusAbstract, { prefix: false })
+  status?: CommonEntities.StatusAbstract;
 
-  @Column(() => TimestampAbstract, { prefix: false })
-  timestamp: TimestampAbstract;
+  @Column(() => CommonEntities.TimestampAbstract, { prefix: false })
+  timestamp?: CommonEntities.TimestampAbstract;
 }

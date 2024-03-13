@@ -1,1 +1,2 @@
-export { saveTag, saveTags, Tag } from './services';
+export * as TagsServices from './services';
+export * as TagsEntities from './entities';

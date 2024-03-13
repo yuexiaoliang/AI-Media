@@ -4,6 +4,7 @@ import path from 'path';
 import fs from 'fs-extra';
 import { fileURLToPath } from 'url';
 import { localDataToRemoteDataOfNpmPackages, localDataToRemoteDataOfEnglishWords } from './localDataToRemoteData';
+import { NpmPackagesServices, EnglishWordsServices } from '@auto-blog/orm';
 
 import yargs from 'yargs-parser';
 
@@ -12,8 +13,14 @@ import yargs from 'yargs-parser';
 // import { start as englishWordsStart } from '@auto-blog/english-words';
 // import { setPackageStatus } from '@auto-blog/database/npm-packages';
 
+async function test() {
+  const res = await EnglishWordsServices.getEnglishWordsByStatus({ publishedXiaohongshu: true });
+  console.log(`🚀 > test > res:`, res?.length);
+}
+test();
+
 // localDataToRemoteDataOfNpmPackages();
-localDataToRemoteDataOfEnglishWords()
+// localDataToRemoteDataOfEnglishWords()
 
 // async function main() {
 //   const argv = yargs(process.argv.slice(2));

@@ -1,15 +1,15 @@
-import { initDataSource } from '../data-source';
-import { TagEntity } from './entities';
+import { DataSource } from '..';
+import { TagsEntities } from '..';
 
-export type Tag = TagEntity['name'];
+export type Tag = TagsEntities.TagEntity['name'];
 
 /**
  * 保存标签
  */
 export async function saveTag(tag: Tag) {
-  const dataSource = await initDataSource();
+  const dataSource = await DataSource.initDataSource();
 
-  const repository = dataSource.getRepository(TagEntity);
+  const repository = dataSource.getRepository(TagsEntities.TagEntity);
 
   try {
     let tagEntity = await repository.findOne({ where: { name: tag } });

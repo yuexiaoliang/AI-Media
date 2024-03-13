@@ -1,23 +1,62 @@
-import { dataToStatus } from '../common/transform';
-import { Status } from '../common/types';
-import { initDataSource } from '../data-source';
-import { EnglishWordEntity } from './entities';
+import { DataSource } from '..';
+import { CommonTransforms, CommonTypes } from '..';
+import { EnglishWordsEntities } from '..';
 
-export type EnglishWord = PartialKeys<Omit<EnglishWordEntity, 'status' | 'timestamp' | 'tags'>, 'id'> & Status;
+export type EnglishWord = PartialKeys<Omit<EnglishWordsEntities.EnglishWordEntity, 'status' | 'timestamp' | 'tags'>, 'id'> & CommonTypes.Status;
+
+/**
+ * 获取单词数据
+ * @param word 单词
+ */
+export async function getEnglishWord(word: string) {
+  const dataSource = await DataSource.initDataSource();
+  const repository = dataSource.getRepository(EnglishWordsEntities.EnglishWordEntity);
+
+  const result = await repository.findOne({ where: { word } });
+  if (!result) return null;
+
+  return CommonTransforms.dataToUserData(result);
+}
+
+/**
+ * 获取指定状态的单词数据
+ */
+export async function getEnglishWordByStatus(status: CommonTypes.Status) {
+  const dataSource = await DataSource.initDataSource();
+  const repository = dataSource.getRepository(EnglishWordsEntities.EnglishWordEntity);
+
+  const result = await repository.findOne({ where: { status: CommonTransforms.userStatusToStatus(status) } });
+  if (!result) return null;
+
+  return CommonTransforms.dataToUserData(result);
+}
+
+/**
+ * 获取所有指定状态的单词数据
+ */
+export async function getEnglishWordsByStatus(status: CommonTypes.Status) {
+  const dataSource = await DataSource.initDataSource();
+  const repository = dataSource.getRepository(EnglishWordsEntities.EnglishWordEntity);
+
+  const result = await repository.find({ where: { status: CommonTransforms.userStatusToStatus(status) } });
+  if (!result) return null;
+
+  return result.map(CommonTransforms.dataToUserData);
+}
 
 /**
  * 保存
  */
 export async function saveEnglishWord(data: EnglishWord) {
-  const dataSource = await initDataSource();
-  const repository = dataSource.getRepository(EnglishWordEntity);
+  const dataSource = await DataSource.initDataSource();
+  const repository = dataSource.getRepository(EnglishWordsEntities.EnglishWordEntity);
 
   const queryRunner = dataSource.createQueryRunner();
 
   await queryRunner.startTransaction();
 
   try {
-    const newData = dataToStatus(data);
+    const newData = CommonTransforms.userDataToData(data);
 
     let entity = await repository.findOne({ where: { word: data.word } });
 
@@ -45,7 +84,7 @@ export async function saveEnglishWord(data: EnglishWord) {
  */
 export const saveEnglishWords = async (data: EnglishWord[]) => {
   const total = data.length;
-  const dataSource = await initDataSource();
+  const dataSource = await DataSource.initDataSource();
 
   const errorResult = [];
   const successResult = [];

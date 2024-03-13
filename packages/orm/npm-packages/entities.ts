@@ -1,6 +1,6 @@
 import { Column, Entity, PrimaryGeneratedColumn, JoinTable, ManyToMany } from 'typeorm';
-import { StatusAbstract, TimestampAbstract } from '../common/entities';
-import { TagEntity } from '../tags/entities';
+import { CommonEntities } from '..';
+import { TagsEntities } from '..';
 
 @Entity('npm-packages')
 export class NpmPackageEntity {
@@ -27,13 +27,13 @@ export class NpmPackageEntity {
   @Column({ nullable: true })
   repositoryUrl?: string;
 
-  @ManyToMany(() => TagEntity, { cascade: true })
+  @ManyToMany(() => TagsEntities.TagEntity, { cascade: true })
   @JoinTable()
-  tags?: TagEntity[];
+  tags?: TagsEntities.TagEntity[];
 
-  @Column(() => StatusAbstract, { prefix: false })
-  status?: StatusAbstract;
+  @Column(() => CommonEntities.StatusAbstract, { prefix: false })
+  status?: CommonEntities.StatusAbstract;
 
-  @Column(() => TimestampAbstract, { prefix: false })
-  timestamp?: TimestampAbstract;
+  @Column(() => CommonEntities.TimestampAbstract, { prefix: false })
+  timestamp?: CommonEntities.TimestampAbstract;
 }

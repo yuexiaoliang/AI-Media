@@ -1,3 +1,4 @@
+import dayjs from 'dayjs';
 import crypto from 'crypto';
 export * as file from './file';
 
@@ -41,4 +42,9 @@ export function defineLogStr(platform: string) {
 
     return `${icon} [${platform}] -> ${text}`;
   };
+}
+
+export function dateFormat(date: dayjs.ConfigType, template: string = 'YYYY-MM-DD HH:mm:ss') {
+  if (!date) return;
+  return dayjs(date).format(template);
 }

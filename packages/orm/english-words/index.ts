@@ -1,1 +1,2 @@
-export { saveEnglishWord, saveEnglishWords, EnglishWord } from './services';
+export * as EnglishWordsServices from './services';
+export * as EnglishWordsEntities from './entities';

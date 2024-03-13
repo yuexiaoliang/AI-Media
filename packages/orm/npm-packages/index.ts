@@ -1,1 +1,2 @@
-export { saveNpmPackage, saveNpmPackages, NpmPackage } from './services';
+export * as NpmPackagesServices from './services';
+export * as NpmPackagesEntities from './entities';

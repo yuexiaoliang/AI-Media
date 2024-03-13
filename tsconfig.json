@@ -15,7 +15,7 @@
     "skipLibCheck": true, // 跳过库文件的类型检查以提高性能
     "forceConsistentCasingInFileNames": true // 禁止对大小写不一致的引用
   },
-  "include": ["packages/**/*.ts", "projects/**/*.ts", "types"],
+  "include": ["packages/**/*.ts", "projects/**/*.ts", "types", "./*.ts"],
   "exclude": [
     "node_modules", // 排除node_modules
     "**/node_modules/*"

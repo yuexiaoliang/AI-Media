@@ -12,13 +12,14 @@ export async function localDataToRemoteDataOfEnglishWords() {
   const data = words.map((item: any) => {
     const { word, xhsPublished, dataGenerated } = item;
 
-    const result = {
+    const result: EnglishWordsServices.EnglishWord = {
       word,
-      generatedData: dataGenerated,
       publishedXiaohongshu: xhsPublished
     };
 
     getDetails(word, result);
+
+    result.generatedData = !!dataGenerated || !!result.content;
 
     return result;
   });
@@ -26,7 +27,7 @@ export async function localDataToRemoteDataOfEnglishWords() {
   const [successRes, errorRes] = await EnglishWordsServices.saveEnglishWords(data);
   console.log(`共 ${data.length} 条数据，成功 ${successRes.length} 条，失败 ${errorRes.length} 条`);
 
-  function getDetails(word: string, result: any) {
+  function getDetails(word: string, result: EnglishWordsServices.EnglishWord) {
     const mdPath = path.resolve(__dirname, `./english-words/${word}/data.json`);
     if (!fs.existsSync(mdPath)) return;
 
@@ -40,16 +41,17 @@ export async function localDataToRemoteDataOfNpmPackages() {
     const { name, homepage, repository_url, stepsStatus } = item;
     const { generatedArticle, publishedWeixinDraft, publishedJuejin } = stepsStatus || {};
 
-    const result = {
+    const result: NpmPackagesServices.NpmPackage = {
       pkg: name,
       homepage,
       repositoryUrl: repository_url,
-      generatedData: generatedArticle,
       publishedWeixin: publishedWeixinDraft,
       publishedJuejin
     };
 
     getDetails(name, result);
+
+    result.generatedData = !!generatedArticle || !!result.content;
 
     return result;
   });
@@ -57,7 +59,7 @@ export async function localDataToRemoteDataOfNpmPackages() {
   const [successRes, errorRes] = await NpmPackagesServices.saveNpmPackages(data);
   console.log(`共 ${data.length} 条数据，成功 ${successRes.length} 条，失败 ${errorRes.length} 条`);
 
-  function getDetails(pkg: string, result: any) {
+  function getDetails(pkg: string, result: NpmPackagesServices.NpmPackage) {
     const aigcRecords = JSON.parse(fs.readFileSync(path.resolve(__dirname, 'db/aigc-records.json'), 'utf-8')).list;
     const record = aigcRecords.find((item: any) => item?.info?.pkgName === pkg);
     if (!record) return;

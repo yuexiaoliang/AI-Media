@@ -2,9 +2,9 @@ import 'reflect-metadata';
 import { DataSource } from 'typeorm';
 import constants from '@auto-blog/constants';
 
-import { EnglishWordEntity } from './english-words/entities';
-import { NpmPackageEntity } from './npm-packages/entities';
-import { TagEntity } from './tags/entities';
+import { EnglishWordsEntities } from './english-words';
+import { NpmPackagesEntities } from './npm-packages';
+import { TagsEntities } from './tags';
 
 export const AppDataSource = new DataSource({
   type: 'mysql',
@@ -14,7 +14,7 @@ export const AppDataSource = new DataSource({
   password: constants.MYSQL_PASSWORD,
   database: constants.MYSQL_DATABASE,
   synchronize: true,
-  entities: [EnglishWordEntity, NpmPackageEntity, TagEntity]
+  entities: [EnglishWordsEntities.EnglishWordEntity, NpmPackagesEntities.NpmPackageEntity, TagsEntities.TagEntity]
 });
 
 export async function initDataSource() {
