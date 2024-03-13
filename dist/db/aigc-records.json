@@ -4245,6 +4245,24 @@
           "total_tokens": 2116
         }
       }
+    },
+    {
+      "project": "english-words",
+      "info": {
+        "word": "sacred"
+      },
+      "completionInfo": {
+        "id": "chatcmpl-92R5aZpk56O4gvmURzeQUZ89c1lHT",
+        "object": "chat.completion",
+        "created": 1710367814,
+        "model": "gpt-4-0125-preview",
+        "system_fingerprint": "fp_31c0f205d1",
+        "usage": {
+          "prompt_tokens": 1642,
+          "completion_tokens": 712,
+          "total_tokens": 2354
+        }
+      }
     }
   ]
 }

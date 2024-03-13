@@ -8672,7 +8672,9 @@
       "word": "russian"
     },
     {
-      "word": "sacred"
+      "word": "sacred",
+      "dataGenerated": true,
+      "xhsPublished": true
     },
     {
       "word": "sacrifice"
