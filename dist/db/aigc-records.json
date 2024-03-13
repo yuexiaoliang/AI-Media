@@ -4081,7 +4081,6 @@
       }
     },
     {
-<<<<<<< HEAD
       "project": "english-words",
       "info": {
         "word": "son"
@@ -4096,7 +4095,10 @@
           "prompt_tokens": 1573,
           "completion_tokens": 605,
           "total_tokens": 2178
-=======
+        }
+      }
+    },
+    {
       "project": "npm-packages",
       "info": {
         "pkgName": "browserify-sign",
@@ -4112,12 +4114,10 @@
           "prompt_tokens": 1242,
           "completion_tokens": 900,
           "total_tokens": 2142
->>>>>>> ff19e5debb6e0447b0bf609cbbbe6acba0b3aff8
         }
       }
     },
     {
-<<<<<<< HEAD
       "project": "english-words",
       "info": {
         "word": "any"
@@ -4132,7 +4132,10 @@
           "prompt_tokens": 1423,
           "completion_tokens": 474,
           "total_tokens": 1897
-=======
+        }
+      }
+    },
+    {
       "project": "npm-packages",
       "info": {
         "pkgName": "wrap-ansi",
@@ -4148,12 +4151,10 @@
           "prompt_tokens": 1108,
           "completion_tokens": 1220,
           "total_tokens": 2328
->>>>>>> ff19e5debb6e0447b0bf609cbbbe6acba0b3aff8
         }
       }
     },
     {
-<<<<<<< HEAD
       "project": "english-words",
       "info": {
         "word": "level"
@@ -4168,7 +4169,10 @@
           "prompt_tokens": 2363,
           "completion_tokens": 609,
           "total_tokens": 2972
-=======
+        }
+      }
+    },
+    {
       "project": "npm-packages",
       "info": {
         "pkgName": "os-homedir",
@@ -4184,7 +4188,6 @@
           "prompt_tokens": 943,
           "completion_tokens": 912,
           "total_tokens": 1855
->>>>>>> ff19e5debb6e0447b0bf609cbbbe6acba0b3aff8
         }
       }
     }
