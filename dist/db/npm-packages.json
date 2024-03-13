@@ -1742,7 +1742,8 @@
         "collectedGuide": true,
         "generatedArticle": true,
         "publishedWeixinDraft": true,
-        "publishedGithub": false
+        "publishedGithub": false,
+        "publishedJuejin": true
       },
       "homepage": "https://github.com/ahmadnassri/node-har-validator",
       "repository_url": "https://github.com/ahmadnassri/node-har-validator"
