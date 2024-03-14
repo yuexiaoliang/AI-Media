@@ -18,7 +18,7 @@ declare module '*.html' {
  * @param fn - 要运行的函数
  * @param args - 函数的参数
  */
-declare type Argv<T = string> = {
+declare type Argv<T = string, P = unknown> = {
   fn?: T;
-  args?: any;
+  args?: P;
 } | null | undefined;

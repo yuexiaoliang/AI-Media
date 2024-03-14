@@ -10,6 +10,7 @@ import { start as startWord, setEnglishWordStatus as setWordStatus } from '@auto
 sourceMapSupport.install();
 
 type MethodsNames = keyof typeof methods;
+type MethodsParams = Parameters<(typeof methods)[MethodsNames]>;
 
 const methods = {
   startNpm,
@@ -21,7 +22,7 @@ const methods = {
   startType
 };
 
-const argv = yargs(process.argv.slice(2)) as Argv<MethodsNames>;
+const argv = (yargs(process.argv.slice(2)) as Argv<MethodsNames, MethodsParams>) || {};
 
 main().catch((error) => {
   console.error(error);
@@ -48,21 +49,22 @@ main().catch((error) => {
  * setNpmStatus({ word: 'able', platform: 'weixin' })
  */
 async function main() {
-  if (!argv?.fn) return;
+  const { fn: fnName, args } = argv;
+  if (!fnName) return;
 
-  if (!methods[argv.fn]) {
-    throw new Error(`Main.js: Function "${argv.fn}" not found`);
+  const method = methods[fnName];
+
+  if (!method) {
+    throw new Error(`Main.js: Method "${fnName}" not found`);
   }
 
-  let _args = argv.args;
-
-  if (Array.isArray(argv.args)) {
+  if (Array.isArray(args)) {
     // @ts-ignore
-    await methods[argv.fn](...argv.args);
+    await method(...args);
   } else {
     // @ts-ignore
-    await methods[argv.fn](_args);
+    await method(args);
   }
 
-  console.log('Done!');
+  process.exit(0);
 }
