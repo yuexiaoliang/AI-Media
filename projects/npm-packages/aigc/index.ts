@@ -23,7 +23,17 @@ export const genArticle = async (readme: string, pkgName: string, repositoryUrl:
             title: '文章标题',
             description: '文章描述',
             tags: ['标签1', '标签2', '标签3'],
-            markdown: `文章正文...`
+            markdown: `# 文章标题
+
+## 📌 H2标题
+
+内容...
+
+## 🚀 H2标题
+
+内容...
+
+> 仓库地址：<${repositoryUrl}>`
           })
         })
       },
@@ -42,7 +52,7 @@ ${readme}
 
     const data = JSON.parse(content);
 
-    const [{ html }] = mdToHtml(data.markdown);
+    const html = mdToHtml(data.markdown, data.title);
 
     const result = {
       pkg: pkgName,
