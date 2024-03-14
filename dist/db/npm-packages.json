@@ -307,7 +307,8 @@
         "collectedGuide": true,
         "generatedArticle": true,
         "publishedWeixinDraft": true,
-        "publishedGithub": false
+        "publishedGithub": false,
+        "publishedJuejin": true
       },
       "homepage": "https://github.com/isaacs/node-mkdirp#readme",
       "repository_url": "https://github.com/isaacs/node-mkdirp"
@@ -765,7 +766,8 @@
         "collectedGuide": true,
         "generatedArticle": true,
         "publishedWeixinDraft": true,
-        "publishedGithub": false
+        "publishedGithub": false,
+        "publishedJuejin": true
       },
       "homepage": "https://github.com/visionmedia/bytes.js#readme",
       "repository_url": "https://github.com/visionmedia/bytes.js"
@@ -1071,7 +1073,8 @@
         "collectedGuide": true,
         "generatedArticle": true,
         "publishedWeixinDraft": true,
-        "publishedGithub": false
+        "publishedGithub": false,
+        "publishedJuejin": true
       },
       "homepage": "https://github.com/paulmillr/chokidar",
       "repository_url": "https://github.com/paulmillr/chokidar"
@@ -1352,7 +1355,8 @@
         "collectedGuide": true,
         "generatedArticle": true,
         "publishedWeixinDraft": true,
-        "publishedGithub": false
+        "publishedGithub": false,
+        "publishedJuejin": true
       },
       "homepage": "https://github.com/quartzjer/ecc-jsbn",
       "repository_url": "https://github.com/quartzjer/ecc-jsbn"
@@ -1739,7 +1743,8 @@
         "collectedGuide": true,
         "generatedArticle": true,
         "publishedWeixinDraft": true,
-        "publishedGithub": false
+        "publishedGithub": false,
+        "publishedJuejin": true
       },
       "homepage": "https://github.com/ahmadnassri/node-har-validator",
       "repository_url": "https://github.com/ahmadnassri/node-har-validator"
@@ -2019,7 +2024,8 @@
         "collectedGuide": true,
         "generatedArticle": true,
         "publishedWeixinDraft": true,
-        "publishedGithub": false
+        "publishedGithub": false,
+        "publishedJuejin": true
       },
       "homepage": "https://github.com/mishoo/UglifyJS#readme",
       "repository_url": "https://github.com/mishoo/UglifyJS"
@@ -2519,12 +2525,14 @@
     {
       "name": "wrap-ansi",
       "stepsStatus": {
-        "gottenBaseInfo": false,
-        "collectedGuide": false,
-        "generatedArticle": false,
-        "publishedWeixinDraft": false,
+        "gottenBaseInfo": true,
+        "collectedGuide": true,
+        "generatedArticle": true,
+        "publishedWeixinDraft": true,
         "publishedGithub": false
-      }
+      },
+      "homepage": "https://github.com/chalk/wrap-ansi#readme",
+      "repository_url": "https://github.com/chalk/wrap-ansi"
     },
     {
       "name": "buffer",
@@ -2763,12 +2771,14 @@
     {
       "name": "os-homedir",
       "stepsStatus": {
-        "gottenBaseInfo": false,
-        "collectedGuide": false,
-        "generatedArticle": false,
-        "publishedWeixinDraft": false,
+        "gottenBaseInfo": true,
+        "collectedGuide": true,
+        "generatedArticle": true,
+        "publishedWeixinDraft": true,
         "publishedGithub": false
-      }
+      },
+      "homepage": "https://github.com/sindresorhus/os-homedir#readme",
+      "repository_url": "https://github.com/sindresorhus/os-homedir"
     },
     {
       "name": "p-limit",
@@ -4019,12 +4029,14 @@
     {
       "name": "regexpu-core",
       "stepsStatus": {
-        "gottenBaseInfo": false,
-        "collectedGuide": false,
-        "generatedArticle": false,
+        "gottenBaseInfo": true,
+        "collectedGuide": true,
+        "generatedArticle": true,
         "publishedWeixinDraft": false,
         "publishedGithub": false
-      }
+      },
+      "homepage": "https://mths.be/regexpu",
+      "repository_url": "https://github.com/mathiasbynens/regexpu-core"
     },
     {
       "name": "babel-template",

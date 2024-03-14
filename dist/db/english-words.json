@@ -658,7 +658,9 @@
       "word": "anxious"
     },
     {
-      "word": "any"
+      "word": "any",
+      "dataGenerated": true,
+      "xhsPublished": true
     },
     {
       "word": "anybody"
@@ -5924,7 +5926,9 @@
       "word": "letter"
     },
     {
-      "word": "level"
+      "word": "level",
+      "dataGenerated": true,
+      "xhsPublished": true
     },
     {
       "word": "liberty"
@@ -6257,7 +6261,9 @@
       "word": "meanwhile"
     },
     {
-      "word": "measure"
+      "word": "measure",
+      "dataGenerated": true,
+      "xhsPublished": true
     },
     {
       "word": "meat"
@@ -8461,7 +8467,9 @@
       "word": "restrict"
     },
     {
-      "word": "restriction"
+      "word": "restriction",
+      "dataGenerated": true,
+      "xhsPublished": true
     },
     {
       "word": "result"
@@ -8664,7 +8672,9 @@
       "word": "russian"
     },
     {
-      "word": "sacred"
+      "word": "sacred",
+      "dataGenerated": true,
+      "xhsPublished": true
     },
     {
       "word": "sacrifice"
@@ -9488,7 +9498,9 @@
       "word": "somewhere"
     },
     {
-      "word": "son"
+      "word": "son",
+      "dataGenerated": true,
+      "xhsPublished": true
     },
     {
       "word": "song"
