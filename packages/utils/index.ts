@@ -57,3 +57,13 @@ export function dateFormat(date: dayjs.ConfigType, template: string = 'YYYY-MM-D
 export function mdToHtml(md: string) {
   return juice.inlineContent(decode(md), theme + hljs);
 }
+
+export function printToConsole(content: any) {
+  let res = content;
+
+  try {
+    res = JSON.stringify(res);
+  } catch (error) {}
+
+  console.log(`###运行完成${JSON.stringify(res)}###运行完成`);
+}

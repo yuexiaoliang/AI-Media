@@ -1,6 +1,6 @@
 import { weixin } from '@auto-blog/platform';
 import { NpmPackagesServices, CommonTypes, CommonTransforms } from '@auto-blog/orm';
-import { mdToHtml } from '@auto-blog/utils';
+import { mdToHtml, printToConsole } from '@auto-blog/utils';
 import { npm, github } from './libraries';
 import * as cover from './cover';
 import * as aigc from './aigc';
@@ -13,7 +13,7 @@ export async function start(args?: { platform?: CommonTypes.PublishedPlatforms; 
   // 如果指定了包名，则只会获取该包的数据
   // 如果获取不到，则会抛出异常
   if (_pkg) {
-    console.log(`\n 正在获取【${platform}】数据...`);
+    console.log(`\n 正在获取【${_pkg}】数据...`);
     data = await NpmPackagesServices.getNpmPackage(_pkg);
 
     if (!data) {
@@ -25,7 +25,11 @@ export async function start(args?: { platform?: CommonTypes.PublishedPlatforms; 
   // 如果获取不到，则会抛出异常
   else {
     console.log(`\n 正在获取未发布到【${platform}】的包...`);
-    data = await NpmPackagesServices.getNpmPackageByStatus({ [CommonTransforms.platformToPublishedPlatformStatus(platform)]: false });
+    data = await NpmPackagesServices.getNpmPackageByStatus({ [CommonTransforms.platformToPublishedPlatformStatus(platform)]: false, generatedData: true });
+
+    if (!data) {
+      data = await NpmPackagesServices.getNpmPackageByStatus({ [CommonTransforms.platformToPublishedPlatformStatus(platform)]: false, generatedData: false });
+    }
 
     if (!data) {
       throw new Error(`没有找到未发布到【${platform}】的包`);
@@ -49,7 +53,7 @@ export async function start(args?: { platform?: CommonTypes.PublishedPlatforms; 
     await weixin.draft.addDraft(pkg, { title, digest: description, content: mdToHtml(content!), thumb_media_id });
   }
 
-  console.log(`###运行完成${JSON.stringify({ name: pkg, title: title, desc: description, cover: coverPath, md: content })}###运行完成`);
+  printToConsole({ name: pkg, title: title, desc: description, cover: coverPath, md: content });
 
   async function generating(pkg: string) {
     console.log(`\n 正在生成【${pkg}】的数据...`);

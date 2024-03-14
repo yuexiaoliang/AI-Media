@@ -4,13 +4,14 @@ import path from 'path';
 import html2md from 'html-to-md';
 import * as cheerio from 'cheerio';
 import wait from 'wait';
-import { defineLogStr, file, renderTemplate } from '@auto-blog/utils';
+import { defineLogStr, file, printToConsole, renderTemplate } from '@auto-blog/utils';
 import { AIModel, chat } from '@auto-blog/openai';
 
 import genDataSystemPrompt from './prompts/genDataSystem.txt';
 import genDataUserPrompt from './prompts/genDataUser.txt';
 import { defineCoverGeneration } from '@auto-blog/cover';
 import { CommonTransforms, CommonTypes, EnglishWordsServices } from '@auto-blog/orm';
+import httpsGet from '@auto-blog/utils/httpsGet';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 
@@ -56,30 +57,38 @@ const dataExample = [
 
 const logStr = defineLogStr('english-words');
 
-export async function start() {
-  console.log(logStr('正在获取单词...'));
-  let data: EnglishWordsServices.EnglishWord | null = await EnglishWordsServices.getRandomEnglishWordByStatus({ generatedData: true, publishedXiaohongshu: false });
+export async function start(args?: { word?: string; platform?: CommonTypes.PublishedPlatforms }) {
+  const { word, platform = 'xiaohongshu' } = args || {};
+  let data: EnglishWordsServices.EnglishWord | null = null;
 
-  if (!data) {
-    console.log(logStr('正在生成单词数据...'));
-    data = await EnglishWordsServices.getRandomEnglishWordByStatus({ generatedData: false });
+  if (word) {
+    console.log(logStr(`正在获取【${word}】数据..`));
+    data = await EnglishWordsServices.getEnglishWord(word);
     if (!data) {
-      throw new Error(`[EnglishWord] -> 没有带生成数据的单词了`);
+      throw new Error(logStr(`指定单词“${word}”数据不存在`, 'error'));
+    }
+  } else {
+    console.log(logStr(`正在获取未发布到【${platform}】的单词...`));
+    data = await EnglishWordsServices.getRandomEnglishWordByStatus({ [CommonTransforms.platformToPublishedPlatformStatus(platform)]: false, generatedData: true });
+
+    if (!data) {
+      data = await EnglishWordsServices.getRandomEnglishWordByStatus({ [CommonTransforms.platformToPublishedPlatformStatus(platform)]: false, generatedData: false });
     }
 
-    data = await genData(data.word);
     if (!data) {
-      throw new Error(`[EnglishWord] -> 生成数据出错了`);
+      throw new Error(logStr(`没有找到未发布到【${platform}】的单词`, 'error'));
     }
   }
-  console.log(logStr(`单词为：${data.word}`));
+
+  if (!data.generatedData) {
+    console.log(logStr('正在生成单词数据...'));
+    data = await genData(data.word);
+  }
 
   console.log(logStr('正在生成单词卡片...'));
-  await genCards(data.word);
+  const cards = await genCards(data.word);
 
-  console.log(logStr(`单词“${data.word}”生成完成！`, 'success'));
-
-  await wait(2000);
+  printToConsole({ word: data.word, content: data.content, cards });
 }
 
 export async function setEnglishWordStatus(word: string, status: CommonTypes.PublishedPlatforms) {
@@ -90,16 +99,14 @@ export async function setEnglishWordStatus(word: string, status: CommonTypes.Pub
  * 生成数据
  */
 async function genData(word: string) {
-  const data = await EnglishWordsServices.getEnglishWord(word);
-
-  if (data?.generatedData) return data;
-
   console.log(logStr('正在获取词义信息...'));
   const meaning = await fetchWordMeaning(word);
 
   // 暂时去掉
   // console.log(logStr('正在获取词源信息...'));
   // const etymology = await fetchEtymologyMD(word);
+
+  let data: string | Data;
 
   try {
     const completions = chat.defineCompletions({ model: AIModel.GPT4, response_format: { type: 'json_object' } });
@@ -108,9 +115,7 @@ async function genData(word: string) {
       {
         role: 'system',
         content: renderTemplate(genDataSystemPrompt, {
-          example: JSON.stringify({
-            data: dataExample
-          })
+          example: JSON.stringify(dataExample)
         })
       },
       {
@@ -122,10 +127,25 @@ async function genData(word: string) {
       }
     ]);
 
-    const data = JSON.parse(content).data as Data;
+    if (!content) {
+      throw new Error(logStr('AI 生成内容为空', 'error'));
+    }
+
+    data = content;
+  } catch (error) {
+    throw new Error(logStr(`AI 生成内容出错：${error}`, 'error'));
+  }
+
+  try {
+    data = JSON.parse(data);
+  } catch (error) {
+    throw new Error(logStr(`AI 生成内容 JSON 解析出错：${error}`, 'error'));
+  }
+
+  try {
     return await EnglishWordsServices.saveEnglishWord({ word, generatedData: true, content: data });
   } catch (error) {
-    throw new Error(logStr('AI 生成内容出错', 'error'));
+    throw new Error(logStr(`保存数据出错：${error}`, 'error'));
   }
 }
 
@@ -134,7 +154,7 @@ async function genData(word: string) {
  */
 async function fetchEtymologyMD(word: string) {
   try {
-    let soundCode = (await http(`https://www.etymonline.com/word/${word}`)) as string;
+    let soundCode = (await httpsGet(`https://www.etymonline.com/word/${word}`)) as string;
 
     const $ = cheerio.load(soundCode);
     const $projects = $('.main div > div').filter(function () {
@@ -165,7 +185,7 @@ async function fetchEtymologyMD(word: string) {
  */
 async function fetchWordMeaning(word: string) {
   try {
-    const res = (await http(`https://api.dictionaryapi.dev/api/v2/entries/en/${word}`)) as string;
+    const res = (await httpsGet(`https://api.dictionaryapi.dev/api/v2/entries/en/${word}`)) as string;
     const list = (JSON.parse(res) || []) as { license: any; sourceUrls: any; word: any; phonetics: any; meanings: any }[];
 
     if (!list.length) {
@@ -243,43 +263,6 @@ function cardPath(word: string, name: string) {
   return path.resolve(cardsDir(word), `${name}`);
 }
 
-function dataPath(word: string) {
-  return path.resolve(dir(word), 'data.json');
-}
-
 function removeCardsDir(word: string) {
   file.removeDir(cardsDir(word));
-}
-
-function saveDataFile(word: string, content: string) {
-  file.saveFile(dataPath(word), content);
-}
-
-function readDataFile(word: string) {
-  const str = file.getFile(dataPath(word));
-  if (!str) return;
-
-  return JSON.parse(str) as Data;
-}
-
-function http(url: string) {
-  return new Promise((resolve, reject) => {
-    https
-      .get(url, (response) => {
-        let data = '';
-
-        // 接收数据片段
-        response.on('data', (chunk) => {
-          data += chunk;
-        });
-
-        // 数据接收完成
-        response.on('end', () => {
-          resolve(data);
-        });
-      })
-      .on('error', (error) => {
-        reject(error);
-      });
-  });
 }
