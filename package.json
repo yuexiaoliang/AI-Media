@@ -22,7 +22,8 @@
     "start:npm": "",
     "start:ts": "node ./dist/index.cjs -p type-challenges",
     "start:words": "node ./dist/index.cjs -p english-words",
-    "find-deadcode": "npx ts-prune"
+    "find-deadcode": "npx ts-prune",
+    "depcheck": "npx depcheck"
   },
   "keywords": [],
   "author": "",

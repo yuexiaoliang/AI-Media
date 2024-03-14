@@ -46,7 +46,7 @@ export default defineConfig({
   // clean: true,
   // minify: true,
   noExternal: [/.*\@auto\-blog.*/],
-  dts: false,
+  dts: true,
 
   format: ['cjs', 'esm'],
 

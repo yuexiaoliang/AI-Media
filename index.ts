@@ -6,16 +6,12 @@ import sourceMapSupport from 'source-map-support';
 import { start as typeChallengesStart } from '@auto-blog/type-challenges';
 import { start as npmPackagesStart, setNpmPackageStatus } from '@auto-blog/npm-packages';
 import { start as englishWordsStart, setEnglishWordStatus } from '@auto-blog/english-words';
-import { localDataToRemoteDataOfNpmPackages, localDataToRemoteDataOfEnglishWords } from './localDataToRemoteData';
 
 sourceMapSupport.install();
 
 type FunctionsNames = keyof typeof functions;
 
 const functions = {
-  localDataToRemoteDataOfNpmPackages,
-  localDataToRemoteDataOfEnglishWords,
-
   npmPackagesStart,
   setNpmPackageStatus,
 
