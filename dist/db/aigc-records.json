@@ -4081,7 +4081,6 @@
       }
     },
     {
-<<<<<<< HEAD
       "project": "english-words",
       "info": {
         "word": "son"
@@ -4096,7 +4095,10 @@
           "prompt_tokens": 1573,
           "completion_tokens": 605,
           "total_tokens": 2178
-=======
+        }
+      }
+    },
+    {
       "project": "npm-packages",
       "info": {
         "pkgName": "browserify-sign",
@@ -4112,12 +4114,10 @@
           "prompt_tokens": 1242,
           "completion_tokens": 900,
           "total_tokens": 2142
->>>>>>> ff19e5debb6e0447b0bf609cbbbe6acba0b3aff8
         }
       }
     },
     {
-<<<<<<< HEAD
       "project": "english-words",
       "info": {
         "word": "any"
@@ -4132,7 +4132,10 @@
           "prompt_tokens": 1423,
           "completion_tokens": 474,
           "total_tokens": 1897
-=======
+        }
+      }
+    },
+    {
       "project": "npm-packages",
       "info": {
         "pkgName": "wrap-ansi",
@@ -4148,12 +4151,10 @@
           "prompt_tokens": 1108,
           "completion_tokens": 1220,
           "total_tokens": 2328
->>>>>>> ff19e5debb6e0447b0bf609cbbbe6acba0b3aff8
         }
       }
     },
     {
-<<<<<<< HEAD
       "project": "english-words",
       "info": {
         "word": "level"
@@ -4168,7 +4169,10 @@
           "prompt_tokens": 2363,
           "completion_tokens": 609,
           "total_tokens": 2972
-=======
+        }
+      }
+    },
+    {
       "project": "npm-packages",
       "info": {
         "pkgName": "os-homedir",
@@ -4184,7 +4188,79 @@
           "prompt_tokens": 943,
           "completion_tokens": 912,
           "total_tokens": 1855
->>>>>>> ff19e5debb6e0447b0bf609cbbbe6acba0b3aff8
+        }
+      }
+    },
+    {
+      "project": "english-words",
+      "info": {
+        "word": "measure"
+      },
+      "completionInfo": {
+        "id": "chatcmpl-928CZRNIfG2puV16Z7TRlfVDEBwG7",
+        "object": "chat.completion",
+        "created": 1710295211,
+        "model": "gpt-4-0125-preview",
+        "system_fingerprint": "fp_c121a3f431",
+        "usage": {
+          "prompt_tokens": 1669,
+          "completion_tokens": 672,
+          "total_tokens": 2341
+        }
+      }
+    },
+    {
+      "project": "npm-packages",
+      "info": {
+        "pkgName": "regexpu-core",
+        "title": "在旧版JavaScript中使用ES2015+ Unicode正则表达式的终极指南"
+      },
+      "completionInfo": {
+        "id": "chatcmpl-928FT46wLTuybSkNrJ7Y1CioHafL7",
+        "object": "chat.completion",
+        "created": 1710295391,
+        "model": "gpt-4-0125-preview",
+        "system_fingerprint": "fp_31c0f205d1",
+        "usage": {
+          "prompt_tokens": 3604,
+          "completion_tokens": 1210,
+          "total_tokens": 4814
+        }
+      }
+    },
+    {
+      "project": "english-words",
+      "info": {
+        "word": "restriction"
+      },
+      "completionInfo": {
+        "id": "chatcmpl-92GTfR2uHFT7whZSEBFsKjKyvjeYg",
+        "object": "chat.completion",
+        "created": 1710327023,
+        "model": "gpt-4-0125-preview",
+        "system_fingerprint": "fp_c121a3f431",
+        "usage": {
+          "prompt_tokens": 1423,
+          "completion_tokens": 693,
+          "total_tokens": 2116
+        }
+      }
+    },
+    {
+      "project": "english-words",
+      "info": {
+        "word": "sacred"
+      },
+      "completionInfo": {
+        "id": "chatcmpl-92R5aZpk56O4gvmURzeQUZ89c1lHT",
+        "object": "chat.completion",
+        "created": 1710367814,
+        "model": "gpt-4-0125-preview",
+        "system_fingerprint": "fp_31c0f205d1",
+        "usage": {
+          "prompt_tokens": 1642,
+          "completion_tokens": 712,
+          "total_tokens": 2354
         }
       }
     }

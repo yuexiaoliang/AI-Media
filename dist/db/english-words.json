@@ -6261,7 +6261,9 @@
       "word": "meanwhile"
     },
     {
-      "word": "measure"
+      "word": "measure",
+      "dataGenerated": true,
+      "xhsPublished": true
     },
     {
       "word": "meat"
@@ -8465,7 +8467,9 @@
       "word": "restrict"
     },
     {
-      "word": "restriction"
+      "word": "restriction",
+      "dataGenerated": true,
+      "xhsPublished": true
     },
     {
       "word": "result"
@@ -8668,7 +8672,9 @@
       "word": "russian"
     },
     {
-      "word": "sacred"
+      "word": "sacred",
+      "dataGenerated": true,
+      "xhsPublished": true
     },
     {
       "word": "sacrifice"

@@ -766,7 +766,8 @@
         "collectedGuide": true,
         "generatedArticle": true,
         "publishedWeixinDraft": true,
-        "publishedGithub": false
+        "publishedGithub": false,
+        "publishedJuejin": true
       },
       "homepage": "https://github.com/visionmedia/bytes.js#readme",
       "repository_url": "https://github.com/visionmedia/bytes.js"
@@ -1354,7 +1355,8 @@
         "collectedGuide": true,
         "generatedArticle": true,
         "publishedWeixinDraft": true,
-        "publishedGithub": false
+        "publishedGithub": false,
+        "publishedJuejin": true
       },
       "homepage": "https://github.com/quartzjer/ecc-jsbn",
       "repository_url": "https://github.com/quartzjer/ecc-jsbn"
@@ -1741,7 +1743,8 @@
         "collectedGuide": true,
         "generatedArticle": true,
         "publishedWeixinDraft": true,
-        "publishedGithub": false
+        "publishedGithub": false,
+        "publishedJuejin": true
       },
       "homepage": "https://github.com/ahmadnassri/node-har-validator",
       "repository_url": "https://github.com/ahmadnassri/node-har-validator"
@@ -4028,7 +4031,7 @@
       "stepsStatus": {
         "gottenBaseInfo": true,
         "collectedGuide": true,
-        "generatedArticle": false,
+        "generatedArticle": true,
         "publishedWeixinDraft": false,
         "publishedGithub": false
       },
