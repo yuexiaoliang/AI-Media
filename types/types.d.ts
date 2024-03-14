@@ -13,9 +13,12 @@ declare module '*.html' {
   export default content;
 }
 
-declare interface Argv {
-  platform?: CommonTypes.PublishedPlatforms;
-  setPublished?: CommonTypes.PublishedPlatforms;
-  pkg?: string;
-  p?: 'npm-packages' | 'type-challenges' | 'english-words';
-}
+/**
+ * 命令行参数
+ * @param fn - 要运行的函数
+ * @param args - 函数的参数
+ */
+declare type Argv<T = string> = {
+  fn?: T;
+  args?: any;
+} | null | undefined;

@@ -5,7 +5,7 @@ import * as aigc from './aigc';
 import { NpmPackagesServices, CommonTypes, CommonTransforms } from '@auto-blog/orm';
 import { mdToHtml } from '@auto-blog/utils';
 
-export async function publisher(argv: Argv) {
+export async function start(argv: Argv) {
   const platform: CommonTypes.PublishedPlatforms = argv?.platform || 'weixin';
   const pkgName: string = argv?.pkg || '';
 
@@ -57,4 +57,11 @@ export async function publisher(argv: Argv) {
   } catch (error: any) {
     throw error;
   }
+}
+
+export async function setNpmPackageStatus(pkg: string, status: CommonTypes.PublishedPlatforms) {
+  return await NpmPackagesServices.saveNpmPackage({
+    pkg,
+    [CommonTransforms.platformToPublishedPlatformStatus(status)]: true
+  });
 }

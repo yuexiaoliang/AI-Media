@@ -10,7 +10,7 @@ import { AIModel, chat } from '@auto-blog/openai';
 import genDataSystemPrompt from './prompts/genDataSystem.txt';
 import genDataUserPrompt from './prompts/genDataUser.txt';
 import { defineCoverGeneration } from '@auto-blog/cover';
-import { EnglishWordsServices } from '@auto-blog/orm';
+import { CommonTransforms, CommonTypes, EnglishWordsServices } from '@auto-blog/orm';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 
@@ -80,6 +80,10 @@ export async function start() {
   console.log(logStr(`单词“${data.word}”生成完成！`, 'success'));
 
   await wait(2000);
+}
+
+export async function setEnglishWordStatus(word: string, status: CommonTypes.PublishedPlatforms) {
+  return await EnglishWordsServices.saveEnglishWord({ word, [CommonTransforms.platformToPublishedPlatformStatus(status)]: true });
 }
 
 /**

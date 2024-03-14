@@ -1,45 +1,72 @@
 import 'reflect-metadata';
 import 'dotenv/config';
-import path from 'path';
-import fs from 'fs-extra';
-import { fileURLToPath } from 'url';
-import { localDataToRemoteDataOfNpmPackages, localDataToRemoteDataOfEnglishWords } from './localDataToRemoteData';
-import { NpmPackagesServices, EnglishWordsServices } from '@auto-blog/orm';
-
 import yargs from 'yargs-parser';
+import sourceMapSupport from 'source-map-support';
 
-import { publisher as npmPackagesWeixinPublisher } from '@auto-blog/npm-packages';
-import { publisher as typeChallengesPublisher } from '@auto-blog/type-challenges';
-import { start as englishWordsStart } from '@auto-blog/english-words';
-import { platformToPublishedPlatformStatus } from '@auto-blog/orm/common/transforms';
+import { start as typeChallengesStart } from '@auto-blog/type-challenges';
+import { start as npmPackagesStart, setNpmPackageStatus } from '@auto-blog/npm-packages';
+import { start as englishWordsStart, setEnglishWordStatus } from '@auto-blog/english-words';
+import { localDataToRemoteDataOfNpmPackages, localDataToRemoteDataOfEnglishWords } from './localDataToRemoteData';
+
+sourceMapSupport.install();
+
+type FunctionsNames = keyof typeof functions;
+
+const functions = {
+  localDataToRemoteDataOfNpmPackages,
+  localDataToRemoteDataOfEnglishWords,
+
+  npmPackagesStart,
+  setNpmPackageStatus,
+
+  englishWordsStart,
+  setEnglishWordStatus,
+
+  typeChallengesStart
+};
+
+const argv = yargs(process.argv.slice(2)) as Argv<FunctionsNames>;
 
 main().catch((error) => {
   console.error(error);
   process.exit(1);
 });
 
+/**
+ * 通过命令行执行函数
+ *
+ * 无参数的
+ * --fn setEnglishWordStatus
+ * setEnglishWordStatus()
+ *
+ * 字符串参数
+ * --fn setEnglishWordStatus --args able
+ * setEnglishWordStatus('able')
+ *
+ * 多个字符串参数
+ * --fn setEnglishWordStatus --args able --args weixin
+ * setEnglishWordStatus('able', 'weixin)
+ *
+ * 对象参数
+ * --fn setEnglishWordStatus --args.word=able --args.platform=weixin
+ * setEnglishWordStatus({ word: 'able', platform: 'weixin' })
+ */
 async function main() {
-  const argv = yargs(process.argv.slice(2)) as Argv;
-  const { setPublished, p: project, pkg } = argv;
+  if (!argv?.fn) return;
 
-  // 设置包的发布状态
-  if (project === 'npm-packages' && setPublished && pkg) {
-    await NpmPackagesServices.saveNpmPackage({
-      pkg,
-      [platformToPublishedPlatformStatus(setPublished)]: true
-    });
-    return;
+  if (!functions[argv.fn]) {
+    throw new Error(`Main.js: Function "${argv.fn}" not found`);
   }
 
-  const projectsMap = {
-    'npm-packages': npmPackagesWeixinPublisher,
-    'type-challenges': typeChallengesPublisher,
-    'english-words': englishWordsStart
-  };
+  let _args = argv.args;
 
-  if (!project || !projectsMap[project]) {
-    throw new Error('❌ > project not found');
+  if (Array.isArray(argv.args)) {
+    // @ts-ignore
+    await functions[argv.fn](...argv.args);
+  } else {
+    // @ts-ignore
+    await functions[argv.fn](_args);
   }
 
-  await projectsMap[project](argv);
+  console.log('Done!');
 }
