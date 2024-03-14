@@ -37,11 +37,11 @@ export async function start(args?: { platform?: CommonTypes.PublishedPlatforms; 
     }
   }
 
-  const { generatedData, title, pkg, description, content } = data;
-
-  if (!generatedData) {
-    data = await generating(pkg);
+  if (!data.generatedData) {
+    data = await generating(data.pkg);
   }
+
+  const { title, pkg, description, content } = data;
 
   console.log('\n 正在生成缩略图...');
   const coverPath = await cover.generateCover(pkg);
@@ -53,7 +53,7 @@ export async function start(args?: { platform?: CommonTypes.PublishedPlatforms; 
     const html = mdToHtml(content!, title);
 
     console.log('\n 正在新增公众号草稿...');
-    await weixin.draft.addDraft(pkg, { title, digest: description, content: html, thumb_media_id });
+    await weixin.draft.addDraft(pkg, { title, digest: description?.slice(0, 54), content: html, thumb_media_id });
   }
 
   printToConsole({ name: pkg, title: title, desc: description, cover: coverPath, md: content });
