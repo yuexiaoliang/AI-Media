@@ -1,10 +1,8 @@
 import rough from 'roughjs';
 import { Svg2Roughjs } from 'svg2roughjs'
 import './word-card.scss'
-import _mock from '../dist/english-words/from/data.json'
 import wait from 'wait'
 
-const [wordInfo, ...mock] = _mock
 
 const baseSize = 28.8
 const primary_color = 'red'
@@ -16,11 +14,6 @@ const container_width = 37.5
 window.render = render;
 document.querySelector('html').style.fontSize = `${baseSize}px`
 
-mock.forEach(item => {
-  sessionStorage.setItem('card-data', JSON.stringify(item))
-  sessionStorage.setItem('word-info', JSON.stringify(wordInfo))
-  render()
-})
 
 async function render() {
   const app = document.querySelector('#cover')
