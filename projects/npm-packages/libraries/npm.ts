@@ -5,7 +5,6 @@ import { NpmPackagesServices } from '@auto-blog/orm';
 
 // 采集包列表
 export const collectPackages = async () => {
-
   const params = {
     page: 13,
     platforms: 'npm',
@@ -24,13 +23,11 @@ export const collectPackages = async () => {
     if ($projects.length) {
       $projects.each((_, item) => {
         const name = $(item).find('h5 a').text();
-        const finded = data.packages.find(({ name: _name }) => _name === name);
-        if (finded) return;
 
         packages.push({ pkg: name });
       });
 
-      await NpmPackagesServices.saveNpmPackages(packages);
+      return await NpmPackagesServices.saveNpmPackages(packages);
     }
   } catch (err: any) {
     if (err?.isAxiosError) {
@@ -38,8 +35,6 @@ export const collectPackages = async () => {
     }
     throw new Error(`@auto-blog/libraries: ${err}`);
   }
-
-  return data.packages;
 };
 
 // 获取包的基本信息
@@ -56,5 +51,5 @@ export async function getPackageInfo(pkgName: string) {
     repositoryUrl: repository_url
   };
 
-  return pkg;
+  return await NpmPackagesServices.saveNpmPackage(pkg);
 }
