@@ -5,7 +5,7 @@
   "main": "index.js",
   "type": "module",
   "scripts": {
-    "dev": "tsup --config tsup.config.ts --watch",
+    "dev": "tsup --config tsup.config.ts --watch --onSuccess \"node dist/index.js --fn startNpm\"",
     "dev:html": "pnpm --filter html-templates dev",
     "build": "tsup --config tsup.config.ts",
     "build:html": "pnpm --filter html-templates build",

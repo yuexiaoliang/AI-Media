@@ -3,13 +3,17 @@ import MarkdownIt from 'markdown-it';
 import filenamify from 'filenamify';
 import type StateBlock from 'markdown-it/lib/rules_block/state_block';
 import mdHighlight from 'markdown-it-highlightjs';
-import { mdToHtml } from '@auto-blog/utils';
+import juice from 'juice';
+import { decode } from 'html-entities';
+
+import theme from './styles/theme.css';
+import hljs from './styles/hljs.css';
 
 export interface MetaYamlOptions {
   cb?(yamlJSON: Record<string, any>, yamlRaw: string): void;
 }
 
-export const mdToWeixin = <T>(val: string) => {
+export const mdToHtml = <T>(val: string) => {
   const md = new MarkdownIt({ html: true });
 
   let _meta: T;
@@ -30,7 +34,9 @@ export const mdToWeixin = <T>(val: string) => {
 
   const result = md.render(val);
 
-  return [{ meta: _meta!, html: mdToHtml(result) }, md] as [{ meta: T; html: string }, MarkdownIt];
+  const html = juice.inlineContent(decode(result), theme + hljs);
+
+  return [{ meta: _meta!, html }, md] as [{ meta: T; html: string }, MarkdownIt];
 };
 
 function removeMatchingH1Plugin(md: MarkdownIt) {

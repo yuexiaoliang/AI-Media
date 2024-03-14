@@ -1,6 +1,7 @@
 import { weixin } from '@auto-blog/platform';
 import { NpmPackagesServices, CommonTypes, CommonTransforms } from '@auto-blog/orm';
-import { mdToHtml, printToConsole } from '@auto-blog/utils';
+import { printToConsole } from '@auto-blog/utils';
+import { mdToHtml } from '@auto-blog/md-render';
 import { npm, github } from './libraries';
 import * as cover from './cover';
 import * as aigc from './aigc';
@@ -49,8 +50,10 @@ export async function start(args?: { platform?: CommonTypes.PublishedPlatforms; 
     console.log('\n 正在上传图片到公众号素材库...');
     const { media_id: thumb_media_id } = await weixin.material.addMaterial(coverPath);
 
+    const [{ html }] = mdToHtml(content!);
+
     console.log('\n 正在新增公众号草稿...');
-    await weixin.draft.addDraft(pkg, { title, digest: description, content: mdToHtml(content!), thumb_media_id });
+    await weixin.draft.addDraft(pkg, { title, digest: description, content: html, thumb_media_id });
   }
 
   printToConsole({ name: pkg, title: title, desc: description, cover: coverPath, md: content });

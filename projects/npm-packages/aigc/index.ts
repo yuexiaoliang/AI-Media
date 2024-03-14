@@ -1,7 +1,7 @@
 import html2md from 'html-to-md';
 import { AIModel, chat } from '@auto-blog/openai';
 import { renderTemplate } from '@auto-blog/utils';
-import { mdToWeixin } from '@auto-blog/md-render';
+import { mdToHtml } from '@auto-blog/md-render';
 
 import genArticlePrompt from './prompts/genArticle.txt';
 import { NpmPackagesServices } from '@auto-blog/orm';
@@ -42,7 +42,7 @@ ${readme}
 
     const data = JSON.parse(content);
 
-    const [{ html }] = mdToWeixin(data.markdown);
+    const [{ html }] = mdToHtml(data.markdown);
 
     const result = {
       pkg: pkgName,

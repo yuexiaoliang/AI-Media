@@ -12,6 +12,7 @@ export default defineConfig({
   clean: true,
   minify: true,
   format: 'esm',
+  loader: { '.txt': 'text', '.css': 'text', '.html': 'text' },
 
   esbuildPlugins: [
     copy({

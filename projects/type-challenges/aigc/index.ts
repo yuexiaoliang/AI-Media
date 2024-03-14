@@ -1,6 +1,6 @@
 import { AIModel, chat } from '@auto-blog/openai';
 import { renderTemplate } from '@auto-blog/utils';
-import { mdToWeixin } from '@auto-blog/md-render';
+import { mdToHtml } from '@auto-blog/md-render';
 
 import * as file from '../file';
 import genArticlePrompt from './prompts/genArticle.txt';
@@ -24,7 +24,7 @@ export const genArticle = async (readme: string, tsUtil: string) => {
   return { md: content, html, meta };
 
   function renderAndSave(md: string) {
-    const [{ html, meta }] = mdToWeixin<{
+    const [{ html, meta }] = mdToHtml<{
       title: string;
       tags: string[];
       effect: string;
