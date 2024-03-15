@@ -91,8 +91,15 @@ export async function start(args?: { word?: string; platform?: CommonTypes.Publi
   printToConsole({ word: data.word, content: data.content, cards });
 }
 
-export async function setEnglishWordStatus(word: string, status: CommonTypes.PublishedPlatforms) {
-  return await EnglishWordsServices.saveEnglishWord({ word, [CommonTransforms.platformToPublishedPlatformStatus(status)]: true });
+export async function setEnglishWordPlatformStatus({ word, platform }: { word: string; platform: CommonTypes.PublishedPlatforms }) {
+  return await EnglishWordsServices.saveEnglishWord({ word, [CommonTransforms.platformToPublishedPlatformStatus(platform)]: true });
+}
+
+export async function setEnglishWordStatus({ word, key, value = true }: { word: string; key: CommonTypes.StatusKeys; value: boolean }) {
+  return await EnglishWordsServices.saveEnglishWord({
+    word,
+    [key]: value
+  });
 }
 
 /**

@@ -72,9 +72,16 @@ export async function start(args?: { platform?: CommonTypes.PublishedPlatforms; 
   }
 }
 
-export async function setNpmPackageStatus(pkg: string, status: CommonTypes.PublishedPlatforms) {
+export async function setNpmPackageStatus({ pkg, key, value = true }: { pkg: string; key: CommonTypes.StatusKeys; value: boolean }) {
   return await NpmPackagesServices.saveNpmPackage({
     pkg,
-    [CommonTransforms.platformToPublishedPlatformStatus(status)]: true
+    [key]: value
+  });
+}
+
+export async function setNpmPackagePlatformStatus({ pkg, platform, value = true }: { pkg: string; platform: CommonTypes.PublishedPlatforms; value: boolean }) {
+  return await NpmPackagesServices.saveNpmPackage({
+    pkg,
+    [CommonTransforms.platformToPublishedPlatformStatus(platform)]: value
   });
 }

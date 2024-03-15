@@ -56,5 +56,5 @@ export function printToConsole(content: any) {
     res = JSON.stringify(res);
   } catch (error) {}
 
-  console.log(`###运行完成${JSON.stringify(res)}###运行完成`);
+  console.log(`###运行完成${res}###运行完成`);
 }

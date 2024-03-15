@@ -4,8 +4,8 @@ import yargs from 'yargs-parser';
 import sourceMapSupport from 'source-map-support';
 
 import { start as startType } from '@auto-blog/type-challenges';
-import { start as startNpm, setNpmPackageStatus as setNpmStatus } from '@auto-blog/npm-packages';
-import { start as startWord, setEnglishWordStatus as setWordStatus } from '@auto-blog/english-words';
+import { start as startNpm, setNpmPackageStatus as setNpmStatus, setNpmPackagePlatformStatus as setNpmPlatformStatus } from '@auto-blog/npm-packages';
+import { start as startWord, setEnglishWordStatus as setWordStatus, setEnglishWordPlatformStatus as setWordPlatformStatus } from '@auto-blog/english-words';
 
 sourceMapSupport.install();
 
@@ -15,9 +15,11 @@ type MethodsParams = Parameters<(typeof methods)[MethodsNames]>;
 const methods = {
   startNpm,
   setNpmStatus,
+  setNpmPlatformStatus,
 
   startWord,
   setWordStatus,
+  setWordPlatformStatus,
 
   startType
 };
