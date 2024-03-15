@@ -87,8 +87,12 @@ export async function start(args?: { word?: string; platform?: CommonTypes.Publi
 
   console.log(logStr('正在生成单词卡片...'));
   const cards = await genCards(data.word);
+  const result = { word: data.word, content: data.content, cards, cardsStr: '' };
+  if (cards?.length) {
+    result.cardsStr = `"${cards.join('" "')}"`;
+  }
 
-  printToConsole({ word: data.word, content: data.content, cards });
+  printToConsole(result);
 }
 
 export async function setEnglishWordPlatformStatus({ word, platform }: { word: string; platform: CommonTypes.PublishedPlatforms }) {
