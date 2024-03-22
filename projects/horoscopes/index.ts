@@ -1,9 +1,11 @@
 import { fileURLToPath } from 'url';
 import path from 'path';
 import httpsGet from '@auto-blog/utils/httpsGet';
-import { defineLogStr, file } from '@auto-blog/utils';
+import { defineLogStr, file, renderTemplate } from '@auto-blog/utils';
 import * as cheerio from 'cheerio';
 import { capitalize } from 'lodash-es';
+import { AIModel, chat } from '@auto-blog/openai';
+import genDataSystemPrompt from './prompts/genDataSystem.txt';
 
 type HoroscopesNames = keyof typeof horoscopes;
 
@@ -55,28 +57,88 @@ const horoscopes = {
 } as const;
 const horoscopesTypes = ['general', 'love', 'career', 'wellness', 'weekly-money'] as const;
 const relativeDates = ['yesterday', 'today', 'tomorrow'] as const;
+const dataExample = {
+  mood: { stars: 2.5, title: '情绪指数', content: 'xxxx' },
+  general: { stars: 4, title: '综合运势', content: 'xxxx' },
+  love: { stars: 2, title: '爱情', content: 'xxxx' },
+  money: { stars: 5, title: '财富', content: 'xxxx' },
+  career: { stars: 3, title: '事业', content: 'xxxx' },
+  wellness: { stars: 3, title: '健康', content: 'xxxx' }
+};
+
+type GeneratedData = typeof dataExample;
 
 export async function start() {
-  const name = 'aries';
-  const res = await getMarkdownData(name);
+  const name = 'aquarius';
+
+  console.log(logStr(`正在采集 ${name} 的数据...`));
+  const md = await collectDataToMarkdown(name);
+
+  console.log(logStr(`正在 AI 生成...`));
+  const res = await generateData(md);
+
   console.log(`🚀 > start > res:`, res);
+  file.saveFile(path.resolve(__dirname, 'star-ratings.json'), JSON.stringify(res));
 }
 
 /**
- * 获取 markdown 格式的数据
+ * 数据生成
  */
-export async function getMarkdownData(horoscopeName: HoroscopesNames) {
+export async function generateData(data: string) {
+  let result: string | GeneratedData;
+
+  try {
+    const completions = chat.defineCompletions({ model: AIModel.GPT4, response_format: { type: 'json_object' } });
+
+    const { content } = await completions([
+      {
+        role: 'system',
+        content: renderTemplate(genDataSystemPrompt, {
+          example: JSON.stringify(dataExample)
+        })
+      },
+      {
+        role: 'user',
+        content: data
+      }
+    ]);
+
+    if (!content) {
+      throw new Error(logStr('AI 生成内容为空', 'error'));
+    }
+
+    result = content;
+  } catch (error) {
+    throw new Error(logStr(`AI 生成内容出错：${error}`, 'error'));
+  }
+
+  try {
+    result = JSON.parse(result);
+  } catch (error) {
+    throw new Error(logStr(`AI 生成内容 JSON 解析出错：${error}`, 'error'));
+  }
+
+  try {
+    // return await EnglishWordsServices.saveEnglishWord({});
+  } catch (error) {
+    throw new Error(logStr(`保存数据出错：${error}`, 'error'));
+  }
+
+  return result;
+}
+
+/**
+ * 将采集到的数据转换为 Markdown 格式
+ */
+export async function collectDataToMarkdown(horoscopeName: HoroscopesNames) {
   const starRatings = await collectStarRatings({ horoscopeName: horoscopeName, relativeDate: 'today' });
   const fortunes = await collectAllFortunes({ horoscopeName: horoscopeName, laDate: '20240322' });
-  console.log(`🚀 > getMarkdownData > fortunes:`, fortunes);
 
-  file.saveFile(path.resolve(__dirname, 'horoscope-data.json'), JSON.stringify({ name: horoscopeName, starRatings, fortunes }));
-
-  const starRatingsStr = starRatings.data
-    .map((item) => {
-      return `### ${item.title}\n\n**Grade:** ${item.grade} Stars\n\n${item.text}`;
-    })
-    .join('\n\n');
+  // const starRatingsStr = starRatings.data
+  //   .map((item) => {
+  //     return `### ${item.title}\n\n**Grade:** ${item.grade} Stars\n\n${item.text}`;
+  //   })
+  //   .join('\n\n');
 
   const fortunesStr = fortunes
     .map((item) => {
@@ -86,13 +148,12 @@ export async function getMarkdownData(horoscopeName: HoroscopesNames) {
 
   let result = `# ${capitalize(horoscopeName)} horoscopes for today\n\n`;
 
+  // 今日心情
+  result += `**Today emoji:** ${starRatings.emoji}\n\n`;
+
   // 运势数据
   result += `## Horoscopes\n\n${fortunesStr}\n\n`;
 
-  // 星座评级
-  result += `## Star Ratings\n\n**Today emoji:** ${starRatings.emoji}\n\n${starRatingsStr}\n`;
-
-  file.saveFile(path.resolve(__dirname, 'horoscope-data.md'), result);
   return result;
 }
 
@@ -171,7 +232,6 @@ async function collectStarRatings({ relativeDate, horoscopeName }: CollectStarRa
 
   const url = `${COLLECT_BASE_URL}/star-ratings/${relativeDate}/${horoscopeName}`;
   const html = await httpsGet(url);
-  file.saveFile(path.resolve(__dirname, 'star-ratings.html'), html);
 
   const $ = cheerio.load(html!);
   const $content = $('.switcher ~ .module-skin');
