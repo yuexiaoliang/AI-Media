@@ -9,7 +9,7 @@ export default defineConfig({
   outDir: 'dist',
   noExternal: [/.*\@auto\-blog.*/],
   sourcemap: true,
-  clean: true,
+  clean: false,
   minify: true,
   format: 'esm',
   loader: { '.txt': 'text', '.css': 'text', '.html': 'text' },

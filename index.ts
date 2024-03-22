@@ -6,6 +6,7 @@ import sourceMapSupport from 'source-map-support';
 import { start as startType } from '@auto-blog/type-challenges';
 import { start as startNpm, setNpmPackageStatus as setNpmStatus, setNpmPackagePlatformStatus as setNpmPlatformStatus } from '@auto-blog/npm-packages';
 import { start as startWord, setEnglishWordStatus as setWordStatus, setEnglishWordPlatformStatus as setWordPlatformStatus } from '@auto-blog/english-words';
+import { start as startHoroscope } from '@auto-blog/horoscopes';
 
 sourceMapSupport.install();
 
@@ -20,6 +21,8 @@ const methods = {
   startWord,
   setWordStatus,
   setWordPlatformStatus,
+
+  startHoroscope,
 
   startType
 };
