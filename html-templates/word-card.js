@@ -2,6 +2,7 @@ import rough from 'roughjs';
 import { Svg2Roughjs } from 'svg2roughjs'
 import './word-card.scss'
 import wait from 'wait'
+import { createElement, appendChildren, setHTMLAttrs } from './utils'
 
 
 const baseSize = 28.8
@@ -70,7 +71,6 @@ async function render() {
 
   renderBackground(card, ({ width, height }) => {
     const canvas = createElement('canvas', { width, height, class: "bg" })
-    console.log(`🚀 > renderBackground > height:`, height);
     const rc = rough.canvas(canvas)
 
     const fillStyles = ['zigzag-line', 'dashed', 'hachure', 'cross-hatch']
@@ -209,43 +209,4 @@ function createSVGByHTML(html, attrs = {}) {
   setHTMLAttrs(el, attrs)
 
   return el
-}
-
-// 创建元素
-function createElement(tag, attrs = {}, html) {
-  const el = document.createElement(tag)
-  setHTMLAttrs(el, attrs)
-
-  if (typeof html === 'string') el.innerHTML = html
-
-  return el
-}
-
-function setHTMLAttrs(el, attrs) {
-  for (let key in attrs) {
-    el.setAttribute(key, attrs[key])
-  }
-}
-
-function appendChildren(parent, children,) {
-  if (!children) return;
-
-  if (typeof children === 'string') {
-    const temp = document.createElement('div')
-    temp.innerHTML = children
-    appendChildren(parent, temp.children)
-    return parent
-  }
-
-  if (typeof children !== 'string' && children.length || Array.isArray(children)) {
-    Array.from(children).forEach(child => {
-      appendChildren(parent, child)
-    })
-
-    return parent
-  }
-
-  parent.appendChild(children)
-
-  return parent
 }
