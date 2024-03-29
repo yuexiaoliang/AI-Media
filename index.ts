@@ -8,12 +8,32 @@ import { start as startNpm, setNpmPackageStatus as setNpmStatus, setNpmPackagePl
 import { start as startWord, setEnglishWordStatus as setWordStatus, setEnglishWordPlatformStatus as setWordPlatformStatus } from '@auto-blog/english-words';
 import { start as startHoroscope } from '@auto-blog/horoscopes';
 
+import { qianwen, Types as AiTypes } from '@auto-blog/ai';
+
 sourceMapSupport.install();
 
 type MethodsNames = keyof typeof methods;
 type MethodsParams = Parameters<(typeof methods)[MethodsNames]>;
 
+const dev = async () => {
+  const completions = qianwen.defineCompletions({ model: AiTypes.AIModel.QWEN_TURBO });
+
+  const { content } = await completions([
+    {
+      role: 'system',
+      content: '你是一个翻译家，尤其擅长英文和中文的相互翻译。你需要将用户发你的内容进行中英互译。'
+    },
+    {
+      role: 'user',
+      content: 'projects'
+    }
+  ]);
+
+  console.log(`🚀 > dev > content:`, content);
+};
+
 const methods = {
+  dev,
   startNpm,
   setNpmStatus,
   setNpmPlatformStatus,
