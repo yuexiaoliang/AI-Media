@@ -5,7 +5,7 @@
   "main": "index.js",
   "type": "module",
   "scripts": {
-    "dev": "tsup --config tsup.config.ts --watch --onSuccess \"node dist/index.js --fn startNpm\"",
+    "dev": "tsup --config tsup.config.ts --watch --onSuccess \"node dist/index.js --fn startWord --args.word=able\"",
     "dev:html": "pnpm --filter html-templates dev",
     "build": "tsup --config tsup.config.ts",
     "build:html": "pnpm --filter html-templates build",
@@ -33,6 +33,7 @@
     "typescript": "^5.2.2"
   },
   "dependencies": {
+    "@auto-blog/ai": "workspace:^",
     "@auto-blog/constants": "workspace:^",
     "@auto-blog/cover": "workspace:^",
     "@auto-blog/english-words": "workspace:^",
