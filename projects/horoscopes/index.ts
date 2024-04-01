@@ -4,7 +4,7 @@ import httpsGet from '@auto-blog/utils/httpsGet';
 import { defineLogStr, extractJsonFromMarkdown, file, renderTemplate } from '@auto-blog/utils';
 import * as cheerio from 'cheerio';
 import { capitalize } from 'lodash-es';
-import { qianwen, Types as AiTypes } from '@auto-blog/ai';
+import { moonshot, Types as AiTypes } from '@auto-blog/ai';
 import genDataSystemPrompt from './prompts/genDataSystem.txt';
 
 type HoroscopesNames = keyof typeof horoscopes;
@@ -68,7 +68,6 @@ const dataExample = {
 
 type GeneratedData = typeof dataExample;
 
-
 export async function start() {
   const name = 'aquarius';
 
@@ -89,8 +88,8 @@ export async function generateData(data: string) {
   let result: string | GeneratedData;
 
   try {
-    const completions = qianwen.defineCompletions({
-      model: AiTypes.AIModel.QWEN_PLUS
+    const completions = moonshot.defineCompletions({
+      model: AiTypes.AIModel.MOONSHOT_V1_8K
     });
 
     const { content } = await completions([
@@ -105,7 +104,6 @@ export async function generateData(data: string) {
         content: data
       }
     ]);
-    console.log('content =>', content);
 
     if (!content) {
       throw new Error(logStr('AI 生成内容为空', 'error'));
@@ -225,7 +223,7 @@ async function collectFortune({ horoscopeName, laDate, type = 'general' }: Colle
     throw new Error(logStr(`${logPrefix}运势数据为空`, 'error'));
   }
 
-  return { type, text };
+  return { type: type === 'weekly-money' ? 'money' : type, text };
 }
 
 /**
