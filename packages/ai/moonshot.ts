@@ -5,16 +5,15 @@ import * as Types from './types';
 
 const { merge } = lodash;
 
-const BASE_URL = 'https://dashscope.aliyuncs.com/api/v1/services';
+const BASE_URL = 'https://api.moonshot.cn/v1';
 
 const http = axios.create({
   baseURL: BASE_URL
 });
 
 http.interceptors.request.use((config) => {
-  config.headers['Authorization'] = `Bearer ${constants.QIANWEN_API_KEY}`;
+  config.headers['Authorization'] = `Bearer ${constants.MOONSHOT_API_KEY}`;
   config.headers['Content-Type'] = 'application/json';
-  config.headers['Accept'] = '*/*';
   return config;
 });
 
@@ -25,25 +24,20 @@ http.interceptors.response.use((response) => {
 export const defineCompletions = (config: Record<string, any> = {}) => {
   const _config = merge(
     {
-      model: Types.AIModel.QWEN_TURBO,
-      parameters: {
-        result_format: 'message'
-      }
+      model: Types.AIModel.MOONSHOT_V1_8K
     },
     config
   );
 
   return async (messages: Types.ChatCompletionMessage[]) => {
-    const res = (await http.post('/aigc/text-generation/generation', {
+    const res = (await http.post('/chat/completions', {
       ..._config,
-      input: {
-        messages
-      }
-    })) as Types.ChatCompletionQianwen;
+      messages
+    })) as Types.ChatCompletionMoonshot;
 
-    const { output, ...rest } = res;
+    const { choices, ...rest } = res;
 
-    const [completion] = output.choices;
+    const [completion] = choices;
     const content = completion.message.content;
 
     return { content, completionInfo: rest };

@@ -8,7 +8,7 @@ import { start as startNpm, setNpmPackageStatus as setNpmStatus, setNpmPackagePl
 import { start as startWord, setEnglishWordStatus as setWordStatus, setEnglishWordPlatformStatus as setWordPlatformStatus } from '@auto-blog/english-words';
 import { start as startHoroscope } from '@auto-blog/horoscopes';
 
-import { qianwen, Types as AiTypes } from '@auto-blog/ai';
+import { qianwen, moonshot , Types as AiTypes } from '@auto-blog/ai';
 
 sourceMapSupport.install();
 
@@ -16,7 +16,7 @@ type MethodsNames = keyof typeof methods;
 type MethodsParams = Parameters<(typeof methods)[MethodsNames]>;
 
 const dev = async () => {
-  const completions = qianwen.defineCompletions({ model: AiTypes.AIModel.QWEN_TURBO });
+  const completions = moonshot.defineCompletions();
 
   const { content } = await completions([
     {
