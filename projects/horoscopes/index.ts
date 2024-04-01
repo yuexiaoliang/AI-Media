@@ -1,10 +1,10 @@
 import { fileURLToPath } from 'url';
 import path from 'path';
 import httpsGet from '@auto-blog/utils/httpsGet';
-import { defineLogStr, file, renderTemplate } from '@auto-blog/utils';
+import { defineLogStr, extractJsonFromMarkdown, file, renderTemplate } from '@auto-blog/utils';
 import * as cheerio from 'cheerio';
 import { capitalize } from 'lodash-es';
-import { AIModel, chat } from '@auto-blog/openai';
+import { qianwen, Types as AiTypes } from '@auto-blog/ai';
 import genDataSystemPrompt from './prompts/genDataSystem.txt';
 
 type HoroscopesNames = keyof typeof horoscopes;
@@ -68,6 +68,7 @@ const dataExample = {
 
 type GeneratedData = typeof dataExample;
 
+
 export async function start() {
   const name = 'aquarius';
 
@@ -88,7 +89,9 @@ export async function generateData(data: string) {
   let result: string | GeneratedData;
 
   try {
-    const completions = chat.defineCompletions({ model: AIModel.GPT4, response_format: { type: 'json_object' } });
+    const completions = qianwen.defineCompletions({
+      model: AiTypes.AIModel.QWEN_PLUS
+    });
 
     const { content } = await completions([
       {
@@ -102,6 +105,7 @@ export async function generateData(data: string) {
         content: data
       }
     ]);
+    console.log('content =>', content);
 
     if (!content) {
       throw new Error(logStr('AI 生成内容为空', 'error'));
@@ -113,7 +117,7 @@ export async function generateData(data: string) {
   }
 
   try {
-    result = JSON.parse(result);
+    result = extractJsonFromMarkdown(result);
   } catch (error) {
     throw new Error(logStr(`AI 生成内容 JSON 解析出错：${error}`, 'error'));
   }

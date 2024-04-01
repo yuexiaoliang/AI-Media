@@ -58,3 +58,12 @@ export function printToConsole(content: any) {
 
   console.log(`###运行完成${res}###运行完成`);
 }
+
+// 提取 markdown 的 json
+export function extractJsonFromMarkdown(markdown: string) {
+  const jsonRegex = /```json\n([\s\S]*?)```/g;
+  const jsonStr = jsonRegex.exec(markdown)?.[1];
+  if (!jsonStr) return null;
+
+  return JSON.parse(jsonStr);
+}
