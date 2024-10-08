@@ -13,7 +13,7 @@ export default function httpsGet(url: string, options?: HttpsGetOptions) {
 
   return new Promise<any>((resolve, reject) => {
     https
-      .get(_url, rest, (response) => {
+      .get(_url, {...rest, timeout: 3000000}, (response) => {
         let data = '';
 
         // 接收数据片段

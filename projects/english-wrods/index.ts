@@ -196,8 +196,8 @@ async function fetchEtymologyMD(word: string) {
  */
 async function fetchWordMeaning(word: string) {
   try {
-    const res = (await httpsGet(`https://api.dictionaryapi.dev/api/v2/entries/en/${word}`)) as string;
-    const list = (JSON.parse(res) || []) as { license: any; sourceUrls: any; word: any; phonetics: any; meanings: any }[];
+    const res = (await httpsGet(`https://api.dictionaryapi.dev/api/v2/entries/en/${word}`));
+    const list = res as { license: any; sourceUrls: any; word: any; phonetics: any; meanings: any }[];
 
     if (!list.length) {
       console.error(logStr('词义信息为空', 'error'));
@@ -205,6 +205,7 @@ async function fetchWordMeaning(word: string) {
     }
 
     const { license, sourceUrls, phonetics, ...rest } = list[0];
+    console.log(`🚀 > fetchWordMeaning > rest:`, rest);
 
     return JSON.stringify(rest);
   } catch (error) {
